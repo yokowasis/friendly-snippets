@@ -1,4 +1,9 @@
 {
+  "cl": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cl",
+    "body": ["console.${2:log}(${1:something});"]
+  },
   "fetch": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "fetch",
