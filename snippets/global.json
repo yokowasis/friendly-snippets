@@ -3,12 +3,11 @@
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "alertyesno",
     "body": [
-      "var txt;",
-      "var r = confirm(\"Press a button!\");",
+      "const r = confirm(\"Press a button!\");",
       "if (r == true) {",
-      "\ttxt = \"You pressed OK!\";",
+      "\tconst txt = \"You pressed OK!\";",
       "} else {",
-      "\ttxt = \"You pressed Cancel!\";",
+      "\tconst txt = \"You pressed Cancel!\";",
       "}"
     ]
   },
