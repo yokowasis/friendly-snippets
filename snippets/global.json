@@ -4,7 +4,7 @@
     "prefix": "alertyesno",
     "body": [
       "const r = confirm(\"Press a button!\");",
-      "if (r == true) {",
+      "if (r === true) {",
       "\tconst txt = \"You pressed OK!\";",
       "} else {",
       "\tconst txt = \"You pressed Cancel!\";",
