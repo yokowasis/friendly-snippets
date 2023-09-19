@@ -1,128 +1,381 @@
 {
-    "try/except": {
-        "prefix": "try/except",
-        "body": [
-            "try:",
-            "\t${1:pass}",
-            "except ${2:expression} as ${3:identifier}:",
-            "\t${4:pass}"
-        ],
-        "description": "Code snippet for a try/except statement"
-    },
-    "try/finally": {
-        "prefix": "try/finally",
-        "body": ["try:", "\t${1:pass}", "finally:", "\t${2:pass}"],
-        "description": "Code snippet for a try/finally statement"
-    },
-    "try/except/else": {
-        "prefix": "try/except/else",
-        "body": [
-            "try:",
-            "\t${1:pass}",
-            "except ${2:expression} as ${3:identifier}:",
-            "\t${4:pass}",
-            "else:",
-            "\t${5:pass}"
-        ],
-        "description": "Code snippet for a try/except/else statement"
-    },
-    "try/except/finally": {
-        "prefix": "try/except/finally",
-        "body": [
-            "try:",
-            "\t${1:pass}",
-            "except ${2:expression} as ${3:identifier}:",
-            "\t${4:pass}",
-            "finally:",
-            "\t${5:pass}"
-        ],
-        "description": "Code snippet for a try/except/finally statement"
-    },
-    "try/except/else/finally": {
-        "prefix": "try/except/else/finally",
-        "body": [
-            "try:",
-            "\t${1:pass}",
-            "except ${2:expression} as ${3:identifier}:",
-            "\t${4:pass}",
-            "else:",
-            "\t${5:pass}",
-            "finally:",
-            "\t${6:pass}"
-        ],
-        "description": "Code snippet for a try/except/else/finally statement"
-    },
-    "def(class method)": {
-        "prefix": "def class method",
-        "body": [
-            "def ${1:funcname}(self, ${2:parameter_list}):",
-            "\t${3:pass}"
-        ],
-        "description": "Code snippet for a class method"
-    },
-    "def(static class method)": {
-        "prefix": "def static class method",
-        "body": [
-            "@staticmethod",
-            "def ${1:funcname}(${2:parameter_list}):",
-            "\t${3:pass}"
-        ],
-        "description": "Code snippet for a static class method"
-    },
-    "def(abstract class method)": {
-        "prefix": "def abstract class method",
-        "body": [
-            "def ${1:funcname}(self, ${2:parameter_list}):",
-            "\traise NotImplementedError"
-        ],
-        "description": "Code snippet for an abstract class method"
-    },
-    "lambda": {
-        "prefix": "lambda",
-        "body": ["lambda ${1:parameter_list}: ${2:expression}"],
-        "description": "Code snippet for a lambda statement"
-    },
-    "if(main)": {
-        "prefix": "__main__",
-        "body": ["if __name__ == \"__main__\":", "    ${1:pass}"],
-        "description": "Code snippet for a `if __name__ == \"__main__\": ...` block"
-    },
-    "async/def": {
-        "prefix": "async/def",
-        "body": [
-            "async def ${1:funcname}(${2:parameter_list}):",
-            "\t${3:pass}"
-        ],
-        "description": "Code snippet for an async statement"
-    },
-    "async/for": {
-        "prefix": "async/for",
-        "body": ["async for ${1:target} in ${2:iter}:", "\t${3:block}"],
-        "description": "Code snippet for an async for statement"
-    },
-    "async/for/else": {
-        "prefix": "async/for/else",
-        "body": [
-            "async for ${1:target} in ${2:iter}:",
-            "\t${3:block}",
-            "else:",
-            "\t${4:block}"
-        ],
-        "description": "Code snippet for an async for statement with else"
-    },
-    "async/with": {
-        "prefix": "async/with",
-        "body": ["async with ${1:expr} as ${2:var}:", "\t${3:block}"],
-        "description": "Code snippet for an async with statement"
-    },
-    "add/new/cell": {
-        "prefix": "add/new/cell",
-        "body": "# %%",
-        "description": "Code snippet to add a new cell"
-    },
-    "mark/markdown": {
-        "prefix": "mark/markdown",
-        "body": "# %% [markdown]",
-        "description": "Code snippet to add a new markdown cell"
-    }
+  "try/except": {
+    "prefix": "try/except",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}"
+    ],
+    "description": "Code snippet for a try/except statement"
+  },
+  "try/finally": {
+    "prefix": "try/finally",
+    "body": ["try:", "\t${1:pass}", "finally:", "\t${2:pass}"],
+    "description": "Code snippet for a try/finally statement"
+  },
+  "try/except/else": {
+    "prefix": "try/except/else",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}",
+      "else:",
+      "\t${5:pass}"
+    ],
+    "description": "Code snippet for a try/except/else statement"
+  },
+  "try/except/finally": {
+    "prefix": "try/except/finally",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}",
+      "finally:",
+      "\t${5:pass}"
+    ],
+    "description": "Code snippet for a try/except/finally statement"
+  },
+  "try/except/else/finally": {
+    "prefix": "try/except/else/finally",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}",
+      "else:",
+      "\t${5:pass}",
+      "finally:",
+      "\t${6:pass}"
+    ],
+    "description": "Code snippet for a try/except/else/finally statement"
+  },
+  "def(class method)": {
+    "prefix": "def class method",
+    "body": ["def ${1:funcname}(self, ${2:parameter_list}):", "\t${3:pass}"],
+    "description": "Code snippet for a class method"
+  },
+  "def(static class method)": {
+    "prefix": "def static class method",
+    "body": [
+      "@staticmethod",
+      "def ${1:funcname}(${2:parameter_list}):",
+      "\t${3:pass}"
+    ],
+    "description": "Code snippet for a static class method"
+  },
+  "def(abstract class method)": {
+    "prefix": "def abstract class method",
+    "body": [
+      "def ${1:funcname}(self, ${2:parameter_list}):",
+      "\traise NotImplementedError"
+    ],
+    "description": "Code snippet for an abstract class method"
+  },
+  "lambda": {
+    "prefix": "lambda",
+    "body": ["lambda ${1:parameter_list}: ${2:expression}"],
+    "description": "Code snippet for a lambda statement"
+  },
+  "if(main)": {
+    "prefix": "__main__",
+    "body": ["if __name__ == \"__main__\":", "    ${1:pass}"],
+    "description": "Code snippet for a `if __name__ == \"__main__\": ...` block"
+  },
+  "async/def": {
+    "prefix": "async/def",
+    "body": ["async def ${1:funcname}(${2:parameter_list}):", "\t${3:pass}"],
+    "description": "Code snippet for an async statement"
+  },
+  "async/for": {
+    "prefix": "async/for",
+    "body": ["async for ${1:target} in ${2:iter}:", "\t${3:block}"],
+    "description": "Code snippet for an async for statement"
+  },
+  "async/for/else": {
+    "prefix": "async/for/else",
+    "body": [
+      "async for ${1:target} in ${2:iter}:",
+      "\t${3:block}",
+      "else:",
+      "\t${4:block}"
+    ],
+    "description": "Code snippet for an async for statement with else"
+  },
+  "async/with": {
+    "prefix": "async/with",
+    "body": ["async with ${1:expr} as ${2:var}:", "\t${3:block}"],
+    "description": "Code snippet for an async with statement"
+  },
+  "add/new/cell": {
+    "prefix": "add/new/cell",
+    "body": "# %%",
+    "description": "Code snippet to add a new cell"
+  },
+  "mark/markdown": {
+    "prefix": "mark/markdown",
+    "body": "# %% [markdown]",
+    "description": "Code snippet to add a new markdown cell"
+  },
+  "readcsv": {
+    "prefix": "readcsv",
+    "body": [
+      "import pandas as pd",
+      "",
+      "${1:df} = pd.read_csv('$2', delimiter='${3:,}')",
+      "print(${1:df})"
+    ]
+  },
+  // -------Machine Learning--------
+  "ML-KmeanClustering": {
+    "prefix": "ML-KmeanClustering",
+    "body": [
+      "import numpy as np",
+      "from sklearn.cluster import KMeans",
+      "",
+      "# Define the data points",
+      "data = np.array(",
+      "    [",
+      "        [1],",
+      "        [2],",
+      "        [3],",
+      "        [4],",
+      "        [5],",
+      "        [6],",
+      "        [7],",
+      "        [8],",
+      "        [9],",
+      "        [10],",
+      "        [1]",
+      "    ]",
+      ")",
+      "",
+      "# Define the number of clusters",
+      "k = 3",
+      "",
+      "# Run k-means clustering",
+      "kmeans = KMeans(n_clusters=k)",
+      "kmeans.fit(data)",
+      "",
+      "# Print the cluster assignments",
+      "print(kmeans.labels_)",
+      "# predict",
+      "print(kmeans.predict([[3.8]]))"
+    ]
+  },
+  "ML-LinearRegression": {
+    "prefix": "ML-LinearRegression",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "from scipy import stats",
+      "import pandas as pd",
+      "",
+      "df = pd.read_csv('test-data.csv', delimiter='\t')",
+      "",
+      "kolom_target = 'max_kecepatan'",
+      "",
+      "# cari korelasi tiap kolom dengan kolom target dengan nilai absolut",
+      "print(df.corr(numeric_only='true').abs()[kolom_target].sort_values(ascending=False))",
+      "",
+      "# tentukan kolom yang menjadi x, berdasarkan nilai korelasi di bagian sebelumnya",
+      "x = df['umur_mobil']",
+      "y = df[kolom_target]",
+      "",
+      "slope, intercept, r, p, std_err = stats.linregress(x, y)",
+      "",
+      "def predict(x):",
+      "  return slope * x + intercept",
+      "",
+      "model = list(map(predict, x))",
+      "",
+      "plt.scatter(x, y)",
+      "plt.plot(x,model, color='red')",
+      "plt.show()",
+      "print ('Nilai Korelasi :', r)",
+      "print ('Prediksi Max Speed Mobil Umur 20 tahun :', predict(20))"
+    ]
+  },
+  "ML-LinearRegressionMultiple": {
+    "prefix": "ML-LinearRegressionMultiple",
+    "body": [
+      "import pandas as pd",
+      "from sklearn import linear_model",
+      "",
+      "df = pd.read_csv('test-data.csv', delimiter='\\t')",
+      "",
+      "kolom_target = 'max_kecepatan'",
+      "",
+      "# cari korelasi tiap kolom dengan kolom target dengan nilai absolut",
+      "print(df.corr(numeric_only='true').abs()[kolom_target].sort_values(ascending=False))",
+      "",
+      "# tentukan beberapa kolom yang menjadi menjadi variable, berdasarkan nilai korelasi di bagian sebelumnya",
+      "",
+      "kolom_variable = ['umur_mobil','harga']",
+      "",
+      "x = df[kolom_variable]",
+      "y = df[kolom_target]",
+      "",
+      "model  = linear_model.LinearRegression()",
+      "model.fit(x.values,y)",
+      "",
+      "print ('Prediksi Max Speed Mobil Umur 3 tahun, dengan harga 150000 :', model.predict([[3,150000]]))"
+    ]
+  },
+  "wordcloud": {
+    "prefix": "wordcloud",
+    "body": [
+      "from wordcloud import WordCloud",
+      "import matplotlib.pyplot as plt",
+      "",
+      "text = ${1:df}['${2:text}'].values",
+      "wordcloud = WordCloud().generate(str(text))",
+      "plt.imshow(wordcloud, interpolation='bilinear')",
+      "plt.axis(\"off\")",
+      "plt.show()"
+    ],
+    "description": "description for wordcloud"
+  },
+  "preprocess": {
+    "prefix": "preprocess",
+    "body": [
+      "from nltk.corpus import stopwords",
+      "import nltk",
+      "",
+      "stop_words = stopwords.words('english')",
+      "stop_words.extend([${1:'http'}])",
+      "",
+      "def preprocess(text):",
+      "    text = text.lower()",
+      "    text = nltk.word_tokenize(text)",
+      "    text = [word for word in text if word not in stop_words]",
+      "    text = [word for word in text if word.isalpha()]",
+      "    return text",
+      "",
+      "${2:df}['${3:text}'] = ${2:df}['${3:text}'].apply(preprocess)"
+    ],
+    "description": "description for preprocess"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for ${1:i} in range(len(${2:arr})):", "  print(${2:arr}[${1:i}])"]
+  },
+  "split": {
+    "prefix": "split",
+    "body": [
+      "from sklearn.model_selection import train_test_split\r",
+      "\r",
+      "X = df[[\"kode_kota\",\"kode_pintu\"]]\r",
+      "y = df[\"tinggi_air\"]\r",
+      "\r",
+      "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)",
+      "input_shape = [X_train.shape[1]]"
+    ],
+    "description": "description for split"
+  },
+  "map": {
+    "prefix": "map",
+    "body": [
+      "df['status_siaga'] = df['status_siaga'].map({\r",
+      "    'Status : Normal': 0, \r",
+      "    'Status : Siaga 1': 1, \r",
+      "    })"
+    ]
+  },
+  "confusion-matrix": {
+    "prefix": "confusion-matrix",
+    "body": [
+      "from sklearn.metrics import confusion_matrix\r",
+      "from sklearn.metrics import classification_report\r",
+      "import seaborn as sns\r",
+      "import matplotlib.pyplot as plt\r",
+      "\r",
+      "confusion_matrix(y_test, y_pred)\r",
+      "\r",
+      "cm = confusion_matrix(y_test, y_pred)\r",
+      "sns.heatmap(cm, annot=True, fmt='d')\r",
+      "plt.xlabel('Predicted')\r",
+      "plt.ylabel('Truth')\r",
+      "\r",
+      "print(classification_report(y_test, y_pred))"
+    ],
+    "description": "description for confusion-matrix"
+  },
+  "ML-neural-binary-classification": {
+    "prefix": "ML-neural-binary-classification",
+    "body": [
+      "from tensorflow import keras\r",
+      "from keras import layers\r",
+      "\r",
+      "model =  keras.Sequential([\r",
+      "    layers.BatchNormalization(input_shape=input_shape),\r",
+      "    layers.Dense(256,activation='relu'),\r",
+      "    layers.BatchNormalization(),\r",
+      "    layers.Dropout(0.3),\r",
+      "    layers.Dense(256,activation='relu'),\r",
+      "    layers.BatchNormalization(),\r",
+      "    layers.Dropout(0.3),\r",
+      "    layers.Dense(1, activation='sigmoid'),\r",
+      "])\r",
+      "\r",
+      "model.compile(\r",
+      "    optimizer='adam',\r",
+      "    loss='binary_crossentropy',\r",
+      "    metrics=['binary_accuracy'],\r",
+      ")\r",
+      "\r",
+      "early_stopping = keras.callbacks.EarlyStopping(\r",
+      "    patience=5,\r",
+      "    min_delta=0.001,\r",
+      "    restore_best_weights=True,\r",
+      ")\r",
+      "\r",
+      "history = model.fit(\r",
+      "    X_train, y_train,\r",
+      "    validation_data=(X_test, y_test),\r",
+      "    batch_size=512,\r",
+      "    epochs=200,\r",
+      "    callbacks=[early_stopping],\r",
+      ")\r",
+      "\r",
+      "history_df = pd.DataFrame(history.history)\r",
+      "history_df.loc[:, ['loss', 'val_loss']].plot(title=\"Cross-entropy\")\r",
+      "history_df.loc[:, ['binary_accuracy', 'val_binary_accuracy']].plot(title=\"Accuracy\")"
+    ],
+    "description": "description for ML-neural-binary-classification"
+  },
+  "plothist": {
+    "prefix": "plothist",
+    "body": ["fig = px.histogram(df, x=\"status_siaga\")\r", "fig.show()"],
+    "description": "description for plothist"
+  },
+  "ML-RandomForest": {
+    "prefix": "ML-RandomForest",
+    "body": [
+      "from sklearn.ensemble import RandomForestClassifier\r",
+      "\r",
+      "rfc_model = RandomForestClassifier(n_estimators=100)\r",
+      "rfc_model.fit(X_train, y_train)"
+    ],
+    "description": "description for ML-RandomForest"
+  },
+  "plotline": {
+    "prefix": "plotline",
+    "body": [
+      "fig = px.line(${1:df_kota_1}, ${2:x=\"tanggal\",} y=\"${3:tinggi_air}\", title='${4:Kota 1}')\r",
+      "fig.show()"
+    ],
+    "description": "description for plotline"
+  },
+  "plotlinemulti": {
+    "prefix": "plotlinemulti",
+    "body": [
+      "fig = make_subplots(rows=1, cols=2)\r",
+      "fig.add_trace(go.Scatter(y=df_kota_1['tinggi_air'], name=\"Kota 1\"),row=1, col=1)\r",
+      "fig.add_trace(go.Scatter(y=df_kota_2['tinggi_air'], name=\"Kota 2\"),row=1, col=2)\r",
+      "fig.show()"
+    ],
+    "description": "description for plotlinemulti"
+  }
 }
