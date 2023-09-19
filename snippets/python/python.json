@@ -128,7 +128,6 @@
       "print(${1:df})"
     ]
   },
-  // -------Machine Learning--------
   "ML-KmeanClustering": {
     "prefix": "ML-KmeanClustering",
     "body": [
