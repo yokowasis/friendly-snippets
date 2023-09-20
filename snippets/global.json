@@ -1,4 +1,25 @@
 {
+  "hashRoute": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "hashRoute",
+    "body": [
+      "import { HashRouter, Route, Routes } from \"react-router-dom\";",
+      "",
+      "const Home = () => {",
+      "  return <>Home</>;",
+      "};",
+      "",
+      "const App = () => (",
+      "  <HashRouter>",
+      "    <Routes>",
+      "      <Route path=\"/\" Component={Home} />",
+      "    </Routes>",
+      "  </HashRouter>",
+      ");",
+      "",
+      "export default App;"
+    ]
+  },
   "alertyesno": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "alertyesno",
