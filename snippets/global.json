@@ -1,0 +1,7 @@
+{
+  "fn": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "fn",
+    "body": ["function ${1:functionName}() {", "  ${2}", "}"]
+  }
+}
