@@ -1,127 +1,1654 @@
 {
-  "hashRoute": {
-    "scope": "javascriptreact,typescriptreact",
-    "prefix": "hashRoute",
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 	// Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  //
+  // -------CPP--------------
+  "main": {
+    "scope": "cpp",
+    "prefix": "main",
     "body": [
-      "import { HashRouter, Route, Routes } from \"react-router-dom\";",
+      "#include <iostream>",
+      "using namespace std;",
       "",
-      "const Home = () => {",
-      "  return <>Home</>;",
-      "};",
-      "",
-      "const App = () => (",
-      "  <HashRouter>",
-      "    <Routes>",
-      "      <Route path=\"/\" Component={Home} />",
-      "    </Routes>",
-      "  </HashRouter>",
-      ");",
-      "",
-      "export default App;"
-    ]
-  },
-  "alertyesno": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "alertyesno",
-    "body": [
-      "const r = confirm(\"Press a button!\");",
-      "if (r === true) {",
-      "\tconst txt = \"You pressed OK!\";",
-      "} else {",
-      "\tconst txt = \"You pressed Cancel!\";",
+      "int main() {",
+      "\t$1",
+      "\treturn 0;",
       "}"
     ]
+  },
+  "for": {
+    "scope": "cpp",
+    "prefix": "for",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < ${2:count}; ${1:i}++) {",
+      "\t$3",
+      "}"
+    ]
+  },
+  "while": {
+    "scope": "cpp",
+    "prefix": "while",
+    "body": ["while (${1:condition}) {", "\t$2", "}"]
+  },
+  "dowhile": {
+    "scope": "cpp",
+    "prefix": "dowhile",
+    "body": ["do {", "\t$1", "} while (${2:condition});"]
+  },
+  // -----SQL--------
+  "move": {
+    "scope": "sql",
+    "prefix": "move",
+    "body": [
+      "ALTER TABLE `${1:table_name}` CHANGE `${2:columname}` `${2:columname}` ${3|VARCHAR,INT,TEXT,LONGTEXT|}(${4|5,10,100,255|}) DEFAULT ${5|\"\",NULL,0|} AFTER `${6:columnname}`;"
+    ]
+  },
+  // -------PHP--------------
+  "whoami" : {
+    scope : "php,html",
+    "prefix" : "whoami",
+    "body" : "<?php echo posix_getpwuid(posix_geteuid())['name']; ?>"
+  },
+  "php-pre": {
+    "scope": "php",
+    "prefix": "pre",
+    "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
+  },
+  "inline-php": {
+    "scope": "html",
+    "prefix": "ph",
+    "body": "<?php ${1} ?>",
+    "description": "Inline PHP Tag"
+  },
+  "backward-php": {
+    "scope": "html",
+    "prefix": "bph",
+    "body": "?> $1 <?php",
+    "description": "Inline PHP Tag"
+  },
+  "dthelper": {
+    "scope": "html",
+    "prefix": "dthelper",
+    "body": [
+      "<?php",
+      "include(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/require.php\");",
+      "require_once(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/bimasoft-dt-helper.php\");",
+      "",
+      "\\$dtable = \"datasiswa\";",
+      "\\$bimasoft = new bimasoft_dt_helper(\"./page/\" . \\$_GET['page'] . \"/controller.php?&dtable=\\$dtable\");",
+      "",
+      "\\$comp->checkPermission(\\$_GET['j_'], \\$permission, \\$bimasoft);",
+      "\\$bimasoft->table(\\$dtable);",
+      "",
+      "?>",
+      "<div class=\"content-wrapper\">",
+      "  <div class=\"content-header\">",
+      "    <div class=\"container-fluid\">",
+      "      <div class=\"row mb-2\">",
+      "        <div class=\"col-sm-6\">",
+      "          <h1 class=\"m-0 text-dark\">${1:Data Siswa}</h1>",
+      "        </div><!-- /.col -->",
+      "        <div class=\"col-sm-6\">",
+      "          <ol class=\"breadcrumb float-sm-right\">",
+      "            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+      "            <li class=\"breadcrumb-item active\">${1:Data Siswa}</li>",
+      "          </ol>",
+      "        </div><!-- /.col -->",
+      "      </div><!-- /.row -->",
+      "    </div><!-- /.container-fluid -->",
+      "  </div>",
+      "",
+      "  <section class=\"content\">",
+      "    <div class=\"container-fluid\">",
+      "      <div class=\"row\">",
+      "        <div class=\"col-md-12\">",
+      "          <div class=\"card\">",
+      "            <div class=\"card-header\">",
+      "              <div class=\"row\">",
+      "                <div class=\"col-8\">${1:Data Siswa}</div>",
+      "                <div class=\"col-4\">",
+      "                  <?php echo \\$comp->dtCustomMenu() ?>",
+      "                </div>",
+      "              </div>",
+      "            </div>",
+      "            <div class=\"card-body\">",
+      "              <?php echo (\\$bimasoft->renderHTML());  ?>",
+      "            </div>",
+      "            <div class=\"card-footer clearfix\">",
+      "",
+      "            </div>",
+      "",
+      "          </div>",
+      "        </div>",
+      "      </div>",
+      "    </div>",
+      "  </section>",
+      "",
+      "</div>",
+      "",
+      "<?php echo \\$bimasoft->renderJS() ?>      "
+    ]
+  },
+  "controllerDefault": {
+    "scope": "html",
+    "prefix": "controllerDefault",
+    "body": [
+      "<?php require_once(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/bimasoft-dt-helper.php\"); ?>",
+      "<?php",
+      "\\$bimasoft = new bimasoft_dt_helper(NULL, \\$path);",
+      "\\$bimasoft->table(\\$_GET['dtable']);",
+      "\\$bimasoft->allowEmpty(\"catatan\");",
+      "\\$bimasoft->renderPHP();"
+    ]
+  },
+  "inline-php-echo": {
+    "scope": "php",
+    "prefix": "ph=",
+    "body": "<?php echo \"$1\" ?>",
+    "description": "Inline PHP Tag"
+  },
+  "ob": {
+    "scope": "php",
+    "prefix": "ob",
+    "body": ["ob_start();", "//Do Something", "$1", "return ob_get_clean();"]
+  },
+  "pe": {
+    "scope": "php",
+    "prefix": "pe",
+    "body": ["echo \"<p>${1:this}</p>\";"]
+  },
+  "nowdate": {
+    "scope": "php",
+    "prefix": "nowdate",
+    "body": ["date(\"Y-m-d\")"]
+  },
+  "nowtime": {
+    "scope": "php",
+    "prefix": "nowtime",
+    "body": ["date(\"H:i\")"]
+  },
+  "toint": {
+    "scope": "php",
+    "prefix": "toint",
+    "body": "$${1:str} = (int)$${1:str};"
+  },
+  "curl": {
+    "scope": "php",
+    "prefix": "curl",
+    "body": []
+  },
+  "php_date": {
+    "scope": "php",
+    "prefix": "php_date",
+    "body": ["\\$date = date(\"Y-m-d\",time());"]
+  },
+  "mysql": {
+    "scope": "php",
+    "prefix": "mysql",
+    "body": [
+      "\\$servername = \"localhost\";",
+      "\\$username = \"username\";",
+      "\\$password = \"password\";",
+      "\\$dbname = \"myDB\";",
+      "",
+      "// Create connection",
+      "\\$conn = new mysqli(\\$servername, \\$username, \\$password, \\$dbname);",
+      "// Check connection",
+      "if (\\$conn->connect_error) {",
+      "\tdie(\"Connection failed: \" . \\$conn->connect_error);",
+      "} "
+    ]
+  },
+  "mysql_select": {
+    "scope": "php",
+    "prefix": "mysql_select",
+    "body": [
+      "\\$sql = \"SELECT id, firstname, lastname FROM MyGuests\";",
+      "\\$result = \\$conn->query(\\$sql);",
+      "if (\\$result->num_rows > 0) {",
+      "\t// output data of each row",
+      "\twhile(\\$row = \\$result->fetch_assoc()) {",
+      "\t\techo \"id: \" . \\$row[\"id\"]. \" - Name: \" . \\$row[\"firstname\"]. \" \" . \\$row[\"lastname\"]. \"<br>\";",
+      "\t}",
+      "} else {",
+      "\techo \"0 results\";",
+      "}",
+      "\\$conn->close();"
+    ]
+  },
+  "toarray": {
+    "scope": "php",
+    "prefix": "toarray",
+    "body": "${1:\\$array} =  (array) ${2:\\$yourObject};"
+  },
+  "wp_shortcode": {
+    "scope": "php",
+    "prefix": "wp_shortcode",
+    "body": [
+      "function ${1:shortcode_name}( \\$atts ) {",
+      "\t\\$a = shortcode_atts( array(",
+      "\t\t'foo' => 'something',",
+      "\t\t'bar' => 'something else',",
+      "\t), \\$atts );",
+      "\tob_start();",
+      "\t//Do Something",
+      "\tinclude '${1:shortcode_name}.php';",
+      "\treturn ob_get_clean();",
+      "}",
+      "add_shortcode( '${1:shortcode_name}', '${1:shortcode_name}' );"
+    ]
+  },
+  "wp_select": {
+    "scope": "php",
+    "prefix": "wp_select",
+    "body": [
+      "global \\$wpdb;",
+      "\\$sql =",
+      "\t\"SELECT ID, post_title ",
+      "\tFROM \\$wpdb->posts",
+      "\tWHERE post_status = %s ",
+      "\t\tAND post_author = %d",
+      "\t\";",
+      "\\$rows = \\$wpdb->get_results(\\$wpdb->prepare(\\$sql,array('string',10)));",
+      "",
+      "foreach ( \\$rows as \\$row ) ",
+      "{",
+      "\techo \\$row->post_title;",
+      "}"
+    ]
+  },
+  "wp_get_var": {
+    "scope": "php",
+    "prefix": "wp_get_var",
+    "body": [
+      "global \\$wpdb;",
+      "\\$sql =",
+      "\"",
+      "SELECT `column`",
+      "FROM `table`",
+      "WHERE `something` = %s",
+      "\";",
+      "",
+      "\\$var = \\$wpdb->get_var(\\$wpdb->prepare(\\$sql,array(\"something\")));"
+    ]
+  },
+  "wp_insert": {
+    "scope": "php",
+    "prefix": "wp_insert",
+    "body": [
+      "global \\$wpdb;",
+      "\\$wpdb->insert( ",
+      "\t'table', ",
+      "\tarray( ",
+      "\t\t'column1' => 'value1', ",
+      "\t\t'column2' => 123 ",
+      "\t), ",
+      "\tarray( ",
+      "\t\t'%s', ",
+      "\t\t'%d' ",
+      "\t) ",
+      ");",
+      "\\$insert_id = \\$wpdb->insert_id;"
+    ]
+  },
+  "wp_update": {
+    "scope": "php",
+    "prefix": "wp_update",
+    "body": [
+      "global \\$wpdb;",
+      "\\$affectedrows = ",
+      "\\$wpdb->update( ",
+      "\t'table', ",
+      "\tarray( ",
+      "\t\t'column1' => 'value1', ",
+      "\t\t'column2' => 123 ",
+      "\t), ",
+      "\tarray( ",
+      "\t\t'where1' => 'value1', ",
+      "\t) ",
+      ");"
+    ]
+  },
+  "wp_rest": {
+    "scope": "php",
+    "prefix": "wp_rest",
+    "body": [
+      "add_action('rest_api_init', function () {",
+      "\tregister_rest_route( 'bimasoft-mms/v1', 'check-user/(?P<username>.+)/(?P<password>.+)',array(",
+      "\t\t'methods'  => 'GET',",
+      "\t\t'callback' => function(\\$request){",
+      "",
+      "\t\t\t\\$username = \\$request['username'];",
+      "\t\t\t\\$pass = \\$request['password'];",
+      "",
+      "\t\t\t\\$user = get_user_by( 'login', \\$username );",
+      "\t\t\tif ( \\$user && wp_check_password( \\$pass, \\$user->data->user_pass, \\$user->ID) ) {",
+      "\t\t\t\t\\$status = 'pass';",
+      "\t\t\t\t\\$roles = \\$user->roles[0];",
+      "\t\t\t} else {",
+      "\t\t\t\t\\$status = 'fail';",
+      "\t\t\t\t\\$roles = '';",
+      "\t\t\t}",
+      "",
+      "\t\t\t\\$response = new WP_REST_RESPONSE(array(",
+      "\t\t\t\t\"status\" => \\$status,",
+      "\t\t\t\t\"role\" => \\$roles",
+      "\t\t\t),200);",
+      "\t\t\treturn (\\$response);",
+      "",
+      "\t\t}",
+      "\t));",
+      "});"
+    ]
+  },
+  "wp_admin": {
+    "scope": "php",
+    "prefix": "wp_admin",
+    "body": [
+      "/*",
+      "\t===============",
+      "\tAdmin Page",
+      "\t===============",
+      "*/",
+      "",
+      "",
+      "function parent_menu_slug_content(){",
+      "\t//Generation of Admin Page",
+      "}",
+      "",
+      "function sub_menu_slug_content(){",
+      "\t//Sub Menu",
+      "}",
+      "",
+      "function parent_menu_add_admin_page(){",
+      "\t\\$page_title \t\t= 'Parent Title';",
+      "\t\\$menu_title \t\t= 'Parent Title';",
+      "\t\\$menu_slug\t\t\t= 'parent_menu_slug';",
+      "\t\\$callback \t\t\t= 'parent_menu_slug_content';",
+      "\t\\$icon\t\t\t\t= 'dashicons-list-view';",
+      "\t\\$position\t\t\t= 110;",
+      "",
+      "\t/*",
+      "\t2\t- Dashboard",
+      "\t4\t- Separator",
+      "\t5\t- Posts",
+      "\t10\t- Media",
+      "\t15 \t- Links",
+      "\t20\t- Pages",
+      "\t25\t- Comments",
+      "\t59\t- Separator",
+      "\t60\t- Appearance",
+      "\t65  - Plugins",
+      "\t70\t- Users",
+      "\t75\t- Tools",
+      "\t80\t- Settings",
+      "\t99\t- Separator",
+      "\t*/",
+      "",
+      "\t//Generate Admin Page",
+      "\tadd_menu_page( \\$page_title, \\$menu_title, 'manage_options', \\$menu_slug, \\$callback, \\$icon, \\$position );",
+      "",
+      "\t//Generate Admin Sub-Page",
+      "\t\\$page_title \t\t= 'Sub Page Title';",
+      "\t\\$menu_title \t\t= 'Sub Page Title';",
+      "\t\\$menu_slug\t\t\t= 'sub_menu_slug';",
+      "\t\\$callback \t\t\t= 'sub_menu_slug_content';",
+      "\tadd_submenu_page( 'parent_menu_slug', \\$page_title, \\$menu_title, 'manage_options', \\$menu_slug, \\$callback );",
+      "}",
+      "",
+      "add_action( 'admin_menu', 'parent_menu_add_admin_page');"
+    ]
+  },
+  "ecosystempm2json": {
+    "prefix": "ecosystempm2json",
+    "scope": "json",
+    "body": [
+      "{",
+      "  \"apps\": [",
+      "    {",
+      "      \"name\": \"cbtAdmin-svelte:3000\",",
+      "      \"script\": \"npm run deploy\",",
+      "      \"watch\": false,",
+      "      \"instances\": 1,",
+      "      \"env\": {",
+      "        \"PORT\": 3000",
+      "      }",
+      "    }",
+      "  ]",
+      "}"
+    ],
+    "description": ""
+  },
+  // JAVASCRIPT
+  "openai": {
+    "prefix": "openai",
+    "scope": "typescript,javascript",
+    "body": [
+      "import OpenAI from \"openai\";",
+      "",
+      "const openai = new OpenAI();",
+      "",
+      "async function main() {",
+      "  const completion = await openai.chat.completions.create({",
+      "    messages: [{ role: \"system\", content: \"You are a helpful assistant.\" }],",
+      "    model: \"gpt-3.5-turbo\",",
+      "  });",
+      "",
+      "  console.log(completion.choices[0]);",
+      "}",
+      "",
+      "main();"
+    ],
+    "description": ""
+  },
+  "ecosystempm2": {
+    "scope": "javascript",
+    "prefix": "ecosystempm2",
+    "body": [
+      "module.exports = {",
+      "  apps: [",
+      "    {",
+      "      name: \"businessplan:3010\",",
+      "      script: \"npm start\",",
+      "    },",
+      "  ],",
+      "};"
+    ]
+  },
+  "fn": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "fn",
+    "body": ["function ${1:functionName}() {", "  ${2}", "}"]
+  },
+  "timeout": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "timeout",
+    "body": [
+      "const timeout = new Timeout();",
+      "timeout",
+      "  .wrap(",
+      "    somefunction(),",
+      "    10000,",
+      "    \"Timeout...\"",
+      "  )",
+      "  .then((s) => {",
+      "    // Do Something",
+      "  })",
+      "  .catch((e) => {",
+      "    console.log (e);",
+      "  })",
+      "  .finally(() => timeout.clear(...timeout.ids));"
+    ],
+    "description": ""
+  },
+  "typetemplate": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "tyt",
+    "body": [
+      "/**",
+      " * @template T",
+      " * @typedef ${1:TypeName}",
+      " * @type {{a : string}}",
+      " */"
+    ]
+  },
+  "typedef": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "tyd",
+    "body": [
+      "/**",
+      " * @typedef ${1:TypeName}",
+      " * @type {{a : string}}",
+      " */"
+    ]
+  },
+  "typeimport": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "typeimport",
+    "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
+  },
+  "prisma": {
+    "scope": "typescriptreact,typescript,javascript,javascriptreact",
+    "prefix": "prisma",
+    "body": [
+      "const prisma = new PrismaClient();",
+      "",
+      "async function main() {",
+      "  const user = await prisma.users.create({",
+      "    data: {",
+      "      username: \"${1:alice2}\",",
+      "      password: \"${2:password}\",",
+      "      hak_akses: \"${3:admin}\",",
+      "    },",
+      "  });",
+      "  console.log(user);",
+      "}",
+      "",
+      "function execSQL() {",
+      "  main()",
+      "    .then(async () => {",
+      "      await prisma.\\$disconnect();",
+      "    })",
+      "    .catch(async (e) => {",
+      "      console.error(e);",
+      "      await prisma.\\$disconnect();",
+      "      process.exit(1);",
+      "    });",
+      "}"
+    ]
+  },
+  "couchonchanges": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "couchdbOnChanges",
+    "body": [
+      "const changes = db.from(`table`).changes((c) => {",
+      "\tconsole.log(c);",
+      "}, `idtowatch`);",
+      "return () => {",
+      "\tchanges.cancel();",
+      "};"
+    ],
+    "description": "React useEffect with changes"
+  },
+  "muiSelect": {
+    "scope": "typescriptreact, javascriptreact",
+    "prefix": "muiSelect",
+    "body": [
+      "<FormControl fullWidth>",
+      "  <InputLabel id=\"demo-simple-select-label\">Age</InputLabel>",
+      "  <Select",
+      "    labelId=\"demo-simple-select-label\"",
+      "    id=\"demo-simple-select\"",
+      "    value={age}",
+      "    label=\"Age\"",
+      "    onChange={handleChange}",
+      "  >",
+      "    <MenuItem value={10}>Ten</MenuItem>",
+      "    <MenuItem value={20}>Twenty</MenuItem>",
+      "    <MenuItem value={30}>Thirty</MenuItem>",
+      "  </Select>",
+      "</FormControl>"
+    ]
+  },
+  "supabaseUpload": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "supabaseUpload",
+    "body": [
+      "const file = /** @type {HTMLInputElement} */ (document.getElementById('${1:file}'));",
+      "if (file?.files?.length) {",
+      "\tconst fileToUpload = file.files[0];",
+      "\tconst { data, error } = await supabase.storage",
+      "\t\t.from('${2:table}')",
+      "\t\t.upload('${3:file}', fileToUpload, {",
+      "\t\t\tcacheControl: '3600',",
+      "\t\t\tupsert: false",
+      "\t\t});",
+      "\t\tif (error) {",
+      "\t\t\tconsole.log(error);",
+      "\t\t} else {",
+      "\t\t\tconsole.log(data);",
+      "\t\t}",
+      "}"
+    ]
+  },
+  "typeWrap": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "ty",
+    "body": ["/** @type {${1:TypeName}} */ ($TM_SELECTED_TEXT)"]
+  },
+  "typeWrapPHP": {
+    "scope": "php",
+    "prefix": "ty",
+    "body": [
+      "/** @var ${1:TypeName}  $TM_SELECTED_TEXT */",
+      "$TM_SELECTED_TEXT"
+    ]
+  },
+  "type": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ":",
+    "body": ["/** @type {${1:TypeName}} */ "]
   },
   "cl": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "cl",
     "body": ["console.${2:log}(${1:something});"]
   },
+  "ajax": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ajax",
+    "body": [
+      "$.ajax({",
+      "\turl: '/path/to/file',",
+      "\ttype: 'default GET (Other values: POST)',",
+      "\tdataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',",
+      "\tdata: {param1: 'value1'},",
+      "}).done(function(e) {",
+      "\tconsole.log(\"success\");",
+      "}).fail(function(e) {",
+      "\tconsole.log(\"error\");",
+      "}).always(function(e) {",
+      "\tconsole.log(\"complete\");",
+      "});"
+    ]
+  },
+  "replaceall": {
+    "prefix": "replaceall",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact",
+    "body": ["${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');"]
+  },
+  "jqr": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "jqr",
+    "body": ["(function( $ ) {", "\t${1:Jquery Stuff}", "})( jQuery );"]
+  },
+  "alertyesno": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "alertyesno",
+    "body": [
+      "const r = confirm(\"${1:Some Prompt}\");",
+      "if (r == true) {",
+      "  ${2:// Do Something}",
+      "}"
+    ]
+  },
+  "toint_js": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "toint",
+    "body": "${1:varName} = parseInt(${1:varName});"
+  },
   "fetch": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "fetch",
     "body": [
-      "fetch(\"https://${1:someurl.com}\",{",
+      "fetch(\"https://bot.bimasoft.web.id:4020/getip\",{",
       "\tmethod: \"GET\",",
       "\theaders: {",
       "\t\t'Accept': 'application/json',",
       "\t\t'Content-Type': 'application/json'",
       "\t},",
       "})",
-      "\t.then(res => res.json())",
-      "\t.then((result) => {",
-      "\t\tconsole.log(result);",
-      "\t})",
-      "\t.catch((err) => {",
-      "\t\tconsole.log(err);",
-      "\t})"
+      ".then(res => res.json())",
+      ".then((result) => {",
+      "\tconsole.log(result);",
+      "})",
+      ".catch((err) => {",
+      "\tconsole.log(err);",
+      "})"
+    ]
+  },
+  "preact": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "preact",
+    "body": [
+      "const ${1:Component} = (props) => {",
+      "\treturn html``;",
+      "}",
+      "",
+      "export default ${1:Component};"
+    ]
+  },
+  "react": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "react",
+    "body": [
+      "const ${1:Component} = (props) => {",
+      "\treturn (<></>);",
+      "}",
+      "",
+      "export default ${1:Component};"
+    ]
+  },
+  "svelteeach": {
+    "scope": "svelte",
+    "prefix": "each",
+    "body": ["{#each ${1:items} as ${2:item}}", "\t${3:item}", "{/each}"]
+  },
+  "svelteifelse": {
+    "scope": "svelte",
+    "prefix": "ifelse",
+    "body": [
+      "{#if ${1:true}}",
+      "\t${2:dosomething}",
+      "{:else}",
+      "\t${3:somethingelse}",
+      "{/if}"
+    ]
+  },
+  "svelteif": {
+    "scope": "svelte",
+    "prefix": "if",
+    "body": ["{#if ${1:true}}", "\t${2: //dosomething}", "{/if}"]
+  },
+  "svelte": {
+    "scope": "svelte",
+    "prefix": "svelte",
+    "body": [
+      "<script lang=\"ts\">",
+      "\timport type { PageData, ActionData } from './\\$types';",
+      "\texport let data: PageData;",
+      "\texport let form: ActionData;",
+      "</script>",
+      "",
+      "{#if form?.success}",
+      "\t<p>Successfully logged in! Welcome back</p>",
+      "{/if}"
+    ]
+  },
+  "svelteAPI": {
+    "scope": "typescript",
+    "prefix": "svelteapi",
+    "body": [
+      "import { json } from \"@sveltejs/kit\";",
+      "import type { RequestHandler } from \"./\\$types\";",
+      "",
+      "const headers = {",
+      "  \"Access-Control-Allow-Origin\": \"*\",",
+      "  \"Access-Control-Allow-Methods\": \"GET,HEAD,PUT,PATCH,POST,DELETE\",",
+      "  \"Access-Control-Allow-Headers\": \"Content-Type,authorization\",",
+      "};",
+      "",
+      "export const OPTIONS: RequestHandler = () => {",
+      "  return new Response(\"\", {",
+      "    status: 200,",
+      "    headers,",
+      "  });",
+      "};",
+      "export const POST: RequestHandler = async ({ request, cookies }) => {",
+      "  const { something } = await request.json();",
+      "",
+      "  return json({ something }, { status: 200, headers });",
+      "};",
+      "",
+      "export const GET: RequestHandler = ({ url, params }) => {",
+      "  const q = url.searchParams.get(\"q\");",
+      "  // const slug = params.slug;",
+      "  const number = Math.floor(Math.random() * 6) + 1;",
+      "",
+      "  return json({ number }, {status:200, headers});",
+      "};",
+      ""
+    ]
+  },
+  "sveltePost": {
+    "scope": "javascript,typescript",
+    "prefix": "sveltePost",
+    "body": [
+      "/* eslint-disable no-unused-vars */",
+      "",
+      "import { json } from '@sveltejs/kit';",
+      "",
+      "/** @type {import('./\\$types').RequestHandler} */",
+      "export async function POST({ request }) {",
+      "\tconst { somevar } = /** @type {{somevar:string}} */ (await request.json());",
+      "\treturn json({});",
+      "}"
+    ]
+  },
+  "sveltePageServer": {
+    "scope": "javascript,typescript",
+    "prefix": "svelteServer",
+    "body": [
+      "/* eslint-disable no-unused-vars */",
+      "/** @type {import('./\\$types').PageServerLoad} */",
+      "export async function load({ cookies, params }) {",
+      "\treturn {};",
+      "}",
+      "",
+      "/** @type {import('./\\$types').Actions} */",
+      "export const actions = {",
+      "\tdefault: async ({ cookies, request }) => {",
+      "\t\tconst data = await request.formData();",
+      "\t\tconst someVar = data.get('someVar');",
+      "\t\treturn { success: true };",
+      "\t}",
+      "};"
+    ]
+  },
+  "nextApiPost": {
+    "prefix": "nextApiPost",
+    "scope": "javascript",
+    "body": [
+      "// @ts-check",
+      "import { NextResponse } from \"next/server\"",
+      "export const runtime = 'edge'",
+      "/**",
+      " * @typedef { import(\"next/server\").NextRequest } NextRequest",
+      " */",
+      "",
+      "export const OPTIONS = async () => {",
+      "  return NextResponse.json({",
+      "    status: \"ok\",",
+      "  });",
+      "};",
+      "",
+      "/**",
+      " *",
+      " * @param {NextRequest} req",
+      " * @param {{params : Object<string,string>}} DynamicRouteParams",
+      " * @returns",
+      " */",
+      "export const POST = async (req , {params}) => {",
+      "  try {",
+      "    const body = await req.json();",
+      "    /** @type {Object.<string,string>} */",
+      "    const {} = body",
+      "    const {} = params ? params : {};",
+      "",
+      "    return NextResponse.json({ status: \"ok\", body });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: error.toString() });",
+      "  }",
+      "};"
+    ]
+  },
+  "nextApiRouteTS": {
+    "prefix": "nextapiroute",
+    "scope": "typescript",
+    "body": [
+      "// path : app/somepath/route.ts",
+      "",
+      "import { NextRequest, NextResponse } from \"next/server\";",
+      "// export const runtime = \"edge\";",
+      "",
+      "export const OPTIONS = async () => {",
+      "  return NextResponse.json({",
+      "    status: \"ok\",",
+      "  });",
+      "};",
+      "",
+      "export const GET = async (",
+      "  req: NextRequest,",
+      "  { params }: { params: { [s: string]: string } }",
+      ") => {",
+      "  try {",
+      "    const url = new URL(req.url);",
+      "    const {} = params ? params : {};",
+      "    const searchParams = new URLSearchParams(url.search);",
+      "    const test = searchParams.get(\"test\");",
+      "",
+      "    return NextResponse.json({ status: \"ok\" });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: (error as any).toString() });",
+      "  }",
+      "};",
+      "",
+      "export const POST = async (",
+      "  req: NextRequest,",
+      "  { params }: { params: { [s: string]: string } }",
+      ") => {",
+      "  try {",
+      "    const body = await req.json();",
+      "    const {}: { [key: string]: string } = body;",
+      "    const {} = params;",
+      "",
+      "    return NextResponse.json({ status: \"ok\", body });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: (error as any).toString() });",
+      "  }",
+      "};",
+      ""
+    ],
+    "description": ""
+  },
+  "nextApiPostTS": {
+    "prefix": "nextapipost",
+    "scope": "typescript",
+    "body": [
+      "// path : app/somepath/route.ts",
+      "",
+      "import { NextRequest, NextResponse } from \"next/server\";",
+      "// export const runtime = \"edge\";",
+      "",
+      "export const OPTIONS = async () => {",
+      "  return NextResponse.json({",
+      "    status: \"ok\",",
+      "  });",
+      "};",
+      "",
+      "export const POST = async (",
+      "  req: NextRequest,",
+      "  { params }: { params: { [s: string]: string } }",
+      ") => {",
+      "  try {",
+      "    const body = await req.json();",
+      "    const {}: { [key: string]: string } = body;",
+      "    const {} = params;",
+      "",
+      "    return NextResponse.json({ status: \"ok\", body });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: (error as any).toString() });",
+      "  }",
+      "};",
+      ""
+    ],
+    "description": ""
+  },
+  "nextApiRoute": {
+    "prefix": "nextApiRoute",
+    "scope": "javascript",
+    "body": [
+      "// @ts-check",
+      "import { NextResponse } from \"next/server\"",
+      "export const runtime = 'edge'",
+      "/**",
+      " * @typedef { import(\"next/server\").NextRequest } NextRequest",
+      " */",
+      "",
+      "export const OPTIONS = async () => {",
+      "  return NextResponse.json({",
+      "    status: \"ok\",",
+      "  });",
+      "};",
+      "",
+      "/**",
+      " *",
+      " * @param {NextRequest} req",
+      " * @param {{params : Object<string,string>}} DynamicRouteParams",
+      " * @returns",
+      " */",
+      "export const GET = async (req, {params}) => {",
+      "  try {",
+      "    const url = new URL(req.url);",
+      "    const {} = params ? params : {};",
+      "    const searchParams = new URLSearchParams(url.search);",
+      "    const test = searchParams.get(\"test\");",
+      "",
+      "    return NextResponse.json({ status: \"ok\" });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: error.toString() });",
+      "  }",
+      "};",
+      "",
+      "/**",
+      " *",
+      " * @param {NextRequest} req",
+      " * @param {{params : Object<string,string>}} DynamicRouteParams",
+      " * @returns",
+      " */",
+      "export const POST = async (req , {params}) => {",
+      "  try {",
+      "    const body = await req.json();",
+      "    /** @type {Object.<string,string>} */",
+      "    const {} = body",
+      "    const {} = params;",
+      "",
+      "    return NextResponse.json({ status: \"ok\", body });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ err: error.toString() });",
+      "  }",
+      "};",
+      ""
+    ],
+    "description": "nextApiRoute"
+  },
+  "sveltePageLoad": {
+    "scope": "javascript",
+    "prefix": "svelte",
+    "body": [
+      "/** @type {import('./\\$types').PageLoad} */",
+      "export async function load({ params }) {",
+      "\treturn {};",
+      "}"
+    ]
+  },
+  "sveltePageLoadTS": {
+    "scope": "typescript",
+    "prefix": "svelte",
+    "body": [
+      "import type { PageLoad } from './\\$types';",
+      "",
+      "export const load = (async ({ fetch, params }) => {",
+      "\tconst res = await fetch(`/api/items/${params.id}`);",
+      "\tconst item = await res.json();",
+      "",
+      "\treturn { item };",
+      "}) satisfies PageLoad;"
+    ]
+  },
+  "preactClass": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "preactClass",
+    "body": [
+      "class classComponent extends Component {",
+      "\tconstructor(props) {",
+      "\t\tsuper();",
+      "\t\tthis.state = {",
+      "\t\t\ttext: '',",
+      "\t\t};",
+      "\t\tthis.btnClick = this.btnClick.bind(this);",
+      "\t}",
+      "\tcomponentDidMount() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'OK',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\tbtnClick() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'BTN CLICKED',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\trender() {",
+      "\t\treturn html`",
+      "\t\t\t<div>",
+      "\t\t\t\t<h1>${this.state.text}</h1>",
+      "\t\t\t\t<button onclick=${this.btnClick}>CLICK ME !!</button>",
+      "\t\t\t</div>",
+      "\t\t`;",
+      "\t}",
+      "}",
+      "",
+      "export default classComponent;"
+    ]
+  },
+  "promisenew": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "promisenew",
+    "body": [
+      "return new Promise(async (resolve, reject) => {",
+      "\tif (\"OK\") {",
+      "\t\tresolve (\"OK\")",
+      "\t} else {",
+      "\t\treject (\"ERROR\");",
+      "\t}",
+      "});"
+    ]
+  },
+  "preactRouter": {
+    "scope": "html,javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "preactRouter",
+    "body": [
+      "<\\${Router} history=\\${createHashHistory()} >",
+      "\t<\\${Login} path=\"/\" />",
+      "\t<\\${AsyncRoute} path=\"/dashboard\" getComponent=\\${()=>import(\"../Pages/Dashboard.js\").then(module=>module.default)} />",
+      "<//>"
+    ]
+  },
+  "searchParams": {
+    "scope": "typescript",
+    "prefix": "searchParams",
+    "body": [
+      "const { searchParams } = new URL(req.url)",
+      "const hello = searchParams.get('hello')"
+    ]
+  },
+  "returnedge": {
+    "scope": "typescript",
+    "prefix": "returnedge",
+    "body": [
+      "return new NextResponse(",
+      "  JSON.stringify({",
+      "    hello: \"World\",",
+      "  }),",
+      "  {",
+      "    status: 200,",
+      "    headers: {",
+      "      \"content-type\": \"application/json\",",
+      "    },",
+      "  }",
+      ");"
+    ]
+  },
+  "nextedge13": {
+    "scope": "typescript",
+    "prefix": "nextedge13",
+    "body": [
+      "import { NextRequest, NextResponse } from \"next/server\";",
+      "",
+      "export async function OPTIONS() {",
+      "  return new NextResponse(\"ok\", {",
+      "    status: 200,",
+      "  });",
+      "}",
+      "",
+      "export async function GET(req: NextResponse) {",
+      "  return new NextResponse(",
+      "    JSON.stringify({",
+      "      hello: \"World\",",
+      "    }),",
+      "    {",
+      "      status: 200,",
+      "      headers: {",
+      "        \"content-type\": \"application/json\",",
+      "      },",
+      "    }",
+      "  );",
+      "}",
+      "",
+      "export async function POST(req: NextRequest) {",
+      "  const url = req.nextUrl;",
+      "  const somequery = url.searchParams.get(\"somequery\") || \"world\";",
+      "",
+      "  const body = await req.json();",
+      "  const somebody = body.somebody || \"body\";",
+      "",
+      "  // your code here",
+      "",
+      "  return new NextResponse(",
+      "    JSON.stringify({ hello: somequery, body: somebody }),",
+      "    {",
+      "      status: 200,",
+      "      headers: {",
+      "        \"content-type\": \"application/json\",",
+      "      },",
+      "    }",
+      "  );",
+      "}"
+    ]
+  },
+  "nextEdge": {
+    "scope": "typescript",
+    "prefix": "nextedge",
+    "body": [
+      "import { NextRequest, NextResponse } from \"next/server\";",
+      "",
+      "export const config = {",
+      "  runtime: \"edge\",",
+      "};",
+      "export default async function handler(req: NextRequest) {",
+      "  const url = req.nextUrl;",
+      "  const somequery = url.searchParams.get(\"somequery\") || \"world\";",
+      "  if (req.method === \"OPTIONS\") {",
+      "    return new NextResponse(\"ok\", {",
+      "      status: 200,",
+      "      headers: {},",
+      "    });",
+      "  }",
+      "",
+      "  const body = await req.json();",
+      "  const somebody = body.somebody || \"body\";",
+      "",
+      "  // your code here",
+      "  ${1}",
+      "",
+      "",
+      "  return new NextResponse(",
+      "    JSON.stringify({ hello: somequery, body: somebody }),",
+      "    {",
+      "      status: 200,",
+      "      headers: {",
+      "        \"content-type\": \"application/json\",",
+      "      },",
+      "    }",
+      "  );",
+      "}"
     ]
   },
   "fetchawait": {
     "scope": "typescript,javascript,javascriptreact,typescriptreact",
     "prefix": "fetchawait",
     "body": [
-      "const r = await fetch(`${1:domain}`,{",
+      "const r = await (await fetch(`${1:domain}`,{",
       "  method: \"${2:GET}\",",
       "  headers: {",
       "    'Accept': 'application/json',",
       "    'Content-Type': 'application/json'",
       "  },",
-      "})",
-      "try {",
-      "  const json = await r.json();  ",
-      "} catch (error) {",
-      "  console.log(error);",
+      "})).json()"
+    ]
+  },
+  "nextAPI": {
+    "scope": "typescript",
+    "prefix": "next",
+    "body": [
+      "import { NextApiRequest, NextApiResponse } from \"next\";",
+      "export default (req: NextApiRequest, res: NextApiResponse) => {",
+      "\tres.statusCode = 200;",
+      "\tres.setHeader(\"Content-Type\", \"application/json\");",
+      "\tres.end(JSON.stringify({",
+      "\t\tmsg: \"Hello World!\"",
+      "\t}));",
       "}"
     ]
   },
-  "copyright": {
-    "prefix": "c)",
-    "body": ["Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved."],
-    "description": "Snippet to put copyright"
-  },
-  "diso": {
-    "prefix": "diso",
+  "map": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "map",
     "body": [
-      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
-    ],
-    "description": "ISO date time stamp"
+      "${1:array}.map((${2:object}, index) => {",
+      "\treturn <>{${2:object}}</>",
+      "})"
+    ]
   },
-  "date": {
-    "prefix": "date",
-    "body": ["${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"],
-    "description": "Put the date in (Y-m-D) format"
-  },
-  "dateMDY": {
-    "prefix": "dateMDY",
-    "body": ["${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}"],
-    "description": "Put the date in (m/D/Y) format"
-  },
-  "time": {
-    "prefix": "time",
-    "body": ["${CURRENT_HOUR}:${CURRENT_MINUTE}"],
-    "description": "I give you back the time (H:M)"
-  },
-  "timeHMS": {
-    "prefix": "timeHMS",
-    "body": ["${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"],
-    "description": "I give you back the time (H:M:S)"
-  },
-  "datetime": {
-    "prefix": "datetime",
+  "serverSideRenderingNextJS": {
+    "scope": "typescriptreact",
+    "prefix": "ssr",
     "body": [
-      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}"
+      "export async function getServerSideProps() {",
+      "\treturn { props: { data : {} } }",
+      "}"
+    ]
+  },
+  "fc": {
+    "scope": "typescriptreact",
+    "prefix": "fc",
+    "body": [
+      "import { FC } from 'react'",
+      "",
+      "interface pageProps {",
+      "  path?: string",
+      "}",
+      "",
+      "const ${1:Page}: FC<pageProps> = ({}) => {",
+      "  return <></>",
+      "}",
+      "",
+      "export default ${1:Page}"
+    ]
+  },
+  "next": {
+    "scope": "typescriptreact",
+    "prefix": "next",
+    "body": [
+      "import type { NextPage } from 'next'",
+      "const ${1:Page}: NextPage<{someProps : string}> = (props) => {",
+      "\treturn(",
+      "\t\t<>",
+      "\t\t\t${2}",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:Page}"
+    ]
+  },
+  // FLUTTER
+  "class": {
+    "scope": "dart",
+    "prefix": "class",
+    "body": [
+      "class Car {",
+      "  String make;",
+      "  String model;",
+      "  int year;",
+      "  Map<String, dynamic> data;",
+      "",
+      "  void honk() {",
+      "    print('Beep beep!');",
+      "  }",
+      "",
+      "  Future<void> fetchData() async {",
+      "    var url = 'https://api.example.com/cars/$make/$model';",
+      "    var response = await HttpClient().getUrl(Uri.parse(url));",
+      "    var responseBody = await response.transform(utf8.decoder).join();",
+      "    data = json.decode(responseBody);",
+      "  }",
+      "}",
+      ""
     ],
-    "description": "I give you back the time and date (Y-m-d H:M)"
+    "description": "A class representing a car"
   },
-  "Lorem Ipsum Sentence": {
-    "prefix": "loremSent",
-    "body": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    "description": "Lorem Ipsum Sentence"
+  // ------------- HTML ---------------------
+  "bsCenterClass": {
+    "scope": "svelte,html",
+    "prefix": "bsCenterClass",
+    "body": [
+      "<div class=\"d-flex justify-content-center align-items-center vh-100\">",
+      "\t${1}",
+      "</div>"
+    ]
   },
-  "Lorem Ipsum Paragraph": {
-    "prefix": "loremPara",
-    "body": "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    "description": "Lorem Ipsum Paragraph"
+  "html:preact": {
+    "scope": "html",
+    "prefix": "html:preact",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css\" rel=\"stylesheet\">",
+      "\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js\"></script>",
+      "\t<script src=\"https://unpkg.com/htm@latest/dist/htm.js\"></script>",
+      "\t<script src=\"https://unpkg.com/preact@latest/dist/preact.umd.js\"></script>",
+      "\t<script src=\"https://unpkg.com/preact@latest/hooks/dist/hooks.umd.js\"></script>",
+      "\t<script src=\"https://unpkg.com/preact-router@latest/dist/preact-router.umd.js\"></script>",
+      "\t<script src=\"https://unpkg.com/history@latest/umd/history.production.min.js\"></script>",
+      "\t",
+      "\t<script>",
+      "\t\tconst h = preact.h;",
+      "\t\tconst html = htm.bind(h);",
+      "\t\tconst render = preact.render;",
+      "\t\tconst Component = preact.Component;",
+      "\t\tconst useState = preactHooks.useState;",
+      "\t\tconst useEffect = preactHooks.useEffect;",
+      "\t\tconst Router = preactRouter;",
+      "\t\tconst createHashHistory = HistoryLibrary.createHashHistory;",
+      "\t</script>",
+      "\t<script src=\"https://cdn.jsdelivr.net/gh/yokowasis/preact-async-route@master/umd/preact-async-route.umd.js\"></script>",
+      "",
+      "\t<script defer type=\"module\">\t\t",
+      "\t\timport App from './umd/App.js';",
+      "\t",
+      "\t\trender(html`<\\${App} />`, document.getElementById(\"App\"));",
+      "\t</script>",
+      "",
+      "\t<title>CBTAdmin</title>",
+      "</head>",
+      "<body>",
+      "\t<div id=\"App\">",
+      "",
+      "\t</div>",
+      "</body>",
+      "</html>"
+    ]
+  },
+  // Markdown -----------------------------
+  "aligned": {
+    "scope": "markdown",
+    "prefix": "aligned",
+    "body": ["$$", "\\begin{aligned}", "  y &= x", "\\end{aligned}", "$$"]
+  },
+  "markdown:embed": {
+    "prefix": "embed",
+    "scope": "markdown",
+    "body": "[!embed](${1:url})"
+  },
+  // Python --------------------
+  "importcsv": {
+    "prefix": "importcsv",
+    "scope" : "python",
+    "body": [
+      "import pandas as pd",
+      "",
+      "df = pd.read_csv('${1:somefile.csv}', encoding='ISO-8859-1', sep=\",\")",
+      "df.head()"
+    ],
+    "description": "importcsv"
+  },
+  "df": {
+    "prefix": "df",
+    "description": "df",
+    "scope": "python",
+    "body": [
+      "df = pd.DataFrame([",
+      "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
+      "])"
+    ]
+  },
+  "impnumpy": {
+    "prefix": "impnumpy",
+    "description": "impnumpy",
+    "scope": "python",
+    "body": ["import numpy as np"]
+  },
+  "imppandas": {
+    "prefix": "imppandas",
+    "description": "imppandas",
+    "scope": "python",
+    "body": ["import pandas as pd"]
+  },
+  // YAML ------------------------
+  "environmentConda": {
+    "prefix": "environmentConda",
+    "scope": "yaml",
+    "body": [
+      "name: ${1:environmentName}",
+      "channels:",
+      "  - conda-forge",
+      "dependencies:",
+      "  - python=3.10"
+    ],
+    "description": ""
+  },
+  "GithubPullSubModules": {
+    "prefix": "GithubPullSubModules",
+    "scope": "shellscript",
+    "body": [
+      "git submodule update --init --recursive",
+      "git submodule update --recursive --remote",
+      "cd src/react-form",
+      "git checkout main",
+      "git pull",
+      "cd ../../",
+      ""
+    ],
+    "description": ""
+  },
+  "GithubActionPingURL": {
+    "prefix": "GithubActionPingURL",
+    "scope": "github-actions-workflow,yml,yaml",
+    "body": [
+      "# name : .github/workflows/ping.yml",
+      "name: Deploy to host2",
+      "on:",
+      "  push:",
+      "    branches:",
+      "      - \"main\"",
+      "    paths-ignore:",
+      "      - \"**/*.md\"",
+      "      - \"**/*.mjs\"",
+      "      - \"**/ping.yml\"",
+      "jobs:",
+      "  build:",
+      "    runs-on: ubuntu-latest",
+      "    steps:",
+      "      - name: PING",
+      "        run: curl https://deploy.host2.bimasoft.web.id/svelte-cbtadmin",
+      ""
+    ]
+  },
+  "GithubActionPagesNextJS": {
+    "prefix": "GithubActionPagesNextJS",
+    "scope": "github-actions-workflow",
+    "body": [
+      "# name : .github/workflows/ping.yml",
+      "name: Deploy to GitHub Pages",
+      "on:",
+      "  push:",
+      "    branches:",
+      "      - \"viteBranch\"",
+      "    paths-ignore:",
+      "      - \"**/*.md\"",
+      "      - \"**/*.mjs\"",
+      "      # - \"**/ping.yml\"",
+      "permissions:",
+      "  contents: read",
+      "  pages: write",
+      "  id-token: write",
+      "concurrency:",
+      "  group: \"pages\"",
+      "  cancel-in-progress: false",
+      "jobs:",
+      "  build:",
+      "    runs-on: ubuntu-latest",
+      "    steps:",
+      "      - name: Checkout Repository",
+      "        uses: actions/checkout@v4",
+      "        with:",
+      "          submodules: recursive",
+      "      - uses: pnpm/action-setup@v2",
+      "        with:",
+      "          version: 8",
+      "      - name: Detect package manager",
+      "        id: detect-package-manager",
+      "        run: |",
+      "          if [ -f \"${{ github.workspace }}/yarn.lock\" ]; then",
+      "            echo \"manager=yarn\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=install\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=yarn\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          elif [ -f \"${{ github.workspace }}/pnpm-lock.yaml\" ]; then",
+      "            echo \"manager=pnpm\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=install\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=pnpm\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          elif [ -f \"${{ github.workspace }}/package.json\" ]; then",
+      "            echo \"manager=npm\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=ci\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=npx --no-install\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          else",
+      "            echo \"Unable to determine package manager\"",
+      "            exit 1",
+      "          fi",
+      "      - name: Setup Node",
+      "        uses: actions/setup-node@v4",
+      "        with:",
+      "          node-version: \"20\"",
+      "          cache: ${{ steps.detect-package-manager.outputs.manager }}",
+      "      - name: Install dependencies",
+      "        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}",
+      "      - name: Build project",
+      "        run: ${{ steps.detect-package-manager.outputs.runner }} npm run build",
+      "      - name: Upload artifact",
+      "        uses: actions/upload-pages-artifact@v2",
+      "        with:",
+      "          path: ./dist",
+      "  # Deployment job",
+      "  deploy:",
+      "    environment:",
+      "      name: github-pages",
+      "      url: ${{ steps.deployment.outputs.page_url }}",
+      "    runs-on: ubuntu-latest",
+      "    needs: build",
+      "    steps:",
+      "      - name: Deploy to GitHub Pages",
+      "        id: deployment",
+      "        uses: actions/deploy-pages@v3"
+    ]
+  },
+  // Latex --------------------
+  "Bold text": {
+    "prefix": "bold",
+    "scope": "latex",
+    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "description": "Make text bold"
+  },
+  "Bold text BF": {
+    "prefix": "bf",
+    "scope": "latex",
+    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "description": "Make text bold"
+  },
+  "Underline": {
+    "prefix": "under",
+    "scope": "latex",
+    "body": ["\\underline{${1:$TM_SELECTED_TEXT}}"]
+  },
+  "Italic": {
+    "prefix": "it",
+    "scope": "latex",
+    "body": ["\\textit{${1:$TM_SELECTED_TEXT}}"]
+  },
+  "Latex Numbering": {
+    "prefix": "numbering",
+    "scope": "latex",
+    "body": ["\\begin{enumerate}", "  \\item ${1:item}", "\\end{enumerate}"],
+    "description": "Latex Numbering"
+  },
+  "Latex Bullets": {
+    "prefix": "bullets",
+    "scope": "latex",
+    "body": ["\\begin{itemize}", "  \\item ${1:item}", "\\end{itemize}"],
+    "description": "Latex Bullets"
+  },
+  "Latex Bullets Table": {
+    "prefix": "bulletstable",
+    "scope": "latex",
+    "body": [
+      "\\begin{itemize}[topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=0pt,before=\\vspace{-\baselineskip},after=\\vspace{-\baselineskip}]",
+      "  \\item ${1:item}",
+      "\\end{itemize}"
+    ],
+    "description": "Latex Bullets With No Margina and Padding. Usually at the start of the table cell"
+  },
+  "Align Right": {
+    "prefix": "alignright",
+    "scope": "latex",
+    "body": ["\\begin{flushright}", "  ${1:item}", "\\end{flushright}"],
+    "description": "Align Right"
+  },
+  "Subsection": {
+    "prefix": "subsection",
+    "scope": "latex",
+    "body": ["\\subsection{${1:Subsection}}"],
+    "description": "Latex Subsection"
+  },
+  "SubSubsection": {
+    "prefix": "subsubsection",
+    "scope": "latex",
+    "body": ["\\subsubsection{${1:SubSubsection}}"],
+    "description": "Latex SubSubsection"
+  },
+  "Section": {
+    "prefix": "section",
+    "scope": "latex",
+    "body": ["\\section{${1:Section}}"],
+    "description": "Latex Section"
+  },
+  "image": {
+    "prefix": "image",
+    "scope": "latex",
+    "body": [
+      "\\begin{figure}[h]",
+      "  \\centering",
+      "  \\includegraphics[width=0.5\\textwidth]{${1:filename}}",
+      "  \\caption{${2:Caption for the image}}",
+      "  \\label{fig:${3:label}}",
+      "\\end{figure}"
+    ]
+  },
+  "tablelong": {
+    "prefix": "tablelong",
+    "scope": "latex",
+    "body": [
+      "\\begin{longtable}{",
+      "  >{\\raggedright\\arraybackslash}p{3cm}",
+      "  >{\\raggedright\\arraybackslash}p{3cm}",
+      "  }",
+      "  \\captionsetup{justification=centering}",
+      "  \\caption{Caption Tabel} \\\\\\",
+      "  \\hline",
+      "  Head1 & Head2 \\\\\\ \\hline",
+      "  \\endfirsthead",
+      "  \\multicolumn{2}{c}%",
+      "  {Tabel \\thetable\\ -- \\textit{Sambungan halaman sebelumnya}} \\\\\\ ",
+      "  \\hline \\\\\\",
+      "  Head1 & Head2 \\\\\\ \\hline \\endhead",
+      "  \\hline \\multicolumn{2}{r}{\\textit{Bersambung di halaman selanjutnya}} \\\\\\",
+      "  \\endfoot",
+      "  \\hline",
+      "  \\endlastfoot",
+      "  Kolomn 1 & Kolom 2 \\\\\\ \\hline",
+      "  Kolomn 1 & Kolom 2 \\\\\\ \\hline",
+      "  \\label{tab:label}",
+      "\\end{longtable}      "
+    ]
+  },
+  "landscape": {
+    "prefix": "landscape",
+    "scope": "latex",
+    "body": [
+      "\\newpage",
+      "\\KOMAoptions{paper=landscape,DIV=9,pagesize}",
+      "\\recalctypearea"
+    ]
+  },
+  "potrait": {
+    "prefix": "potrait",
+    "scope": "latex",
+    "body": [
+      "\\newpage",
+      "\\KOMAoptions{paper=portrait,pagesize}",
+      "\\recalctypearea"
+    ]
   }
 }
+
