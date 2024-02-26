@@ -748,6 +748,29 @@
       "{/if}"
     ]
   },
+  "drizzleSchema": {
+    "scope": "typescript",
+    "prefix": "drizzleSchema",
+    "body": [
+      "export const tablename = mysqlTable(",
+      "  \"${1:tableName}\",",
+      "  {",
+      "    id: bigint(\"id\", { mode: \"number\" }).primaryKey().autoincrement(),",
+      "    hari: varchar(\"hari\", { length: 100 }).default(\"\"),",
+      "    jamke: varchar(\"jamke\", { length: 100 }).default(\"\"),",
+      "    waktu: varchar(\"waktu\", { length: 100 }).default(\"\"),",
+      "  },",
+      "  (table) => {",
+      "    return {",
+      "      ${1:tableName}_hari_idx: index(\"${1:tableName}_hari_idx\").on(table.hari),",
+      "      ${1:tableName}_jamke_idx: index(\"${1:tableName}_jamke_idx\").on(table.jamke),",
+      "    };",
+      "  }",
+      ");",
+      ""
+    ],
+    "description": "drizzleSchema"
+  },
   "svelteAPI": {
     "scope": "typescript",
     "prefix": "svelteapi",
@@ -1441,7 +1464,7 @@
   },
   "GithubActionPagesNextJS": {
     "prefix": "GithubActionPagesNextJS",
-    "scope": "github-actions-workflow",
+    "scope": "github-actions-workflow,yml,yaml",
     "body": [
       "# name : .github/workflows/ping.yml",
       "name: Deploy to GitHub Pages",
