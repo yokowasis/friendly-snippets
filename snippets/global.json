@@ -38,10 +38,10 @@
       "ALTER TABLE `${1:table_name}` CHANGE `${2:columname}` `${2:columname}` ${3|VARCHAR,INT,TEXT,LONGTEXT|}(${4|5,10,100,255|}) DEFAULT ${5|\"\",NULL,0|} AFTER `${6:columnname}`;"
     ]
   },
-  "whoami" : {
-    "scope" : "php,html",
-    "prefix" : "whoami",
-    "body" : "<?php echo posix_getpwuid(posix_geteuid())['name']; ?>"
+  "whoami": {
+    "scope": "php,html",
+    "prefix": "whoami",
+    "body": "<?php echo posix_getpwuid(posix_geteuid())['name']; ?>"
   },
   "php-pre": {
     "scope": "php",
@@ -433,6 +433,44 @@
       "main();"
     ],
     "description": ""
+  },
+  "forof": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "forof",
+    "body": ["for (const ${1:iterator} of ${2:object}) {", "  ", "}"],
+    "description": "forof"
+  },
+  "forin": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "forin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "  if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {",
+      "    const element = ${2:object}[${1:key}];",
+      "    for (let index = 0; index < array.length; index++) {",
+      "      const element = array[index];",
+      "      ",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "forin"
+  },
+  "for": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "for",
+    "body": [
+      "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+      "  const element = ${2:array}[${1:index}];  ",
+      "}"
+    ],
+    "description": "for"
+  },
+  "foreach": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "foreach",
+    "body": ["${1:array}.forEach(element => {  ", "});"],
+    "description": "foreach"
   },
   "fn": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
@@ -1325,7 +1363,7 @@
   },
   "importcsv": {
     "prefix": "importcsv",
-    "scope" : "python",
+    "scope": "python",
     "body": [
       "import pandas as pd",
       "",
@@ -1611,4 +1649,3 @@
     ]
   }
 }
-
