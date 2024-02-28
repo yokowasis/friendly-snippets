@@ -560,13 +560,13 @@
     "description": ""
   },
   "forof": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreacttypescripttypescriptreact",
     "prefix": "forof",
     "body": ["for (const ${1:iterator} of ${2:object}) {", "  ", "}"],
     "description": "forof"
   },
   "forin": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "forin",
     "body": [
       "for (const ${1:key} in ${2:object}) {",
@@ -578,7 +578,7 @@
     "description": "forin"
   },
   "for": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "for",
     "body": [
       "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
@@ -588,18 +588,18 @@
     "description": "for"
   },
   "foreach": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "foreach",
     "body": ["${1:array}.forEach(element => {  ", "});"],
     "description": "foreach"
   },
   "fn": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "fn",
     "body": ["function ${1:functionName}() {", "  ${2}", "}"]
   },
   "timeout": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "timeout",
     "body": [
       "const timeout = new Timeout();",

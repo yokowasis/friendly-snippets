@@ -13,12 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +253 snippets/global.json
+badd +1158 ~/AppData/Local/nvim/init.lua
 argglobal
 %argdel
-$argadd snippets/global.json
-edit snippets/global.json
+edit ~/AppData/Local/nvim/init.lua
 argglobal
+balt ~/AppData/Local/nvim/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -29,12 +29,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 252 - ((18 * winheight(0) + 17) / 35)
+let s:l = 1158 - ((21 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 252
-normal! 022|
+keepjumps 1158
+normal! 050|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -48,6 +48,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
