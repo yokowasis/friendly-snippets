@@ -839,7 +839,7 @@
   },
   "svelteGoogleLogin": {
     "prefix": "svelteGoogleLogin",
-    "scope": "svelte",
+    "scope": "typescript",
     "body": [
       "import { json, text } from \"@sveltejs/kit\";",
       "import type { RequestHandler } from \"./$types\";",
