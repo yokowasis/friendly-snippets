@@ -842,7 +842,7 @@
     "scope": "typescript",
     "body": [
       "import { json, text } from \"@sveltejs/kit\";",
-      "import type { RequestHandler } from \"./$types\";",
+      "import type { RequestHandler } from \"./\\$types\";",
       "import { OAuth2Client } from \"google-auth-library\";",
       "",
       "const CLIENT_ID =",
@@ -899,7 +899,7 @@
       "        </head>",
       "        <body data-sveltekit-preload-data=\"hover\">",
       "          <div id=\"g_id_onload\"",
-      "               data-client_id=\"${CLIENT_ID}\"",
+      "               data-client_id=\"\\${CLIENT_ID}\"",
       "               data-context=\"signin\"",
       "               data-ux_mode=\"popup\"",
       "               data-login_uri=\"http://localhost:3010/test/login\"",
