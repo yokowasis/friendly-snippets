@@ -831,7 +831,7 @@
     "prefix": "urlparams",
     "body": [
       "const urlParams = new URLSearchParams(window.location.search);",
-      "const param = urlParams.get('${1:param}');"
+      "const ${1:param} = urlParams.get('${1:param}');"
     ]
   },
   "react": {
