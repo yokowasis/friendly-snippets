@@ -826,6 +826,14 @@
       "export default ${1:Component};"
     ]
   },
+  "urlparams": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "urlparams",
+    "body": [
+      "const urlParams = new URLSearchParams(window.location.search);",
+      "const param = urlParams.get('${1:param}');"
+    ]
+  },
   "react": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "react",
