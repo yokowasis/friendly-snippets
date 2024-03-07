@@ -729,6 +729,11 @@
       "}"
     ]
   },
+  "typedef": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "typedef",
+    "body": ["/** @typedef {${1:someTypeOrImport}} ${2:TypeName} */"]
+  },
   "typeWrap": {
     "scope": "javascript,javascriptreact,typescript",
     "prefix": "ty",
