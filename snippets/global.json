@@ -295,8 +295,6 @@
     "prefix": "post",
     "scope": "php",
     "body": [
-      "<?php",
-      "",
       "\\$apiEndpoint = 'https://example.com/api';",
       "",
       "// Data to be sent in JSON format",
