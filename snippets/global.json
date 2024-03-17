@@ -12,7 +12,7 @@
       "}"
     ]
   },
-  "for": {
+  "forcpp": {
     "scope": "cpp",
     "prefix": "for",
     "body": [
