@@ -669,16 +669,6 @@
       " */"
     ]
   },
-  "typedef": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "tyd",
-    "body": [
-      "/**",
-      " * @typedef ${1:TypeName}",
-      " * @type {{a : string}}",
-      " */"
-    ]
-  },
   "typeimport": {
     "scope": "javascript,javascriptreact",
     "prefix": "typeimport",
