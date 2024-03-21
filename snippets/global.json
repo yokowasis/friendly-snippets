@@ -637,6 +637,16 @@
     "prefix": "fn",
     "body": ["function ${1:functionName}() {", "  ${2}", "}"]
   },
+  "setTimeout": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "setTimeout",
+    "body": ["setTimeout(() => {", "  ${1}", "}, ${2:delay});"]
+  },
+  "setInterval": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "setInterval",
+    "body": ["setInterval(() => {", "  ${1}", "}, ${2:delay});"]
+  },
   "timeout": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "timeout",
