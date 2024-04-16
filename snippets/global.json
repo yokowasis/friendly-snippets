@@ -769,7 +769,7 @@
     "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
   },
   "typefunction": {
-    "scope": "javascript,javascriptreact,typescript",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "typef",
     "body": [
        "/**",
