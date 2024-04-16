@@ -777,7 +777,7 @@
        " * @param {string} param1",
        " * @param {Object<string,string>} param2",
        " * @returns {string[]}",
-       " */",
+       " */"
     ]
   },
   "typedef": {
