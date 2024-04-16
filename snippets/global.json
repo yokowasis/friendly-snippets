@@ -658,22 +658,6 @@
     ],
     "description": ""
   },
-  "typetemplate": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "tyt",
-    "body": [
-      "/**",
-      " * @template T",
-      " * @typedef ${1:TypeName}",
-      " * @type {{a : string}}",
-      " */"
-    ]
-  },
-  "typeimport": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "typeimport",
-    "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
-  },
   "prisma": {
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "prefix": "prisma",
@@ -756,6 +740,34 @@
       "\t\t\tconsole.log(data);",
       "\t\t}",
       "}"
+    ]
+  },
+  "typetemplate": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "tyt",
+    "body": [
+      "/**",
+      " * @template T",
+      " * @typedef ${1:TypeName}",
+      " * @type {{a : string}}",
+      " */"
+    ]
+  },
+  "typeimport": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "typeimport",
+    "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
+  },
+  "typefunction": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "typef",
+    "body": [
+       "/**",
+       " *",
+       " * @param {string} param1",
+       " * @param {Object<string,string>} param2",
+       " * @returns {string[]}",
+       " */",
     ]
   },
   "typedef": {
