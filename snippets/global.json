@@ -9,7 +9,7 @@
       "",
       "using namespace std;",
       "",
-      "int main() {",
+      "signed main() {",
       "\t$1",
       "\treturn 0;",
       "}"
