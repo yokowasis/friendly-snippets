@@ -1647,6 +1647,13 @@
       "</html>"
     ]
   },
+  "style": {
+    "scope": "markdown",
+    "prefix": "style",
+    "body": [
+      "<div custom-style=\"${1:style}\">${2:content}</div>"
+    ]
+  },
   "aligned": {
     "scope": "markdown",
     "prefix": "aligned",
