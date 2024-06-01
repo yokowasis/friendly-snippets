@@ -1651,35 +1651,35 @@
     "scope": "markdown",
     "prefix": "text-underline",
     "body": [
-      "<div custom-style=\"text-underline\">${1:content}</div>"
+      "<span custom-style=\"text-underline\">${1:content}</span>"
     ]
   }, 
   "text-warning": {
     "scope": "markdown",
     "prefix": "text-warning",
     "body": [
-      "<div custom-style=\"text-warning\">${1:content}</div>"
+      "<span custom-style=\"text-warning\">${1:content}</span>"
     ]
   }, 
   "text-danger": {
     "scope": "markdown",
     "prefix": "text-danger",
     "body": [
-      "<div custom-style=\"text-danger\">${1:content}</div>"
+      "<span custom-style=\"text-danger\">${1:content}</span>"
     ]
   }, 
   "text-success": {
     "scope": "markdown",
     "prefix": "text-success",
     "body": [
-      "<div custom-style=\"text-success\">${1:content}</div>"
+      "<span custom-style=\"text-success\">${1:content}</span>"
     ]
   }, 
   "text-primary": {
     "scope": "markdown",
     "prefix": "text-primary",
     "body": [
-      "<div custom-style=\"text-primary\">${1:content}</div>"
+      "<span custom-style=\"text-primary\">${1:content}</span>"
     ]
   },
   "figure": {
