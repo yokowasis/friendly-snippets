@@ -1647,6 +1647,55 @@
       "</html>"
     ]
   },
+  "text-underline": {
+    "scope": "markdown",
+    "prefix": "text-underline",
+    "body": [
+      "<div custom-style=\"text-underline\">${1:content}</div>"
+    ]
+  }, 
+  "text-warning": {
+    "scope": "markdown",
+    "prefix": "text-warning",
+    "body": [
+      "<div custom-style=\"text-warning\">${1:content}</div>"
+    ]
+  }, 
+  "text-danger": {
+    "scope": "markdown",
+    "prefix": "text-danger",
+    "body": [
+      "<div custom-style=\"text-danger\">${1:content}</div>"
+    ]
+  }, 
+  "text-success": {
+    "scope": "markdown",
+    "prefix": "text-success",
+    "body": [
+      "<div custom-style=\"text-success\">${1:content}</div>"
+    ]
+  }, 
+  "text-primary": {
+    "scope": "markdown",
+    "prefix": "text-primary",
+    "body": [
+      "<div custom-style=\"text-primary\">${1:content}</div>"
+    ]
+  },
+  "figure": {
+    "scope": "markdown",
+    "prefix": "figure",
+    "body": [
+      "<div custom-style=\"figure\">${1:content}</div>"
+    ]
+  },
+  "center": {
+    "scope": "markdown",
+    "prefix": "center",
+    "body": [
+      "<div custom-style=\"center\">${1:content}</div>"
+    ]
+  },
   "style": {
     "scope": "markdown",
     "prefix": "style",
