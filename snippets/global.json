@@ -1647,6 +1647,20 @@
       "</html>"
     ]
   },
+  "link": {
+    "scope": "markdown",
+    "prefix": "link",
+    "body": [
+      "[${1:linkText}](${2:url})"
+    ]
+  }, 
+  "image": {
+    "scope": "markdown",
+    "prefix": "image",
+    "body": [
+      "![${1:alt}](${2:url})"
+    ]
+  }, 
   "text-underline": {
     "scope": "markdown",
     "prefix": "text-underline",
