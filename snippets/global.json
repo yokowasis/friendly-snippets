@@ -1681,6 +1681,11 @@
     "prefix": "text-danger",
     "body": ["[${1:content}]{custom-style=\"text-danger\"}"]
   },
+  "code": {
+    "scope": "markdown",
+    "prefix": "code",
+    "body": ["[${1:content}]{custom-style=\"code\"}"]
+  },
   "text-success": {
     "scope": "markdown",
     "prefix": "text-success",
@@ -1705,6 +1710,11 @@
     "scope": "markdown",
     "prefix": "center",
     "body": ["::: {custom-style=\"center\"}", "| ${1:caption}", ":::"]
+  },
+  "span": {
+    "scope": "markdown",
+    "prefix": "span",
+    "body": ["[${1:content}]{custom-style=\"${2:style}\"}"]
   },
   "style": {
     "scope": "markdown",
