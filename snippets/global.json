@@ -1661,7 +1661,7 @@
     "prefix": "link",
     "body": ["[${1:linkText}](${2:url})"]
   },
-  "image": {
+  "image-md": {
     "scope": "markdown",
     "prefix": "image",
     "body": ["![${1:alt}](${2:url})"]
