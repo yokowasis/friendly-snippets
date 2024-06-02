@@ -1664,7 +1664,7 @@
   "image-md": {
     "scope": "markdown",
     "prefix": "image",
-    "body": ["![${1:alt}](${2:url})"]
+    "body": ["![${1:alt}](${2:url}){width=${3:50%}}"]
   },
   "text-underline": {
     "scope": "markdown",
