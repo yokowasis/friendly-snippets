@@ -1651,9 +1651,12 @@
     "scope": "markdown",
     "prefix": "table-multiline",
     "body": [
-      "| ${1:Header} | ${2:Header} |",
-      "| --- | --- |",
-      "| ${3:Content} | ${4:Content} |"
+      "+--------+--------+",
+      "| Header | Header |",
+      "+========+========+",
+      "| Isi    | Isi    |",
+      "|        | Isi 2  |",
+      "+--------+--------+",
     ]
   },
   "md-table": {
