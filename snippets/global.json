@@ -1702,6 +1702,11 @@
     "prefix": "text-danger",
     "body": ["[${1:content}]{custom-style=\"text-danger\"}"]
   },
+  "code-md-block": {
+    "scope": "markdown",
+    "prefix": "code-block",
+    "body": ["```${1:php}", "", "", "", "```"]
+  },
   "code": {
     "scope": "markdown",
     "prefix": "code",
