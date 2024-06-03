@@ -1684,7 +1684,7 @@
     "body": [
       "::: {custom-style=\"center\"}",
       "| ![${1:alt}](${2:url}){width=${3:50%}}",
-      ":::",
+      ":::"
     ]
   },
   "text-underline": {
