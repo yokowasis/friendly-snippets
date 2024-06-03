@@ -1647,7 +1647,16 @@
       "</html>"
     ]
   },
-  "table": {
+  "md-table-multiline": {
+    "scope": "markdown",
+    "prefix": "table-multiline",
+    "body": [
+      "| ${1:Header} | ${2:Header} |",
+      "| --- | --- |",
+      "| ${3:Content} | ${4:Content} |"
+    ]
+  },
+  "md-table": {
     "scope": "markdown",
     "prefix": "table",
     "body": [
