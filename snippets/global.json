@@ -1678,6 +1678,15 @@
     "prefix": "image",
     "body": ["![${1:alt}](${2:url}){width=${3:50%}}"]
   },
+  "image-md-center": {
+    "scope": "markdown",
+    "prefix": "image-center",
+    "body": [
+      "::: {custom-style=\"center\"}",
+      "| ![${1:alt}](${2:url}){width=${3:50%}}",
+      ":::",
+    ]
+  },
   "text-underline": {
     "scope": "markdown",
     "prefix": "text-underline",
