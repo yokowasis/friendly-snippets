@@ -1687,6 +1687,16 @@
       ":::"
     ]
   },
+  "code-cpp": {
+    "scope": "markdown",
+    "prefix": "cpp",
+    "body": ["```cpp", "${1:code}", "```"]
+  },
+  "code-python": {
+    "scope": "markdown",
+    "prefix": "python",
+    "body": ["```python", "${1:code}", "```"]
+  },
   "text-underline": {
     "scope": "markdown",
     "prefix": "text-underline",
