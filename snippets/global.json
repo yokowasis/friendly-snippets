@@ -1769,7 +1769,7 @@
   },
   "importcsv": {
     "prefix": "importcsv",
-    "scope": "python, markdown",
+    "scope": "python,markdown",
     "body": [
       "import pandas as pd",
       "",
@@ -1781,7 +1781,7 @@
   "df": {
     "prefix": "df",
     "description": "df",
-    "scope": "python, markdown",
+    "scope": "python,markdown",
     "body": [
       "df = pd.DataFrame([",
       "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
@@ -1791,13 +1791,13 @@
   "impnumpy": {
     "prefix": "impnumpy",
     "description": "impnumpy",
-    "scope": "python, markdown",
+    "scope": "python,markdown",
     "body": ["import numpy as np"]
   },
   "imppandas": {
     "prefix": "imppandas",
     "description": "imppandas",
-    "scope": "python, markdown",
+    "scope": "python,markdown",
     "body": ["import pandas as pd"]
   },
   "environmentConda": {
