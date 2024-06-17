@@ -1785,7 +1785,12 @@
     "body": [
       "df = pd.DataFrame([",
       "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
-      "])"
+      "])",
+      "",
+      "df = df._append({",
+      "  \"first_name\" : \"Yoko\",",
+      "  \"last_name\" : \"Wasis\"",
+      "}, ignore_index=True)"
     ]
   },
   "impnumpy": {
