@@ -1767,6 +1767,12 @@
     "scope": "markdown",
     "body": "[!embed](${1:url})"
   },
+  "exportcsv": {
+    "prefix": "exportcsv",
+    "scope": "python,markdown",
+    "body": ["df.to_csv('data.csv', index=False)"],
+    "description": "importcsv"
+  },
   "importcsv": {
     "prefix": "importcsv",
     "scope": "python,markdown",
