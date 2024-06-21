@@ -1663,9 +1663,11 @@
     "scope": "markdown",
     "prefix": "table",
     "body": [
-      "| ${1:Header} | ${2:Header} |",
+      "| ${2:Header} | ${3:Header} |",
       "| --- | --- |",
-      "| ${3:Content} | ${4:Content} |"
+      "| ${4:Content} | ${5:Content} |",
+      "",
+      ": ${1:Caption}"
     ]
   },
   "link": {
