@@ -1683,7 +1683,7 @@
     "prefix": "reffigure",
     "body": ["#REFFIGURE"]
   },
-  "reftale": {
+  "reftable": {
     "scope": "markdown",
     "prefix": "reftable",
     "body": ["#REFTABLE"]
