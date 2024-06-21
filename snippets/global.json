@@ -1769,14 +1769,6 @@
       "| Table #REFFIGURE. ${1:caption}",
       ":::"
     ]
-  }"figimage": {
-    "scope": "markdown",
-    "prefix": "figimage",
-    "body": [
-      "::: {custom-style=\"figure\"}",
-      "| Table #REFIMAGE. ${1:caption}",
-      ":::"
-    ]
   },
   "figimage": {
     "scope": "markdown",
