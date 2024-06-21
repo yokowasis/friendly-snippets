@@ -1663,11 +1663,11 @@
     "scope": "markdown",
     "prefix": "table",
     "body": [
-      "| ${2:Header} | ${3:Header} |",
+      "| ${3:Header} | ${4:Header} |",
       "| --- | --- |",
-      "| ${4:Content} | ${5:Content} |",
+      "| ${5:Content} | ${6:Content} |",
       "",
-      ": ${1:Caption}"
+      ": ${1:Caption} {#tbl:${2:tblref}}"
     ]
   },
   "link": {
