@@ -1673,34 +1673,15 @@
     "prefix": "link",
     "body": ["[${1:linkText}](${2:url})"]
   },
-  "refimage": {
-    "scope": "markdown",
-    "prefix": "refimage",
-    "body": ["#REFIMAGE"]
-  },
-  "reffigure": {
-    "scope": "markdown",
-    "prefix": "reffigure",
-    "body": ["#REFFIGURE"]
-  },
-  "reftable": {
-    "scope": "markdown",
-    "prefix": "reftable",
-    "body": ["#REFTABLE"]
-  },
   "image-md": {
     "scope": "markdown",
     "prefix": "image",
-    "body": ["![${1:alt}](${2:url}){width=${3:50%}}"]
+    "body": ["![${1:caption}](${2:url}){#fig:${3:figure0}, width=${4:50%}}"]
   },
-  "image-md-center": {
+  "ref-md": {
     "scope": "markdown",
-    "prefix": "image-center",
-    "body": [
-      "::: {custom-style=\"center\"}",
-      "| ![${1:alt}](${2:url}){width=${3:50%}}",
-      ":::"
-    ]
+    "prefix": "ref",
+    "body": ["[@${1:fig}:${2:figure0}]"]
   },
   "code-cpp": {
     "scope": "markdown",
@@ -1751,33 +1732,6 @@
     "scope": "markdown",
     "prefix": "figure",
     "body": ["::: {custom-style=\"figure\"}", "| ${1:caption}", ":::"]
-  },
-  "figtable": {
-    "scope": "markdown",
-    "prefix": "figtable",
-    "body": [
-      "::: {custom-style=\"figure\"}",
-      "| Table #REFTABLE. ${1:caption}",
-      ":::"
-    ]
-  },
-  "figfigure": {
-    "scope": "markdown",
-    "prefix": "figfigure",
-    "body": [
-      "::: {custom-style=\"figure\"}",
-      "| Table #REFFIGURE. ${1:caption}",
-      ":::"
-    ]
-  },
-  "figimage": {
-    "scope": "markdown",
-    "prefix": "figimage",
-    "body": [
-      "::: {custom-style=\"figure\"}",
-      "| Table #REFIMAGE. ${1:caption}",
-      ":::"
-    ]
   },
   "single": {
     "scope": "markdown",
