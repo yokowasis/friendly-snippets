@@ -1752,6 +1752,41 @@
     "prefix": "figure",
     "body": ["::: {custom-style=\"figure\"}", "| ${1:caption}", ":::"]
   },
+  "figtable": {
+    "scope": "markdown",
+    "prefix": "figtable",
+    "body": [
+      "::: {custom-style=\"figure\"}",
+      "| Table #REFTABLE. ${1:caption}",
+      ":::"
+    ]
+  },
+  "figfigure": {
+    "scope": "markdown",
+    "prefix": "figfigure",
+    "body": [
+      "::: {custom-style=\"figure\"}",
+      "| Table #REFFIGURE. ${1:caption}",
+      ":::"
+    ]
+  }"figimage": {
+    "scope": "markdown",
+    "prefix": "figimage",
+    "body": [
+      "::: {custom-style=\"figure\"}",
+      "| Table #REFIMAGE. ${1:caption}",
+      ":::"
+    ]
+  },
+  "figimage": {
+    "scope": "markdown",
+    "prefix": "figimage",
+    "body": [
+      "::: {custom-style=\"figure\"}",
+      "| Table #REFIMAGE. ${1:caption}",
+      ":::"
+    ]
+  },
   "single": {
     "scope": "markdown",
     "prefix": "single",
