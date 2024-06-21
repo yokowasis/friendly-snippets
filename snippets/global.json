@@ -1733,17 +1733,17 @@
   "figure": {
     "scope": "markdown",
     "prefix": "figure",
-    "body": ["::: {custom-style=\"figure\"}", "| ${1:caption}", ":::"]
+    "body": ["::: {custom-style=\"figure\"}", "${1:caption}", ":::"]
   },
   "single": {
     "scope": "markdown",
     "prefix": "single",
-    "body": ["::: {custom-style=\"single\"}", "| ${1:text}", ":::"]
+    "body": ["::: {custom-style=\"single\"}", "${1:text}", ":::"]
   },
   "center": {
     "scope": "markdown",
     "prefix": "center",
-    "body": ["::: {custom-style=\"center\"}", "| ${1:caption}", ":::"]
+    "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
   },
   "span": {
     "scope": "markdown",
@@ -1753,7 +1753,7 @@
   "style": {
     "scope": "markdown",
     "prefix": "style",
-    "body": ["::: {custom-style=\"${1:Style Name}\"}", "| ${2:content}", ":::"]
+    "body": ["::: {custom-style=\"${1:Style Name}\"}", "${2:content}", ":::"]
   },
   "aligned": {
     "scope": "markdown",
