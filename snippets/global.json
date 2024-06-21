@@ -1673,6 +1673,21 @@
     "prefix": "link",
     "body": ["[${1:linkText}](${2:url})"]
   },
+  "refimage": {
+    "scope": "markdown",
+    "prefix": "refimage",
+    "body": ["#REFIMAGE"]
+  },
+  "reffigure": {
+    "scope": "markdown",
+    "prefix": "reffigure",
+    "body": ["#REFFIGURE"]
+  },
+  "reftale": {
+    "scope": "markdown",
+    "prefix": "reftable",
+    "body": ["#REFTABLE"]
+  },
   "image-md": {
     "scope": "markdown",
     "prefix": "image",
