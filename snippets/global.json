@@ -1676,7 +1676,7 @@
   "image-md": {
     "scope": "markdown",
     "prefix": "image",
-    "body": ["![${1:caption}](${2:url}){#fig:${3:figure0}, width=${4:50%}}"]
+    "body": ["![${1:caption}](${2:url}){#fig:${3:figure0} width=${4:50%}}"]
   },
   "ref-md": {
     "scope": "markdown",
