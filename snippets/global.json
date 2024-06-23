@@ -1695,6 +1695,11 @@
     "prefix": "python",
     "body": ["```python", "${1:code}", "```"]
   },
+  "text-italic": {
+    "scope": "markdown",
+    "prefix": "text-italic",
+    "body": ["[${1:content}]{custom-style=\"text-italic\"}"]
+  },
   "text-underline": {
     "scope": "markdown",
     "prefix": "text-underline",
