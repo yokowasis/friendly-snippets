@@ -1750,6 +1750,16 @@
     "prefix": "center",
     "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
   },
+  "md-fs8": {
+    "scope": "markdown",
+    "prefix": "fs8",
+    "body": ["[${1:content}]{custom-style=\"$fs8\"}"]
+  },
+  "md-fs6": {
+    "scope": "markdown",
+    "prefix": "fs6",
+    "body": ["[${1:content}]{custom-style=\"$fs6\"}"]
+  },
   "span": {
     "scope": "markdown",
     "prefix": "span",
