@@ -1750,6 +1750,21 @@
     "prefix": "center",
     "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
   },
+  "prettier-ignore": {
+    "scope": "markdown",
+    "prefix": "ignore",
+    "body": ["<!-- prettier-ignore -->"]
+  },
+  "prettier-ignore-end": {
+    "scope": "markdown",
+    "prefix": "ignore-end",
+    "body": ["<!-- prettier-ignore-end -->"]
+  },
+  "prettier-ignore-start": {
+    "scope": "markdown",
+    "prefix": "ignore-start",
+    "body": ["<!-- prettier-ignore-start -->"]
+  },
   "md-fs8": {
     "scope": "markdown",
     "prefix": "fs8",
