@@ -1648,7 +1648,7 @@
     ]
   },
   "md-table-multiline": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "table-multiline",
     "body": [
       "+--------+--------+",
@@ -1660,7 +1660,7 @@
     ]
   },
   "md-table": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "table",
     "body": [
       "| ${3:Header} | ${4:Header} |",
@@ -1671,128 +1671,128 @@
     ]
   },
   "link": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "link",
     "body": ["[${1:linkText}](${2:url})"]
   },
   "image-md": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "image",
     "body": ["![${1:caption}](${2:url}){#fig:${3:figure0} width=${4:50%}}"]
   },
   "ref-md": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "ref",
     "body": ["[@${1:fig}:${2:figure0}]"]
   },
   "code-cpp": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "cpp",
     "body": ["```cpp", "${1:code}", "```"]
   },
   "code-python": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "python",
     "body": ["```python", "${1:code}", "```"]
   },
   "text-italic": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-italic",
     "body": ["[${1:content}]{custom-style=\"text-italic\"}"]
   },
   "text-underline": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-underline",
     "body": ["[${1:content}]{custom-style=\"text-underline\"}"]
   },
   "text-primary": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-primary",
     "body": ["[${1:content}]{custom-style=\"text-primary\"}"]
   },
   "text-danger": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-danger",
     "body": ["[${1:content}]{custom-style=\"text-danger\"}"]
   },
   "code-md-block": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "code-block",
     "body": ["```${1:php}", "", "", "", "```"]
   },
   "code": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "code",
     "body": ["[${1:content}]{custom-style=\"code\"}"]
   },
   "text-success": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-success",
     "body": ["[${1:content}]{custom-style=\"text-success\"}"]
   },
   "text-warning": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "text-warning",
     "body": ["[${1:content}]{custom-style=\"text-warning\"}"]
   },
   "figure": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "figure",
     "body": ["::: {custom-style=\"figure\"}", "${1:caption}", ":::"]
   },
   "single": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "single",
     "body": ["::: {custom-style=\"single\"}", "${1:text}", ":::"]
   },
   "center": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "center",
     "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
   },
   "prettier-ignore": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "ignore",
     "body": ["<!-- prettier-ignore -->"]
   },
   "prettier-ignore-end": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "ignore-end",
     "body": ["<!-- prettier-ignore-end -->"]
   },
   "prettier-ignore-start": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "ignore-start",
     "body": ["<!-- prettier-ignore-start -->"]
   },
   "md-fs8": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "fs8",
     "body": ["[${1:content}]{custom-style=\"$fs8\"}"]
   },
   "md-fs6": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "fs6",
     "body": ["[${1:content}]{custom-style=\"$fs6\"}"]
   },
   "span": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "span",
     "body": ["[${1:content}]{custom-style=\"${2:style}\"}"]
   },
   "style": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "style",
     "body": ["::: {custom-style=\"${1:Style Name}\"}", "${2:content}", ":::"]
   },
   "aligned": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "aligned",
     "body": ["$$", "\\begin{aligned}", "  y &= x", "\\end{aligned}", "$$"]
   },
   "markdown:embed": {
     "prefix": "embed",
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "body": "[!embed](${1:url})"
   },
   "exportcsv": {
