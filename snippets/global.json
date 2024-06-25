@@ -1651,12 +1651,14 @@
     "scope": "markdown,pandoc",
     "prefix": "table-multiline",
     "body": [
+      "<!-- prettier-ignore-start -->",
       "+--------+--------+",
       "| Header | Header |",
       "+========+========+",
       "| Isi    | Isi    |",
       "|        | Isi 2  |",
-      "+--------+--------+"
+      "+--------+--------+",
+      "<!-- prettier-ignore-end -->"
     ]
   },
   "md-table": {
@@ -1755,15 +1757,14 @@
     "prefix": "ignore",
     "body": ["<!-- prettier-ignore -->"]
   },
-  "prettier-ignore-end": {
+  "prettier-ignore-range": {
     "scope": "markdown,pandoc",
-    "prefix": "ignore-end",
-    "body": ["<!-- prettier-ignore-end -->"]
-  },
-  "prettier-ignore-start": {
-    "scope": "markdown,pandoc",
-    "prefix": "ignore-start",
-    "body": ["<!-- prettier-ignore-start -->"]
+    "prefix": "ignore-range",
+    "body": [
+      "<!-- prettier-ignore-start -->",
+      "${1}",
+      "<!-- prettier-ignore-end -->"
+    ]
   },
   "md-fs8": {
     "scope": "markdown,pandoc",
