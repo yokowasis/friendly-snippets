@@ -1661,6 +1661,21 @@
       "<!-- prettier-ignore-end -->"
     ]
   },
+  "md-table-noborder": {
+    "scope": "markdown,pandoc",
+    "prefix": "table-noborder",
+    "body": [
+      "::: {custom-style=\"tableStyle\"}",
+      "noborder",
+      ":::",
+      "",
+      "| ${3:Header} | ${4:Header} |",
+      "| --- | --- |",
+      "| ${5:Content} | ${6:Content} |",
+      "",
+      ": ${1:Caption} {#tbl:${2:tblref}}"
+    ]
+  },
   "md-table": {
     "scope": "markdown,pandoc",
     "prefix": "table",
