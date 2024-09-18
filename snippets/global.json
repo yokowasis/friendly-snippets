@@ -4,9 +4,12 @@
     "prefix": "main",
     "body": [
       "#include <iostream>",
+      "#include <bits/stdc++.h>",
+      "#define int long long",
+      "",
       "using namespace std;",
       "",
-      "int main() {",
+      "signed main() {",
       "\t$1",
       "\treturn 0;",
       "}"
@@ -174,13 +177,13 @@
     "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
   },
   "inline-php": {
-    "scope": "html",
+    "scope": "html,php",
     "prefix": "ph",
     "body": "<?php ${1} ?>",
     "description": "Inline PHP Tag"
   },
   "backward-php": {
-    "scope": "html",
+    "scope": "php,html",
     "prefix": "bph",
     "body": "?> $1 <?php",
     "description": "Inline PHP Tag"
@@ -1644,19 +1647,179 @@
       "</html>"
     ]
   },
+  "md-table-multiline": {
+    "scope": "markdown,pandoc",
+    "prefix": "table-multiline",
+    "body": [
+      "<!-- prettier-ignore-start -->",
+      "+--------+--------+",
+      "| Header | Header |",
+      "+========+========+",
+      "| Isi    | Isi    |",
+      "|        | Isi 2  |",
+      "+--------+--------+",
+      "<!-- prettier-ignore-end -->"
+    ]
+  },
+  "md-table-noborder": {
+    "scope": "markdown,pandoc",
+    "prefix": "table-noborder",
+    "body": [
+      "::: {custom-style=\"tableStyle\"}",
+      "noborder",
+      ":::",
+      "",
+      "| ${3:Header} | ${4:Header} |",
+      "| --- | --- |",
+      "| ${5:Content} | ${6:Content} |",
+      "",
+      ": ${1:Caption} {#tbl:${2:tblref}}"
+    ]
+  },
+  "md-table": {
+    "scope": "markdown,pandoc",
+    "prefix": "table",
+    "body": [
+      "| ${3:Header} | ${4:Header} |",
+      "| --- | --- |",
+      "| ${5:Content} | ${6:Content} |",
+      "",
+      ": ${1:Caption} {#tbl:${2:tblref}}"
+    ]
+  },
+  "link": {
+    "scope": "markdown,pandoc",
+    "prefix": "link",
+    "body": ["[${1:linkText}](${2:url})"]
+  },
+  "image-md": {
+    "scope": "markdown,pandoc",
+    "prefix": "image",
+    "body": ["![${1:caption}](${2:url}){#fig:${3:figure0} width=${4:50%}}"]
+  },
+  "ref-md": {
+    "scope": "markdown,pandoc",
+    "prefix": "ref",
+    "body": ["[@${1:fig}:${2:figure0}]"]
+  },
+  "code-cpp": {
+    "scope": "markdown,pandoc",
+    "prefix": "cpp",
+    "body": ["```cpp", "${1:code}", "```"]
+  },
+  "code-python": {
+    "scope": "markdown,pandoc",
+    "prefix": "python",
+    "body": ["```python", "${1:code}", "```"]
+  },
+  "text-italic": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-italic",
+    "body": ["[${1:content}]{custom-style=\"text-italic\"}"]
+  },
+  "text-underline": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-underline",
+    "body": ["[${1:content}]{custom-style=\"text-underline\"}"]
+  },
+  "text-primary": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-primary",
+    "body": ["[${1:content}]{custom-style=\"text-primary\"}"]
+  },
+  "text-danger": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-danger",
+    "body": ["[${1:content}]{custom-style=\"text-danger\"}"]
+  },
+  "code-md-block": {
+    "scope": "markdown,pandoc",
+    "prefix": "code-block",
+    "body": ["```${1:php}", "", "", "", "```"]
+  },
+  "code": {
+    "scope": "markdown,pandoc",
+    "prefix": "code",
+    "body": ["[${1:content}]{custom-style=\"code\"}"]
+  },
+  "text-success": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-success",
+    "body": ["[${1:content}]{custom-style=\"text-success\"}"]
+  },
+  "text-warning": {
+    "scope": "markdown,pandoc",
+    "prefix": "text-warning",
+    "body": ["[${1:content}]{custom-style=\"text-warning\"}"]
+  },
+  "figure": {
+    "scope": "markdown,pandoc",
+    "prefix": "figure",
+    "body": ["::: {custom-style=\"figure\"}", "${1:caption}", ":::"]
+  },
+  "single": {
+    "scope": "markdown,pandoc",
+    "prefix": "single",
+    "body": ["::: {custom-style=\"single\"}", "${1:text}", ":::"]
+  },
+  "center": {
+    "scope": "markdown,pandoc",
+    "prefix": "center",
+    "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
+  },
+  "prettier-ignore": {
+    "scope": "markdown,pandoc",
+    "prefix": "ignore",
+    "body": ["<!-- prettier-ignore -->"]
+  },
+  "prettier-ignore-range": {
+    "scope": "markdown,pandoc",
+    "prefix": "ignore-range",
+    "body": [
+      "<!-- prettier-ignore-start -->",
+      "${1}",
+      "<!-- prettier-ignore-end -->"
+    ]
+  },
+  "md-fs8": {
+    "scope": "markdown,pandoc",
+    "prefix": "fs8",
+    "body": ["[${1:content}]{custom-style=\"$fs8\"}"]
+  },
+  "md-fs6": {
+    "scope": "markdown,pandoc",
+    "prefix": "fs6",
+    "body": ["[${1:content}]{custom-style=\"$fs6\"}"]
+  },
+  "span": {
+    "scope": "markdown,pandoc",
+    "prefix": "span",
+    "body": ["[${1:content}]{custom-style=\"${2:style}\"}"]
+  },
+  "style": {
+    "scope": "markdown,pandoc",
+    "prefix": "style",
+    "body": ["::: {custom-style=\"${1:Style Name}\"}", "${2:content}", ":::"]
+  },
   "aligned": {
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "prefix": "aligned",
     "body": ["$$", "\\begin{aligned}", "  y &= x", "\\end{aligned}", "$$"]
   },
   "markdown:embed": {
     "prefix": "embed",
-    "scope": "markdown",
+    "scope": "markdown,pandoc",
     "body": "[!embed](${1:url})"
+  },
+  "exportcsv": {
+    "prefix": "exportcsv",
+    "scope": "python,markdown",
+    "body": ["df.to_csv('data.csv', index=False)"],
+    "description": "importcsv"
   },
   "importcsv": {
     "prefix": "importcsv",
-    "scope": "python",
+    "scope": "python,markdown",
     "body": [
       "import pandas as pd",
       "",
@@ -1668,23 +1831,28 @@
   "df": {
     "prefix": "df",
     "description": "df",
-    "scope": "python",
+    "scope": "python,markdown",
     "body": [
       "df = pd.DataFrame([",
       "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
-      "])"
+      "])",
+      "",
+      "df = df._append({",
+      "  \"first_name\" : \"Yoko\",",
+      "  \"last_name\" : \"Wasis\"",
+      "}, ignore_index=True)"
     ]
   },
   "impnumpy": {
     "prefix": "impnumpy",
     "description": "impnumpy",
-    "scope": "python",
+    "scope": "python,markdown",
     "body": ["import numpy as np"]
   },
   "imppandas": {
     "prefix": "imppandas",
     "description": "imppandas",
-    "scope": "python",
+    "scope": "python,markdown",
     "body": ["import pandas as pd"]
   },
   "environmentConda": {
