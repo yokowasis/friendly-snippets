@@ -177,14 +177,14 @@
     "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
   },
   "inline-php": {
-    "scope": "html",
+    "scope": "html,php",
     "prefix": "ph",
     "body": "<?php ${1} ?>",
     "description": "Inline PHP Tag"
   },
   "backward-php": {
-    "scope": "php",
-    "prefix": "ph",
+    "scope": "php,html",
+    "prefix": "bph",
     "body": "?> $1 <?php",
     "description": "Inline PHP Tag"
   },
