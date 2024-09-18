@@ -183,8 +183,8 @@
     "description": "Inline PHP Tag"
   },
   "backward-php": {
-    "scope": "html",
-    "prefix": "bph",
+    "scope": "php",
+    "prefix": "ph",
     "body": "?> $1 <?php",
     "description": "Inline PHP Tag"
   },
