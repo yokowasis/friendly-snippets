@@ -599,7 +599,7 @@
     "description": ""
   },
   "forof": {
-    "scope": "javascript,javascriptreacttypescripttypescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "forof",
     "body": ["for (const ${1:iterator} of ${2:object}) {", "  ", "}"],
     "description": "forof"
@@ -772,12 +772,12 @@
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "typef",
     "body": [
-       "/**",
-       " *",
-       " * @param {string} param1",
-       " * @param {Object<string,string>} param2",
-       " * @returns {string[]}",
-       " */"
+      "/**",
+      " *",
+      " * @param {string} param1",
+      " * @param {Object<string,string>} param2",
+      " * @returns {string[]}",
+      " */"
     ]
   },
   "typedef": {
