@@ -1,6 +1,5 @@
 {
   "map": {
-    "scope": "typescriptreact,javascriptreact",
     "prefix": "map",
     "body": [
       "${1:array}.map((${2:object}, index) => {",

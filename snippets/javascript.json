@@ -1,6 +1,5 @@
 {
   "typetemplate": {
-    "scope": "javascript,javascriptreact",
     "prefix": "tyt",
     "body": [
       "/**",
@@ -11,22 +10,18 @@
     ]
   },
   "typeimport": {
-    "scope": "javascript,javascriptreact",
     "prefix": "typeimport",
     "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
   },
   "typedef": {
-    "scope": "javascript,javascriptreact",
     "prefix": "typedef",
     "body": ["/** @typedef {${1:someTypeOrImport}} ${2:TypeName} */"]
   },
   "typeWrap": {
-    "scope": "javascript,javascriptreact",
     "prefix": "ty",
     "body": ["/** @type {${1:TypeName}} */ ($TM_SELECTED_TEXT)"]
   },
   "type": {
-    "scope": "javascript,javascriptreact",
     "prefix": ":",
     "body": ["/** @type {${1:TypeName}} */ "]
   }

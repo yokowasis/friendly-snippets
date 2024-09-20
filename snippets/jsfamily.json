@@ -1,6 +1,5 @@
 {
   "searchParams": {
-    "scope": "typescript,javascript,javascriptreact,typescriptreact",
     "prefix": "searchParams",
     "body": [
       "const { searchParams } = new URL(req.url)",
@@ -8,7 +7,6 @@
     ]
   },
   "fetchawait": {
-    "scope": "typescript,javascript,javascriptreact,typescriptreact",
     "prefix": "fetchawait",
     "body": [
       "const r = await (await fetch(`${1:domain}`,{",
@@ -21,13 +19,11 @@
     ]
   },
   "forof": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "forof",
     "body": ["for (const ${1:iterator} of ${2:object}) {", "  ", "}"],
     "description": "forof"
   },
   "forin": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "forin",
     "body": [
       "for (const ${1:key} in ${2:object}) {",
@@ -39,7 +35,6 @@
     "description": "forin"
   },
   "for": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "for",
     "body": [
       "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
@@ -49,28 +44,23 @@
     "description": "for"
   },
   "foreach": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "foreach",
     "body": ["${1:array}.forEach(element => {  ", "});"],
     "description": "foreach"
   },
   "fn": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "fn",
     "body": ["function ${1:functionName}() {", "  ${2}", "}"]
   },
   "setTimeout": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "setTimeout",
     "body": ["setTimeout(() => {", "  ${1}", "}, ${2:delay});"]
   },
   "setInterval": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "setInterval",
     "body": ["setInterval(() => {", "  ${1}", "}, ${2:delay});"]
   },
   "timeout": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "timeout",
     "body": [
       "const timeout = new Timeout();",
@@ -91,7 +81,6 @@
     "description": ""
   },
   "supabaseUpload": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "supabaseUpload",
     "body": [
       "const file = /** @type {HTMLInputElement} */ (document.getElementById('${1:file}'));",
@@ -112,7 +101,6 @@
     ]
   },
   "typefunction": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "typef",
     "body": [
       "/**",
@@ -124,12 +112,10 @@
     ]
   },
   "cl": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "cl",
     "body": ["console.${2:log}(${1:something});"]
   },
   "ajax": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "ajax",
     "body": [
       "$.ajax({",
@@ -148,16 +134,13 @@
   },
   "replaceall": {
     "prefix": "replaceall",
-    "scope": "javascript, typescript, javascriptreact, typescriptreact",
     "body": ["${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');"]
   },
   "jqr": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "jqr",
     "body": ["(function( $ ) {", "\t${1:Jquery Stuff}", "})( jQuery );"]
   },
   "alertyesno": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "alertyesno",
     "body": [
       "const r = confirm(\"${1:Some Prompt}\");",
@@ -167,12 +150,10 @@
     ]
   },
   "toint_js": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "toint",
     "body": "${1:varName} = parseInt(${1:varName});"
   },
   "fetch": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "fetch",
     "body": [
       "fetch(\"https://bot.bimasoft.web.id:4020/getip\",{",
