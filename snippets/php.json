@@ -1,4 +1,8 @@
 {
+  "cl": {
+    "prefix": "cl",
+    "body": ["console.log($1);"]
+  },
   "typeWrapPHP": {
     "prefix": "ty",
     "body": [
@@ -307,7 +311,7 @@
     "description": "post"
   },
   "php_date": {
-    "prefix": "php_date",
+    "prefix": "date",
     "body": ["\\$date = date(\"Y-m-d\",time());"]
   },
   "mysql": {
