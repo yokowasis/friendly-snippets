@@ -17,11 +17,17 @@
         "path": "./snippets/global.json"
       },
       {
-        "language": "javascript,javascriptreact",
+        "language": [
+          "javarcript",
+          "javascriptreact "
+        ],
         "path": "./snippets/javascript.json"
       },
       {
-        "language": "typescript,typescriptreact",
+        "language": [
+          "typescript",
+          "typescriptreact"
+        ],
         "path": "./snippets/typescript.json"
       },
       {
@@ -29,15 +35,26 @@
         "path": "./snippets/html.json"
       },
       {
-        "language": "html,php",
+        "language": [
+          "html",
+          "php"
+        ],
         "path": "./snippets/php.json"
       },
       {
-        "language": "javascriptreact,typescriptreact,javascript,typescript",
+        "language": [
+          "javascriptreact",
+          "typescriptreact",
+          "javascript",
+          "typescript"
+        ],
         "path": "./snippets/jsfamily.json"
       },
       {
-        "language": "javascriptreact,typescriptreact",
+        "language": [
+          "javascriptreact",
+          "typescriptreact"
+        ],
         "path": "./snippets/react.json"
       },
       {
