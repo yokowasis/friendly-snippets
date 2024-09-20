@@ -1,0 +1,3494 @@
+{
+  "fa-address-book": {
+    "prefix": "fa-address-book",
+    "body": "fas fa-address-book"
+  },
+  "fa-address-card": {
+    "prefix": "fa-address-card",
+    "body": "fas fa-address-card"
+  },
+  "fa-adjust": {
+    "prefix": "fa-adjust",
+    "body": "fas fa-adjust"
+  },
+  "fa-align-center": {
+    "prefix": "fa-align-center",
+    "body": "fas fa-align-center"
+  },
+  "fa-align-justify": {
+    "prefix": "fa-align-justify",
+    "body": "fas fa-align-justify"
+  },
+  "fa-align-left": {
+    "prefix": "fa-align-left",
+    "body": "fas fa-align-left"
+  },
+  "fa-align-right": {
+    "prefix": "fa-align-right",
+    "body": "fas fa-align-right"
+  },
+  "fa-allergies": {
+    "prefix": "fa-allergies",
+    "body": "fas fa-allergies"
+  },
+  "fa-ambulance": {
+    "prefix": "fa-ambulance",
+    "body": "fas fa-ambulance"
+  },
+  "fa-american-sign-language-interpreting": {
+    "prefix": "fa-american-sign-language-interpreting",
+    "body": "fas fa-american-sign-language-interpreting"
+  },
+  "fa-anchor": {
+    "prefix": "fa-anchor",
+    "body": "fas fa-anchor"
+  },
+  "fa-angle-double-down": {
+    "prefix": "fa-angle-double-down",
+    "body": "fas fa-angle-double-down"
+  },
+  "fa-angle-double-left": {
+    "prefix": "fa-angle-double-left",
+    "body": "fas fa-angle-double-left"
+  },
+  "fa-angle-double-right": {
+    "prefix": "fa-angle-double-right",
+    "body": "fas fa-angle-double-right"
+  },
+  "fa-angle-double-up": {
+    "prefix": "fa-angle-double-up",
+    "body": "fas fa-angle-double-up"
+  },
+  "fa-angle-down": {
+    "prefix": "fa-angle-down",
+    "body": "fas fa-angle-down"
+  },
+  "fa-angle-left": {
+    "prefix": "fa-angle-left",
+    "body": "fas fa-angle-left"
+  },
+  "fa-angle-right": {
+    "prefix": "fa-angle-right",
+    "body": "fas fa-angle-right"
+  },
+  "fa-angle-up": {
+    "prefix": "fa-angle-up",
+    "body": "fas fa-angle-up"
+  },
+  "fa-archive": {
+    "prefix": "fa-archive",
+    "body": "fas fa-archive"
+  },
+  "fa-arrow-alt-circle-down": {
+    "prefix": "fa-arrow-alt-circle-down",
+    "body": "fas fa-arrow-alt-circle-down"
+  },
+  "fa-arrow-alt-circle-left": {
+    "prefix": "fa-arrow-alt-circle-left",
+    "body": "fas fa-arrow-alt-circle-left"
+  },
+  "fa-arrow-alt-circle-right": {
+    "prefix": "fa-arrow-alt-circle-right",
+    "body": "fas fa-arrow-alt-circle-right"
+  },
+  "fa-arrow-alt-circle-up": {
+    "prefix": "fa-arrow-alt-circle-up",
+    "body": "fas fa-arrow-alt-circle-up"
+  },
+  "fa-arrow-circle-down": {
+    "prefix": "fa-arrow-circle-down",
+    "body": "fas fa-arrow-circle-down"
+  },
+  "fa-arrow-circle-left": {
+    "prefix": "fa-arrow-circle-left",
+    "body": "fas fa-arrow-circle-left"
+  },
+  "fa-arrow-circle-right": {
+    "prefix": "fa-arrow-circle-right",
+    "body": "fas fa-arrow-circle-right"
+  },
+  "fa-arrow-circle-up": {
+    "prefix": "fa-arrow-circle-up",
+    "body": "fas fa-arrow-circle-up"
+  },
+  "fa-arrow-down": {
+    "prefix": "fa-arrow-down",
+    "body": "fas fa-arrow-down"
+  },
+  "fa-arrow-left": {
+    "prefix": "fa-arrow-left",
+    "body": "fas fa-arrow-left"
+  },
+  "fa-arrow-right": {
+    "prefix": "fa-arrow-right",
+    "body": "fas fa-arrow-right"
+  },
+  "fa-arrow-up": {
+    "prefix": "fa-arrow-up",
+    "body": "fas fa-arrow-up"
+  },
+  "fa-arrows-alt": {
+    "prefix": "fa-arrows-alt",
+    "body": "fas fa-arrows-alt"
+  },
+  "fa-arrows-alt-h": {
+    "prefix": "fa-arrows-alt-h",
+    "body": "fas fa-arrows-alt-h"
+  },
+  "fa-arrows-alt-v": {
+    "prefix": "fa-arrows-alt-v",
+    "body": "fas fa-arrows-alt-v"
+  },
+  "fa-assistive-listening-systems": {
+    "prefix": "fa-assistive-listening-systems",
+    "body": "fas fa-assistive-listening-systems"
+  },
+  "fa-asterisk": {
+    "prefix": "fa-asterisk",
+    "body": "fas fa-asterisk"
+  },
+  "fa-at": {
+    "prefix": "fa-at",
+    "body": "fas fa-at"
+  },
+  "fa-audio-description": {
+    "prefix": "fa-audio-description",
+    "body": "fas fa-audio-description"
+  },
+  "fa-backward": {
+    "prefix": "fa-backward",
+    "body": "fas fa-backward"
+  },
+  "fa-balance-scale": {
+    "prefix": "fa-balance-scale",
+    "body": "fas fa-balance-scale"
+  },
+  "fa-ban": {
+    "prefix": "fa-ban",
+    "body": "fas fa-ban"
+  },
+  "fa-band-aid": {
+    "prefix": "fa-band-aid",
+    "body": "fas fa-band-aid"
+  },
+  "fa-barcode": {
+    "prefix": "fa-barcode",
+    "body": "fas fa-barcode"
+  },
+  "fa-bars": {
+    "prefix": "fa-bars",
+    "body": "fas fa-bars"
+  },
+  "fa-baseball-ball": {
+    "prefix": "fa-baseball-ball",
+    "body": "fas fa-baseball-ball"
+  },
+  "fa-basketball-ball": {
+    "prefix": "fa-basketball-ball",
+    "body": "fas fa-basketball-ball"
+  },
+  "fa-bath": {
+    "prefix": "fa-bath",
+    "body": "fas fa-bath"
+  },
+  "fa-battery-empty": {
+    "prefix": "fa-battery-empty",
+    "body": "fas fa-battery-empty"
+  },
+  "fa-battery-full": {
+    "prefix": "fa-battery-full",
+    "body": "fas fa-battery-full"
+  },
+  "fa-battery-half": {
+    "prefix": "fa-battery-half",
+    "body": "fas fa-battery-half"
+  },
+  "fa-battery-quarter": {
+    "prefix": "fa-battery-quarter",
+    "body": "fas fa-battery-quarter"
+  },
+  "fa-battery-three-quarters": {
+    "prefix": "fa-battery-three-quarters",
+    "body": "fas fa-battery-three-quarters"
+  },
+  "fa-bed": {
+    "prefix": "fa-bed",
+    "body": "fas fa-bed"
+  },
+  "fa-beer": {
+    "prefix": "fa-beer",
+    "body": "fas fa-beer"
+  },
+  "fa-bell": {
+    "prefix": "fa-bell",
+    "body": "fas fa-bell"
+  },
+  "fa-bell-slash": {
+    "prefix": "fa-bell-slash",
+    "body": "fas fa-bell-slash"
+  },
+  "fa-bicycle": {
+    "prefix": "fa-bicycle",
+    "body": "fas fa-bicycle"
+  },
+  "fa-binoculars": {
+    "prefix": "fa-binoculars",
+    "body": "fas fa-binoculars"
+  },
+  "fa-birthday-cake": {
+    "prefix": "fa-birthday-cake",
+    "body": "fas fa-birthday-cake"
+  },
+  "fa-blind": {
+    "prefix": "fa-blind",
+    "body": "fas fa-blind"
+  },
+  "fa-bold": {
+    "prefix": "fa-bold",
+    "body": "fas fa-bold"
+  },
+  "fa-bolt": {
+    "prefix": "fa-bolt",
+    "body": "fas fa-bolt"
+  },
+  "fa-bomb": {
+    "prefix": "fa-bomb",
+    "body": "fas fa-bomb"
+  },
+  "fa-book": {
+    "prefix": "fa-book",
+    "body": "fas fa-book"
+  },
+  "fa-bookmark": {
+    "prefix": "fa-bookmark",
+    "body": "fas fa-bookmark"
+  },
+  "fa-bowling-ball": {
+    "prefix": "fa-bowling-ball",
+    "body": "fas fa-bowling-ball"
+  },
+  "fa-box": {
+    "prefix": "fa-box",
+    "body": "fas fa-box"
+  },
+  "fa-box-open": {
+    "prefix": "fa-box-open",
+    "body": "fas fa-box-open"
+  },
+  "fa-boxes": {
+    "prefix": "fa-boxes",
+    "body": "fas fa-boxes"
+  },
+  "fa-braille": {
+    "prefix": "fa-braille",
+    "body": "fas fa-braille"
+  },
+  "fa-briefcase": {
+    "prefix": "fa-briefcase",
+    "body": "fas fa-briefcase"
+  },
+  "fa-briefcase-medical": {
+    "prefix": "fa-briefcase-medical",
+    "body": "fas fa-briefcase-medical"
+  },
+  "fa-bug": {
+    "prefix": "fa-bug",
+    "body": "fas fa-bug"
+  },
+  "fa-building": {
+    "prefix": "fa-building",
+    "body": "fas fa-building"
+  },
+  "fa-bullhorn": {
+    "prefix": "fa-bullhorn",
+    "body": "fas fa-bullhorn"
+  },
+  "fa-bullseye": {
+    "prefix": "fa-bullseye",
+    "body": "fas fa-bullseye"
+  },
+  "fa-burn": {
+    "prefix": "fa-burn",
+    "body": "fas fa-burn"
+  },
+  "fa-bus": {
+    "prefix": "fa-bus",
+    "body": "fas fa-bus"
+  },
+  "fa-calculator": {
+    "prefix": "fa-calculator",
+    "body": "fas fa-calculator"
+  },
+  "fa-calendar": {
+    "prefix": "fa-calendar",
+    "body": "fas fa-calendar"
+  },
+  "fa-calendar-alt": {
+    "prefix": "fa-calendar-alt",
+    "body": "fas fa-calendar-alt"
+  },
+  "fa-calendar-check": {
+    "prefix": "fa-calendar-check",
+    "body": "fas fa-calendar-check"
+  },
+  "fa-calendar-minus": {
+    "prefix": "fa-calendar-minus",
+    "body": "fas fa-calendar-minus"
+  },
+  "fa-calendar-plus": {
+    "prefix": "fa-calendar-plus",
+    "body": "fas fa-calendar-plus"
+  },
+  "fa-calendar-times": {
+    "prefix": "fa-calendar-times",
+    "body": "fas fa-calendar-times"
+  },
+  "fa-camera": {
+    "prefix": "fa-camera",
+    "body": "fas fa-camera"
+  },
+  "fa-camera-retro": {
+    "prefix": "fa-camera-retro",
+    "body": "fas fa-camera-retro"
+  },
+  "fa-capsules": {
+    "prefix": "fa-capsules",
+    "body": "fas fa-capsules"
+  },
+  "fa-car": {
+    "prefix": "fa-car",
+    "body": "fas fa-car"
+  },
+  "fa-caret-down": {
+    "prefix": "fa-caret-down",
+    "body": "fas fa-caret-down"
+  },
+  "fa-caret-left": {
+    "prefix": "fa-caret-left",
+    "body": "fas fa-caret-left"
+  },
+  "fa-caret-right": {
+    "prefix": "fa-caret-right",
+    "body": "fas fa-caret-right"
+  },
+  "fa-caret-square-down": {
+    "prefix": "fa-caret-square-down",
+    "body": "fas fa-caret-square-down"
+  },
+  "fa-caret-square-left": {
+    "prefix": "fa-caret-square-left",
+    "body": "fas fa-caret-square-left"
+  },
+  "fa-caret-square-right": {
+    "prefix": "fa-caret-square-right",
+    "body": "fas fa-caret-square-right"
+  },
+  "fa-caret-square-up": {
+    "prefix": "fa-caret-square-up",
+    "body": "fas fa-caret-square-up"
+  },
+  "fa-caret-up": {
+    "prefix": "fa-caret-up",
+    "body": "fas fa-caret-up"
+  },
+  "fa-cart-arrow-down": {
+    "prefix": "fa-cart-arrow-down",
+    "body": "fas fa-cart-arrow-down"
+  },
+  "fa-cart-plus": {
+    "prefix": "fa-cart-plus",
+    "body": "fas fa-cart-plus"
+  },
+  "fa-certificate": {
+    "prefix": "fa-certificate",
+    "body": "fas fa-certificate"
+  },
+  "fa-chart-area": {
+    "prefix": "fa-chart-area",
+    "body": "fas fa-chart-area"
+  },
+  "fa-chart-bar": {
+    "prefix": "fa-chart-bar",
+    "body": "fas fa-chart-bar"
+  },
+  "fa-chart-line": {
+    "prefix": "fa-chart-line",
+    "body": "fas fa-chart-line"
+  },
+  "fa-chart-pie": {
+    "prefix": "fa-chart-pie",
+    "body": "fas fa-chart-pie"
+  },
+  "fa-check": {
+    "prefix": "fa-check",
+    "body": "fas fa-check"
+  },
+  "fa-check-circle": {
+    "prefix": "fa-check-circle",
+    "body": "fas fa-check-circle"
+  },
+  "fa-check-square": {
+    "prefix": "fa-check-square",
+    "body": "fas fa-check-square"
+  },
+  "fa-chess": {
+    "prefix": "fa-chess",
+    "body": "fas fa-chess"
+  },
+  "fa-chess-bishop": {
+    "prefix": "fa-chess-bishop",
+    "body": "fas fa-chess-bishop"
+  },
+  "fa-chess-board": {
+    "prefix": "fa-chess-board",
+    "body": "fas fa-chess-board"
+  },
+  "fa-chess-king": {
+    "prefix": "fa-chess-king",
+    "body": "fas fa-chess-king"
+  },
+  "fa-chess-knight": {
+    "prefix": "fa-chess-knight",
+    "body": "fas fa-chess-knight"
+  },
+  "fa-chess-pawn": {
+    "prefix": "fa-chess-pawn",
+    "body": "fas fa-chess-pawn"
+  },
+  "fa-chess-queen": {
+    "prefix": "fa-chess-queen",
+    "body": "fas fa-chess-queen"
+  },
+  "fa-chess-rook": {
+    "prefix": "fa-chess-rook",
+    "body": "fas fa-chess-rook"
+  },
+  "fa-chevron-circle-down": {
+    "prefix": "fa-chevron-circle-down",
+    "body": "fas fa-chevron-circle-down"
+  },
+  "fa-chevron-circle-left": {
+    "prefix": "fa-chevron-circle-left",
+    "body": "fas fa-chevron-circle-left"
+  },
+  "fa-chevron-circle-right": {
+    "prefix": "fa-chevron-circle-right",
+    "body": "fas fa-chevron-circle-right"
+  },
+  "fa-chevron-circle-up": {
+    "prefix": "fa-chevron-circle-up",
+    "body": "fas fa-chevron-circle-up"
+  },
+  "fa-chevron-down": {
+    "prefix": "fa-chevron-down",
+    "body": "fas fa-chevron-down"
+  },
+  "fa-chevron-left": {
+    "prefix": "fa-chevron-left",
+    "body": "fas fa-chevron-left"
+  },
+  "fa-chevron-right": {
+    "prefix": "fa-chevron-right",
+    "body": "fas fa-chevron-right"
+  },
+  "fa-chevron-up": {
+    "prefix": "fa-chevron-up",
+    "body": "fas fa-chevron-up"
+  },
+  "fa-child": {
+    "prefix": "fa-child",
+    "body": "fas fa-child"
+  },
+  "fa-circle": {
+    "prefix": "fa-circle",
+    "body": "fas fa-circle"
+  },
+  "fa-circle-notch": {
+    "prefix": "fa-circle-notch",
+    "body": "fas fa-circle-notch"
+  },
+  "fa-clipboard": {
+    "prefix": "fa-clipboard",
+    "body": "fas fa-clipboard"
+  },
+  "fa-clipboard-check": {
+    "prefix": "fa-clipboard-check",
+    "body": "fas fa-clipboard-check"
+  },
+  "fa-clipboard-list": {
+    "prefix": "fa-clipboard-list",
+    "body": "fas fa-clipboard-list"
+  },
+  "fa-clock": {
+    "prefix": "fa-clock",
+    "body": "fas fa-clock"
+  },
+  "fa-clone": {
+    "prefix": "fa-clone",
+    "body": "fas fa-clone"
+  },
+  "fa-closed-captioning": {
+    "prefix": "fa-closed-captioning",
+    "body": "fas fa-closed-captioning"
+  },
+  "fa-cloud": {
+    "prefix": "fa-cloud",
+    "body": "fas fa-cloud"
+  },
+  "fa-cloud-download-alt": {
+    "prefix": "fa-cloud-download-alt",
+    "body": "fas fa-cloud-download-alt"
+  },
+  "fa-cloud-upload-alt": {
+    "prefix": "fa-cloud-upload-alt",
+    "body": "fas fa-cloud-upload-alt"
+  },
+  "fa-code": {
+    "prefix": "fa-code",
+    "body": "fas fa-code"
+  },
+  "fa-code-branch": {
+    "prefix": "fa-code-branch",
+    "body": "fas fa-code-branch"
+  },
+  "fa-coffee": {
+    "prefix": "fa-coffee",
+    "body": "fas fa-coffee"
+  },
+  "fa-cog": {
+    "prefix": "fa-cog",
+    "body": "fas fa-cog"
+  },
+  "fa-cogs": {
+    "prefix": "fa-cogs",
+    "body": "fas fa-cogs"
+  },
+  "fa-columns": {
+    "prefix": "fa-columns",
+    "body": "fas fa-columns"
+  },
+  "fa-comment": {
+    "prefix": "fa-comment",
+    "body": "fas fa-comment"
+  },
+  "fa-comment-alt": {
+    "prefix": "fa-comment-alt",
+    "body": "fas fa-comment-alt"
+  },
+  "fa-comment-dots": {
+    "prefix": "fa-comment-dots",
+    "body": "fas fa-comment-dots"
+  },
+  "fa-comment-slash": {
+    "prefix": "fa-comment-slash",
+    "body": "fas fa-comment-slash"
+  },
+  "fa-comments": {
+    "prefix": "fa-comments",
+    "body": "fas fa-comments"
+  },
+  "fa-compass": {
+    "prefix": "fa-compass",
+    "body": "fas fa-compass"
+  },
+  "fa-compress": {
+    "prefix": "fa-compress",
+    "body": "fas fa-compress"
+  },
+  "fa-copy": {
+    "prefix": "fa-copy",
+    "body": "fas fa-copy"
+  },
+  "fa-copyright": {
+    "prefix": "fa-copyright",
+    "body": "fas fa-copyright"
+  },
+  "fa-couch": {
+    "prefix": "fa-couch",
+    "body": "fas fa-couch"
+  },
+  "fa-credit-card": {
+    "prefix": "fa-credit-card",
+    "body": "fas fa-credit-card"
+  },
+  "fa-crop": {
+    "prefix": "fa-crop",
+    "body": "fas fa-crop"
+  },
+  "fa-crosshairs": {
+    "prefix": "fa-crosshairs",
+    "body": "fas fa-crosshairs"
+  },
+  "fa-cube": {
+    "prefix": "fa-cube",
+    "body": "fas fa-cube"
+  },
+  "fa-cubes": {
+    "prefix": "fa-cubes",
+    "body": "fas fa-cubes"
+  },
+  "fa-cut": {
+    "prefix": "fa-cut",
+    "body": "fas fa-cut"
+  },
+  "fa-database": {
+    "prefix": "fa-database",
+    "body": "fas fa-database"
+  },
+  "fa-deaf": {
+    "prefix": "fa-deaf",
+    "body": "fas fa-deaf"
+  },
+  "fa-desktop": {
+    "prefix": "fa-desktop",
+    "body": "fas fa-desktop"
+  },
+  "fa-diagnoses": {
+    "prefix": "fa-diagnoses",
+    "body": "fas fa-diagnoses"
+  },
+  "fa-dna": {
+    "prefix": "fa-dna",
+    "body": "fas fa-dna"
+  },
+  "fa-dollar-sign": {
+    "prefix": "fa-dollar-sign",
+    "body": "fas fa-dollar-sign"
+  },
+  "fa-dolly": {
+    "prefix": "fa-dolly",
+    "body": "fas fa-dolly"
+  },
+  "fa-dolly-flatbed": {
+    "prefix": "fa-dolly-flatbed",
+    "body": "fas fa-dolly-flatbed"
+  },
+  "fa-donate": {
+    "prefix": "fa-donate",
+    "body": "fas fa-donate"
+  },
+  "fa-dot-circle": {
+    "prefix": "fa-dot-circle",
+    "body": "fas fa-dot-circle"
+  },
+  "fa-dove": {
+    "prefix": "fa-dove",
+    "body": "fas fa-dove"
+  },
+  "fa-download": {
+    "prefix": "fa-download",
+    "body": "fas fa-download"
+  },
+  "fa-edit": {
+    "prefix": "fa-edit",
+    "body": "fas fa-edit"
+  },
+  "fa-eject": {
+    "prefix": "fa-eject",
+    "body": "fas fa-eject"
+  },
+  "fa-ellipsis-h": {
+    "prefix": "fa-ellipsis-h",
+    "body": "fas fa-ellipsis-h"
+  },
+  "fa-ellipsis-v": {
+    "prefix": "fa-ellipsis-v",
+    "body": "fas fa-ellipsis-v"
+  },
+  "fa-envelope": {
+    "prefix": "fa-envelope",
+    "body": "fas fa-envelope"
+  },
+  "fa-envelope-open": {
+    "prefix": "fa-envelope-open",
+    "body": "fas fa-envelope-open"
+  },
+  "fa-envelope-square": {
+    "prefix": "fa-envelope-square",
+    "body": "fas fa-envelope-square"
+  },
+  "fa-eraser": {
+    "prefix": "fa-eraser",
+    "body": "fas fa-eraser"
+  },
+  "fa-euro-sign": {
+    "prefix": "fa-euro-sign",
+    "body": "fas fa-euro-sign"
+  },
+  "fa-exchange-alt": {
+    "prefix": "fa-exchange-alt",
+    "body": "fas fa-exchange-alt"
+  },
+  "fa-exclamation": {
+    "prefix": "fa-exclamation",
+    "body": "fas fa-exclamation"
+  },
+  "fa-exclamation-circle": {
+    "prefix": "fa-exclamation-circle",
+    "body": "fas fa-exclamation-circle"
+  },
+  "fa-exclamation-triangle": {
+    "prefix": "fa-exclamation-triangle",
+    "body": "fas fa-exclamation-triangle"
+  },
+  "fa-expand": {
+    "prefix": "fa-expand",
+    "body": "fas fa-expand"
+  },
+  "fa-expand-arrows-alt": {
+    "prefix": "fa-expand-arrows-alt",
+    "body": "fas fa-expand-arrows-alt"
+  },
+  "fa-external-link-alt": {
+    "prefix": "fa-external-link-alt",
+    "body": "fas fa-external-link-alt"
+  },
+  "fa-external-link-square-alt": {
+    "prefix": "fa-external-link-square-alt",
+    "body": "fas fa-external-link-square-alt"
+  },
+  "fa-eye": {
+    "prefix": "fa-eye",
+    "body": "fas fa-eye"
+  },
+  "fa-eye-dropper": {
+    "prefix": "fa-eye-dropper",
+    "body": "fas fa-eye-dropper"
+  },
+  "fa-eye-slash": {
+    "prefix": "fa-eye-slash",
+    "body": "fas fa-eye-slash"
+  },
+  "fa-fast-backward": {
+    "prefix": "fa-fast-backward",
+    "body": "fas fa-fast-backward"
+  },
+  "fa-fast-forward": {
+    "prefix": "fa-fast-forward",
+    "body": "fas fa-fast-forward"
+  },
+  "fa-fax": {
+    "prefix": "fa-fax",
+    "body": "fas fa-fax"
+  },
+  "fa-female": {
+    "prefix": "fa-female",
+    "body": "fas fa-female"
+  },
+  "fa-fighter-jet": {
+    "prefix": "fa-fighter-jet",
+    "body": "fas fa-fighter-jet"
+  },
+  "fa-file": {
+    "prefix": "fa-file",
+    "body": "fas fa-file"
+  },
+  "fa-file-alt": {
+    "prefix": "fa-file-alt",
+    "body": "fas fa-file-alt"
+  },
+  "fa-file-archive": {
+    "prefix": "fa-file-archive",
+    "body": "fas fa-file-archive"
+  },
+  "fa-file-audio": {
+    "prefix": "fa-file-audio",
+    "body": "fas fa-file-audio"
+  },
+  "fa-file-code": {
+    "prefix": "fa-file-code",
+    "body": "fas fa-file-code"
+  },
+  "fa-file-excel": {
+    "prefix": "fa-file-excel",
+    "body": "fas fa-file-excel"
+  },
+  "fa-file-image": {
+    "prefix": "fa-file-image",
+    "body": "fas fa-file-image"
+  },
+  "fa-file-medical": {
+    "prefix": "fa-file-medical",
+    "body": "fas fa-file-medical"
+  },
+  "fa-file-medical-alt": {
+    "prefix": "fa-file-medical-alt",
+    "body": "fas fa-file-medical-alt"
+  },
+  "fa-file-pdf": {
+    "prefix": "fa-file-pdf",
+    "body": "fas fa-file-pdf"
+  },
+  "fa-file-powerpoint": {
+    "prefix": "fa-file-powerpoint",
+    "body": "fas fa-file-powerpoint"
+  },
+  "fa-file-video": {
+    "prefix": "fa-file-video",
+    "body": "fas fa-file-video"
+  },
+  "fa-file-word": {
+    "prefix": "fa-file-word",
+    "body": "fas fa-file-word"
+  },
+  "fa-film": {
+    "prefix": "fa-film",
+    "body": "fas fa-film"
+  },
+  "fa-filter": {
+    "prefix": "fa-filter",
+    "body": "fas fa-filter"
+  },
+  "fa-fire": {
+    "prefix": "fa-fire",
+    "body": "fas fa-fire"
+  },
+  "fa-fire-extinguisher": {
+    "prefix": "fa-fire-extinguisher",
+    "body": "fas fa-fire-extinguisher"
+  },
+  "fa-first-aid": {
+    "prefix": "fa-first-aid",
+    "body": "fas fa-first-aid"
+  },
+  "fa-flag": {
+    "prefix": "fa-flag",
+    "body": "fas fa-flag"
+  },
+  "fa-flag-checkered": {
+    "prefix": "fa-flag-checkered",
+    "body": "fas fa-flag-checkered"
+  },
+  "fa-flask": {
+    "prefix": "fa-flask",
+    "body": "fas fa-flask"
+  },
+  "fa-folder": {
+    "prefix": "fa-folder",
+    "body": "fas fa-folder"
+  },
+  "fa-folder-open": {
+    "prefix": "fa-folder-open",
+    "body": "fas fa-folder-open"
+  },
+  "fa-font": {
+    "prefix": "fa-font",
+    "body": "fas fa-font"
+  },
+  "fa-football-ball": {
+    "prefix": "fa-football-ball",
+    "body": "fas fa-football-ball"
+  },
+  "fa-forward": {
+    "prefix": "fa-forward",
+    "body": "fas fa-forward"
+  },
+  "fa-frown": {
+    "prefix": "fa-frown",
+    "body": "fas fa-frown"
+  },
+  "fa-futbol": {
+    "prefix": "fa-futbol",
+    "body": "fas fa-futbol"
+  },
+  "fa-gamepad": {
+    "prefix": "fa-gamepad",
+    "body": "fas fa-gamepad"
+  },
+  "fa-gavel": {
+    "prefix": "fa-gavel",
+    "body": "fas fa-gavel"
+  },
+  "fa-gem": {
+    "prefix": "fa-gem",
+    "body": "fas fa-gem"
+  },
+  "fa-genderless": {
+    "prefix": "fa-genderless",
+    "body": "fas fa-genderless"
+  },
+  "fa-gift": {
+    "prefix": "fa-gift",
+    "body": "fas fa-gift"
+  },
+  "fa-glass-martini": {
+    "prefix": "fa-glass-martini",
+    "body": "fas fa-glass-martini"
+  },
+  "fa-globe": {
+    "prefix": "fa-globe",
+    "body": "fas fa-globe"
+  },
+  "fa-golf-ball": {
+    "prefix": "fa-golf-ball",
+    "body": "fas fa-golf-ball"
+  },
+  "fa-graduation-cap": {
+    "prefix": "fa-graduation-cap",
+    "body": "fas fa-graduation-cap"
+  },
+  "fa-h-square": {
+    "prefix": "fa-h-square",
+    "body": "fas fa-h-square"
+  },
+  "fa-hand-holding": {
+    "prefix": "fa-hand-holding",
+    "body": "fas fa-hand-holding"
+  },
+  "fa-hand-holding-heart": {
+    "prefix": "fa-hand-holding-heart",
+    "body": "fas fa-hand-holding-heart"
+  },
+  "fa-hand-holding-usd": {
+    "prefix": "fa-hand-holding-usd",
+    "body": "fas fa-hand-holding-usd"
+  },
+  "fa-hand-lizard": {
+    "prefix": "fa-hand-lizard",
+    "body": "fas fa-hand-lizard"
+  },
+  "fa-hand-paper": {
+    "prefix": "fa-hand-paper",
+    "body": "fas fa-hand-paper"
+  },
+  "fa-hand-peace": {
+    "prefix": "fa-hand-peace",
+    "body": "fas fa-hand-peace"
+  },
+  "fa-hand-point-down": {
+    "prefix": "fa-hand-point-down",
+    "body": "fas fa-hand-point-down"
+  },
+  "fa-hand-point-left": {
+    "prefix": "fa-hand-point-left",
+    "body": "fas fa-hand-point-left"
+  },
+  "fa-hand-point-right": {
+    "prefix": "fa-hand-point-right",
+    "body": "fas fa-hand-point-right"
+  },
+  "fa-hand-point-up": {
+    "prefix": "fa-hand-point-up",
+    "body": "fas fa-hand-point-up"
+  },
+  "fa-hand-pointer": {
+    "prefix": "fa-hand-pointer",
+    "body": "fas fa-hand-pointer"
+  },
+  "fa-hand-rock": {
+    "prefix": "fa-hand-rock",
+    "body": "fas fa-hand-rock"
+  },
+  "fa-hand-scissors": {
+    "prefix": "fa-hand-scissors",
+    "body": "fas fa-hand-scissors"
+  },
+  "fa-hand-spock": {
+    "prefix": "fa-hand-spock",
+    "body": "fas fa-hand-spock"
+  },
+  "fa-hands": {
+    "prefix": "fa-hands",
+    "body": "fas fa-hands"
+  },
+  "fa-hands-helping": {
+    "prefix": "fa-hands-helping",
+    "body": "fas fa-hands-helping"
+  },
+  "fa-handshake": {
+    "prefix": "fa-handshake",
+    "body": "fas fa-handshake"
+  },
+  "fa-hashtag": {
+    "prefix": "fa-hashtag",
+    "body": "fas fa-hashtag"
+  },
+  "fa-hdd": {
+    "prefix": "fa-hdd",
+    "body": "fas fa-hdd"
+  },
+  "fa-heading": {
+    "prefix": "fa-heading",
+    "body": "fas fa-heading"
+  },
+  "fa-headphones": {
+    "prefix": "fa-headphones",
+    "body": "fas fa-headphones"
+  },
+  "fa-heart": {
+    "prefix": "fa-heart",
+    "body": "fas fa-heart"
+  },
+  "fa-heartbeat": {
+    "prefix": "fa-heartbeat",
+    "body": "fas fa-heartbeat"
+  },
+  "fa-history": {
+    "prefix": "fa-history",
+    "body": "fas fa-history"
+  },
+  "fa-hockey-puck": {
+    "prefix": "fa-hockey-puck",
+    "body": "fas fa-hockey-puck"
+  },
+  "fa-home": {
+    "prefix": "fa-home",
+    "body": "fas fa-home"
+  },
+  "fa-hospital": {
+    "prefix": "fa-hospital",
+    "body": "fas fa-hospital"
+  },
+  "fa-hospital-alt": {
+    "prefix": "fa-hospital-alt",
+    "body": "fas fa-hospital-alt"
+  },
+  "fa-hospital-symbol": {
+    "prefix": "fa-hospital-symbol",
+    "body": "fas fa-hospital-symbol"
+  },
+  "fa-hourglass": {
+    "prefix": "fa-hourglass",
+    "body": "fas fa-hourglass"
+  },
+  "fa-hourglass-end": {
+    "prefix": "fa-hourglass-end",
+    "body": "fas fa-hourglass-end"
+  },
+  "fa-hourglass-half": {
+    "prefix": "fa-hourglass-half",
+    "body": "fas fa-hourglass-half"
+  },
+  "fa-hourglass-start": {
+    "prefix": "fa-hourglass-start",
+    "body": "fas fa-hourglass-start"
+  },
+  "fa-i-cursor": {
+    "prefix": "fa-i-cursor",
+    "body": "fas fa-i-cursor"
+  },
+  "fa-id-badge": {
+    "prefix": "fa-id-badge",
+    "body": "fas fa-id-badge"
+  },
+  "fa-id-card": {
+    "prefix": "fa-id-card",
+    "body": "fas fa-id-card"
+  },
+  "fa-id-card-alt": {
+    "prefix": "fa-id-card-alt",
+    "body": "fas fa-id-card-alt"
+  },
+  "fa-image": {
+    "prefix": "fa-image",
+    "body": "fas fa-image"
+  },
+  "fa-images": {
+    "prefix": "fa-images",
+    "body": "fas fa-images"
+  },
+  "fa-inbox": {
+    "prefix": "fa-inbox",
+    "body": "fas fa-inbox"
+  },
+  "fa-indent": {
+    "prefix": "fa-indent",
+    "body": "fas fa-indent"
+  },
+  "fa-industry": {
+    "prefix": "fa-industry",
+    "body": "fas fa-industry"
+  },
+  "fa-info": {
+    "prefix": "fa-info",
+    "body": "fas fa-info"
+  },
+  "fa-info-circle": {
+    "prefix": "fa-info-circle",
+    "body": "fas fa-info-circle"
+  },
+  "fa-italic": {
+    "prefix": "fa-italic",
+    "body": "fas fa-italic"
+  },
+  "fa-key": {
+    "prefix": "fa-key",
+    "body": "fas fa-key"
+  },
+  "fa-keyboard": {
+    "prefix": "fa-keyboard",
+    "body": "fas fa-keyboard"
+  },
+  "fa-language": {
+    "prefix": "fa-language",
+    "body": "fas fa-language"
+  },
+  "fa-laptop": {
+    "prefix": "fa-laptop",
+    "body": "fas fa-laptop"
+  },
+  "fa-leaf": {
+    "prefix": "fa-leaf",
+    "body": "fas fa-leaf"
+  },
+  "fa-lemon": {
+    "prefix": "fa-lemon",
+    "body": "fas fa-lemon"
+  },
+  "fa-level-down-alt": {
+    "prefix": "fa-level-down-alt",
+    "body": "fas fa-level-down-alt"
+  },
+  "fa-level-up-alt": {
+    "prefix": "fa-level-up-alt",
+    "body": "fas fa-level-up-alt"
+  },
+  "fa-life-ring": {
+    "prefix": "fa-life-ring",
+    "body": "fas fa-life-ring"
+  },
+  "fa-lightbulb": {
+    "prefix": "fa-lightbulb",
+    "body": "fas fa-lightbulb"
+  },
+  "fa-link": {
+    "prefix": "fa-link",
+    "body": "fas fa-link"
+  },
+  "fa-lira-sign": {
+    "prefix": "fa-lira-sign",
+    "body": "fas fa-lira-sign"
+  },
+  "fa-list": {
+    "prefix": "fa-list",
+    "body": "fas fa-list"
+  },
+  "fa-list-alt": {
+    "prefix": "fa-list-alt",
+    "body": "fas fa-list-alt"
+  },
+  "fa-list-ol": {
+    "prefix": "fa-list-ol",
+    "body": "fas fa-list-ol"
+  },
+  "fa-list-ul": {
+    "prefix": "fa-list-ul",
+    "body": "fas fa-list-ul"
+  },
+  "fa-location-arrow": {
+    "prefix": "fa-location-arrow",
+    "body": "fas fa-location-arrow"
+  },
+  "fa-lock": {
+    "prefix": "fa-lock",
+    "body": "fas fa-lock"
+  },
+  "fa-lock-open": {
+    "prefix": "fa-lock-open",
+    "body": "fas fa-lock-open"
+  },
+  "fa-long-arrow-alt-down": {
+    "prefix": "fa-long-arrow-alt-down",
+    "body": "fas fa-long-arrow-alt-down"
+  },
+  "fa-long-arrow-alt-left": {
+    "prefix": "fa-long-arrow-alt-left",
+    "body": "fas fa-long-arrow-alt-left"
+  },
+  "fa-long-arrow-alt-right": {
+    "prefix": "fa-long-arrow-alt-right",
+    "body": "fas fa-long-arrow-alt-right"
+  },
+  "fa-long-arrow-alt-up": {
+    "prefix": "fa-long-arrow-alt-up",
+    "body": "fas fa-long-arrow-alt-up"
+  },
+  "fa-low-vision": {
+    "prefix": "fa-low-vision",
+    "body": "fas fa-low-vision"
+  },
+  "fa-magic": {
+    "prefix": "fa-magic",
+    "body": "fas fa-magic"
+  },
+  "fa-magnet": {
+    "prefix": "fa-magnet",
+    "body": "fas fa-magnet"
+  },
+  "fa-male": {
+    "prefix": "fa-male",
+    "body": "fas fa-male"
+  },
+  "fa-map": {
+    "prefix": "fa-map",
+    "body": "fas fa-map"
+  },
+  "fa-map-marker": {
+    "prefix": "fa-map-marker",
+    "body": "fas fa-map-marker"
+  },
+  "fa-map-marker-alt": {
+    "prefix": "fa-map-marker-alt",
+    "body": "fas fa-map-marker-alt"
+  },
+  "fa-map-pin": {
+    "prefix": "fa-map-pin",
+    "body": "fas fa-map-pin"
+  },
+  "fa-map-signs": {
+    "prefix": "fa-map-signs",
+    "body": "fas fa-map-signs"
+  },
+  "fa-mars": {
+    "prefix": "fa-mars",
+    "body": "fas fa-mars"
+  },
+  "fa-mars-double": {
+    "prefix": "fa-mars-double",
+    "body": "fas fa-mars-double"
+  },
+  "fa-mars-stroke": {
+    "prefix": "fa-mars-stroke",
+    "body": "fas fa-mars-stroke"
+  },
+  "fa-mars-stroke-h": {
+    "prefix": "fa-mars-stroke-h",
+    "body": "fas fa-mars-stroke-h"
+  },
+  "fa-mars-stroke-v": {
+    "prefix": "fa-mars-stroke-v",
+    "body": "fas fa-mars-stroke-v"
+  },
+  "fa-medkit": {
+    "prefix": "fa-medkit",
+    "body": "fas fa-medkit"
+  },
+  "fa-meh": {
+    "prefix": "fa-meh",
+    "body": "fas fa-meh"
+  },
+  "fa-mercury": {
+    "prefix": "fa-mercury",
+    "body": "fas fa-mercury"
+  },
+  "fa-microchip": {
+    "prefix": "fa-microchip",
+    "body": "fas fa-microchip"
+  },
+  "fa-microphone": {
+    "prefix": "fa-microphone",
+    "body": "fas fa-microphone"
+  },
+  "fa-microphone-slash": {
+    "prefix": "fa-microphone-slash",
+    "body": "fas fa-microphone-slash"
+  },
+  "fa-minus": {
+    "prefix": "fa-minus",
+    "body": "fas fa-minus"
+  },
+  "fa-minus-circle": {
+    "prefix": "fa-minus-circle",
+    "body": "fas fa-minus-circle"
+  },
+  "fa-minus-square": {
+    "prefix": "fa-minus-square",
+    "body": "fas fa-minus-square"
+  },
+  "fa-mobile": {
+    "prefix": "fa-mobile",
+    "body": "fas fa-mobile"
+  },
+  "fa-mobile-alt": {
+    "prefix": "fa-mobile-alt",
+    "body": "fas fa-mobile-alt"
+  },
+  "fa-money-bill-alt": {
+    "prefix": "fa-money-bill-alt",
+    "body": "fas fa-money-bill-alt"
+  },
+  "fa-moon": {
+    "prefix": "fa-moon",
+    "body": "fas fa-moon"
+  },
+  "fa-motorcycle": {
+    "prefix": "fa-motorcycle",
+    "body": "fas fa-motorcycle"
+  },
+  "fa-mouse-pointer": {
+    "prefix": "fa-mouse-pointer",
+    "body": "fas fa-mouse-pointer"
+  },
+  "fa-music": {
+    "prefix": "fa-music",
+    "body": "fas fa-music"
+  },
+  "fa-neuter": {
+    "prefix": "fa-neuter",
+    "body": "fas fa-neuter"
+  },
+  "fa-newspaper": {
+    "prefix": "fa-newspaper",
+    "body": "fas fa-newspaper"
+  },
+  "fa-notes-medical": {
+    "prefix": "fa-notes-medical",
+    "body": "fas fa-notes-medical"
+  },
+  "fa-object-group": {
+    "prefix": "fa-object-group",
+    "body": "fas fa-object-group"
+  },
+  "fa-object-ungroup": {
+    "prefix": "fa-object-ungroup",
+    "body": "fas fa-object-ungroup"
+  },
+  "fa-outdent": {
+    "prefix": "fa-outdent",
+    "body": "fas fa-outdent"
+  },
+  "fa-paint-brush": {
+    "prefix": "fa-paint-brush",
+    "body": "fas fa-paint-brush"
+  },
+  "fa-pallet": {
+    "prefix": "fa-pallet",
+    "body": "fas fa-pallet"
+  },
+  "fa-paper-plane": {
+    "prefix": "fa-paper-plane",
+    "body": "fas fa-paper-plane"
+  },
+  "fa-paperclip": {
+    "prefix": "fa-paperclip",
+    "body": "fas fa-paperclip"
+  },
+  "fa-parachute-box": {
+    "prefix": "fa-parachute-box",
+    "body": "fas fa-parachute-box"
+  },
+  "fa-paragraph": {
+    "prefix": "fa-paragraph",
+    "body": "fas fa-paragraph"
+  },
+  "fa-paste": {
+    "prefix": "fa-paste",
+    "body": "fas fa-paste"
+  },
+  "fa-pause": {
+    "prefix": "fa-pause",
+    "body": "fas fa-pause"
+  },
+  "fa-pause-circle": {
+    "prefix": "fa-pause-circle",
+    "body": "fas fa-pause-circle"
+  },
+  "fa-paw": {
+    "prefix": "fa-paw",
+    "body": "fas fa-paw"
+  },
+  "fa-pen-square": {
+    "prefix": "fa-pen-square",
+    "body": "fas fa-pen-square"
+  },
+  "fa-pencil-alt": {
+    "prefix": "fa-pencil-alt",
+    "body": "fas fa-pencil-alt"
+  },
+  "fa-people-carry": {
+    "prefix": "fa-people-carry",
+    "body": "fas fa-people-carry"
+  },
+  "fa-percent": {
+    "prefix": "fa-percent",
+    "body": "fas fa-percent"
+  },
+  "fa-phone": {
+    "prefix": "fa-phone",
+    "body": "fas fa-phone"
+  },
+  "fa-phone-slash": {
+    "prefix": "fa-phone-slash",
+    "body": "fas fa-phone-slash"
+  },
+  "fa-phone-square": {
+    "prefix": "fa-phone-square",
+    "body": "fas fa-phone-square"
+  },
+  "fa-phone-volume": {
+    "prefix": "fa-phone-volume",
+    "body": "fas fa-phone-volume"
+  },
+  "fa-piggy-bank": {
+    "prefix": "fa-piggy-bank",
+    "body": "fas fa-piggy-bank"
+  },
+  "fa-pills": {
+    "prefix": "fa-pills",
+    "body": "fas fa-pills"
+  },
+  "fa-plane": {
+    "prefix": "fa-plane",
+    "body": "fas fa-plane"
+  },
+  "fa-play": {
+    "prefix": "fa-play",
+    "body": "fas fa-play"
+  },
+  "fa-play-circle": {
+    "prefix": "fa-play-circle",
+    "body": "fas fa-play-circle"
+  },
+  "fa-plug": {
+    "prefix": "fa-plug",
+    "body": "fas fa-plug"
+  },
+  "fa-plus": {
+    "prefix": "fa-plus",
+    "body": "fas fa-plus"
+  },
+  "fa-plus-circle": {
+    "prefix": "fa-plus-circle",
+    "body": "fas fa-plus-circle"
+  },
+  "fa-plus-square": {
+    "prefix": "fa-plus-square",
+    "body": "fas fa-plus-square"
+  },
+  "fa-podcast": {
+    "prefix": "fa-podcast",
+    "body": "fas fa-podcast"
+  },
+  "fa-poo": {
+    "prefix": "fa-poo",
+    "body": "fas fa-poo"
+  },
+  "fa-pound-sign": {
+    "prefix": "fa-pound-sign",
+    "body": "fas fa-pound-sign"
+  },
+  "fa-power-off": {
+    "prefix": "fa-power-off",
+    "body": "fas fa-power-off"
+  },
+  "fa-prescription-bottle": {
+    "prefix": "fa-prescription-bottle",
+    "body": "fas fa-prescription-bottle"
+  },
+  "fa-prescription-bottle-alt": {
+    "prefix": "fa-prescription-bottle-alt",
+    "body": "fas fa-prescription-bottle-alt"
+  },
+  "fa-print": {
+    "prefix": "fa-print",
+    "body": "fas fa-print"
+  },
+  "fa-procedures": {
+    "prefix": "fa-procedures",
+    "body": "fas fa-procedures"
+  },
+  "fa-puzzle-piece": {
+    "prefix": "fa-puzzle-piece",
+    "body": "fas fa-puzzle-piece"
+  },
+  "fa-qrcode": {
+    "prefix": "fa-qrcode",
+    "body": "fas fa-qrcode"
+  },
+  "fa-question": {
+    "prefix": "fa-question",
+    "body": "fas fa-question"
+  },
+  "fa-question-circle": {
+    "prefix": "fa-question-circle",
+    "body": "fas fa-question-circle"
+  },
+  "fa-quidditch": {
+    "prefix": "fa-quidditch",
+    "body": "fas fa-quidditch"
+  },
+  "fa-quote-left": {
+    "prefix": "fa-quote-left",
+    "body": "fas fa-quote-left"
+  },
+  "fa-quote-right": {
+    "prefix": "fa-quote-right",
+    "body": "fas fa-quote-right"
+  },
+  "fa-random": {
+    "prefix": "fa-random",
+    "body": "fas fa-random"
+  },
+  "fa-recycle": {
+    "prefix": "fa-recycle",
+    "body": "fas fa-recycle"
+  },
+  "fa-redo": {
+    "prefix": "fa-redo",
+    "body": "fas fa-redo"
+  },
+  "fa-redo-alt": {
+    "prefix": "fa-redo-alt",
+    "body": "fas fa-redo-alt"
+  },
+  "fa-registered": {
+    "prefix": "fa-registered",
+    "body": "fas fa-registered"
+  },
+  "fa-reply": {
+    "prefix": "fa-reply",
+    "body": "fas fa-reply"
+  },
+  "fa-reply-all": {
+    "prefix": "fa-reply-all",
+    "body": "fas fa-reply-all"
+  },
+  "fa-retweet": {
+    "prefix": "fa-retweet",
+    "body": "fas fa-retweet"
+  },
+  "fa-ribbon": {
+    "prefix": "fa-ribbon",
+    "body": "fas fa-ribbon"
+  },
+  "fa-road": {
+    "prefix": "fa-road",
+    "body": "fas fa-road"
+  },
+  "fa-rocket": {
+    "prefix": "fa-rocket",
+    "body": "fas fa-rocket"
+  },
+  "fa-rss": {
+    "prefix": "fa-rss",
+    "body": "fas fa-rss"
+  },
+  "fa-rss-square": {
+    "prefix": "fa-rss-square",
+    "body": "fas fa-rss-square"
+  },
+  "fa-ruble-sign": {
+    "prefix": "fa-ruble-sign",
+    "body": "fas fa-ruble-sign"
+  },
+  "fa-rupee-sign": {
+    "prefix": "fa-rupee-sign",
+    "body": "fas fa-rupee-sign"
+  },
+  "fa-save": {
+    "prefix": "fa-save",
+    "body": "fas fa-save"
+  },
+  "fa-search": {
+    "prefix": "fa-search",
+    "body": "fas fa-search"
+  },
+  "fa-search-minus": {
+    "prefix": "fa-search-minus",
+    "body": "fas fa-search-minus"
+  },
+  "fa-search-plus": {
+    "prefix": "fa-search-plus",
+    "body": "fas fa-search-plus"
+  },
+  "fa-seedling": {
+    "prefix": "fa-seedling",
+    "body": "fas fa-seedling"
+  },
+  "fa-server": {
+    "prefix": "fa-server",
+    "body": "fas fa-server"
+  },
+  "fa-share": {
+    "prefix": "fa-share",
+    "body": "fas fa-share"
+  },
+  "fa-share-alt": {
+    "prefix": "fa-share-alt",
+    "body": "fas fa-share-alt"
+  },
+  "fa-share-alt-square": {
+    "prefix": "fa-share-alt-square",
+    "body": "fas fa-share-alt-square"
+  },
+  "fa-share-square": {
+    "prefix": "fa-share-square",
+    "body": "fas fa-share-square"
+  },
+  "fa-shekel-sign": {
+    "prefix": "fa-shekel-sign",
+    "body": "fas fa-shekel-sign"
+  },
+  "fa-shield-alt": {
+    "prefix": "fa-shield-alt",
+    "body": "fas fa-shield-alt"
+  },
+  "fa-ship": {
+    "prefix": "fa-ship",
+    "body": "fas fa-ship"
+  },
+  "fa-shipping-fast": {
+    "prefix": "fa-shipping-fast",
+    "body": "fas fa-shipping-fast"
+  },
+  "fa-shopping-bag": {
+    "prefix": "fa-shopping-bag",
+    "body": "fas fa-shopping-bag"
+  },
+  "fa-shopping-basket": {
+    "prefix": "fa-shopping-basket",
+    "body": "fas fa-shopping-basket"
+  },
+  "fa-shopping-cart": {
+    "prefix": "fa-shopping-cart",
+    "body": "fas fa-shopping-cart"
+  },
+  "fa-shower": {
+    "prefix": "fa-shower",
+    "body": "fas fa-shower"
+  },
+  "fa-sign": {
+    "prefix": "fa-sign",
+    "body": "fas fa-sign"
+  },
+  "fa-sign-in-alt": {
+    "prefix": "fa-sign-in-alt",
+    "body": "fas fa-sign-in-alt"
+  },
+  "fa-sign-language": {
+    "prefix": "fa-sign-language",
+    "body": "fas fa-sign-language"
+  },
+  "fa-sign-out-alt": {
+    "prefix": "fa-sign-out-alt",
+    "body": "fas fa-sign-out-alt"
+  },
+  "fa-signal": {
+    "prefix": "fa-signal",
+    "body": "fas fa-signal"
+  },
+  "fa-sitemap": {
+    "prefix": "fa-sitemap",
+    "body": "fas fa-sitemap"
+  },
+  "fa-sliders-h": {
+    "prefix": "fa-sliders-h",
+    "body": "fas fa-sliders-h"
+  },
+  "fa-smile": {
+    "prefix": "fa-smile",
+    "body": "fas fa-smile"
+  },
+  "fa-smoking": {
+    "prefix": "fa-smoking",
+    "body": "fas fa-smoking"
+  },
+  "fa-snowflake": {
+    "prefix": "fa-snowflake",
+    "body": "fas fa-snowflake"
+  },
+  "fa-sort": {
+    "prefix": "fa-sort",
+    "body": "fas fa-sort"
+  },
+  "fa-sort-alpha-down": {
+    "prefix": "fa-sort-alpha-down",
+    "body": "fas fa-sort-alpha-down"
+  },
+  "fa-sort-alpha-up": {
+    "prefix": "fa-sort-alpha-up",
+    "body": "fas fa-sort-alpha-up"
+  },
+  "fa-sort-amount-down": {
+    "prefix": "fa-sort-amount-down",
+    "body": "fas fa-sort-amount-down"
+  },
+  "fa-sort-amount-up": {
+    "prefix": "fa-sort-amount-up",
+    "body": "fas fa-sort-amount-up"
+  },
+  "fa-sort-down": {
+    "prefix": "fa-sort-down",
+    "body": "fas fa-sort-down"
+  },
+  "fa-sort-numeric-down": {
+    "prefix": "fa-sort-numeric-down",
+    "body": "fas fa-sort-numeric-down"
+  },
+  "fa-sort-numeric-up": {
+    "prefix": "fa-sort-numeric-up",
+    "body": "fas fa-sort-numeric-up"
+  },
+  "fa-sort-up": {
+    "prefix": "fa-sort-up",
+    "body": "fas fa-sort-up"
+  },
+  "fa-space-shuttle": {
+    "prefix": "fa-space-shuttle",
+    "body": "fas fa-space-shuttle"
+  },
+  "fa-spinner": {
+    "prefix": "fa-spinner",
+    "body": "fas fa-spinner"
+  },
+  "fa-square": {
+    "prefix": "fa-square",
+    "body": "fas fa-square"
+  },
+  "fa-square-full": {
+    "prefix": "fa-square-full",
+    "body": "fas fa-square-full"
+  },
+  "fa-star": {
+    "prefix": "fa-star",
+    "body": "fas fa-star"
+  },
+  "fa-star-half": {
+    "prefix": "fa-star-half",
+    "body": "fas fa-star-half"
+  },
+  "fa-step-backward": {
+    "prefix": "fa-step-backward",
+    "body": "fas fa-step-backward"
+  },
+  "fa-step-forward": {
+    "prefix": "fa-step-forward",
+    "body": "fas fa-step-forward"
+  },
+  "fa-stethoscope": {
+    "prefix": "fa-stethoscope",
+    "body": "fas fa-stethoscope"
+  },
+  "fa-sticky-note": {
+    "prefix": "fa-sticky-note",
+    "body": "fas fa-sticky-note"
+  },
+  "fa-stop": {
+    "prefix": "fa-stop",
+    "body": "fas fa-stop"
+  },
+  "fa-stop-circle": {
+    "prefix": "fa-stop-circle",
+    "body": "fas fa-stop-circle"
+  },
+  "fa-stopwatch": {
+    "prefix": "fa-stopwatch",
+    "body": "fas fa-stopwatch"
+  },
+  "fa-street-view": {
+    "prefix": "fa-street-view",
+    "body": "fas fa-street-view"
+  },
+  "fa-strikethrough": {
+    "prefix": "fa-strikethrough",
+    "body": "fas fa-strikethrough"
+  },
+  "fa-subscript": {
+    "prefix": "fa-subscript",
+    "body": "fas fa-subscript"
+  },
+  "fa-subway": {
+    "prefix": "fa-subway",
+    "body": "fas fa-subway"
+  },
+  "fa-suitcase": {
+    "prefix": "fa-suitcase",
+    "body": "fas fa-suitcase"
+  },
+  "fa-sun": {
+    "prefix": "fa-sun",
+    "body": "fas fa-sun"
+  },
+  "fa-superscript": {
+    "prefix": "fa-superscript",
+    "body": "fas fa-superscript"
+  },
+  "fa-sync": {
+    "prefix": "fa-sync",
+    "body": "fas fa-sync"
+  },
+  "fa-sync-alt": {
+    "prefix": "fa-sync-alt",
+    "body": "fas fa-sync-alt"
+  },
+  "fa-syringe": {
+    "prefix": "fa-syringe",
+    "body": "fas fa-syringe"
+  },
+  "fa-table": {
+    "prefix": "fa-table",
+    "body": "fas fa-table"
+  },
+  "fa-table-tennis": {
+    "prefix": "fa-table-tennis",
+    "body": "fas fa-table-tennis"
+  },
+  "fa-tablet": {
+    "prefix": "fa-tablet",
+    "body": "fas fa-tablet"
+  },
+  "fa-tablet-alt": {
+    "prefix": "fa-tablet-alt",
+    "body": "fas fa-tablet-alt"
+  },
+  "fa-tablets": {
+    "prefix": "fa-tablets",
+    "body": "fas fa-tablets"
+  },
+  "fa-tachometer-alt": {
+    "prefix": "fa-tachometer-alt",
+    "body": "fas fa-tachometer-alt"
+  },
+  "fa-tag": {
+    "prefix": "fa-tag",
+    "body": "fas fa-tag"
+  },
+  "fa-tags": {
+    "prefix": "fa-tags",
+    "body": "fas fa-tags"
+  },
+  "fa-tape": {
+    "prefix": "fa-tape",
+    "body": "fas fa-tape"
+  },
+  "fa-tasks": {
+    "prefix": "fa-tasks",
+    "body": "fas fa-tasks"
+  },
+  "fa-taxi": {
+    "prefix": "fa-taxi",
+    "body": "fas fa-taxi"
+  },
+  "fa-terminal": {
+    "prefix": "fa-terminal",
+    "body": "fas fa-terminal"
+  },
+  "fa-text-height": {
+    "prefix": "fa-text-height",
+    "body": "fas fa-text-height"
+  },
+  "fa-text-width": {
+    "prefix": "fa-text-width",
+    "body": "fas fa-text-width"
+  },
+  "fa-th": {
+    "prefix": "fa-th",
+    "body": "fas fa-th"
+  },
+  "fa-th-large": {
+    "prefix": "fa-th-large",
+    "body": "fas fa-th-large"
+  },
+  "fa-th-list": {
+    "prefix": "fa-th-list",
+    "body": "fas fa-th-list"
+  },
+  "fa-thermometer": {
+    "prefix": "fa-thermometer",
+    "body": "fas fa-thermometer"
+  },
+  "fa-thermometer-empty": {
+    "prefix": "fa-thermometer-empty",
+    "body": "fas fa-thermometer-empty"
+  },
+  "fa-thermometer-full": {
+    "prefix": "fa-thermometer-full",
+    "body": "fas fa-thermometer-full"
+  },
+  "fa-thermometer-half": {
+    "prefix": "fa-thermometer-half",
+    "body": "fas fa-thermometer-half"
+  },
+  "fa-thermometer-quarter": {
+    "prefix": "fa-thermometer-quarter",
+    "body": "fas fa-thermometer-quarter"
+  },
+  "fa-thermometer-three-quarters": {
+    "prefix": "fa-thermometer-three-quarters",
+    "body": "fas fa-thermometer-three-quarters"
+  },
+  "fa-thumbs-down": {
+    "prefix": "fa-thumbs-down",
+    "body": "fas fa-thumbs-down"
+  },
+  "fa-thumbs-up": {
+    "prefix": "fa-thumbs-up",
+    "body": "fas fa-thumbs-up"
+  },
+  "fa-thumbtack": {
+    "prefix": "fa-thumbtack",
+    "body": "fas fa-thumbtack"
+  },
+  "fa-ticket-alt": {
+    "prefix": "fa-ticket-alt",
+    "body": "fas fa-ticket-alt"
+  },
+  "fa-times": {
+    "prefix": "fa-times",
+    "body": "fas fa-times"
+  },
+  "fa-times-circle": {
+    "prefix": "fa-times-circle",
+    "body": "fas fa-times-circle"
+  },
+  "fa-tint": {
+    "prefix": "fa-tint",
+    "body": "fas fa-tint"
+  },
+  "fa-toggle-off": {
+    "prefix": "fa-toggle-off",
+    "body": "fas fa-toggle-off"
+  },
+  "fa-toggle-on": {
+    "prefix": "fa-toggle-on",
+    "body": "fas fa-toggle-on"
+  },
+  "fa-trademark": {
+    "prefix": "fa-trademark",
+    "body": "fas fa-trademark"
+  },
+  "fa-train": {
+    "prefix": "fa-train",
+    "body": "fas fa-train"
+  },
+  "fa-transgender": {
+    "prefix": "fa-transgender",
+    "body": "fas fa-transgender"
+  },
+  "fa-transgender-alt": {
+    "prefix": "fa-transgender-alt",
+    "body": "fas fa-transgender-alt"
+  },
+  "fa-trash": {
+    "prefix": "fa-trash",
+    "body": "fas fa-trash"
+  },
+  "fa-trash-alt": {
+    "prefix": "fa-trash-alt",
+    "body": "fas fa-trash-alt"
+  },
+  "fa-tree": {
+    "prefix": "fa-tree",
+    "body": "fas fa-tree"
+  },
+  "fa-trophy": {
+    "prefix": "fa-trophy",
+    "body": "fas fa-trophy"
+  },
+  "fa-truck": {
+    "prefix": "fa-truck",
+    "body": "fas fa-truck"
+  },
+  "fa-truck-loading": {
+    "prefix": "fa-truck-loading",
+    "body": "fas fa-truck-loading"
+  },
+  "fa-truck-moving": {
+    "prefix": "fa-truck-moving",
+    "body": "fas fa-truck-moving"
+  },
+  "fa-tty": {
+    "prefix": "fa-tty",
+    "body": "fas fa-tty"
+  },
+  "fa-tv": {
+    "prefix": "fa-tv",
+    "body": "fas fa-tv"
+  },
+  "fa-umbrella": {
+    "prefix": "fa-umbrella",
+    "body": "fas fa-umbrella"
+  },
+  "fa-underline": {
+    "prefix": "fa-underline",
+    "body": "fas fa-underline"
+  },
+  "fa-undo": {
+    "prefix": "fa-undo",
+    "body": "fas fa-undo"
+  },
+  "fa-undo-alt": {
+    "prefix": "fa-undo-alt",
+    "body": "fas fa-undo-alt"
+  },
+  "fa-universal-access": {
+    "prefix": "fa-universal-access",
+    "body": "fas fa-universal-access"
+  },
+  "fa-university": {
+    "prefix": "fa-university",
+    "body": "fas fa-university"
+  },
+  "fa-unlink": {
+    "prefix": "fa-unlink",
+    "body": "fas fa-unlink"
+  },
+  "fa-unlock": {
+    "prefix": "fa-unlock",
+    "body": "fas fa-unlock"
+  },
+  "fa-unlock-alt": {
+    "prefix": "fa-unlock-alt",
+    "body": "fas fa-unlock-alt"
+  },
+  "fa-upload": {
+    "prefix": "fa-upload",
+    "body": "fas fa-upload"
+  },
+  "fa-user": {
+    "prefix": "fa-user",
+    "body": "fas fa-user"
+  },
+  "fa-user-circle": {
+    "prefix": "fa-user-circle",
+    "body": "fas fa-user-circle"
+  },
+  "fa-user-md": {
+    "prefix": "fa-user-md",
+    "body": "fas fa-user-md"
+  },
+  "fa-user-plus": {
+    "prefix": "fa-user-plus",
+    "body": "fas fa-user-plus"
+  },
+  "fa-user-secret": {
+    "prefix": "fa-user-secret",
+    "body": "fas fa-user-secret"
+  },
+  "fa-user-times": {
+    "prefix": "fa-user-times",
+    "body": "fas fa-user-times"
+  },
+  "fa-users": {
+    "prefix": "fa-users",
+    "body": "fas fa-users"
+  },
+  "fa-utensil-spoon": {
+    "prefix": "fa-utensil-spoon",
+    "body": "fas fa-utensil-spoon"
+  },
+  "fa-utensils": {
+    "prefix": "fa-utensils",
+    "body": "fas fa-utensils"
+  },
+  "fa-venus": {
+    "prefix": "fa-venus",
+    "body": "fas fa-venus"
+  },
+  "fa-venus-double": {
+    "prefix": "fa-venus-double",
+    "body": "fas fa-venus-double"
+  },
+  "fa-venus-mars": {
+    "prefix": "fa-venus-mars",
+    "body": "fas fa-venus-mars"
+  },
+  "fa-vial": {
+    "prefix": "fa-vial",
+    "body": "fas fa-vial"
+  },
+  "fa-vials": {
+    "prefix": "fa-vials",
+    "body": "fas fa-vials"
+  },
+  "fa-video": {
+    "prefix": "fa-video",
+    "body": "fas fa-video"
+  },
+  "fa-video-slash": {
+    "prefix": "fa-video-slash",
+    "body": "fas fa-video-slash"
+  },
+  "fa-volleyball-ball": {
+    "prefix": "fa-volleyball-ball",
+    "body": "fas fa-volleyball-ball"
+  },
+  "fa-volume-down": {
+    "prefix": "fa-volume-down",
+    "body": "fas fa-volume-down"
+  },
+  "fa-volume-off": {
+    "prefix": "fa-volume-off",
+    "body": "fas fa-volume-off"
+  },
+  "fa-volume-up": {
+    "prefix": "fa-volume-up",
+    "body": "fas fa-volume-up"
+  },
+  "fa-warehouse": {
+    "prefix": "fa-warehouse",
+    "body": "fas fa-warehouse"
+  },
+  "fa-weight": {
+    "prefix": "fa-weight",
+    "body": "fas fa-weight"
+  },
+  "fa-wheelchair": {
+    "prefix": "fa-wheelchair",
+    "body": "fas fa-wheelchair"
+  },
+  "fa-wifi": {
+    "prefix": "fa-wifi",
+    "body": "fas fa-wifi"
+  },
+  "fa-window-close": {
+    "prefix": "fa-window-close",
+    "body": "fas fa-window-close"
+  },
+  "fa-window-maximize": {
+    "prefix": "fa-window-maximize",
+    "body": "fas fa-window-maximize"
+  },
+  "fa-window-minimize": {
+    "prefix": "fa-window-minimize",
+    "body": "fas fa-window-minimize"
+  },
+  "fa-window-restore": {
+    "prefix": "fa-window-restore",
+    "body": "fas fa-window-restore"
+  },
+  "fa-wine-glass": {
+    "prefix": "fa-wine-glass",
+    "body": "fas fa-wine-glass"
+  },
+  "fa-won-sign": {
+    "prefix": "fa-won-sign",
+    "body": "fas fa-won-sign"
+  },
+  "fa-wrench": {
+    "prefix": "fa-wrench",
+    "body": "fas fa-wrench"
+  },
+  "fa-x-ray": {
+    "prefix": "fa-x-ray",
+    "body": "fas fa-x-ray"
+  },
+  "fa-yen-sign": {
+    "prefix": "fa-yen-sign",
+    "body": "fas fa-yen-sign"
+  },
+  "fa-500px": {
+    "prefix": "fa-500px",
+    "body": "fab fa-500px"
+  },
+  "fa-accessible-icon": {
+    "prefix": "fa-accessible-icon",
+    "body": "fab fa-accessible-icon"
+  },
+  "fa-accusoft": {
+    "prefix": "fa-accusoft",
+    "body": "fab fa-accusoft"
+  },
+  "fa-adn": {
+    "prefix": "fa-adn",
+    "body": "fab fa-adn"
+  },
+  "fa-adversal": {
+    "prefix": "fa-adversal",
+    "body": "fab fa-adversal"
+  },
+  "fa-affiliatetheme": {
+    "prefix": "fa-affiliatetheme",
+    "body": "fab fa-affiliatetheme"
+  },
+  "fa-algolia": {
+    "prefix": "fa-algolia",
+    "body": "fab fa-algolia"
+  },
+  "fa-amazon": {
+    "prefix": "fa-amazon",
+    "body": "fab fa-amazon"
+  },
+  "fa-amazon-pay": {
+    "prefix": "fa-amazon-pay",
+    "body": "fab fa-amazon-pay"
+  },
+  "fa-amilia": {
+    "prefix": "fa-amilia",
+    "body": "fab fa-amilia"
+  },
+  "fa-android": {
+    "prefix": "fa-android",
+    "body": "fab fa-android"
+  },
+  "fa-angellist": {
+    "prefix": "fa-angellist",
+    "body": "fab fa-angellist"
+  },
+  "fa-angrycreative": {
+    "prefix": "fa-angrycreative",
+    "body": "fab fa-angrycreative"
+  },
+  "fa-angular": {
+    "prefix": "fa-angular",
+    "body": "fab fa-angular"
+  },
+  "fa-app-store": {
+    "prefix": "fa-app-store",
+    "body": "fab fa-app-store"
+  },
+  "fa-app-store-ios": {
+    "prefix": "fa-app-store-ios",
+    "body": "fab fa-app-store-ios"
+  },
+  "fa-apper": {
+    "prefix": "fa-apper",
+    "body": "fab fa-apper"
+  },
+  "fa-apple": {
+    "prefix": "fa-apple",
+    "body": "fab fa-apple"
+  },
+  "fa-apple-pay": {
+    "prefix": "fa-apple-pay",
+    "body": "fab fa-apple-pay"
+  },
+  "fa-asymmetrik": {
+    "prefix": "fa-asymmetrik",
+    "body": "fab fa-asymmetrik"
+  },
+  "fa-audible": {
+    "prefix": "fa-audible",
+    "body": "fab fa-audible"
+  },
+  "fa-autoprefixer": {
+    "prefix": "fa-autoprefixer",
+    "body": "fab fa-autoprefixer"
+  },
+  "fa-avianex": {
+    "prefix": "fa-avianex",
+    "body": "fab fa-avianex"
+  },
+  "fa-aviato": {
+    "prefix": "fa-aviato",
+    "body": "fab fa-aviato"
+  },
+  "fa-aws": {
+    "prefix": "fa-aws",
+    "body": "fab fa-aws"
+  },
+  "fa-bandcamp": {
+    "prefix": "fa-bandcamp",
+    "body": "fab fa-bandcamp"
+  },
+  "fa-behance": {
+    "prefix": "fa-behance",
+    "body": "fab fa-behance"
+  },
+  "fa-behance-square": {
+    "prefix": "fa-behance-square",
+    "body": "fab fa-behance-square"
+  },
+  "fa-bimobject": {
+    "prefix": "fa-bimobject",
+    "body": "fab fa-bimobject"
+  },
+  "fa-bitbucket": {
+    "prefix": "fa-bitbucket",
+    "body": "fab fa-bitbucket"
+  },
+  "fa-bitcoin": {
+    "prefix": "fa-bitcoin",
+    "body": "fab fa-bitcoin"
+  },
+  "fa-bity": {
+    "prefix": "fa-bity",
+    "body": "fab fa-bity"
+  },
+  "fa-black-tie": {
+    "prefix": "fa-black-tie",
+    "body": "fab fa-black-tie"
+  },
+  "fa-blackberry": {
+    "prefix": "fa-blackberry",
+    "body": "fab fa-blackberry"
+  },
+  "fa-blogger": {
+    "prefix": "fa-blogger",
+    "body": "fab fa-blogger"
+  },
+  "fa-blogger-b": {
+    "prefix": "fa-blogger-b",
+    "body": "fab fa-blogger-b"
+  },
+  "fa-bluetooth": {
+    "prefix": "fa-bluetooth",
+    "body": "fab fa-bluetooth"
+  },
+  "fa-bluetooth-b": {
+    "prefix": "fa-bluetooth-b",
+    "body": "fab fa-bluetooth-b"
+  },
+  "fa-btc": {
+    "prefix": "fa-btc",
+    "body": "fab fa-btc"
+  },
+  "fa-buromobelexperte": {
+    "prefix": "fa-buromobelexperte",
+    "body": "fab fa-buromobelexperte"
+  },
+  "fa-buysellads": {
+    "prefix": "fa-buysellads",
+    "body": "fab fa-buysellads"
+  },
+  "fa-cc-amazon-pay": {
+    "prefix": "fa-cc-amazon-pay",
+    "body": "fab fa-cc-amazon-pay"
+  },
+  "fa-cc-amex": {
+    "prefix": "fa-cc-amex",
+    "body": "fab fa-cc-amex"
+  },
+  "fa-cc-apple-pay": {
+    "prefix": "fa-cc-apple-pay",
+    "body": "fab fa-cc-apple-pay"
+  },
+  "fa-cc-diners-club": {
+    "prefix": "fa-cc-diners-club",
+    "body": "fab fa-cc-diners-club"
+  },
+  "fa-cc-discover": {
+    "prefix": "fa-cc-discover",
+    "body": "fab fa-cc-discover"
+  },
+  "fa-cc-jcb": {
+    "prefix": "fa-cc-jcb",
+    "body": "fab fa-cc-jcb"
+  },
+  "fa-cc-mastercard": {
+    "prefix": "fa-cc-mastercard",
+    "body": "fab fa-cc-mastercard"
+  },
+  "fa-cc-paypal": {
+    "prefix": "fa-cc-paypal",
+    "body": "fab fa-cc-paypal"
+  },
+  "fa-cc-stripe": {
+    "prefix": "fa-cc-stripe",
+    "body": "fab fa-cc-stripe"
+  },
+  "fa-cc-visa": {
+    "prefix": "fa-cc-visa",
+    "body": "fab fa-cc-visa"
+  },
+  "fa-centercode": {
+    "prefix": "fa-centercode",
+    "body": "fab fa-centercode"
+  },
+  "fa-chrome": {
+    "prefix": "fa-chrome",
+    "body": "fab fa-chrome"
+  },
+  "fa-cloudscale": {
+    "prefix": "fa-cloudscale",
+    "body": "fab fa-cloudscale"
+  },
+  "fa-cloudsmith": {
+    "prefix": "fa-cloudsmith",
+    "body": "fab fa-cloudsmith"
+  },
+  "fa-cloudversify": {
+    "prefix": "fa-cloudversify",
+    "body": "fab fa-cloudversify"
+  },
+  "fa-codepen": {
+    "prefix": "fa-codepen",
+    "body": "fab fa-codepen"
+  },
+  "fa-codiepie": {
+    "prefix": "fa-codiepie",
+    "body": "fab fa-codiepie"
+  },
+  "fa-connectdevelop": {
+    "prefix": "fa-connectdevelop",
+    "body": "fab fa-connectdevelop"
+  },
+  "fa-contao": {
+    "prefix": "fa-contao",
+    "body": "fab fa-contao"
+  },
+  "fa-cpanel": {
+    "prefix": "fa-cpanel",
+    "body": "fab fa-cpanel"
+  },
+  "fa-creative-commons": {
+    "prefix": "fa-creative-commons",
+    "body": "fab fa-creative-commons"
+  },
+  "fa-css3": {
+    "prefix": "fa-css3",
+    "body": "fab fa-css3"
+  },
+  "fa-css3-alt": {
+    "prefix": "fa-css3-alt",
+    "body": "fab fa-css3-alt"
+  },
+  "fa-cuttlefish": {
+    "prefix": "fa-cuttlefish",
+    "body": "fab fa-cuttlefish"
+  },
+  "fa-d-and-d": {
+    "prefix": "fa-d-and-d",
+    "body": "fab fa-d-and-d"
+  },
+  "fa-dashcube": {
+    "prefix": "fa-dashcube",
+    "body": "fab fa-dashcube"
+  },
+  "fa-delicious": {
+    "prefix": "fa-delicious",
+    "body": "fab fa-delicious"
+  },
+  "fa-deploydog": {
+    "prefix": "fa-deploydog",
+    "body": "fab fa-deploydog"
+  },
+  "fa-deskpro": {
+    "prefix": "fa-deskpro",
+    "body": "fab fa-deskpro"
+  },
+  "fa-deviantart": {
+    "prefix": "fa-deviantart",
+    "body": "fab fa-deviantart"
+  },
+  "fa-digg": {
+    "prefix": "fa-digg",
+    "body": "fab fa-digg"
+  },
+  "fa-digital-ocean": {
+    "prefix": "fa-digital-ocean",
+    "body": "fab fa-digital-ocean"
+  },
+  "fa-discord": {
+    "prefix": "fa-discord",
+    "body": "fab fa-discord"
+  },
+  "fa-discourse": {
+    "prefix": "fa-discourse",
+    "body": "fab fa-discourse"
+  },
+  "fa-dochub": {
+    "prefix": "fa-dochub",
+    "body": "fab fa-dochub"
+  },
+  "fa-docker": {
+    "prefix": "fa-docker",
+    "body": "fab fa-docker"
+  },
+  "fa-draft2digital": {
+    "prefix": "fa-draft2digital",
+    "body": "fab fa-draft2digital"
+  },
+  "fa-dribbble": {
+    "prefix": "fa-dribbble",
+    "body": "fab fa-dribbble"
+  },
+  "fa-dribbble-square": {
+    "prefix": "fa-dribbble-square",
+    "body": "fab fa-dribbble-square"
+  },
+  "fa-dropbox": {
+    "prefix": "fa-dropbox",
+    "body": "fab fa-dropbox"
+  },
+  "fa-drupal": {
+    "prefix": "fa-drupal",
+    "body": "fab fa-drupal"
+  },
+  "fa-dyalog": {
+    "prefix": "fa-dyalog",
+    "body": "fab fa-dyalog"
+  },
+  "fa-earlybirds": {
+    "prefix": "fa-earlybirds",
+    "body": "fab fa-earlybirds"
+  },
+  "fa-edge": {
+    "prefix": "fa-edge",
+    "body": "fab fa-edge"
+  },
+  "fa-elementor": {
+    "prefix": "fa-elementor",
+    "body": "fab fa-elementor"
+  },
+  "fa-ember": {
+    "prefix": "fa-ember",
+    "body": "fab fa-ember"
+  },
+  "fa-empire": {
+    "prefix": "fa-empire",
+    "body": "fab fa-empire"
+  },
+  "fa-envira": {
+    "prefix": "fa-envira",
+    "body": "fab fa-envira"
+  },
+  "fa-erlang": {
+    "prefix": "fa-erlang",
+    "body": "fab fa-erlang"
+  },
+  "fa-ethereum": {
+    "prefix": "fa-ethereum",
+    "body": "fab fa-ethereum"
+  },
+  "fa-etsy": {
+    "prefix": "fa-etsy",
+    "body": "fab fa-etsy"
+  },
+  "fa-expeditedssl": {
+    "prefix": "fa-expeditedssl",
+    "body": "fab fa-expeditedssl"
+  },
+  "fa-facebook": {
+    "prefix": "fa-facebook",
+    "body": "fab fa-facebook"
+  },
+  "fa-facebook-f": {
+    "prefix": "fa-facebook-f",
+    "body": "fab fa-facebook-f"
+  },
+  "fa-facebook-messenger": {
+    "prefix": "fa-facebook-messenger",
+    "body": "fab fa-facebook-messenger"
+  },
+  "fa-facebook-square": {
+    "prefix": "fa-facebook-square",
+    "body": "fab fa-facebook-square"
+  },
+  "fa-firefox": {
+    "prefix": "fa-firefox",
+    "body": "fab fa-firefox"
+  },
+  "fa-first-order": {
+    "prefix": "fa-first-order",
+    "body": "fab fa-first-order"
+  },
+  "fa-firstdraft": {
+    "prefix": "fa-firstdraft",
+    "body": "fab fa-firstdraft"
+  },
+  "fa-flickr": {
+    "prefix": "fa-flickr",
+    "body": "fab fa-flickr"
+  },
+  "fa-flipboard": {
+    "prefix": "fa-flipboard",
+    "body": "fab fa-flipboard"
+  },
+  "fa-fly": {
+    "prefix": "fa-fly",
+    "body": "fab fa-fly"
+  },
+  "fa-font-awesome": {
+    "prefix": "fa-font-awesome",
+    "body": "fab fa-font-awesome"
+  },
+  "fa-font-awesome-alt": {
+    "prefix": "fa-font-awesome-alt",
+    "body": "fab fa-font-awesome-alt"
+  },
+  "fa-font-awesome-flag": {
+    "prefix": "fa-font-awesome-flag",
+    "body": "fab fa-font-awesome-flag"
+  },
+  "fa-fonticons": {
+    "prefix": "fa-fonticons",
+    "body": "fab fa-fonticons"
+  },
+  "fa-fonticons-fi": {
+    "prefix": "fa-fonticons-fi",
+    "body": "fab fa-fonticons-fi"
+  },
+  "fa-fort-awesome": {
+    "prefix": "fa-fort-awesome",
+    "body": "fab fa-fort-awesome"
+  },
+  "fa-fort-awesome-alt": {
+    "prefix": "fa-fort-awesome-alt",
+    "body": "fab fa-fort-awesome-alt"
+  },
+  "fa-forumbee": {
+    "prefix": "fa-forumbee",
+    "body": "fab fa-forumbee"
+  },
+  "fa-foursquare": {
+    "prefix": "fa-foursquare",
+    "body": "fab fa-foursquare"
+  },
+  "fa-free-code-camp": {
+    "prefix": "fa-free-code-camp",
+    "body": "fab fa-free-code-camp"
+  },
+  "fa-freebsd": {
+    "prefix": "fa-freebsd",
+    "body": "fab fa-freebsd"
+  },
+  "fa-get-pocket": {
+    "prefix": "fa-get-pocket",
+    "body": "fab fa-get-pocket"
+  },
+  "fa-gg": {
+    "prefix": "fa-gg",
+    "body": "fab fa-gg"
+  },
+  "fa-gg-circle": {
+    "prefix": "fa-gg-circle",
+    "body": "fab fa-gg-circle"
+  },
+  "fa-git": {
+    "prefix": "fa-git",
+    "body": "fab fa-git"
+  },
+  "fa-git-square": {
+    "prefix": "fa-git-square",
+    "body": "fab fa-git-square"
+  },
+  "fa-github": {
+    "prefix": "fa-github",
+    "body": "fab fa-github"
+  },
+  "fa-github-alt": {
+    "prefix": "fa-github-alt",
+    "body": "fab fa-github-alt"
+  },
+  "fa-github-square": {
+    "prefix": "fa-github-square",
+    "body": "fab fa-github-square"
+  },
+  "fa-gitkraken": {
+    "prefix": "fa-gitkraken",
+    "body": "fab fa-gitkraken"
+  },
+  "fa-gitlab": {
+    "prefix": "fa-gitlab",
+    "body": "fab fa-gitlab"
+  },
+  "fa-gitter": {
+    "prefix": "fa-gitter",
+    "body": "fab fa-gitter"
+  },
+  "fa-glide": {
+    "prefix": "fa-glide",
+    "body": "fab fa-glide"
+  },
+  "fa-glide-g": {
+    "prefix": "fa-glide-g",
+    "body": "fab fa-glide-g"
+  },
+  "fa-gofore": {
+    "prefix": "fa-gofore",
+    "body": "fab fa-gofore"
+  },
+  "fa-goodreads": {
+    "prefix": "fa-goodreads",
+    "body": "fab fa-goodreads"
+  },
+  "fa-goodreads-g": {
+    "prefix": "fa-goodreads-g",
+    "body": "fab fa-goodreads-g"
+  },
+  "fa-google": {
+    "prefix": "fa-google",
+    "body": "fab fa-google"
+  },
+  "fa-google-drive": {
+    "prefix": "fa-google-drive",
+    "body": "fab fa-google-drive"
+  },
+  "fa-google-play": {
+    "prefix": "fa-google-play",
+    "body": "fab fa-google-play"
+  },
+  "fa-google-plus": {
+    "prefix": "fa-google-plus",
+    "body": "fab fa-google-plus"
+  },
+  "fa-google-plus-g": {
+    "prefix": "fa-google-plus-g",
+    "body": "fab fa-google-plus-g"
+  },
+  "fa-google-plus-square": {
+    "prefix": "fa-google-plus-square",
+    "body": "fab fa-google-plus-square"
+  },
+  "fa-google-wallet": {
+    "prefix": "fa-google-wallet",
+    "body": "fab fa-google-wallet"
+  },
+  "fa-gratipay": {
+    "prefix": "fa-gratipay",
+    "body": "fab fa-gratipay"
+  },
+  "fa-grav": {
+    "prefix": "fa-grav",
+    "body": "fab fa-grav"
+  },
+  "fa-gripfire": {
+    "prefix": "fa-gripfire",
+    "body": "fab fa-gripfire"
+  },
+  "fa-grunt": {
+    "prefix": "fa-grunt",
+    "body": "fab fa-grunt"
+  },
+  "fa-gulp": {
+    "prefix": "fa-gulp",
+    "body": "fab fa-gulp"
+  },
+  "fa-hacker-news": {
+    "prefix": "fa-hacker-news",
+    "body": "fab fa-hacker-news"
+  },
+  "fa-hacker-news-square": {
+    "prefix": "fa-hacker-news-square",
+    "body": "fab fa-hacker-news-square"
+  },
+  "fa-hips": {
+    "prefix": "fa-hips",
+    "body": "fab fa-hips"
+  },
+  "fa-hire-a-helper": {
+    "prefix": "fa-hire-a-helper",
+    "body": "fab fa-hire-a-helper"
+  },
+  "fa-hooli": {
+    "prefix": "fa-hooli",
+    "body": "fab fa-hooli"
+  },
+  "fa-hotjar": {
+    "prefix": "fa-hotjar",
+    "body": "fab fa-hotjar"
+  },
+  "fa-houzz": {
+    "prefix": "fa-houzz",
+    "body": "fab fa-houzz"
+  },
+  "fa-html5": {
+    "prefix": "fa-html5",
+    "body": "fab fa-html5"
+  },
+  "fa-hubspot": {
+    "prefix": "fa-hubspot",
+    "body": "fab fa-hubspot"
+  },
+  "fa-imdb": {
+    "prefix": "fa-imdb",
+    "body": "fab fa-imdb"
+  },
+  "fa-instagram": {
+    "prefix": "fa-instagram",
+    "body": "fab fa-instagram"
+  },
+  "fa-internet-explorer": {
+    "prefix": "fa-internet-explorer",
+    "body": "fab fa-internet-explorer"
+  },
+  "fa-ioxhost": {
+    "prefix": "fa-ioxhost",
+    "body": "fab fa-ioxhost"
+  },
+  "fa-itunes": {
+    "prefix": "fa-itunes",
+    "body": "fab fa-itunes"
+  },
+  "fa-itunes-note": {
+    "prefix": "fa-itunes-note",
+    "body": "fab fa-itunes-note"
+  },
+  "fa-jenkins": {
+    "prefix": "fa-jenkins",
+    "body": "fab fa-jenkins"
+  },
+  "fa-joget": {
+    "prefix": "fa-joget",
+    "body": "fab fa-joget"
+  },
+  "fa-joomla": {
+    "prefix": "fa-joomla",
+    "body": "fab fa-joomla"
+  },
+  "fa-js": {
+    "prefix": "fa-js",
+    "body": "fab fa-js"
+  },
+  "fa-js-square": {
+    "prefix": "fa-js-square",
+    "body": "fab fa-js-square"
+  },
+  "fa-jsfiddle": {
+    "prefix": "fa-jsfiddle",
+    "body": "fab fa-jsfiddle"
+  },
+  "fa-keycdn": {
+    "prefix": "fa-keycdn",
+    "body": "fab fa-keycdn"
+  },
+  "fa-kickstarter": {
+    "prefix": "fa-kickstarter",
+    "body": "fab fa-kickstarter"
+  },
+  "fa-kickstarter-k": {
+    "prefix": "fa-kickstarter-k",
+    "body": "fab fa-kickstarter-k"
+  },
+  "fa-korvue": {
+    "prefix": "fa-korvue",
+    "body": "fab fa-korvue"
+  },
+  "fa-laravel": {
+    "prefix": "fa-laravel",
+    "body": "fab fa-laravel"
+  },
+  "fa-lastfm": {
+    "prefix": "fa-lastfm",
+    "body": "fab fa-lastfm"
+  },
+  "fa-lastfm-square": {
+    "prefix": "fa-lastfm-square",
+    "body": "fab fa-lastfm-square"
+  },
+  "fa-leanpub": {
+    "prefix": "fa-leanpub",
+    "body": "fab fa-leanpub"
+  },
+  "fa-less": {
+    "prefix": "fa-less",
+    "body": "fab fa-less"
+  },
+  "fa-line": {
+    "prefix": "fa-line",
+    "body": "fab fa-line"
+  },
+  "fa-linkedin": {
+    "prefix": "fa-linkedin",
+    "body": "fab fa-linkedin"
+  },
+  "fa-linkedin-in": {
+    "prefix": "fa-linkedin-in",
+    "body": "fab fa-linkedin-in"
+  },
+  "fa-linode": {
+    "prefix": "fa-linode",
+    "body": "fab fa-linode"
+  },
+  "fa-linux": {
+    "prefix": "fa-linux",
+    "body": "fab fa-linux"
+  },
+  "fa-lyft": {
+    "prefix": "fa-lyft",
+    "body": "fab fa-lyft"
+  },
+  "fa-magento": {
+    "prefix": "fa-magento",
+    "body": "fab fa-magento"
+  },
+  "fa-maxcdn": {
+    "prefix": "fa-maxcdn",
+    "body": "fab fa-maxcdn"
+  },
+  "fa-medapps": {
+    "prefix": "fa-medapps",
+    "body": "fab fa-medapps"
+  },
+  "fa-medium": {
+    "prefix": "fa-medium",
+    "body": "fab fa-medium"
+  },
+  "fa-medium-m": {
+    "prefix": "fa-medium-m",
+    "body": "fab fa-medium-m"
+  },
+  "fa-medrt": {
+    "prefix": "fa-medrt",
+    "body": "fab fa-medrt"
+  },
+  "fa-meetup": {
+    "prefix": "fa-meetup",
+    "body": "fab fa-meetup"
+  },
+  "fa-microsoft": {
+    "prefix": "fa-microsoft",
+    "body": "fab fa-microsoft"
+  },
+  "fa-mix": {
+    "prefix": "fa-mix",
+    "body": "fab fa-mix"
+  },
+  "fa-mixcloud": {
+    "prefix": "fa-mixcloud",
+    "body": "fab fa-mixcloud"
+  },
+  "fa-mizuni": {
+    "prefix": "fa-mizuni",
+    "body": "fab fa-mizuni"
+  },
+  "fa-modx": {
+    "prefix": "fa-modx",
+    "body": "fab fa-modx"
+  },
+  "fa-monero": {
+    "prefix": "fa-monero",
+    "body": "fab fa-monero"
+  },
+  "fa-napster": {
+    "prefix": "fa-napster",
+    "body": "fab fa-napster"
+  },
+  "fa-nintendo-switch": {
+    "prefix": "fa-nintendo-switch",
+    "body": "fab fa-nintendo-switch"
+  },
+  "fa-node": {
+    "prefix": "fa-node",
+    "body": "fab fa-node"
+  },
+  "fa-node-js": {
+    "prefix": "fa-node-js",
+    "body": "fab fa-node-js"
+  },
+  "fa-npm": {
+    "prefix": "fa-npm",
+    "body": "fab fa-npm"
+  },
+  "fa-ns8": {
+    "prefix": "fa-ns8",
+    "body": "fab fa-ns8"
+  },
+  "fa-nutritionix": {
+    "prefix": "fa-nutritionix",
+    "body": "fab fa-nutritionix"
+  },
+  "fa-odnoklassniki": {
+    "prefix": "fa-odnoklassniki",
+    "body": "fab fa-odnoklassniki"
+  },
+  "fa-odnoklassniki-square": {
+    "prefix": "fa-odnoklassniki-square",
+    "body": "fab fa-odnoklassniki-square"
+  },
+  "fa-opencart": {
+    "prefix": "fa-opencart",
+    "body": "fab fa-opencart"
+  },
+  "fa-openid": {
+    "prefix": "fa-openid",
+    "body": "fab fa-openid"
+  },
+  "fa-opera": {
+    "prefix": "fa-opera",
+    "body": "fab fa-opera"
+  },
+  "fa-optin-monster": {
+    "prefix": "fa-optin-monster",
+    "body": "fab fa-optin-monster"
+  },
+  "fa-osi": {
+    "prefix": "fa-osi",
+    "body": "fab fa-osi"
+  },
+  "fa-page4": {
+    "prefix": "fa-page4",
+    "body": "fab fa-page4"
+  },
+  "fa-pagelines": {
+    "prefix": "fa-pagelines",
+    "body": "fab fa-pagelines"
+  },
+  "fa-palfed": {
+    "prefix": "fa-palfed",
+    "body": "fab fa-palfed"
+  },
+  "fa-patreon": {
+    "prefix": "fa-patreon",
+    "body": "fab fa-patreon"
+  },
+  "fa-paypal": {
+    "prefix": "fa-paypal",
+    "body": "fab fa-paypal"
+  },
+  "fa-periscope": {
+    "prefix": "fa-periscope",
+    "body": "fab fa-periscope"
+  },
+  "fa-phabricator": {
+    "prefix": "fa-phabricator",
+    "body": "fab fa-phabricator"
+  },
+  "fa-phoenix-framework": {
+    "prefix": "fa-phoenix-framework",
+    "body": "fab fa-phoenix-framework"
+  },
+  "fa-php": {
+    "prefix": "fa-php",
+    "body": "fab fa-php"
+  },
+  "fa-pied-piper": {
+    "prefix": "fa-pied-piper",
+    "body": "fab fa-pied-piper"
+  },
+  "fa-pied-piper-alt": {
+    "prefix": "fa-pied-piper-alt",
+    "body": "fab fa-pied-piper-alt"
+  },
+  "fa-pied-piper-pp": {
+    "prefix": "fa-pied-piper-pp",
+    "body": "fab fa-pied-piper-pp"
+  },
+  "fa-pinterest": {
+    "prefix": "fa-pinterest",
+    "body": "fab fa-pinterest"
+  },
+  "fa-pinterest-p": {
+    "prefix": "fa-pinterest-p",
+    "body": "fab fa-pinterest-p"
+  },
+  "fa-pinterest-square": {
+    "prefix": "fa-pinterest-square",
+    "body": "fab fa-pinterest-square"
+  },
+  "fa-playstation": {
+    "prefix": "fa-playstation",
+    "body": "fab fa-playstation"
+  },
+  "fa-product-hunt": {
+    "prefix": "fa-product-hunt",
+    "body": "fab fa-product-hunt"
+  },
+  "fa-pushed": {
+    "prefix": "fa-pushed",
+    "body": "fab fa-pushed"
+  },
+  "fa-python": {
+    "prefix": "fa-python",
+    "body": "fab fa-python"
+  },
+  "fa-qq": {
+    "prefix": "fa-qq",
+    "body": "fab fa-qq"
+  },
+  "fa-quinscape": {
+    "prefix": "fa-quinscape",
+    "body": "fab fa-quinscape"
+  },
+  "fa-quora": {
+    "prefix": "fa-quora",
+    "body": "fab fa-quora"
+  },
+  "fa-ravelry": {
+    "prefix": "fa-ravelry",
+    "body": "fab fa-ravelry"
+  },
+  "fa-react": {
+    "prefix": "fa-react",
+    "body": "fab fa-react"
+  },
+  "fa-readme": {
+    "prefix": "fa-readme",
+    "body": "fab fa-readme"
+  },
+  "fa-rebel": {
+    "prefix": "fa-rebel",
+    "body": "fab fa-rebel"
+  },
+  "fa-red-river": {
+    "prefix": "fa-red-river",
+    "body": "fab fa-red-river"
+  },
+  "fa-reddit": {
+    "prefix": "fa-reddit",
+    "body": "fab fa-reddit"
+  },
+  "fa-reddit-alien": {
+    "prefix": "fa-reddit-alien",
+    "body": "fab fa-reddit-alien"
+  },
+  "fa-reddit-square": {
+    "prefix": "fa-reddit-square",
+    "body": "fab fa-reddit-square"
+  },
+  "fa-rendact": {
+    "prefix": "fa-rendact",
+    "body": "fab fa-rendact"
+  },
+  "fa-renren": {
+    "prefix": "fa-renren",
+    "body": "fab fa-renren"
+  },
+  "fa-replyd": {
+    "prefix": "fa-replyd",
+    "body": "fab fa-replyd"
+  },
+  "fa-resolving": {
+    "prefix": "fa-resolving",
+    "body": "fab fa-resolving"
+  },
+  "fa-rocketchat": {
+    "prefix": "fa-rocketchat",
+    "body": "fab fa-rocketchat"
+  },
+  "fa-rockrms": {
+    "prefix": "fa-rockrms",
+    "body": "fab fa-rockrms"
+  },
+  "fa-safari": {
+    "prefix": "fa-safari",
+    "body": "fab fa-safari"
+  },
+  "fa-sass": {
+    "prefix": "fa-sass",
+    "body": "fab fa-sass"
+  },
+  "fa-schlix": {
+    "prefix": "fa-schlix",
+    "body": "fab fa-schlix"
+  },
+  "fa-scribd": {
+    "prefix": "fa-scribd",
+    "body": "fab fa-scribd"
+  },
+  "fa-searchengin": {
+    "prefix": "fa-searchengin",
+    "body": "fab fa-searchengin"
+  },
+  "fa-sellcast": {
+    "prefix": "fa-sellcast",
+    "body": "fab fa-sellcast"
+  },
+  "fa-sellsy": {
+    "prefix": "fa-sellsy",
+    "body": "fab fa-sellsy"
+  },
+  "fa-servicestack": {
+    "prefix": "fa-servicestack",
+    "body": "fab fa-servicestack"
+  },
+  "fa-shirtsinbulk": {
+    "prefix": "fa-shirtsinbulk",
+    "body": "fab fa-shirtsinbulk"
+  },
+  "fa-simplybuilt": {
+    "prefix": "fa-simplybuilt",
+    "body": "fab fa-simplybuilt"
+  },
+  "fa-sistrix": {
+    "prefix": "fa-sistrix",
+    "body": "fab fa-sistrix"
+  },
+  "fa-skyatlas": {
+    "prefix": "fa-skyatlas",
+    "body": "fab fa-skyatlas"
+  },
+  "fa-skype": {
+    "prefix": "fa-skype",
+    "body": "fab fa-skype"
+  },
+  "fa-slack": {
+    "prefix": "fa-slack",
+    "body": "fab fa-slack"
+  },
+  "fa-slack-hash": {
+    "prefix": "fa-slack-hash",
+    "body": "fab fa-slack-hash"
+  },
+  "fa-slideshare": {
+    "prefix": "fa-slideshare",
+    "body": "fab fa-slideshare"
+  },
+  "fa-snapchat": {
+    "prefix": "fa-snapchat",
+    "body": "fab fa-snapchat"
+  },
+  "fa-snapchat-ghost": {
+    "prefix": "fa-snapchat-ghost",
+    "body": "fab fa-snapchat-ghost"
+  },
+  "fa-snapchat-square": {
+    "prefix": "fa-snapchat-square",
+    "body": "fab fa-snapchat-square"
+  },
+  "fa-soundcloud": {
+    "prefix": "fa-soundcloud",
+    "body": "fab fa-soundcloud"
+  },
+  "fa-speakap": {
+    "prefix": "fa-speakap",
+    "body": "fab fa-speakap"
+  },
+  "fa-spotify": {
+    "prefix": "fa-spotify",
+    "body": "fab fa-spotify"
+  },
+  "fa-stack-exchange": {
+    "prefix": "fa-stack-exchange",
+    "body": "fab fa-stack-exchange"
+  },
+  "fa-stack-overflow": {
+    "prefix": "fa-stack-overflow",
+    "body": "fab fa-stack-overflow"
+  },
+  "fa-staylinked": {
+    "prefix": "fa-staylinked",
+    "body": "fab fa-staylinked"
+  },
+  "fa-steam": {
+    "prefix": "fa-steam",
+    "body": "fab fa-steam"
+  },
+  "fa-steam-square": {
+    "prefix": "fa-steam-square",
+    "body": "fab fa-steam-square"
+  },
+  "fa-steam-symbol": {
+    "prefix": "fa-steam-symbol",
+    "body": "fab fa-steam-symbol"
+  },
+  "fa-sticker-mule": {
+    "prefix": "fa-sticker-mule",
+    "body": "fab fa-sticker-mule"
+  },
+  "fa-strava": {
+    "prefix": "fa-strava",
+    "body": "fab fa-strava"
+  },
+  "fa-stripe": {
+    "prefix": "fa-stripe",
+    "body": "fab fa-stripe"
+  },
+  "fa-stripe-s": {
+    "prefix": "fa-stripe-s",
+    "body": "fab fa-stripe-s"
+  },
+  "fa-studiovinari": {
+    "prefix": "fa-studiovinari",
+    "body": "fab fa-studiovinari"
+  },
+  "fa-stumbleupon": {
+    "prefix": "fa-stumbleupon",
+    "body": "fab fa-stumbleupon"
+  },
+  "fa-stumbleupon-circle": {
+    "prefix": "fa-stumbleupon-circle",
+    "body": "fab fa-stumbleupon-circle"
+  },
+  "fa-superpowers": {
+    "prefix": "fa-superpowers",
+    "body": "fab fa-superpowers"
+  },
+  "fa-supple": {
+    "prefix": "fa-supple",
+    "body": "fab fa-supple"
+  },
+  "fa-telegram": {
+    "prefix": "fa-telegram",
+    "body": "fab fa-telegram"
+  },
+  "fa-telegram-plane": {
+    "prefix": "fa-telegram-plane",
+    "body": "fab fa-telegram-plane"
+  },
+  "fa-tencent-weibo": {
+    "prefix": "fa-tencent-weibo",
+    "body": "fab fa-tencent-weibo"
+  },
+  "fa-themeisle": {
+    "prefix": "fa-themeisle",
+    "body": "fab fa-themeisle"
+  },
+  "fa-trello": {
+    "prefix": "fa-trello",
+    "body": "fab fa-trello"
+  },
+  "fa-tripadvisor": {
+    "prefix": "fa-tripadvisor",
+    "body": "fab fa-tripadvisor"
+  },
+  "fa-tumblr": {
+    "prefix": "fa-tumblr",
+    "body": "fab fa-tumblr"
+  },
+  "fa-tumblr-square": {
+    "prefix": "fa-tumblr-square",
+    "body": "fab fa-tumblr-square"
+  },
+  "fa-twitch": {
+    "prefix": "fa-twitch",
+    "body": "fab fa-twitch"
+  },
+  "fa-twitter": {
+    "prefix": "fa-twitter",
+    "body": "fab fa-twitter"
+  },
+  "fa-twitter-square": {
+    "prefix": "fa-twitter-square",
+    "body": "fab fa-twitter-square"
+  },
+  "fa-typo3": {
+    "prefix": "fa-typo3",
+    "body": "fab fa-typo3"
+  },
+  "fa-uber": {
+    "prefix": "fa-uber",
+    "body": "fab fa-uber"
+  },
+  "fa-uikit": {
+    "prefix": "fa-uikit",
+    "body": "fab fa-uikit"
+  },
+  "fa-uniregistry": {
+    "prefix": "fa-uniregistry",
+    "body": "fab fa-uniregistry"
+  },
+  "fa-untappd": {
+    "prefix": "fa-untappd",
+    "body": "fab fa-untappd"
+  },
+  "fa-usb": {
+    "prefix": "fa-usb",
+    "body": "fab fa-usb"
+  },
+  "fa-ussunnah": {
+    "prefix": "fa-ussunnah",
+    "body": "fab fa-ussunnah"
+  },
+  "fa-vaadin": {
+    "prefix": "fa-vaadin",
+    "body": "fab fa-vaadin"
+  },
+  "fa-viacoin": {
+    "prefix": "fa-viacoin",
+    "body": "fab fa-viacoin"
+  },
+  "fa-viadeo": {
+    "prefix": "fa-viadeo",
+    "body": "fab fa-viadeo"
+  },
+  "fa-viadeo-square": {
+    "prefix": "fa-viadeo-square",
+    "body": "fab fa-viadeo-square"
+  },
+  "fa-viber": {
+    "prefix": "fa-viber",
+    "body": "fab fa-viber"
+  },
+  "fa-vimeo": {
+    "prefix": "fa-vimeo",
+    "body": "fab fa-vimeo"
+  },
+  "fa-vimeo-square": {
+    "prefix": "fa-vimeo-square",
+    "body": "fab fa-vimeo-square"
+  },
+  "fa-vimeo-v": {
+    "prefix": "fa-vimeo-v",
+    "body": "fab fa-vimeo-v"
+  },
+  "fa-vine": {
+    "prefix": "fa-vine",
+    "body": "fab fa-vine"
+  },
+  "fa-vk": {
+    "prefix": "fa-vk",
+    "body": "fab fa-vk"
+  },
+  "fa-vnv": {
+    "prefix": "fa-vnv",
+    "body": "fab fa-vnv"
+  },
+  "fa-vuejs": {
+    "prefix": "fa-vuejs",
+    "body": "fab fa-vuejs"
+  },
+  "fa-weibo": {
+    "prefix": "fa-weibo",
+    "body": "fab fa-weibo"
+  },
+  "fa-weixin": {
+    "prefix": "fa-weixin",
+    "body": "fab fa-weixin"
+  },
+  "fa-whatsapp": {
+    "prefix": "fa-whatsapp",
+    "body": "fab fa-whatsapp"
+  },
+  "fa-whatsapp-square": {
+    "prefix": "fa-whatsapp-square",
+    "body": "fab fa-whatsapp-square"
+  },
+  "fa-whmcs": {
+    "prefix": "fa-whmcs",
+    "body": "fab fa-whmcs"
+  },
+  "fa-wikipedia-w": {
+    "prefix": "fa-wikipedia-w",
+    "body": "fab fa-wikipedia-w"
+  },
+  "fa-windows": {
+    "prefix": "fa-windows",
+    "body": "fab fa-windows"
+  },
+  "fa-wordpress": {
+    "prefix": "fa-wordpress",
+    "body": "fab fa-wordpress"
+  },
+  "fa-wordpress-simple": {
+    "prefix": "fa-wordpress-simple",
+    "body": "fab fa-wordpress-simple"
+  },
+  "fa-wpbeginner": {
+    "prefix": "fa-wpbeginner",
+    "body": "fab fa-wpbeginner"
+  },
+  "fa-wpexplorer": {
+    "prefix": "fa-wpexplorer",
+    "body": "fab fa-wpexplorer"
+  },
+  "fa-wpforms": {
+    "prefix": "fa-wpforms",
+    "body": "fab fa-wpforms"
+  },
+  "fa-xbox": {
+    "prefix": "fa-xbox",
+    "body": "fab fa-xbox"
+  },
+  "fa-xing": {
+    "prefix": "fa-xing",
+    "body": "fab fa-xing"
+  },
+  "fa-xing-square": {
+    "prefix": "fa-xing-square",
+    "body": "fab fa-xing-square"
+  },
+  "fa-y-combinator": {
+    "prefix": "fa-y-combinator",
+    "body": "fab fa-y-combinator"
+  },
+  "fa-yahoo": {
+    "prefix": "fa-yahoo",
+    "body": "fab fa-yahoo"
+  },
+  "fa-yandex": {
+    "prefix": "fa-yandex",
+    "body": "fab fa-yandex"
+  },
+  "fa-yandex-international": {
+    "prefix": "fa-yandex-international",
+    "body": "fab fa-yandex-international"
+  },
+  "fa-yelp": {
+    "prefix": "fa-yelp",
+    "body": "fab fa-yelp"
+  },
+  "fa-yoast": {
+    "prefix": "fa-yoast",
+    "body": "fab fa-yoast"
+  },
+  "fa-youtube": {
+    "prefix": "fa-youtube",
+    "body": "fab fa-youtube"
+  },
+  "fa-youtube-square": {
+    "prefix": "fa-youtube-square",
+    "body": "fab fa-youtube-square"
+  }
+}
