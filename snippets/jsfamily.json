@@ -1,0 +1,268 @@
+{
+  "searchParams": {
+    "scope": "typescript,javascript,javascriptreact,typescriptreact",
+    "prefix": "searchParams",
+    "body": [
+      "const { searchParams } = new URL(req.url)",
+      "const hello = searchParams.get('hello')"
+    ]
+  },
+  "fetchawait": {
+    "scope": "typescript,javascript,javascriptreact,typescriptreact",
+    "prefix": "fetchawait",
+    "body": [
+      "const r = await (await fetch(`${1:domain}`,{",
+      "  method: \"${2:GET}\",",
+      "  headers: {",
+      "    'Accept': 'application/json',",
+      "    'Content-Type': 'application/json'",
+      "  },",
+      "})).json()"
+    ]
+  },
+  "forof": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "forof",
+    "body": ["for (const ${1:iterator} of ${2:object}) {", "  ", "}"],
+    "description": "forof"
+  },
+  "forin": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "forin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "  if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {",
+      "    const element = ${2:object}[${1:key}];",
+      "  }",
+      "}"
+    ],
+    "description": "forin"
+  },
+  "for": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "for",
+    "body": [
+      "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+      "  const element = ${2:array}[${1:index}];  ",
+      "}"
+    ],
+    "description": "for"
+  },
+  "foreach": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "foreach",
+    "body": ["${1:array}.forEach(element => {  ", "});"],
+    "description": "foreach"
+  },
+  "fn": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "fn",
+    "body": ["function ${1:functionName}() {", "  ${2}", "}"]
+  },
+  "setTimeout": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "setTimeout",
+    "body": ["setTimeout(() => {", "  ${1}", "}, ${2:delay});"]
+  },
+  "setInterval": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "setInterval",
+    "body": ["setInterval(() => {", "  ${1}", "}, ${2:delay});"]
+  },
+  "timeout": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "timeout",
+    "body": [
+      "const timeout = new Timeout();",
+      "timeout",
+      "  .wrap(",
+      "    somefunction(),",
+      "    10000,",
+      "    \"Timeout...\"",
+      "  )",
+      "  .then((s) => {",
+      "    // Do Something",
+      "  })",
+      "  .catch((e) => {",
+      "    console.log (e);",
+      "  })",
+      "  .finally(() => timeout.clear(...timeout.ids));"
+    ],
+    "description": ""
+  },
+  "supabaseUpload": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "supabaseUpload",
+    "body": [
+      "const file = /** @type {HTMLInputElement} */ (document.getElementById('${1:file}'));",
+      "if (file?.files?.length) {",
+      "\tconst fileToUpload = file.files[0];",
+      "\tconst { data, error } = await supabase.storage",
+      "\t\t.from('${2:table}')",
+      "\t\t.upload('${3:file}', fileToUpload, {",
+      "\t\t\tcacheControl: '3600',",
+      "\t\t\tupsert: false",
+      "\t\t});",
+      "\t\tif (error) {",
+      "\t\t\tconsole.log(error);",
+      "\t\t} else {",
+      "\t\t\tconsole.log(data);",
+      "\t\t}",
+      "}"
+    ]
+  },
+  "typefunction": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "typef",
+    "body": [
+      "/**",
+      " *",
+      " * @param {string} param1",
+      " * @param {Object<string,string>} param2",
+      " * @returns {string[]}",
+      " */"
+    ]
+  },
+  "cl": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cl",
+    "body": ["console.${2:log}(${1:something});"]
+  },
+  "ajax": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ajax",
+    "body": [
+      "$.ajax({",
+      "\turl: '/path/to/file',",
+      "\ttype: 'default GET (Other values: POST)',",
+      "\tdataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',",
+      "\tdata: {param1: 'value1'},",
+      "}).done(function(e) {",
+      "\tconsole.log(\"success\");",
+      "}).fail(function(e) {",
+      "\tconsole.log(\"error\");",
+      "}).always(function(e) {",
+      "\tconsole.log(\"complete\");",
+      "});"
+    ]
+  },
+  "replaceall": {
+    "prefix": "replaceall",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact",
+    "body": ["${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');"]
+  },
+  "jqr": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "jqr",
+    "body": ["(function( $ ) {", "\t${1:Jquery Stuff}", "})( jQuery );"]
+  },
+  "alertyesno": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "alertyesno",
+    "body": [
+      "const r = confirm(\"${1:Some Prompt}\");",
+      "if (r == true) {",
+      "  ${2:// Do Something}",
+      "}"
+    ]
+  },
+  "toint_js": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "toint",
+    "body": "${1:varName} = parseInt(${1:varName});"
+  },
+  "fetch": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "fetch",
+    "body": [
+      "fetch(\"https://bot.bimasoft.web.id:4020/getip\",{",
+      "\tmethod: \"GET\",",
+      "\theaders: {",
+      "\t\t'Accept': 'application/json',",
+      "\t\t'Content-Type': 'application/json'",
+      "\t},",
+      "})",
+      ".then(res => res.json())",
+      ".then((result) => {",
+      "\tconsole.log(result);",
+      "})",
+      ".catch((err) => {",
+      "\tconsole.log(err);",
+      "})"
+    ]
+  },
+  "urlparams": {
+    "prefix": "urlparams",
+    "body": [
+      "const urlParams = new URLSearchParams(window.location.search);",
+      "const ${1:param} = urlParams.get('${1:param}');"
+    ]
+  },
+  "react": {
+    "prefix": "react",
+    "body": [
+      "const ${1:Component} = (props) => {",
+      "\treturn (<></>);",
+      "}",
+      "",
+      "export default ${1:Component};"
+    ]
+  },
+  "preactClass": {
+    "prefix": "preactClass",
+    "body": [
+      "class classComponent extends Component {",
+      "\tconstructor(props) {",
+      "\t\tsuper();",
+      "\t\tthis.state = {",
+      "\t\t\ttext: '',",
+      "\t\t};",
+      "\t\tthis.btnClick = this.btnClick.bind(this);",
+      "\t}",
+      "\tcomponentDidMount() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'OK',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\tbtnClick() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'BTN CLICKED',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\trender() {",
+      "\t\treturn html`",
+      "\t\t\t<div>",
+      "\t\t\t\t<h1>${this.state.text}</h1>",
+      "\t\t\t\t<button onclick=${this.btnClick}>CLICK ME !!</button>",
+      "\t\t\t</div>",
+      "\t\t`;",
+      "\t}",
+      "}",
+      "",
+      "export default classComponent;"
+    ]
+  },
+  "promisenew": {
+    "prefix": "promisenew",
+    "body": [
+      "return new Promise(async (resolve, reject) => {",
+      "\tif (\"OK\") {",
+      "\t\tresolve (\"OK\")",
+      "\t} else {",
+      "\t\treject (\"ERROR\");",
+      "\t}",
+      "});"
+    ]
+  },
+  "preactRouter": {
+    "prefix": "preactRouter",
+    "body": [
+      "<\\${Router} history=\\${createHashHistory()} >",
+      "\t<\\${Login} path=\"/\" />",
+      "\t<\\${AsyncRoute} path=\"/dashboard\" getComponent=\\${()=>import(\"../Pages/Dashboard.js\").then(module=>module.default)} />",
+      "<//>"
+    ]
+  }
+}

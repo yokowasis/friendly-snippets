@@ -1,0 +1,390 @@
+{
+  "html": {
+    "prefix": "html",
+    "body": [
+      "<!doctype html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <title></title>",
+      "  </head>",
+      "  <body>",
+      "  </body>",
+      "</html>"
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "body": ["<?php", "echo 'Hello World';", "?>"]
+  },
+  "whoami": {
+    "prefix": "whoami",
+    "body": "<?php echo posix_getpwuid(posix_geteuid())['name']; ?>"
+  },
+  "php-pre": {
+    "prefix": "pre",
+    "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
+  },
+  "inline-php": {
+    "prefix": "ph",
+    "body": "<?php ${1} ?>",
+    "description": "Inline PHP Tag"
+  },
+  "backward-php": {
+    "prefix": "bph",
+    "body": "?> $1 <?php",
+    "description": "Inline PHP Tag"
+  },
+  "dthelper": {
+    "prefix": "dthelper",
+    "body": [
+      "<?php",
+      "include(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/require.php\");",
+      "require_once(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/bimasoft-dt-helper.php\");",
+      "",
+      "\\$dtable = \"datasiswa\";",
+      "\\$bimasoft = new bimasoft_dt_helper(\"./page/\" . \\$_GET['page'] . \"/controller.php?&dtable=\\$dtable\");",
+      "",
+      "\\$comp->checkPermission(\\$_GET['j_'], \\$permission, \\$bimasoft);",
+      "\\$bimasoft->table(\\$dtable);",
+      "",
+      "?>",
+      "<div class=\"content-wrapper\">",
+      "  <div class=\"content-header\">",
+      "    <div class=\"container-fluid\">",
+      "      <div class=\"row mb-2\">",
+      "        <div class=\"col-sm-6\">",
+      "          <h1 class=\"m-0 text-dark\">${1:Data Siswa}</h1>",
+      "        </div><!-- /.col -->",
+      "        <div class=\"col-sm-6\">",
+      "          <ol class=\"breadcrumb float-sm-right\">",
+      "            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+      "            <li class=\"breadcrumb-item active\">${1:Data Siswa}</li>",
+      "          </ol>",
+      "        </div><!-- /.col -->",
+      "      </div><!-- /.row -->",
+      "    </div><!-- /.container-fluid -->",
+      "  </div>",
+      "",
+      "  <section class=\"content\">",
+      "    <div class=\"container-fluid\">",
+      "      <div class=\"row\">",
+      "        <div class=\"col-md-12\">",
+      "          <div class=\"card\">",
+      "            <div class=\"card-header\">",
+      "              <div class=\"row\">",
+      "                <div class=\"col-8\">${1:Data Siswa}</div>",
+      "                <div class=\"col-4\">",
+      "                  <?php echo \\$comp->dtCustomMenu() ?>",
+      "                </div>",
+      "              </div>",
+      "            </div>",
+      "            <div class=\"card-body\">",
+      "              <?php echo (\\$bimasoft->renderHTML());  ?>",
+      "            </div>",
+      "            <div class=\"card-footer clearfix\">",
+      "",
+      "            </div>",
+      "",
+      "          </div>",
+      "        </div>",
+      "      </div>",
+      "    </div>",
+      "  </section>",
+      "",
+      "</div>",
+      "",
+      "<?php echo \\$bimasoft->renderJS() ?>      "
+    ]
+  },
+  "mms_controller_default": {
+    "prefix": "mms_controller_default",
+    "body": [
+      "<?php require_once(__DIR__ . \"/../../component/bimasoft-wp-mms-base/dt/bimasoft-dt-helper.php\"); ?>",
+      "<?php",
+      "\\$bimasoft = new bimasoft_dt_helper(NULL, \\$path);",
+      "\\$bimasoft->table(\\$_GET['dtable']);",
+      "\\$bimasoft->allowEmpty(\"catatan\");",
+      "\\$bimasoft->renderPHP();"
+    ]
+  },
+  "inline-php-echo": {
+    "prefix": "ph=",
+    "body": "<?php echo \"$1\" ?>",
+    "description": "Inline PHP Tag"
+  },
+  "ob": {
+    "prefix": "ob",
+    "body": ["ob_start();", "//Do Something", "$1", "return ob_get_clean();"]
+  },
+  "pe": {
+    "prefix": "pe",
+    "body": ["echo \"<p>${1:this}</p>\";"]
+  },
+  "nowdate": {
+    "prefix": "nowdate",
+    "body": ["date(\"Y-m-d\")"]
+  },
+  "nowtime": {
+    "prefix": "nowtime",
+    "body": ["date(\"H:i\")"]
+  },
+  "toint": {
+    "prefix": "toint",
+    "body": "$${1:str} = (int)$${1:str};"
+  },
+  "post": {
+    "prefix": "post",
+    "body": [
+      "\\$apiEndpoint = 'https://example.com/api';",
+      "",
+      "// Data to be sent in JSON format",
+      "\\$data = array(",
+      "  'key1' => 'value1',",
+      "  'key2' => 'value2'",
+      ");",
+      "",
+      "// Convert data to JSON format",
+      "\\$jsonData = json_encode(\\$data);",
+      "",
+      "// Initialize cURL session",
+      "\\$ch = curl_init(\\$apiEndpoint);",
+      "",
+      "// Set cURL options",
+      "curl_setopt(\\$ch, CURLOPT_RETURNTRANSFER, true);",
+      "curl_setopt(\\$ch, CURLOPT_CUSTOMREQUEST, 'POST');",
+      "curl_setopt(\\$ch, CURLOPT_POSTFIELDS, \\$jsonData);",
+      "curl_setopt(\\$ch, CURLOPT_HTTPHEADER, array(",
+      "  'Content-Type: application/json',",
+      "  'Content-Length: ' . strlen(\\$jsonData)",
+      "));",
+      "",
+      "// Execute cURL session and get the response",
+      "\\$response = curl_exec(\\$ch);",
+      "",
+      "// Check for cURL errors",
+      "if (curl_errno(\\$ch)) {",
+      "  echo 'Curl error: ' . curl_error(\\$ch);",
+      "}",
+      "",
+      "// Close cURL session",
+      "curl_close(\\$ch);",
+      "",
+      "// Process the response",
+      "echo \\$response;",
+      ""
+    ],
+    "description": "post"
+  },
+  "php_date": {
+    "prefix": "php_date",
+    "body": ["\\$date = date(\"Y-m-d\",time());"]
+  },
+  "mysql": {
+    "prefix": "mysql",
+    "body": [
+      "\\$servername = \"localhost\";",
+      "\\$username = \"username\";",
+      "\\$password = \"password\";",
+      "\\$dbname = \"myDB\";",
+      "",
+      "// Create connection",
+      "\\$conn = new mysqli(\\$servername, \\$username, \\$password, \\$dbname);",
+      "// Check connection",
+      "if (\\$conn->connect_error) {",
+      "\tdie(\"Connection failed: \" . \\$conn->connect_error);",
+      "} "
+    ]
+  },
+  "mysql_select": {
+    "prefix": "mysql_select",
+    "body": [
+      "\\$sql = \"SELECT id, firstname, lastname FROM MyGuests\";",
+      "\\$result = \\$conn->query(\\$sql);",
+      "if (\\$result->num_rows > 0) {",
+      "\t// output data of each row",
+      "\twhile(\\$row = \\$result->fetch_assoc()) {",
+      "\t\techo \"id: \" . \\$row[\"id\"]. \" - Name: \" . \\$row[\"firstname\"]. \" \" . \\$row[\"lastname\"]. \"<br>\";",
+      "\t}",
+      "} else {",
+      "\techo \"0 results\";",
+      "}",
+      "\\$conn->close();"
+    ]
+  },
+  "toarray": {
+    "prefix": "toarray",
+    "body": "${1:\\$array} =  (array) ${2:\\$yourObject};"
+  },
+  "wp_shortcode": {
+    "prefix": "wp_shortcode",
+    "body": [
+      "function ${1:shortcode_name}( \\$atts ) {",
+      "\t\\$a = shortcode_atts( array(",
+      "\t\t'foo' => 'something',",
+      "\t\t'bar' => 'something else',",
+      "\t), \\$atts );",
+      "\tob_start();",
+      "\t//Do Something",
+      "\tinclude '${1:shortcode_name}.php';",
+      "\treturn ob_get_clean();",
+      "}",
+      "add_shortcode( '${1:shortcode_name}', '${1:shortcode_name}' );"
+    ]
+  },
+  "wp_select": {
+    "prefix": "wp_select",
+    "body": [
+      "global \\$wpdb;",
+      "\\$sql =",
+      "\t\"SELECT ID, post_title ",
+      "\tFROM \\$wpdb->posts",
+      "\tWHERE post_status = %s ",
+      "\t\tAND post_author = %d",
+      "\t\";",
+      "\\$rows = \\$wpdb->get_results(\\$wpdb->prepare(\\$sql,array('string',10)));",
+      "",
+      "foreach ( \\$rows as \\$row ) ",
+      "{",
+      "\techo \\$row->post_title;",
+      "}"
+    ]
+  },
+  "wp_get_var": {
+    "prefix": "wp_get_var",
+    "body": [
+      "global \\$wpdb;",
+      "\\$sql =",
+      "\"",
+      "SELECT `column`",
+      "FROM `table`",
+      "WHERE `something` = %s",
+      "\";",
+      "",
+      "\\$var = \\$wpdb->get_var(\\$wpdb->prepare(\\$sql,array(\"something\")));"
+    ]
+  },
+  "wp_insert": {
+    "prefix": "wp_insert",
+    "body": [
+      "global \\$wpdb;",
+      "\\$wpdb->insert( ",
+      "\t'table', ",
+      "\tarray( ",
+      "\t\t'column1' => 'value1', ",
+      "\t\t'column2' => 123 ",
+      "\t), ",
+      "\tarray( ",
+      "\t\t'%s', ",
+      "\t\t'%d' ",
+      "\t) ",
+      ");",
+      "\\$insert_id = \\$wpdb->insert_id;"
+    ]
+  },
+  "wp_update": {
+    "prefix": "wp_update",
+    "body": [
+      "global \\$wpdb;",
+      "\\$affectedrows = ",
+      "\\$wpdb->update( ",
+      "\t'table', ",
+      "\tarray( ",
+      "\t\t'column1' => 'value1', ",
+      "\t\t'column2' => 123 ",
+      "\t), ",
+      "\tarray( ",
+      "\t\t'where1' => 'value1', ",
+      "\t) ",
+      ");"
+    ]
+  },
+  "wp_rest": {
+    "prefix": "wp_rest",
+    "body": [
+      "add_action('rest_api_init', function () {",
+      "\tregister_rest_route( 'bimasoft-mms/v1', 'check-user/(?P<username>.+)/(?P<password>.+)',array(",
+      "\t\t'methods'  => 'GET',",
+      "\t\t'callback' => function(\\$request){",
+      "",
+      "\t\t\t\\$username = \\$request['username'];",
+      "\t\t\t\\$pass = \\$request['password'];",
+      "",
+      "\t\t\t\\$user = get_user_by( 'login', \\$username );",
+      "\t\t\tif ( \\$user && wp_check_password( \\$pass, \\$user->data->user_pass, \\$user->ID) ) {",
+      "\t\t\t\t\\$status = 'pass';",
+      "\t\t\t\t\\$roles = \\$user->roles[0];",
+      "\t\t\t} else {",
+      "\t\t\t\t\\$status = 'fail';",
+      "\t\t\t\t\\$roles = '';",
+      "\t\t\t}",
+      "",
+      "\t\t\t\\$response = new WP_REST_RESPONSE(array(",
+      "\t\t\t\t\"status\" => \\$status,",
+      "\t\t\t\t\"role\" => \\$roles",
+      "\t\t\t),200);",
+      "\t\t\treturn (\\$response);",
+      "",
+      "\t\t}",
+      "\t));",
+      "});"
+    ]
+  },
+  "wp_admin": {
+    "prefix": "wp_admin",
+    "body": [
+      "/*",
+      "\t===============",
+      "\tAdmin Page",
+      "\t===============",
+      "*/",
+      "",
+      "",
+      "function parent_menu_slug_content(){",
+      "\t//Generation of Admin Page",
+      "}",
+      "",
+      "function sub_menu_slug_content(){",
+      "\t//Sub Menu",
+      "}",
+      "",
+      "function parent_menu_add_admin_page(){",
+      "\t\\$page_title \t\t= 'Parent Title';",
+      "\t\\$menu_title \t\t= 'Parent Title';",
+      "\t\\$menu_slug\t\t\t= 'parent_menu_slug';",
+      "\t\\$callback \t\t\t= 'parent_menu_slug_content';",
+      "\t\\$icon\t\t\t\t= 'dashicons-list-view';",
+      "\t\\$position\t\t\t= 110;",
+      "",
+      "\t/*",
+      "\t2\t- Dashboard",
+      "\t4\t- Separator",
+      "\t5\t- Posts",
+      "\t10\t- Media",
+      "\t15 \t- Links",
+      "\t20\t- Pages",
+      "\t25\t- Comments",
+      "\t59\t- Separator",
+      "\t60\t- Appearance",
+      "\t65  - Plugins",
+      "\t70\t- Users",
+      "\t75\t- Tools",
+      "\t80\t- Settings",
+      "\t99\t- Separator",
+      "\t*/",
+      "",
+      "\t//Generate Admin Page",
+      "\tadd_menu_page( \\$page_title, \\$menu_title, 'manage_options', \\$menu_slug, \\$callback, \\$icon, \\$position );",
+      "",
+      "\t//Generate Admin Sub-Page",
+      "\t\\$page_title \t\t= 'Sub Page Title';",
+      "\t\\$menu_title \t\t= 'Sub Page Title';",
+      "\t\\$menu_slug\t\t\t= 'sub_menu_slug';",
+      "\t\\$callback \t\t\t= 'sub_menu_slug_content';",
+      "\tadd_submenu_page( 'parent_menu_slug', \\$page_title, \\$menu_title, 'manage_options', \\$menu_slug, \\$callback );",
+      "}",
+      "",
+      "add_action( 'admin_menu', 'parent_menu_add_admin_page');"
+    ]
+  }
+}
