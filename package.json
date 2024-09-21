@@ -7,7 +7,7 @@
     "snippets": [
       {
         "language": [
-          "all"
+          "c"
         ],
         "path": "./snippets/fa.json"
       },
