@@ -1,4 +1,12 @@
 {
+  "supabase": {
+    "scope": "javascript,typescript",
+    "prefix": "supabase",
+    "body": [
+      "import { createClient } from '@supabase/supabase-js';",
+      "export const supabase = createClient('https://supabase-api.b.app.web.id', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzI4NDg5NjAwLAogICJleHAiOiAxODg2MjU2MDAwCn0.Z0Qi_fL4s-gLFeCkTxp1hTtCHK7Nd26BDj_rNfNc4XU')"
+    ]
+  },
   "express": {
     "prefix": "express",
     "scope": "javascript",
