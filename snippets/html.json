@@ -1,4 +1,10 @@
 {
+  "placeholder": {
+    "prefix": "placeholder",
+    "body": [
+      "<img src='https://placehold.co/600x400/EEE/31343C' alt='placeholder' />"
+    ]
+  },
   "bs4-all": {
     "prefix": "bs4-all",
     "body": [

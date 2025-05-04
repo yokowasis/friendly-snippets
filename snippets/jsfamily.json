@@ -1,4 +1,17 @@
 {
+  "try": {
+    "scope": "javascript,typescript",
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  ${1:code}",
+      "} catch (e) {",
+      "  console.error(e);",
+      "} finally {",
+      "  ${2:code}",
+      "}"
+    ]
+  },
   "supabase": {
     "scope": "javascript,typescript",
     "prefix": "supabase",
