@@ -19,10 +19,7 @@
   },
   "typeWrapPHP": {
     "prefix": "ty",
-    "body": [
-      "/** @var ${1:TypeName}  $TM_SELECTED_TEXT */",
-      "$TM_SELECTED_TEXT"
-    ]
+    "body": ["/** @var ${1:TypeName} */", "$TM_SELECTED_TEXT"]
   },
   "mms_controller_custom": {
     "prefix": "mms_controller_custom",
