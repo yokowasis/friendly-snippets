@@ -1,4 +1,18 @@
 {
+  "typecasting": {
+    "prefix": "typecast",
+    "body": [
+      "class ${1:ClassName} {",
+      "public int ${2:mainProp1};",
+      "public string ${3:mainProp2};",
+      "/** @var object{prop1:string,prop2:array{subprop2:string},prop3:array<int,mixed>} */",
+      "public object ${4:mainProp3};"
+    ]
+  },
+  "var": {
+    "prefix": "var",
+    "body": ["/** @var ${1:TypeName} */"]
+  },
   "cl": {
     "prefix": "cl",
     "body": ["console.log($1);"]
