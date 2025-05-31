@@ -6,6 +6,10 @@
   "contributes": {
     "snippets": [
       {
+        "language": ["go"],
+        "path": "./snippets/go.json"
+      },
+      {
         "language": [
           "c"
         ],

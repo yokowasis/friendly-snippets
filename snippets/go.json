@@ -1,0 +1,44 @@
+{
+  "println": {
+    "prefix": "println",
+    "body": ["fmt.Println(${1:message})"],
+    "description": "Print a message to the console"
+  },
+  "typemap": {
+    "prefix": "typemap",
+    "body": ["var ${1:varName} map[${2:string}]${3:int}"],
+    "description": "Create a new map type"
+  },
+  "typearr": {
+    "prefix": "typearr",
+    "body": ["var ${1:varName} [${3:100}]${2:string}"],
+    "description": "Create a new array type"
+  },
+  "typestruct": {
+    "prefix": "typestruct",
+    "body": [
+      "type ResultPayload struct {",
+      "  Page    int",
+      "  PerPage int",
+      "  Items   map[string]string",
+      "  Arr     []string",
+      "}",
+      "",
+      "result := ResultPayload{",
+      "  1,",
+      "  10,",
+      "  map[string]string{",
+      "    \"item1\": \"value1\",",
+      "    \"item2\": \"value2\",",
+      "    \"item3\": \"value3\",",
+      "  },",
+      "  []string{\"item1\", \"item2\", \"item3\"},",
+      "}"
+    ],
+    "description": "Create a new struct"
+  },
+  "hello": {
+    "prefix": "hello",
+    "body": ["fmt.Println(\"Hello, World!\")"]
+  }
+}
