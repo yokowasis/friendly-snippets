@@ -1,4 +1,19 @@
 {
+  "parsefloat": {
+    "prefix": "parsefloat",
+    "body": ["n,_ := strconv.ParseFloat(${1:str}, 64)"],
+    "description": "Parse a string into a float"
+  },
+  "parseint": {
+    "prefix": "parseint",
+    "body": ["n,_ := strconv.Atoi(${1:str})"],
+    "description": "Parse a string into an integer"
+  },
+  "inttostr": {
+    "prefix": "inttostr",
+    "body": ["s,_ := strconv.Itoa(${1:intVar})"],
+    "description": "Convert an integer to a string"
+  },
   "forof": {
     "prefix": "forof",
     "body": [
@@ -58,7 +73,7 @@
   },
   "typecheck": {
     "prefix": "typecheck",
-    "body": ["typeOfv := fmt.Sprintf(\"%T\", value)"],
+    "body": ["typeOf${1:variable} := fmt.Sprintf(\"%T\", ${1:variable})"],
     "description": "Check if a variable is of a specific type"
   },
   "typemap": {
