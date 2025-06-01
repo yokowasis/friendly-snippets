@@ -1,4 +1,9 @@
 {
+  "now": {
+    "prefix": "now",
+    "body": ["time.Now().Format(\"2006-01-02 15:04:05\")"],
+    "description": "Print the current date and time"
+  },
   "parsefloat": {
     "prefix": "parsefloat",
     "body": ["n,_ := strconv.ParseFloat(${1:str}, 64)"],
@@ -14,13 +19,18 @@
     "body": ["s,_ := strconv.Itoa(${1:intVar})"],
     "description": "Convert an integer to a string"
   },
-  "forof": {
-    "prefix": "forof",
+  "for": {
+    "prefix": "for",
     "body": [
-      "for key, value := range ${1:structobject} {",
-      "  ${3:// code}",
+      "for ${1:i} := ${2:0}; ${1:i} < ${3:10}; ${1:i}++ {",
+      "  ${4:// code}",
       "}"
     ],
+    "description": "For loop with initialization, condition, and post statement"
+  },
+  "forof": {
+    "prefix": "forof",
+    "body": ["for k, v := range ${1:obj} {", "  ${2:// code}", "}"],
     "description": "For loop over a collection"
   },
   "jsonparsedynamic": {
