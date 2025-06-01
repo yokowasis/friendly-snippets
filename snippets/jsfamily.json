@@ -3,8 +3,8 @@
     "scope": "javascript,typescript",
     "prefix": "pb",
     "body": [
-      "import { onMount } from \"svelte\";",
-      "const pb = new PocketBase(\"http://localhost:3000\");"
+      "import PocketBase from \"pocketbase\"",
+      "const pb = new PocketBase(\"${1:http://localhost:3000}\");"
     ]
   },
   "try": {
