@@ -1,8 +1,65 @@
 {
+  "forof": {
+    "prefix": "forof",
+    "body": [
+      "for key, value := range ${1:structobject} {",
+      "  ${3:// code}",
+      "}"
+    ],
+    "description": "For loop over a collection"
+  },
+  "unmarshalinterface": {
+    "prefix": "unmarshalinterface",
+    "body": [
+      "jsonString := []byte(`{\"Name\":\"Wednesday\",\"Age\":6,\"Parents\":[\"Gomez\",\"Morticia\"],\"Siblings\":{\"Brother\":\"Pugsley\",\"Sister\":\"Pubert\"}}`)",
+      "var tempInterfaceVar any",
+      "json.Unmarshal(jsonString, &tempInterfaceVar)",
+      "varName := tempInterfaceVar.(map[string]any)",
+      "",
+      "fmt.Println(varName[\"Parents\"].([]any)[0].(string))",
+      "fmt.Println(varName[\"Siblings\"].(map[string]any)[\"Brother\"].(string))"
+    ],
+    "description": "Unmarshal JSON data into an interface"
+  },
+  "marshal": {
+    "prefix": "marshal",
+    "body": [
+      "type TypeOfV struct {",
+      "  Hello string",
+      "}",
+      "",
+      "var v TypeOfV",
+      "v = TypeOfV{Hello: \"World\"}",
+      "",
+      "jsonStr, err := json.Marshal(v)",
+      "if err != nil {",
+      "  log.Fatalf(\"Error marshalling JSON: %v\", err)",
+      "}",
+      "",
+      "fmt.Println(string(jsonStr))"
+    ],
+    "description": "Marshal a struct into JSON data"
+  },
+  "unmarshal": {
+    "prefix": "unmarshal",
+    "body": [
+      "type ${1:TypeOfV} struct {",
+      "  Hello string `json:\"hello\"`",
+      "}",
+      "var ${2:v} ${1:TypeOfV}",
+      "json.Unmarshal([]byte(`{\"hello\": \"world\"}`), &${2:v})"
+    ],
+    "description": "Unmarshal JSON data into a struct"
+  },
   "println": {
-    "prefix": "println",
+    "prefix": "pl",
     "body": ["fmt.Println(${1:message})"],
     "description": "Print a message to the console"
+  },
+  "typecheck": {
+    "prefix": "typecheck",
+    "body": ["typeOfv := fmt.Sprintf(\"%T\", value)"],
+    "description": "Check if a variable is of a specific type"
   },
   "typemap": {
     "prefix": "typemap",
