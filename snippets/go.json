@@ -28,7 +28,10 @@
     "body": [
       "jsonString := []byte(`{\"Name\":\"Wednesday\",\"Age\":6,\"Parents\":[\"Gomez\",\"Morticia\"],\"Siblings\":{\"Brother\":\"Pugsley\",\"Sister\":\"Pubert\"}}`)",
       "var tempInterfaceVar any",
-      "json.Unmarshal(jsonString, &tempInterfaceVar)",
+      "err := json.Unmarshal(jsonString, &tempInterfaceVar)",
+      "if err != nil {",
+      "  log.Fatalf(\"Error JSON.parse: %v\", err)",
+      "}",
       "varName := tempInterfaceVar.(map[string]any)",
       "",
       "fmt.Println(varName[\"Parents\"].([]any)[0].(string))",
@@ -39,16 +42,16 @@
   "marshal": {
     "prefix": "marshal",
     "body": [
-      "type TypeOfV struct {",
+      "type TypeOf${1:v} struct {",
       "  Hello string",
       "}",
       "",
-      "var v TypeOfV",
-      "v = TypeOfV{Hello: \"World\"}",
+      "var ${1:v} TypeOf${1:v}",
+      "${1:v} = TypeOf{1:v}{Hello: \"World\"}",
       "",
-      "jsonStr, err := json.Marshal(v)",
+      "jsonStr, err := json.Marshal(${1:v})",
       "if err != nil {",
-      "  log.Fatalf(\"Error marshalling JSON: %v\", err)",
+      "  log.Fatalf(\"Error JSON.stringfy: %v\", err)",
       "}",
       "",
       "fmt.Println(string(jsonStr))"
@@ -58,11 +61,14 @@
   "unmarshal": {
     "prefix": "unmarshal",
     "body": [
-      "type ${1:TypeOfV} struct {",
+      "type TypeOf${1:v} struct {",
       "  Hello string `json:\"hello\"`",
       "}",
-      "var ${2:v} ${1:TypeOfV}",
-      "json.Unmarshal([]byte(`{\"hello\": \"world\"}`), &${2:v})"
+      "var ${1:v} TypeOf${1:v}",
+      "err := json.Unmarshal([]byte(`{\"hello\": \"world\"}`), &${1:v})",
+      "if err != nil {",
+      "  log.Fatalf(\"Error JSON.parse: %v\", err)",
+      "}"
     ],
     "description": "Unmarshal JSON data into a struct"
   },
