@@ -1,4 +1,19 @@
 {
+  "jsonbodyfiber": {
+    "prefix": "jsonbodyfiber",
+    "body": [
+      "var data map[string]any",
+      "if err := c.Bind().JSON(&data); err != nil {",
+      "  return c.Status(400).SendString(\"Invalid JSON\" + err.Error())",
+      "}"
+    ],
+    "description": "Parse JSON body in a Fiber route handler"
+  },
+  "typeof": {
+    "prefix": "typeof",
+    "body": ["t := fmt.Sprintf(\"%T\", ${1:variable})"],
+    "description": "Print the type of a variable"
+  },
   "now": {
     "prefix": "now",
     "body": ["time.Now().Format(\"2006-01-02 15:04:05\")"],
