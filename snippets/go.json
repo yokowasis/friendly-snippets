@@ -1,4 +1,14 @@
 {
+  "join": {
+    "prefix": "join",
+    "body": ["strings.Join(${1:array}, ${2:delimiter})"],
+    "description": "Join an array of strings with a delimiter"
+  },
+  "split": {
+    "prefix": "split",
+    "body": ["strings.Split(${1:string}, ${2:delimiter})"],
+    "description": "Split a string by a delimiter"
+  },
   "jsonbodyfiber": {
     "prefix": "jsonbodyfiber",
     "body": [
@@ -11,7 +21,7 @@
   },
   "typeof": {
     "prefix": "typeof",
-    "body": ["t := fmt.Sprintf(\"%T\", ${1:variable})"],
+    "body": ["fmt.Sprintf(\"%T\", ${1:variable})"],
     "description": "Print the type of a variable"
   },
   "now": {
