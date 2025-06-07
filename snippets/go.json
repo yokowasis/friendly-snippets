@@ -9,13 +9,27 @@
     "body": ["strings.Split(${1:string}, ${2:delimiter})"],
     "description": "Split a string by a delimiter"
   },
+  "switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:variable} {",
+      "case ${2:value1}:",
+      "  ${3:// code for value1}",
+      "default:",
+      "  ${4:// default code}",
+      "}"
+    ],
+    "description": "Switch statement with multiple cases"
+  },
   "jsonbodyfiber": {
     "prefix": "jsonbodyfiber",
     "body": [
       "var data map[string]any",
       "if err := c.Bind().JSON(&data); err != nil {",
       "  return c.Status(400).SendString(\"Invalid JSON\" + err.Error())",
-      "}"
+      "}",
+      "urlParams := c.Params(\"${1:paramName}\")",
+      "queryParams1 := c.Query(\"${2:queryParam1}\", \"${3:defaultValue}\")"
     ],
     "description": "Parse JSON body in a Fiber route handler"
   },
