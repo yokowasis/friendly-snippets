@@ -6,7 +6,9 @@
   "contributes": {
     "snippets": [
       {
-        "language": ["go"],
+        "language": [
+          "go"
+        ],
         "path": "./snippets/go.json"
       },
       {
@@ -40,7 +42,7 @@
         "path": "./snippets/typescript.json"
       },
       {
-        "language": "html",
+        "language": ["html", "php"],
         "path": "./snippets/html.json"
       },
       {
@@ -48,7 +50,9 @@
           "html",
           "php"
         ],
-        "path": "./snippets/php.json"
+        "path": [
+          "./snippets/php.json",
+        ]
       },
       {
         "language": [
