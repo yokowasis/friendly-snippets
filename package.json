@@ -42,7 +42,10 @@
         "path": "./snippets/typescript.json"
       },
       {
-        "language": ["html", "php"],
+        "language": [
+          "html",
+          "php"
+        ],
         "path": "./snippets/html.json"
       },
       {
@@ -50,9 +53,7 @@
           "html",
           "php"
         ],
-        "path": [
-          "./snippets/php.json",
-        ]
+        "path": "./snippets/php.json"
       },
       {
         "language": [
