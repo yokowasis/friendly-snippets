@@ -1,0 +1,6 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": ["fn main() {", "  println!(\"Hello, world!\");", "}"]
+  }
+}

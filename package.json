@@ -7,6 +7,12 @@
     "snippets": [
       {
         "language": [
+          "rust"
+        ],
+        "path": "./snippets/rust.json"
+      },
+      {
+        "language": [
           "go"
         ],
         "path": "./snippets/go.json"
