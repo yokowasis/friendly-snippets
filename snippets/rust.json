@@ -1,4 +1,33 @@
 {
+  "now": {
+    "prefix": "now",
+    "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S\").to_string();"],
+    "description": "Get current time in seconds and nanoseconds since the epoch"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "pub struct ${1:ClassName} {",
+      "    username: String,",
+      "    age: u32,",
+      "}",
+      "",
+      "impl ${1:ClassName} {",
+      "    pub fn new(username: String, age: u32) -> Self {",
+      "        Self { username, age }",
+      "    }",
+      "",
+      "    pub fn greet(&self) {",
+      "        println!(\"Hello, my name is {}!\", self.username);",
+      "    }",
+      "",
+      "    pub fn have_birthday(&mut self) {",
+      "        self.age += 1;",
+      "        println!(\"Happy birthday! I'm now {} years old.\", self.age);",
+      "    }",
+      "}"
+    ]
+  },
   "axum": {
     "prefix": "axum",
     "body": [
