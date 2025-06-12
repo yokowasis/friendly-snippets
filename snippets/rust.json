@@ -1,4 +1,26 @@
 {
+  "spawn": {
+    "prefix": "spawn",
+    "body": [
+      "tokio::spawn(async {",
+      "  ${1:some_function()}.await.unwrap()",
+      "});"
+    ],
+    "description": "Spawns an asynchronous task"
+  },
+  "promises": {
+    "prefix": "promises",
+    "body": [
+      "let mut promises: Vec<JoinHandle<()>> = vec![];",
+      "",
+      "promises.push(tokio::spawn(async {",
+      "  ${1:some_function()}.await.unwrap()",
+      "}));",
+      "",
+      "let _results = futures::future::join_all(promises).await;"
+    ],
+    "description": "Example of using promises in Rust"
+  },
   "encode_url_params": {
     "prefix": "encode_url_params",
     "body": [
