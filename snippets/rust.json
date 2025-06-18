@@ -1,4 +1,9 @@
 {
+  "split": {
+    "prefix": "split",
+    "body": ["${1:string}.split(\"${2:;}\").collect::<Vec<&str>>();"],
+    "description": "Splits a string into parts based on a delimiter"
+  },
   "spawn": {
     "prefix": "spawn",
     "body": [
@@ -50,7 +55,7 @@
   },
   "now": {
     "prefix": "now",
-    "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S\").to_string()"],
+    "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S\").to_string();"],
     "description": "Get current time in seconds and nanoseconds since the epoch"
   },
   "class": {
