@@ -64,6 +64,29 @@
       "></cs-select>"
     ]
   },
+  "typeWrap": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "ty",
+    "body": ["/** @type {${1:TypeName}} */ ", "($TM_SELECTED_TEXT)"]
+  },
+  "typeWrapPHP": {
+    "scope": "php",
+    "prefix": "ty",
+    "body": [
+      "/** @var ${1:TypeName}  $TM_SELECTED_TEXT */",
+      "$TM_SELECTED_TEXT"
+    ]
+  },
+  "type": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ":",
+    "body": ["/** @type {${1:TypeName}} */ "]
+  },
+  "list-icon": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "list-icon",
+    "body": ["<list-icon></list-icon>"]
+  },
   "cs-radio": {
     "scope": "html,php,javascriptreact,typescriptreact,svelte",
     "prefix": "cs-radio",
@@ -75,6 +98,7 @@
       "  value=\"\"",
       "  data=\"${4:Satu;Dua;Tiga}\"",
       "  dataValue=\"${5:1;2;3}\"",
+      "  cols=\"${6:1}\"",
       "  onchange=\"someFunction()\"",
       "></cs-radio>"
     ]
