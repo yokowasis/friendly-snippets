@@ -1,4 +1,19 @@
 {
+  "typeof": {
+    "prefix": "typeof",
+    "body": ["std::any::type_name_of_val(&${1:var_name})"],
+    "description": "Prints the type of a variable"
+  },
+  "tostr": {
+    "prefix": "tostr",
+    "body": ["let ${1:var_name} = ${2:string}.to_string();"],
+    "description": "Converts a string to a String type"
+  },
+  "parseint": {
+    "prefix": "parseint",
+    "body": ["let ${1:var_name} = ${2:string}.parse::<i32>().unwrap();"],
+    "description": "Parses a string into an integer"
+  },
   "split": {
     "prefix": "split",
     "body": ["${1:string}.split(\"${2:;}\").collect::<Vec<&str>>();"],
