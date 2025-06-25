@@ -6,12 +6,12 @@
   },
   "tostr": {
     "prefix": "tostr",
-    "body": ["let ${1:var_name} = ${2:string}.to_string();"],
+    "body": ["${1:var_name}.to_string()"],
     "description": "Converts a string to a String type"
   },
   "parseint": {
     "prefix": "parseint",
-    "body": ["let ${1:var_name} = ${2:string}.parse::<i32>().unwrap();"],
+    "body": ["${1:string_var}.parse::<i32>().unwrap_or(0)"],
     "description": "Parses a string into an integer"
   },
   "split": {
