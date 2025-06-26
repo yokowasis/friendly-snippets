@@ -1,4 +1,13 @@
 {
+  "get_header": {
+    "prefix": "get_header",
+    "body": [
+      "if let Some(jwt) = headers.get(\"Authorization\") {",
+      "    jwt_str = jwt.to_str().unwrap_or(\"\");",
+      "}"
+    ],
+    "description": "Retrieves a header from the request"
+  },
   "typeof": {
     "prefix": "typeof",
     "body": ["std::any::type_name_of_val(&${1:var_name})"],
