@@ -1,4 +1,10 @@
 {
+  "get_env": {
+    "prefix": "get_env",
+    "body": [
+      "std::env::var(\"JWT_SECRET\").unwrap_or_else(|_| \"jwtsecret\".to_string());"
+    ]
+  },
   "get_params": {
     "prefix": "get_params",
     "body": [
