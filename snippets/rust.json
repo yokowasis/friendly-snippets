@@ -1,4 +1,11 @@
 {
+  "get_params": {
+    "prefix": "get_params",
+    "body": [
+      "let ${1:some_param} = params.get(\"${1:some_param}\").map(|s| s.as_str()).unwrap_or(\"\");"
+    ],
+    "description": "Retrieves query parameters from the request"
+  },
   "get_header": {
     "prefix": "get_header",
     "body": [
