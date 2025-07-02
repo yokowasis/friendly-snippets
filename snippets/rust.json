@@ -1,9 +1,7 @@
 {
   "get_env": {
     "prefix": "get_env",
-    "body": [
-      "std::env::var(\"${1:ENV_NAME}\").unwrap_or_else(|_| \"${2:default_value}\".to_string());"
-    ]
+    "body": ["std::env::var(\"${1:ENV_NAME}\").unwrap_or_default();"]
   },
   "get_params": {
     "prefix": "get_params",
