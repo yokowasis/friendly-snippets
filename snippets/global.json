@@ -1,4 +1,132 @@
 {
+  "cs-modal": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-modal",
+    "body": [
+      "<cs-modal id=\"${1:modalID}\">",
+      "  <h1>Modal Title</h1>",
+      "  <p>Modal Content</p>",
+      "</cs-modal>",
+      "",
+      "<script>",
+      "  const modal = document.getElementById(\"${1:modalID}\");",
+      "  modal.show();",
+      "",
+      "  modal.addEventListener(\"close\", () => {",
+      "    console.log(\"Modal closed\");",
+      "  });",
+      "",
+      "  modal.addEventListener(\"confirm\", () => {",
+      "    console.log(\"Modal Confirm\");",
+      "  });",
+      "</script>",
+      ""
+    ]
+  },
+  "cs-infocard": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-infocard",
+    "body": [
+      "<cs-infocard",
+      "  title=\"${1:Some Title}\"",
+      "  value=\"${2:150}\"",
+      "  unit=\"${3:People}\"",
+      "  btn-title=\"${4:More Info}\"",
+      "  background=\"${5:linear-gradient(to right, #00c6ff, #0072ff)}\"",
+      ">",
+      "  <div slot=\"icon\"><i-c icon=\"${6:user}\"></i-c></div>",
+      "</cs-infocard>"
+    ]
+  },
+  "cs-input": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-input",
+    "body": [
+      "<cs-input",
+      "  id=\"${1:someID}\"",
+      "  label=\"${2:SomeLabel}\"",
+      "  type=\"${3|text,password,time,date|}\"",
+      "  value=\"\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-input>"
+    ]
+  },
+  "cs-select": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-select",
+    "body": [
+      "<cs-select",
+      "  id=\"${1:someid}\"",
+      "  label=\"${2:Label}\"",
+      "  value=\"\"",
+      "  data=\"${3:Satu;Dua;Tiga}\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-select>"
+    ]
+  },
+  "typeWrap": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "ty",
+    "body": ["/** @type {${1:TypeName}} */ ", "($TM_SELECTED_TEXT)"]
+  },
+  "typeWrapPHP": {
+    "scope": "php",
+    "prefix": "ty",
+    "body": [
+      "/** @var ${1:TypeName}  $TM_SELECTED_TEXT */",
+      "$TM_SELECTED_TEXT"
+    ]
+  },
+  "type": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ":",
+    "body": ["/** @type {${1:TypeName}} */ "]
+  },
+  "list-icon": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "list-icon",
+    "body": ["<list-icon></list-icon>"]
+  },
+  "cs-radio": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-radio",
+    "body": [
+      "<cs-radio",
+      "  id=\"${1:someid}\"",
+      "  label=\"${2:Label}\"",
+      "  type=\"${3|radio,checkbox|}\"",
+      "  value=\"\"",
+      "  data=\"${4:Satu;Dua;Tiga}\"",
+      "  dataValue=\"${5:1;2;3}\"",
+      "  cols=\"${6:1}\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-radio>"
+    ]
+  },
+  "cs-upload": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-upload",
+    "body": [
+      "<cs-upload id=\"${1:someid}\" label=\"${2:Label}\" limit=${3:10}></cs-upload>"
+    ]
+  },
+  "cs-rtf": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-rtf",
+    "body": ["<cs-rtf id=\"${1:someid}\" label=\"${2:Label}\"></cs-rtf>"]
+  },
+  "cs-toast": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-toast",
+    "body": ["<cs-toast></cs-toast>"]
+  },
+  "toast": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "toast",
+    "body": [
+      "toast.${1|push,error,info,success,warn,loading,hide|}(\"${2:message}\",${3:durationms},\"${4|top-right,top-left,bottom-right,bottom-left|}\")"
+    ]
+  },
   "main": {
     "scope": "cpp",
     "prefix": "main",

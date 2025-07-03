@@ -1,4 +1,8 @@
 {
+  "error": {
+    "prefix": "error",
+    "body": ["error_reporting(E_ALL);", "ini_set('display_errors', 1);"]
+  },
   "typecasting": {
     "prefix": "typecast",
     "body": [
@@ -7,6 +11,10 @@
       "  public string $${3:mainProp2};",
       "  /** @var object{prop1:string,prop2:array{subprop2:string},prop3:array<int,mixed>} */",
       "  public object $${4:mainProp3};",
+      "  public int ${2:mainProp1};",
+      "  public string ${3:mainProp2};",
+      "  /** @var object{prop1:string,prop2:array{subprop2:string},prop3:array<int,mixed>} */",
+      "  public object ${4:mainProp3};",
       "}"
     ]
   },

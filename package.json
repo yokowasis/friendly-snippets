@@ -7,6 +7,18 @@
     "snippets": [
       {
         "language": [
+          "rust"
+        ],
+        "path": "./snippets/rust.json"
+      },
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./snippets/go.json"
+      },
+      {
+        "language": [
           "c"
         ],
         "path": "./snippets/fa.json"
@@ -36,7 +48,10 @@
         "path": "./snippets/typescript.json"
       },
       {
-        "language": "html",
+        "language": [
+          "html",
+          "php"
+        ],
         "path": "./snippets/html.json"
       },
       {

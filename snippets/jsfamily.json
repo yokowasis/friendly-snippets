@@ -1,4 +1,12 @@
 {
+  "pb": {
+    "scope": "javascript,typescript",
+    "prefix": "pb",
+    "body": [
+      "import PocketBase from \"pocketbase\"",
+      "const pb = new PocketBase(\"${1:http://localhost:3000}\");"
+    ]
+  },
   "try": {
     "scope": "javascript,typescript",
     "prefix": "try",

@@ -1,0 +1,260 @@
+{
+  "get_env": {
+    "prefix": "get_env",
+    "body": ["std::env::var(\"${1:ENV_NAME}\").unwrap_or_default();"]
+  },
+  "get_params": {
+    "prefix": "get_params",
+    "body": [
+      "let ${1:some_param} = params.get(\"${1:some_param}\").map(|s| s.as_str()).unwrap_or(\"\");"
+    ],
+    "description": "Retrieves query parameters from the request"
+  },
+  "get_header": {
+    "prefix": "get_header",
+    "body": [
+      "if let Some(jwt) = headers.get(\"Authorization\") {",
+      "    jwt_str = jwt.to_str().unwrap_or(\"\");",
+      "}"
+    ],
+    "description": "Retrieves a header from the request"
+  },
+  "typeof": {
+    "prefix": "typeof",
+    "body": ["std::any::type_name_of_val(&${1:var_name})"],
+    "description": "Prints the type of a variable"
+  },
+  "tostr": {
+    "prefix": "tostr",
+    "body": ["${1:var_name}.to_string()"],
+    "description": "Converts a string to a String type"
+  },
+  "parseint": {
+    "prefix": "parseint",
+    "body": ["${1:string_var}.parse::<i32>().unwrap_or(0)"],
+    "description": "Parses a string into an integer"
+  },
+  "split": {
+    "prefix": "split",
+    "body": ["${1:string}.split(\"${2:;}\").collect::<Vec<&str>>();"],
+    "description": "Splits a string into parts based on a delimiter"
+  },
+  "spawn": {
+    "prefix": "spawn",
+    "body": [
+      "tokio::spawn(async {",
+      "  ${1:some_function()}.await.unwrap()",
+      "});"
+    ],
+    "description": "Spawns an asynchronous task"
+  },
+  "promises": {
+    "prefix": "promises",
+    "body": [
+      "let mut promises: Vec<JoinHandle<()>> = vec![];",
+      "",
+      "promises.push(tokio::spawn(async {",
+      "  ${1:some_function()}.await.unwrap()",
+      "}));",
+      "",
+      "let _results = futures::future::join_all(promises).await;"
+    ],
+    "description": "Example of using promises in Rust"
+  },
+  "encode_url_params": {
+    "prefix": "encode_url_params",
+    "body": [
+      "let base = \"${1:url}\";",
+      "let mut url = Url::parse(base).unwrap();",
+      "url.query_pairs_mut()",
+      "    .append_pair(\"lang\", \"en-US\");"
+    ],
+    "description": "Encodes a JSON object"
+  },
+  "fetch": {
+    "prefix": "fetch",
+    "body": [
+      "let client = reqwest::Client::new();",
+      "let res = client",
+      "    .post(\"https://api.example.com/data\")",
+      "    .json(&json!({",
+      "        \"key\": \"value\"",
+      "    }))",
+      "    .send()",
+      "    .await?;",
+      "",
+      "let body = res.text().await?;",
+      "println!(\"{}\", body);",
+      "Ok(())"
+    ]
+  },
+  "now": {
+    "prefix": "now",
+    "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S\").to_string();"],
+    "description": "Get current time in seconds and nanoseconds since the epoch"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "pub struct ${1:ClassName} {",
+      "    username: String,",
+      "    age: u32,",
+      "}",
+      "",
+      "impl ${1:ClassName} {",
+      "    pub fn new(username: String, age: u32) -> Self {",
+      "        Self { username, age }",
+      "    }",
+      "",
+      "    pub fn greet(&self) {",
+      "        println!(\"Hello, my name is {}!\", self.username);",
+      "    }",
+      "",
+      "    pub fn have_birthday(&mut self) {",
+      "        self.age += 1;",
+      "        println!(\"Happy birthday! I'm now {} years old.\", self.age);",
+      "    }",
+      "}"
+    ]
+  },
+  "axum": {
+    "prefix": "axum",
+    "body": [
+      "use std::collections::HashMap;",
+      "",
+      "use axum::{",
+      "    Json, Router,",
+      "    extract::{Path, Query},",
+      "    http::StatusCode,",
+      "    routing::{get, post},",
+      "};",
+      "use serde::{Deserialize, Serialize};",
+      "use serde_json::{Value, json, value};",
+      "",
+      "#[tokio::main]",
+      "async fn main() {",
+      "    tracing_subscriber::fmt::init();",
+      "    let app = Router::new()",
+      "        .route(\"/\", get(root))",
+      "        .route(\"/user/{name}\", get(test));",
+      "    let listener = tokio::net::TcpListener::bind(\"0.0.0.0:3000\").await.unwrap();",
+      "    axum::serve(listener, app).await.unwrap();",
+      "}",
+      "",
+      "async fn root() -> String {",
+      "    \"Hello, World!\".to_string()",
+      "}",
+      "",
+      "async fn test(Path(name): Path<String>, Query(params): Query<HashMap<String, String>>) -> String {",
+      "    let id = params",
+      "        .get(\"id\")",
+      "        .cloned()",
+      "        .unwrap_or_else(|| \"default_id\".to_string());",
+      "",
+      "    println!(\"{}->{}\", id, name);",
+      "",
+      "    return id + \"->\" + &name.to_string();",
+      "}"
+    ],
+    "description": "Basic Axum handler setup"
+  },
+  "fnpost": {
+    "prefix": "fnpost",
+    "body": [
+      "async fn ${1:fnname}(Json(payload): Json<Value>) -> (StatusCode, Json<Option<Value>>) {",
+      "    println!(\"Raw Payload: {}\", payload);",
+      "",
+      "    let hello = payload",
+      "        .get(\"hello\")",
+      "        .and_then(Value::as_str)",
+      "        .unwrap_or(\"world\");",
+      "",
+      "    (StatusCode::CREATED, Json(Some(payload)))",
+      "}"
+    ],
+    "description": "Function with a post-increment operation"
+  },
+  "jsonstingify": {
+    "prefix": "jsonstringify",
+    "body": ["serde_json::to_string(&${1:s}).unwrap()"],
+    "description": "Converts an object to a JSON string"
+  },
+  "jsonparse": {
+    "prefix": "jsonparse",
+    "body": ["let ${1:parsed}: Value = serde_json::from_str(${2:string})?"],
+    "description": "Parses a JSON string"
+  },
+  "hashmap": {
+    "prefix": "hashmap",
+    "body": [
+      "let mut ${1:map_name} = HashMap::new();",
+      "${1:map_name}.insert(${2:key}, ${3:value});"
+    ],
+    "description": "Creates a new HashMap"
+  },
+  "tuple": {
+    "prefix": "tuple",
+    "body": ["let mut ${1:tuple_name} = (${2:elem1}, ${3:elem2});"],
+    "description": "Creates a tuple with specified elements"
+  },
+  "vec": {
+    "prefix": "vec",
+    "body": ["let mut ${1:vec_name} = vec![${2:\"elem1\"}, ${3:\"elem2\"}];"],
+    "description": "Creates a vector with specified elements"
+  },
+  "concat": {
+    "prefix": "concat",
+    "body": ["let mut {1:s} = format!(\"{}{}\", ${2:a}, ${3:b});"],
+    "description": "Concatenates two strings"
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:add}(${2:a: i32}) -> ${3:i32} {",
+      "  return ${4:a+3}",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for ${1:i} in ${2:1..=6} {", "  ${3:statement}", "}"],
+    "description": "For loop construct"
+  },
+  "while": {
+    "prefix": "while",
+    "body": ["while ${1:condition} {", "  ${2:statement}", "}"],
+    "description": "While loop construct"
+  },
+  "loop": {
+    "prefix": "loop",
+    "body": [
+      "loop {",
+      "  ${1:statement}",
+      "  if ${2:condition} {",
+      "    break;",
+      "  }",
+      "}"
+    ],
+    "description": "Loop construct"
+  },
+  "match": {
+    "prefix": "match",
+    "body": [
+      "match ${1:expression} {",
+      "  ${2:pattern} => ${3:result},",
+      "  _ => ${4:default_result}",
+      "}"
+    ],
+    "description": "Match expression"
+  },
+  "pl": {
+    "prefix": "pl",
+    "body": ["println!(\"${1:Hello, world!}\");"],
+    "description": "Prints a message to the console"
+  },
+  "main": {
+    "prefix": "main",
+    "body": ["fn main() {", "  println!(\"Hello, world!\");", "}"]
+  }
+}
