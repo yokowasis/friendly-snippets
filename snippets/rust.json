@@ -2,6 +2,7 @@
   "sql": {
     "prefix": "sql",
     "body": [
+      "let client = state.db_pool.get().await.unwrap();",
       "let (sql, params) = match build_upsert(&client, table, &data, \"key\").await {",
       "    Ok((sql, params)) => (sql, params),",
       "    Err(e) => {",
