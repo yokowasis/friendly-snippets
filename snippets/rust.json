@@ -1,4 +1,13 @@
 {
+  "jsoninsert": {
+    "prefix": "jsoninsert",
+    "body": [
+      "if let Value::Object(ref mut data) = data {",
+      "    data.insert(String::from(\"updated\"), json!(now));",
+      "}"
+    ],
+    "description": "Inserts a new key-value pair into a JSON object"
+  },
   "sql": {
     "prefix": "sql",
     "body": [
