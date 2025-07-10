@@ -1,4 +1,25 @@
 {
+  "jwt_decode": {
+    "prefix": "payload_decode",
+    "body": [
+      "let payload = match utils::decode_jwt::<AuthData>(",
+      "    option_env!(\"JWT_SECRET\").unwrap_or(\"default_secret\"),",
+      "    if let Some(jwt) = headers.get(\"Authorization\") {",
+      "        jwt.to_str().unwrap_or(\"\")",
+      "    } else {",
+      "        \"\"",
+      "    },",
+      ") {",
+      "    Ok(payload) => payload,",
+      "    Err(e) => {",
+      "        eprintln!(\"Error decoding JWT: {}\", e);",
+      "        return format!(\"Error: {}\", e);",
+      "    }",
+      "};",
+      ""
+    ],
+    "description": "Decodes a payload from bytes to a JSON object"
+  },
   "jsoninsert": {
     "prefix": "jsoninsert",
     "body": [
