@@ -11,10 +11,10 @@
   "jsonarrayinsert": {
     "prefix": "jsonarrayinsert",
     "body": [
-      "if let Value::Array(ref mut array) = ${1:data} {",
-      "    for item in array.iter_mut() {",
-      "        if let Value::Object(ref mut obj) = item {",
-      "            obj.insert(String::from(\"${2:key}\"), json!(${3:value}));",
+      "if let Some(array) = ${1:data}.as_array_mut() {",
+      "    for item in array {",
+      "        if let Some(obj) = item.as_object_mut() {",
+      "            obj.insert(\"${2:key}\".to_string(), json!(${3:value}));",
       "        }",
       "    }",
       "}",
