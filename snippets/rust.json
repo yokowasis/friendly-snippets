@@ -1,4 +1,21 @@
 {
+  "jsonarrayinsert": {
+    "prefix": "jsonarrayinsert",
+    "body": [
+      "if let Some(array) = data.as_array_mut() {",
+      "    for item in array.iter_mut() {",
+      "        if let Some(obj) = item.as_object_mut() {",
+      "            obj.insert(",
+      "                \"custom_key\".to_string(),",
+      "                Value::String(\"custom_value\".to_string()),",
+      "            );",
+      "        }",
+      "    }",
+      "}",
+      ""
+    ],
+    "description": "Inserts a new element into a JSON array"
+  },
   "jsoninsert": {
     "prefix": "jsoninsert",
     "body": [
