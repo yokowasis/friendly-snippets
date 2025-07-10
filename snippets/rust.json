@@ -227,8 +227,18 @@
       "Ok(())"
     ]
   },
-  "now": {
-    "prefix": "now",
+  "now_naive": {
+    "prefix": "now_naive",
+    "body": ["Local::now().format(\"%Y-%m-%dT%H:%M:%S\").to_string();"],
+    "description": "Get current time in seconds and nanoseconds since the epoch"
+  },
+  "now_utc": {
+    "prefix": "now_utc",
+    "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S+00:00\").to_string();"],
+    "description": "Get current time in seconds and nanoseconds since the epoch"
+  },
+  "now_string": {
+    "prefix": "now_string",
     "body": ["Local::now().format(\"%Y-%m-%d %H:%M:%S\").to_string();"],
     "description": "Get current time in seconds and nanoseconds since the epoch"
   },
