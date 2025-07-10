@@ -1,14 +1,20 @@
 {
+  "jsoninsert": {
+    "prefix": "jsoninsert",
+    "body": [
+      "if let Value::Object(ref mut obj) = ${1:data} {",
+      "    obj.insert(String::from(\"${2:key}\"), json!(${3:value}));",
+      "}"
+    ],
+    "description": "Inserts a new key-value pair into a JSON object"
+  },
   "jsonarrayinsert": {
     "prefix": "jsonarrayinsert",
     "body": [
-      "if let Some(array) = data.as_array_mut() {",
+      "if let Value::Array(ref mut array) = ${1:data} {",
       "    for item in array.iter_mut() {",
-      "        if let Some(obj) = item.as_object_mut() {",
-      "            obj.insert(",
-      "                \"custom_key\".to_string(),",
-      "                Value::String(\"custom_value\".to_string()),",
-      "            );",
+      "        if let Value::Object(ref mut obj) = item {",
+      "            obj.insert(String::from(\"${2:key}\"), json!(${3:value}));",
       "        }",
       "    }",
       "}",
@@ -16,14 +22,20 @@
     ],
     "description": "Inserts a new element into a JSON array"
   },
-  "jsoninsert": {
-    "prefix": "jsoninsert",
+  "jsonmap": {
+    "prefix": "jsonmap",
     "body": [
-      "if let Value::Object(ref mut data) = data {",
-      "    data.insert(String::from(\"updated\"), json!(now));",
-      "}"
-    ],
-    "description": "Inserts a new key-value pair into a JSON object"
+      "let mut ${1:data} = if ${1:data}.is_object() {",
+      "    if let Some(${1:data}) = ${1:data}.as_object_mut() {",
+      "        ${1:data}",
+      "    } else {",
+      "        &serde_json::Map::new()",
+      "    }",
+      "} else {",
+      "    &serde_json::Map::new()",
+      "};",
+      ""
+    ]
   },
   "sql_update": {
     "prefix": "sql_update",
