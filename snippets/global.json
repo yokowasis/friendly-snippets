@@ -612,6 +612,8 @@
       "        with:",
       "          node-version: \"20\"",
       "          cache: ${{ steps.detect-package-manager.outputs.manager }}",
+      "      - name: Configure git to use GitHub token for private dependencies",
+      "        run: git config --global url.\"https://${{ secrets.GH_TOKEN }}@github.com/\".insteadOf \"https://github.com/\"",
       "      - name: Install dependencies",
       "        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}",
       "      - name: Build project",
