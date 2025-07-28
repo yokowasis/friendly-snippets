@@ -1,6 +1,18 @@
 {
-  "fetch-post": {
-    "prefix": "fetch-post",
+  "try": {
+    "prefix": "try",
+    "body": ["try {", "} catch (const std::exception &e) {", "}", ""]
+  },
+  "resp": {
+    "prefix": "resp",
+    "body": [
+      "auto resp = HttpResponse::newHttpJsonResponse(response);",
+      "resp->setStatusCode(k200OK);",
+      "callback(resp);"
+    ]
+  },
+  "fetch": {
+    "prefix": "fetch",
     "body": [
       "cpr::Header headers = {",
       "  {\"Content-Type\", \"application/json\"}",
@@ -15,6 +27,53 @@
       "    });",
       "",
       "auto ${1:res} = ${1:res}Fut.get();",
+      "",
+      "Json::Value response;",
+      "if (res.status_code == 200) {",
+      "  Json::CharReaderBuilder builder;",
+      "  Json::Value json;",
+      "  std::string errs;",
+      "  std::unique_ptr<Json::CharReader> reader(builder.newCharReader());",
+      "",
+      "  if (reader->parse(res.text.c_str(),",
+      "                    res.text.c_str() + res.text.length(), &json,",
+      "                    &errs)) {",
+      "    response[\"status\"] = \"success\";",
+      "    response[\"repository\"] = json[\"name\"];",
+      "  } else {",
+      "    response[\"status\"] = \"error\";",
+      "    response[\"error\"] =",
+      "        \"Failed to parse GitHub API response: \" + errs;",
+      "  }",
+      "} else {",
+      "  response[\"status\"] = \"error\";",
+      "  response[\"error\"] = \"GitHub API request failed\";",
+      "  response[\"status_code\"] = static_cast<int>(res.status_code);",
+      "}",
+      ""
+    ]
+  },
+  "route": {
+    "prefix": "route",
+    "body": [
+      "app().registerHandler(",
+      "    \"/hello/{name}\",",
+      "    [](const HttpRequestPtr &req,",
+      "       std::function<void(const HttpResponsePtr &)> &&callback,",
+      "       const std::string &name) {",
+      "      // Get query parameters",
+      "      std::string nameRoute = name;",
+      "      std::string nameParam = req->getParameter(\"name\");",
+      "",
+      "      Json::Value response;",
+      "      response[\"message\"] =",
+      "          std::string(\"greeting\") + \" \" + name + \"!\" + nameParam;",
+      "",
+      "      auto resp = HttpResponse::newHttpJsonResponse(response);",
+      "      resp->setStatusCode(k200OK);",
+      "      callback(resp);",
+      "    },",
+      "    {Get});",
       ""
     ]
   }
