@@ -7,6 +7,12 @@
     "snippets": [
       {
         "language": [
+          "cpp"
+        ],
+        "path": "./snippets/cpp.json"
+      },
+      {
+        "language": [
           "rust"
         ],
         "path": "./snippets/rust.json"

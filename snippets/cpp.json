@@ -1,0 +1,21 @@
+{
+  "fetch-post": {
+    "prefix": "fetch-post",
+    "body": [
+      "cpr::Header headers = {",
+      "  {\"Content-Type\", \"application/json\"}",
+      "};",
+      "cpr::Body body = cpr::Body{R\"({\"key\": \"value\"})\"};",
+      "std::future<cpr::Response> ${1:res}Fut =",
+      "    std::async(std::launch::async, [headers, body]() {",
+      "      return cpr::Post(",
+      "          cpr::Url{\"${2:https://url.com/\"}},",
+      "          headers,",
+      "          body);",
+      "    });",
+      "",
+      "auto ${1:res} = ${1:res}Fut.get();",
+      ""
+    ]
+  }
+}
