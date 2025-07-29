@@ -1,4 +1,13 @@
 {
+  "async": {
+    "prefix": "async",
+    "body": [
+      "auto ${1:future} = std::async(std::launch::async, [someVar]() {",
+      "  return someVar;",
+      "});",
+      ""
+    ]
+  },
   "try": {
     "prefix": "try",
     "body": ["try {", "} catch (const std::exception &e) {", "}", ""]
