@@ -1,4 +1,202 @@
 {
+  "keyExistUnoderedMap": {
+    "prefix": "keyExistUnoderedMap",
+    "body": ["${1:varname}.find(${2:key}) != ${1:varname}.end()"]
+  },
+  "helperFnVecToString": {
+    "prefix": "helperFnVecToString",
+    "body": [
+      "string printVector(vector<int> vector) {",
+      "    string ss = \"\";",
+      "    for (int i = 0; i < vector.size(); i++) {",
+      "        string s = \"\";",
+      "        if (i == 0) {",
+      "            s += \"[\";",
+      "        }",
+      "        s += to_string(vector[i]);",
+      "        if (i == vector.size() - 1) {",
+      "            s += \"]\";",
+      "        } else {",
+      "            s += \",\";",
+      "        }",
+      "        ss += s;",
+      "    }",
+      "",
+      "    return ss;",
+      "}",
+      ""
+    ],
+    "description": "helperFnPrintVector"
+  },
+  "printVector2dimensi": {
+    "prefix": "printVector2dimensi",
+    "body": [
+      "    for (int i = 0; i < ${1:vector}.size(); i++) {",
+      "        for (int j = 0; j < ${1:vector}[i].size(); j++) {",
+      "            string s = \"\";",
+      "            if (j == 0) {",
+      "                s += \"[\";",
+      "            }",
+      "            s += to_string(${1:vector}[i][j]);",
+      "            if (j == ${1:vector}[i].size() - 1) {",
+      "                s += \"]\";",
+      "            }",
+      "            cout << s;",
+      "        }",
+      "    }"
+    ],
+    "description": "printVector2dimensi"
+  },
+  "printVector": {
+    "prefix": "printVector",
+    "body": [
+      "    for (int i = 0; i < ${1:vector}.size(); i++) {",
+      "        string s = \"\";",
+      "        if (i == 0) {",
+      "            s += \"[\";",
+      "        }",
+      "        s += to_string(${1:vector}[i]);",
+      "        if (i == ${1:vector}.size() - 1) {",
+      "            s += \"]\";",
+      "        }",
+      "        cout << s;",
+      "    }  "
+    ],
+    "description": "printVector"
+  },
+  "accumulate": {
+    "prefix": "accumulate",
+    "body": "accumulate(${1:vector}.begin(), ${1:vector}.end(), 0);"
+  },
+  "maxElement": {
+    "prefix": "maxElement",
+    "body": ["max_element(${1:vector}.begin(), ${1:vector}.end());"]
+  },
+  "minElement": {
+    "prefix": "minElement",
+    "body": ["min_element(${1:vector}.begin(), ${1:vector}.end());"]
+  },
+  "graph": {
+    "prefix": "graph",
+    "body": [
+      "struct Graph {",
+      "    int n;",
+      "    vector<vector<int>> adj;",
+      "    vector<bool> visited;",
+      "",
+      "    Graph(int jumlah) : n(jumlah) {",
+      "        adj.resize(n + 1); // 1-based index",
+      "        visited.resize(n + 1, false);",
+      "    }",
+      "",
+      "    void tambah(int asal, int tujuan) {",
+      "        adj[asal].push_back(tujuan);",
+      "        adj[tujuan].push_back(asal); // karena graf tak berarah",
+      "    }",
+      "",
+      "    void dfs(int node, vector<int>& component) {",
+      "        visited[node] = true;",
+      "        component.push_back(node);",
+      "        for (int neighbor : adj[node]) {",
+      "            if (!visited[neighbor]) {",
+      "                dfs(neighbor, component);",
+      "            }",
+      "        }",
+      "    }",
+      "",
+      "    vector<vector<int>> buatGroup() {",
+      "        fill(visited.begin(), visited.end(), false);",
+      "        vector<vector<int>> groups;",
+      "        for (int i = 1; i <= n; i++) {",
+      "            if (!visited[i]) {",
+      "                vector<int> comp;",
+      "                dfs(i, comp);",
+      "                groups.push_back(comp);",
+      "            }",
+      "        }",
+      "        return groups;",
+      "    }",
+      "};"
+    ],
+    "description": "graph"
+  },
+  "binaryNearest": {
+    "prefix": "binaryNearest",
+    "body": [
+      "int binaryNearest(const vector<int>& arr, int target) {",
+      "    int left = 0, right = arr.size() - 1;",
+      "",
+      "    while (left <= right) {",
+      "        int mid = left + (right - left) / 2;",
+      "",
+      "        if (arr[mid] == target)",
+      "            return arr[mid];",
+      "        else if (arr[mid] < target)",
+      "            left = mid + 1;",
+      "        else",
+      "            right = mid - 1;",
+      "    }",
+      "",
+      "    if (right < 0) return arr[0];",
+      "    if (left >= arr.size()) return arr.back();",
+      "",
+      "    if (abs(arr[left] - target) < abs(arr[right] - target))",
+      "        return arr[left];",
+      "    else",
+      "        return arr[right];",
+      "}"
+    ],
+    "description": "binaryNearest"
+  },
+  "sortDesc": {
+    "prefix": "sortDesc",
+    "body": ["sort(${1:vec}.begin(), ${1:vec}.end(), greater<int>());"]
+  },
+  "sortAsc": {
+    "prefix": "sortAsc",
+    "body": ["sort(${1:vec}.begin(), ${1:vec}.end());"]
+  },
+  "average": {
+    "prefix": "average",
+    "body": [
+      "template <typename T>",
+      "double average(const std::vector<T>& data) {",
+      "    if (data.empty()) return 0.0;",
+      "    return std::accumulate(data.begin(), data.end(), 0.0) / data.size();",
+      "}"
+    ],
+    "description": "average"
+  },
+  "inVector": {
+    "prefix": "inVector",
+    "body": [
+      "bool inVector = (std::find(${1:vec}.begin(), ${1:vec}.end(), ${2:target}) == ${1:vec}.end());"
+    ]
+  },
+  "toBiner": {
+    "prefix": "toBiner",
+    "body": [
+      "string toBiner(int n, int width = 0) {",
+      "  string binary = \"\";",
+      "",
+      "  if (n == 0) {",
+      "    binary = \"0\";",
+      "  } else {",
+      "    while (n > 0) {",
+      "      binary = (n % 2 ? \"1\" : \"0\") + binary;",
+      "      n /= 2;",
+      "    }",
+      "  }",
+      "",
+      "  while (binary.length() < width) {",
+      "    binary = \"0\" + binary;",
+      "  }",
+      "",
+      "  return binary;",
+      "}"
+    ],
+    "description": "tobinary"
+  },
   "async": {
     "prefix": "async",
     "body": [
