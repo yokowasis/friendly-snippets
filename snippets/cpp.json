@@ -1,4 +1,12 @@
 {
+  "substring": {
+    "prefix": "substring",
+    "body": "${1:str}.find(${2:\"something\"}) != std::string::npos"
+  },
+  "mergevector": {
+    "prefix": "mergevector",
+    "body": "${1:vector}.insert(${1:vector}.end(), ${2:vector2}.begin(), ${2:vector2}.end());"
+  },
   "keyExistUnoderedMap": {
     "prefix": "keyExistUnoderedMap",
     "body": ["${1:varname}.find(${2:key}) != ${1:varname}.end()"]
