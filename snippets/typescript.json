@@ -1,8 +1,24 @@
 {
+  "reduxStore": {
+    "prefix": "reduxStore",
+    "body": [
+      "//store.ts",
+      "import { configureStore } from \"@reduxjs/toolkit\";",
+      "import { pentestSlice } from \"./reducer/pentest\";",
+      "",
+      "export const store = configureStore({",
+      "  reducer: {",
+      "    pentestSlice: pentestSlice.reducer,",
+      "  },",
+      "});",
+      "",
+      "export type RootState = ReturnType<typeof store.getState>;"
+    ]
+  },
   "reduxStateDispatch": {
     "prefix": "reduxStateDispatch",
     "body": [
-      "const pentest = useSelector((state: RootState) => state.pentestSlice);",
+      "const ${1:objectName} = useSelector((state: RootState) => state.${1:objectName}Slice);",
       "const dispatch = useDispatch();"
     ]
   },
@@ -22,15 +38,15 @@
   "reduxReducer": {
     "prefix": "reduxReducer",
     "body": [
-      "//reducer/someReducer.ts",
+      "//reducer/${1:objectName}.ts",
       "import { createSlice } from \"@reduxjs/toolkit\";",
       "",
       "const initialState = {",
       "  namaSekolah: \"CBT.MY.ID\",",
       "};",
       "",
-      "export const pentestSlice = createSlice({",
-      "  name: \"pentest\",",
+      "export const ${1:objectName}Slice = createSlice({",
+      "  name: \"${1:objectName}\",",
       "  initialState,",
       "  reducers: {",
       "    setNamaSekolah: (state, action) => {",
@@ -39,8 +55,8 @@
       "  },",
       "});",
       "",
-      "export const { setNamaSekolah } = pentestSlice.actions;",
-      "export default pentestSlice.reducer;",
+      "export const { setNamaSekolah } = ${1:objectName}Slice.actions;",
+      "export default ${1:objectName}Slice.reducer;",
       ""
     ]
   },
