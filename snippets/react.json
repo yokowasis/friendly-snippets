@@ -2,6 +2,7 @@
   "router": {
     "prefix": "router",
     "body": [
+      "//main.tsx",
       "import { createRoot } from \"react-dom/client\";",
       "import App from \"./App.tsx\";",
       "import { HashRouter, Route, Router, Routes } from \"react-router\";",

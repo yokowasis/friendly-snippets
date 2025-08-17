@@ -1,4 +1,49 @@
 {
+  "reduxStateDispatch": {
+    "prefix": "reduxStateDispatch",
+    "body": [
+      "const pentest = useSelector((state: RootState) => state.pentestSlice);",
+      "const dispatch = useDispatch();"
+    ]
+  },
+  "reduxProvider": {
+    "body": [
+      "// main.tsx",
+      "createRoot(document.getElementById(\"root\")!).render(",
+      "  <Provider store={store}>",
+      "    <SomeRouter>",
+      "      <App />",
+      "    </SomeRouter>",
+      "  </Provider>,",
+      ");",
+      ""
+    ]
+  },
+  "reduxReducer": {
+    "prefix": "reduxReducer",
+    "body": [
+      "//reducer/someReducer.ts",
+      "import { createSlice } from \"@reduxjs/toolkit\";",
+      "",
+      "const initialState = {",
+      "  namaSekolah: \"CBT.MY.ID\",",
+      "};",
+      "",
+      "export const pentestSlice = createSlice({",
+      "  name: \"pentest\",",
+      "  initialState,",
+      "  reducers: {",
+      "    setNamaSekolah: (state, action) => {",
+      "      state.namaSekolah = action.payload;",
+      "    },",
+      "  },",
+      "});",
+      "",
+      "export const { setNamaSekolah } = pentestSlice.actions;",
+      "export default pentestSlice.reducer;",
+      ""
+    ]
+  },
   "svelteGoogleLogin": {
     "prefix": "svelteGoogleLogin",
     "body": [
