@@ -229,6 +229,10 @@
       "}"
     ]
   },
+  "typedef": {
+    "prefix": "typedef",
+    "body": ["/** @typedef {Object<string,string>} SomeType */"]
+  },
   "typefunction": {
     "prefix": "typef",
     "body": [
