@@ -3,8 +3,27 @@
     "prefix": "hello",
     "body": ["print(\"Hello World\")"]
   },
-  "playwright": {
+  "playwright_basic": {
     "prefix": "playwright",
+    "body": [
+      "from playwright.sync_api import sync_playwright",
+      "",
+      "with sync_playwright() as p:",
+      "    browser = p.chromium.launch(headless=False)",
+      "    context = browser.new_context()",
+      "    page = context.new_page()",
+      "",
+      "    page.goto(\"${1:https://example.com}\")",
+      "    page.set_default_timeout(${2:10000})",
+      "",
+      "    ${3:# page actions here}",
+      "",
+      "    browser.close()"
+    ],
+    "description": "Playwright normal usage (launch browser)"
+  },
+  "playwright_attach": {
+    "prefix": "playwright_attach",
     "body": [
       "import subprocess",
       "import time",
