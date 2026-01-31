@@ -1,0 +1,40 @@
+{
+  "hello": {
+    "prefix": "hello",
+    "body": ["print(\"Hello World\")"]
+  },
+  "playwright": {
+    "prefix": "playwright",
+    "body": [
+      "import subprocess",
+      "import time",
+      "from pathlib import Path",
+      "from playwright.sync_api import sync_playwright",
+      "",
+      "# Temporary profile folder",
+      "profile_dir = Path(r\"C:\\\\tmp\\\\chrome-profile\")",
+      "profile_dir.mkdir(exist_ok=True)",
+      "",
+      "# Start Chrome with remote debugging",
+      "chrome_path = r\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"",
+      "subprocess.Popen([",
+      "    chrome_path,",
+      "    \"--remote-debugging-port=9222\",",
+      "    f\"--user-data-dir={profile_dir}\"",
+      "])",
+      "",
+      "# Wait a few seconds for Chrome to start",
+      "time.sleep(5)",
+      "print(\"Chrome launched with remote debugging on port 9222\")",
+      "",
+      "",
+      "p = sync_playwright().start()",
+      "browser = p.chromium.connect_over_cdp(\"http://localhost:9222\")",
+      "context = browser.contexts[0] if browser.contexts else browser.new_context()",
+      "page = context.pages[0] if context.pages else context.new_page()",
+      "page.goto(\"https://google.com\")",
+      "print(page.title())",
+      ""
+    ]
+  }
+}
