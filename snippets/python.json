@@ -36,5 +36,47 @@
       "print(page.title())",
       ""
     ]
+  },
+  "read_csv_csvmodule": {
+    "prefix": "readcsv",
+    "body": [
+      "import csv",
+      "",
+      "with open('${1:file.csv}', newline='', encoding='utf-8') as csvfile:",
+      "    reader = csv.reader(csvfile)",
+      "    header = next(reader)  # skip or store header",
+      "    for row in reader:",
+      "        print(row)"
+    ],
+    "description": "Read CSV using built-in csv module"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class User:",
+      "    \"\"\"User credentials\"\"\"",
+      "",
+      "    def __init__(self, username, password):",
+      "        self.username = username",
+      "        self.password = password"
+    ]
+  },
+  "foreach_loop": {
+    "prefix": "foreach",
+    "body": [
+      "for ${1:item} in ${2:iterable}:",
+      "    ${3:# TODO: do something with ${1:item}}"
+    ],
+    "description": "Python foreach loop"
+  },
+  "try_except": {
+    "prefix": "trycatch",
+    "body": [
+      "try:",
+      "    ${1:# code that may raise an exception}",
+      "except ${2:Exception} as ${3:e}:",
+      "    ${4:print(f\"Error\")}"
+    ],
+    "description": "Python try/except block"
   }
 }
