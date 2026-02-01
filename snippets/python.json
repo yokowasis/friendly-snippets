@@ -1,4 +1,48 @@
 {
+  "save_csv_csvmodule": {
+    "prefix": "savecsv",
+    "body": [
+      "import csv",
+      "",
+      "with open('${1:file.csv}', mode='w', newline='', encoding='utf-8') as file:",
+      "    writer = csv.writer(file)",
+      "    ${2:header = ['col1', 'col2', 'col3']}",
+      "    writer.writerow(header)",
+      "    for ${3:row} in ${4:data}:",
+      "        writer.writerow(${3:row})"
+    ],
+    "description": "Save data to CSV using built-in csv module"
+  },
+  "if_elif_else": {
+    "prefix": "ifelif",
+    "body": [
+      "if ${1:condition1}:",
+      "    ${2:# code for condition1}",
+      "elif ${3:condition2}:",
+      "    ${4:# code for condition2}",
+      "else:",
+      "    ${5:# default / else code}"
+    ],
+    "description": "Python if / elif / else block"
+  },
+  "switch_case": {
+    "prefix": "switch",
+    "body": [
+      "match ${1:variable}:",
+      "    case ${2:val1}:",
+      "        ${3:# code for val1}",
+      "    case ${4:val2}:",
+      "        ${5:# code for val2}",
+      "    case _:",
+      "        ${6:# default / else code}"
+    ],
+    "description": "Python 3.10+ match / case (switch)"
+  },
+  "split_string": {
+    "prefix": "splitstr",
+    "body": ["${1:parts} = ${2:text}.split('${3:delimiter}')"],
+    "description": "Split string into list by delimiter"
+  },
   "hello": {
     "prefix": "hello",
     "body": ["print(\"Hello World\")"]
