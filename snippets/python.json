@@ -1,4 +1,27 @@
 {
+  "dotenv" : {
+    "prefix": "dotenv",
+    "body": [
+      "from dotenv import load_dotenv",
+      "import os",
+      "",
+      "# Load variables from .env into the environment",
+      "load_dotenv()",
+      "",
+      "# Now you can access them",
+      "api_key = os.getenv('API_KEY')",
+      "db_url  = os.getenv('DB_URL')"
+    ],
+    "description": "Load environment variables from .env file"
+  },
+  },
+  "locator": {
+    "prefix": "locator",
+    "body": [
+      "${1:element} = page.locator(\"${2:button}\", has=page.get_by_text(\"${3:text}\", exact=True))"
+    ],
+    "description": "Playwright locator"
+  },
   "save_csv_csvmodule": {
     "prefix": "savecsv",
     "body": [
