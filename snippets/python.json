@@ -1,5 +1,5 @@
 {
-  "dotenv" : {
+  "dotenv": {
     "prefix": "dotenv",
     "body": [
       "from dotenv import load_dotenv",
@@ -13,7 +13,6 @@
       "db_url  = os.getenv('DB_URL')"
     ],
     "description": "Load environment variables from .env file"
-  },
   },
   "locator": {
     "prefix": "locator",
