@@ -1,4 +1,15 @@
 {
+  "file_chooser": {
+    "prefix": "filechooser",
+    "body": [
+      "with page.expect_file_chooser() as fc:",
+      "    click_button(page, \"Upload\")",
+      "    file_chooser = fc.value",
+      "    file_chooser.set_files(\"./icon.png\")",
+      ""
+    ],
+    "description": "Playwright file chooser"
+  },
   "dotenv": {
     "prefix": "dotenv",
     "body": [
