@@ -1,4 +1,14 @@
 {
+  "tolower": {
+    "prefix": "tolower",
+    "body": ["${1:variable}.lower()"],
+    "description": "Convert string to lowercase"
+  },
+  "replace": {
+    "prefix": "replace",
+    "body": ["${1:variable}.replace(\"${2:old}\", \"${3:new}\")"],
+    "description": "Replace all occurrences of a substring with another substring"
+  },
   "printall": {
     "prefix": "printall",
     "body": ["pprint.pprint(${1:list})"],

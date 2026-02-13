@@ -225,31 +225,6 @@
       "{/if}"
     ]
   },
-  "class": {
-    "scope": "dart",
-    "prefix": "class",
-    "body": [
-      "class Car {",
-      "  String make;",
-      "  String model;",
-      "  int year;",
-      "  Map<String, dynamic> data;",
-      "",
-      "  void honk() {",
-      "    print('Beep beep!');",
-      "  }",
-      "",
-      "  Future<void> fetchData() async {",
-      "    var url = 'https://api.example.com/cars/$make/$model';",
-      "    var response = await HttpClient().getUrl(Uri.parse(url));",
-      "    var responseBody = await response.transform(utf8.decoder).join();",
-      "    data = json.decode(responseBody);",
-      "  }",
-      "}",
-      ""
-    ],
-    "description": "A class representing a car"
-  },
   "md-table-multiline": {
     "scope": "markdown,pandoc",
     "prefix": "table-multiline",
