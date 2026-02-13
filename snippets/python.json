@@ -1,4 +1,9 @@
 {
+  "printall": {
+    "prefix": "printall",
+    "body": ["pprint.pprint(${1:list})"],
+    "description": "Print all elements of a list"
+  },
   "file_chooser": {
     "prefix": "filechooser",
     "body": [
