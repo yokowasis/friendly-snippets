@@ -37,6 +37,19 @@
       },
       {
         "language": [
+          "markdown"
+        ],
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": [
+          "latex",
+          "tex"
+        ],
+        "path": "./snippets/latex.json"
+      },
+      {
+        "language": [
           "plaintext",
           "markdown",
           "tex",
