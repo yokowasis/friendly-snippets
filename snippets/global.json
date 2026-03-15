@@ -44,11 +44,14 @@
     "body": [
       "<cs-input",
       "  id=\"${1:someID}\"",
-      "  label=\"${2:SomeLabel}\"",
+      "  type=\"${2|text,password,time,date|}\"",
       "  style=\"${3|mui,tailwind|}\"",
-      "  type=\"${4|text,password,time,date|}\"",
-      "  placeholder=\"${5:SomePlaceholder}\"",
+      "  placeholder=\"\"",
+      "  label=\"\"",
       "  value=\"\"",
+      "  icon=\"\"",
+      "  note=\"\"",
+      "  mode=\"${4|dark,light|}\"",
       "  onchange=\"someFunction()\"",
       "></cs-input>"
     ]
