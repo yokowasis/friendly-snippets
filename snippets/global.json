@@ -47,6 +47,7 @@
       "  label=\"${2:SomeLabel}\"",
       "  style=\"${3|mui,tailwind|}\"",
       "  type=\"${4|text,password,time,date|}\"",
+      "  placeholder=\"${5:SomePlaceholder}\"",
       "  value=\"\"",
       "  onchange=\"someFunction()\"",
       "></cs-input>"
