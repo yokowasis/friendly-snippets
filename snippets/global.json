@@ -45,7 +45,8 @@
       "<cs-input",
       "  id=\"${1:someID}\"",
       "  label=\"${2:SomeLabel}\"",
-      "  type=\"${3|text,password,time,date|}\"",
+      "  style=\"${3|mui,tailwind|}\"",
+      "  type=\"${4|text,password,time,date|}\"",
       "  value=\"\"",
       "  onchange=\"someFunction()\"",
       "></cs-input>"
