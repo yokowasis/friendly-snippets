@@ -1,4 +1,51 @@
 {
+  "pb-autoincrement": {
+    "prefix": "pb-autoincrement",
+    "body": [
+      "app.OnRecordCreate(\"ca_invoice\").BindFunc(func(e *core.RecordEvent) error {",
+      "  var result struct {",
+      "    Value int `db:\"value\"`",
+      "  }",
+      "",
+      "  err := app.DB().NewQuery(`",
+      "    UPDATE counters",
+      "    SET value = value + 1",
+      "    WHERE name = 'invoice'",
+      "    RETURNING value",
+      "  `).One(&result)",
+      "  if err != nil {",
+      "    return err",
+      "  }",
+      "",
+      "  invoiceNo := result.Value",
+      "",
+      "  e.Record.Set(\"invoice_id\", invoiceNo)",
+      "",
+      "  return e.Next()",
+      "})",
+      ""
+    ]
+  },
+  "pb-post": {
+    "prefix": "pb-post",
+    "body": [
+      "se.Router.POST(\"/api/cekdomain\", func(e *core.RequestEvent) error {",
+      "  data := struct {",
+      "    Domain string `json:\"domain\" form:\"domain\"`",
+      "  }{}",
+      "",
+      "  // do something ...",
+      "  if err := e.BindBody(&data); err != nil {",
+      "    return e.BadRequestError(\"Failed to read request data\", err)",
+      "  }",
+      "",
+      "  fmt.Println(data.Domain)",
+      "",
+      "  return e.JSON(http.StatusOK, map[string]bool{\"success\": true})",
+      "})",
+      ""
+    ]
+  },
   "express-gin": {
     "prefix": "express-gin",
     "body": [
@@ -209,7 +256,7 @@
     "description": "Unmarshal JSON data into a struct"
   },
   "println": {
-    "prefix": "pl",
+    "prefix": "cl",
     "body": ["fmt.Println(${1:message})"],
     "description": "Print a message to the console"
   },
