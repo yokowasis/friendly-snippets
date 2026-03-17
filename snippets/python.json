@@ -1,4 +1,44 @@
 {
+  "exportcsv": {
+    "prefix": "exportcsv",
+    "body": ["df.to_csv('data.csv', index=False)"],
+    "description": "importcsv"
+  },
+  "importcsv": {
+    "prefix": "importcsv",
+    "body": [
+      "import pandas as pd",
+      "",
+      "df = pd.read_csv('${1:somefile.csv}', encoding='ISO-8859-1', sep=\",\")",
+      "df.head()"
+    ],
+    "description": "importcsv"
+  },
+  "df": {
+    "prefix": "df",
+    "description": "df",
+    "body": [
+      "df = pd.DataFrame([",
+      "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
+      "])",
+      "",
+      "df = df._append({",
+      "  \"first_name\" : \"Yoko\",",
+      "  \"last_name\" : \"Wasis\"",
+      "}, ignore_index=True)"
+    ]
+  },
+  "impnumpy": {
+    "prefix": "impnumpy",
+    "description": "impnumpy",
+    "body": ["import numpy as np"]
+  },
+  "imppandas": {
+    "prefix": "imppandas",
+    "description": "imppandas",
+    "body": ["import pandas as pd"]
+  },
+
   "tolower": {
     "prefix": "tolower",
     "body": ["${1:variable}.lower()"],

@@ -1,0 +1,112 @@
+{
+  "Bold text": {
+    "prefix": "bold",
+    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "description": "Make text bold"
+  },
+  "Bold text BF": {
+    "prefix": "bf",
+    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "description": "Make text bold"
+  },
+  "Underline": {
+    "prefix": "under",
+    "body": ["\\underline{${1:$TM_SELECTED_TEXT}}"]
+  },
+  "Italic": {
+    "prefix": "it",
+    "body": ["\\textit{${1:$TM_SELECTED_TEXT}}"]
+  },
+  "Latex Numbering": {
+    "prefix": "numbering",
+    "body": ["\\begin{enumerate}", "  \\item ${1:item}", "\\end{enumerate}"],
+    "description": "Latex Numbering"
+  },
+  "Latex Bullets": {
+    "prefix": "bullets",
+    "body": ["\\begin{itemize}", "  \\item ${1:item}", "\\end{itemize}"],
+    "description": "Latex Bullets"
+  },
+  "Latex Bullets Table": {
+    "prefix": "bulletstable",
+    "body": [
+      "\\begin{itemize}[topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=0pt,before=\\vspace{-\baselineskip},after=\\vspace{-\baselineskip}]",
+      "  \\item ${1:item}",
+      "\\end{itemize}"
+    ],
+    "description": "Latex Bullets With No Margina and Padding. Usually at the start of the table cell"
+  },
+  "Align Right": {
+    "prefix": "alignright",
+    "body": ["\\begin{flushright}", "  ${1:item}", "\\end{flushright}"],
+    "description": "Align Right"
+  },
+  "Subsection": {
+    "prefix": "subsection",
+    "body": ["\\subsection{${1:Subsection}}"],
+    "description": "Latex Subsection"
+  },
+  "SubSubsection": {
+    "prefix": "subsubsection",
+    "body": ["\\subsubsection{${1:SubSubsection}}"],
+    "description": "Latex SubSubsection"
+  },
+  "Section": {
+    "prefix": "section",
+    "body": ["\\section{${1:Section}}"],
+    "description": "Latex Section"
+  },
+  "image": {
+    "prefix": "image",
+    "body": [
+      "\\begin{figure}[h]",
+      "  \\centering",
+      "  \\includegraphics[width=0.5\\textwidth]{${1:filename}}",
+      "  \\caption{${2:Caption for the image}}",
+      "  \\label{fig:${3:label}}",
+      "\\end{figure}"
+    ]
+  },
+  "tablelong": {
+    "prefix": "tablelong",
+    "body": [
+      "\\begin{longtable}{",
+      "  >{\\raggedright\\arraybackslash}p{3cm}",
+      "  >{\\raggedright\\arraybackslash}p{3cm}",
+      "  }",
+      "  \\captionsetup{justification=centering}",
+      "  \\caption{Caption Tabel} \\\\\\",
+      "  \\hline",
+      "  Head1 & Head2 \\\\\\ \\hline",
+      "  \\endfirsthead",
+      "  \\multicolumn{2}{c}%",
+      "  {Tabel \\thetable\\ -- \\textit{Sambungan halaman sebelumnya}} \\\\\\ ",
+      "  \\hline \\\\\\",
+      "  Head1 & Head2 \\\\\\ \\hline \\endhead",
+      "  \\hline \\multicolumn{2}{r}{\\textit{Bersambung di halaman selanjutnya}} \\\\\\",
+      "  \\endfoot",
+      "  \\hline",
+      "  \\endlastfoot",
+      "  Kolomn 1 & Kolom 2 \\\\\\ \\hline",
+      "  Kolomn 1 & Kolom 2 \\\\\\ \\hline",
+      "  \\label{tab:label}",
+      "\\end{longtable}      "
+    ]
+  },
+  "landscape": {
+    "prefix": "landscape",
+    "body": [
+      "\\newpage",
+      "\\KOMAoptions{paper=landscape,DIV=9,pagesize}",
+      "\\recalctypearea"
+    ]
+  },
+  "potrait": {
+    "prefix": "potrait",
+    "body": [
+      "\\newpage",
+      "\\KOMAoptions{paper=portrait,pagesize}",
+      "\\recalctypearea"
+    ]
+  }
+}
