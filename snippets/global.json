@@ -45,7 +45,7 @@
       "<cs-input",
       "  id=\"${1:someID}\"",
       "  type=\"${2|text,password,time,date|}\"",
-      "  style=\"${3|mui,tailwind|}\"",
+      "  theme=\"${3|mui,tailwind|}\"",
       "  placeholder=\"\"",
       "  label=\"\"",
       "  value=\"\"",
