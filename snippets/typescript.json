@@ -1,4 +1,29 @@
 {
+  "svelteGlobalDts": {
+    "prefix": "svelteGlobalDts",
+    "body": [
+      "declare global {",
+      "  interface CSDashboardElement extends HTMLElement {",
+      "    logo: string;",
+      "    title: string;",
+      "    subtitle: string;",
+      "    breadcrumb: string[];",
+      "    sidebar: Record<string, Array<{ title: string; icon: string; link: string }>>;",
+      "  }",
+      "",
+      "  namespace svelteHTML {",
+      "    interface IntrinsicElements {",
+      "      'cs-dashboard': Partial<CSDashboardElement> & {",
+      "        id: string;",
+      "      };",
+      "    }",
+      "  }",
+      "}",
+      "",
+      "export {};",
+      ""
+    ]
+  },
   "ftp": {
     "prefix": "ftp",
     "body": [
