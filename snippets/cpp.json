@@ -27,12 +27,20 @@
   "while": {
     "scope": "cpp",
     "prefix": "while",
-    "body": ["while (${1:condition}) {", "\t$2", "}"]
+    "body": [
+      "while (${1:condition}) {",
+      "\t$2",
+      "}"
+    ]
   },
   "dowhile": {
     "scope": "cpp",
     "prefix": "dowhile",
-    "body": ["do {", "\t$1", "} while (${2:condition});"]
+    "body": [
+      "do {",
+      "\t$1",
+      "} while (${2:condition});"
+    ]
   },
   "move": {
     "scope": "sql",
@@ -51,7 +59,9 @@
   },
   "keyExistUnoderedMap": {
     "prefix": "keyExistUnoderedMap",
-    "body": ["${1:varname}.find(${2:key}) != ${1:varname}.end()"]
+    "body": [
+      "${1:varname}.find(${2:key}) != ${1:varname}.end()"
+    ]
   },
   "helperFnVecToString": {
     "prefix": "helperFnVecToString",
@@ -120,11 +130,15 @@
   },
   "maxElement": {
     "prefix": "maxElement",
-    "body": ["max_element(${1:vector}.begin(), ${1:vector}.end());"]
+    "body": [
+      "max_element(${1:vector}.begin(), ${1:vector}.end());"
+    ]
   },
   "minElement": {
     "prefix": "minElement",
-    "body": ["min_element(${1:vector}.begin(), ${1:vector}.end());"]
+    "body": [
+      "min_element(${1:vector}.begin(), ${1:vector}.end());"
+    ]
   },
   "graph": {
     "prefix": "graph",
@@ -200,11 +214,15 @@
   },
   "sortDesc": {
     "prefix": "sortDesc",
-    "body": ["sort(${1:vec}.begin(), ${1:vec}.end(), greater<int>());"]
+    "body": [
+      "sort(${1:vec}.begin(), ${1:vec}.end(), greater<int>());"
+    ]
   },
   "sortAsc": {
     "prefix": "sortAsc",
-    "body": ["sort(${1:vec}.begin(), ${1:vec}.end());"]
+    "body": [
+      "sort(${1:vec}.begin(), ${1:vec}.end());"
+    ]
   },
   "average": {
     "prefix": "average",
@@ -258,7 +276,12 @@
   },
   "try": {
     "prefix": "try",
-    "body": ["try {", "} catch (const std::exception &e) {", "}", ""]
+    "body": [
+      "try {",
+      "} catch (const std::exception &e) {",
+      "}",
+      ""
+    ]
   },
   "resp": {
     "prefix": "resp",

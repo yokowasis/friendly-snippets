@@ -33,7 +33,7 @@
         "language": [
           "c"
         ],
-        "path": "./snippets/fa.json"
+        "path": "./snippets/c.json"
       },
       {
         "language": [
@@ -56,12 +56,12 @@
           "html",
           "all"
         ],
-        "path": "./snippets/global.json"
+        "path": "./snippets/global.code-snippets"
       },
       {
         "language": [
-          "javarcript",
-          "javascriptreact "
+          "javascript",
+          "javascriptreact"
         ],
         "path": "./snippets/javascript.json"
       },
@@ -93,20 +93,44 @@
           "javascript",
           "typescript"
         ],
-        "path": "./snippets/jsfamily.json"
+        "path": "./snippets/jsfamily.code-snippets"
       },
       {
         "language": [
-          "javascriptreact",
-          "typescriptreact"
+          "go",
+          "asm"
         ],
-        "path": "./snippets/react.json"
+        "path": "./snippets/go.asm.json"
       },
       {
         "language": [
-          "license"
+          "groovy"
         ],
-        "path": "./snippets/license.json"
+        "path": "./snippets/groovy.json"
+      },
+      {
+        "language": [
+          "http"
+        ],
+        "path": "./snippets/http.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./snippets/json.json"
+      },
+      {
+        "language": [
+          "jsonc"
+        ],
+        "path": "./snippets/jsonc.json"
+      },
+      {
+        "language": [
+          "svelte"
+        ],
+        "path": "./snippets/svelte.json"
       }
     ]
   }

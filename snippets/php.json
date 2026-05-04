@@ -1,7 +1,10 @@
 {
   "error": {
     "prefix": "error",
-    "body": ["error_reporting(E_ALL);", "ini_set('display_errors', 1);"]
+    "body": [
+      "error_reporting(E_ALL);",
+      "ini_set('display_errors', 1);"
+    ]
   },
   "typecasting": {
     "prefix": "typecast",
@@ -20,15 +23,22 @@
   },
   "var": {
     "prefix": "var",
-    "body": ["/** @var ${1:TypeName} */"]
+    "body": [
+      "/** @var ${1:TypeName} */"
+    ]
   },
   "cl": {
     "prefix": "cl",
-    "body": ["console.log($1);"]
+    "body": [
+      "console.log($1);"
+    ]
   },
   "typeWrapPHP": {
     "prefix": "ty",
-    "body": ["/** @var ${1:TypeName} */", "$TM_SELECTED_TEXT"]
+    "body": [
+      "/** @var ${1:TypeName} */",
+      "$TM_SELECTED_TEXT"
+    ]
   },
   "mms_controller_custom": {
     "prefix": "mms_controller_custom",
@@ -169,7 +179,11 @@
   },
   "test": {
     "prefix": "test",
-    "body": ["<?php", "echo 'Hello World';", "?>"]
+    "body": [
+      "<?php",
+      "echo 'Hello World';",
+      "?>"
+    ]
   },
   "whoami": {
     "prefix": "whoami",
@@ -177,12 +191,11 @@
   },
   "php-pre": {
     "prefix": "pre",
-    "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
-  },
-  "inline-php": {
-    "prefix": "ph",
-    "body": "<?php ${1} ?>",
-    "description": "Inline PHP Tag"
+    "body": [
+      "echo '<pre>';",
+      "${1:something};",
+      "echo '</pre>';"
+    ]
   },
   "backward-php": {
     "prefix": "bph",
@@ -269,19 +282,30 @@
   },
   "ob": {
     "prefix": "ob",
-    "body": ["ob_start();", "//Do Something", "$1", "return ob_get_clean();"]
+    "body": [
+      "ob_start();",
+      "//Do Something",
+      "$1",
+      "return ob_get_clean();"
+    ]
   },
   "pe": {
     "prefix": "pe",
-    "body": ["echo \"<p>${1:this}</p>\";"]
+    "body": [
+      "echo \"<p>${1:this}</p>\";"
+    ]
   },
   "nowdate": {
     "prefix": "nowdate",
-    "body": ["date(\"Y-m-d\")"]
+    "body": [
+      "date(\"Y-m-d\")"
+    ]
   },
   "nowtime": {
     "prefix": "nowtime",
-    "body": ["date(\"H:i\")"]
+    "body": [
+      "date(\"H:i\")"
+    ]
   },
   "toint": {
     "prefix": "toint",
@@ -332,7 +356,9 @@
   },
   "php_date": {
     "prefix": "date",
-    "body": ["\\$date = date(\"Y-m-d\",time());"]
+    "body": [
+      "\\$date = date(\"Y-m-d\",time());"
+    ]
   },
   "mysql": {
     "prefix": "mysql",

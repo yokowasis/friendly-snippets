@@ -38,71 +38,119 @@
   },
   "link": {
     "prefix": "link",
-    "body": ["[${1:linkText}](${2:url})"]
+    "body": [
+      "[${1:linkText}](${2:url})"
+    ]
   },
   "image-md": {
     "prefix": "image",
-    "body": ["![${1:caption}](${2:url}){#fig:${3:figure0} width=${4:50%}}"]
+    "body": [
+      "![${1:caption}](${2:url}){#fig:${3:figure0} width=${4:50%}}"
+    ]
   },
   "ref-md": {
     "prefix": "ref",
-    "body": ["[@${1:fig}:${2:figure0}]"]
+    "body": [
+      "[@${1:fig}:${2:figure0}]"
+    ]
   },
   "code-cpp": {
     "prefix": "cpp",
-    "body": ["```cpp", "${1:code}", "```"]
+    "body": [
+      "```cpp",
+      "${1:code}",
+      "```"
+    ]
   },
   "code-python": {
     "prefix": "python",
-    "body": ["```python", "${1:code}", "```"]
+    "body": [
+      "```python",
+      "${1:code}",
+      "```"
+    ]
   },
   "text-italic": {
     "prefix": "text-italic",
-    "body": ["[${1:content}]{custom-style=\"text-italic\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-italic\"}"
+    ]
   },
   "text-underline": {
     "prefix": "text-underline",
-    "body": ["[${1:content}]{custom-style=\"text-underline\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-underline\"}"
+    ]
   },
   "text-primary": {
     "prefix": "text-primary",
-    "body": ["[${1:content}]{custom-style=\"text-primary\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-primary\"}"
+    ]
   },
   "text-danger": {
     "prefix": "text-danger",
-    "body": ["[${1:content}]{custom-style=\"text-danger\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-danger\"}"
+    ]
   },
   "code-md-block": {
     "prefix": "code-block",
-    "body": ["```${1:php}", "", "", "", "```"]
+    "body": [
+      "```${1:php}",
+      "",
+      "",
+      "",
+      "```"
+    ]
   },
   "code": {
     "prefix": "code",
-    "body": ["[${1:content}]{custom-style=\"code\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"code\"}"
+    ]
   },
   "text-success": {
     "prefix": "text-success",
-    "body": ["[${1:content}]{custom-style=\"text-success\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-success\"}"
+    ]
   },
   "text-warning": {
     "prefix": "text-warning",
-    "body": ["[${1:content}]{custom-style=\"text-warning\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"text-warning\"}"
+    ]
   },
   "figure": {
     "prefix": "figure",
-    "body": ["::: {custom-style=\"figure\"}", "${1:caption}", ":::"]
+    "body": [
+      "::: {custom-style=\"figure\"}",
+      "${1:caption}",
+      ":::"
+    ]
   },
   "single": {
     "prefix": "single",
-    "body": ["::: {custom-style=\"single\"}", "${1:text}", ":::"]
+    "body": [
+      "::: {custom-style=\"single\"}",
+      "${1:text}",
+      ":::"
+    ]
   },
   "center": {
     "prefix": "center",
-    "body": ["::: {custom-style=\"center\"}", "${1:caption}", ":::"]
+    "body": [
+      "::: {custom-style=\"center\"}",
+      "${1:caption}",
+      ":::"
+    ]
   },
   "prettier-ignore": {
     "prefix": "ignore",
-    "body": ["<!-- prettier-ignore -->"]
+    "body": [
+      "<!-- prettier-ignore -->"
+    ]
   },
   "prettier-ignore-range": {
     "prefix": "ignore-range",
@@ -114,26 +162,42 @@
   },
   "md-fs8": {
     "prefix": "fs8",
-    "body": ["[${1:content}]{custom-style=\"$fs8\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"$fs8\"}"
+    ]
   },
   "md-fs6": {
     "prefix": "fs6",
-    "body": ["[${1:content}]{custom-style=\"$fs6\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"$fs6\"}"
+    ]
   },
   "span": {
     "prefix": "span",
-    "body": ["[${1:content}]{custom-style=\"${2:style}\"}"]
+    "body": [
+      "[${1:content}]{custom-style=\"${2:style}\"}"
+    ]
   },
   "style": {
     "prefix": "style",
-    "body": ["::: {custom-style=\"${1:Style Name}\"}", "${2:content}", ":::"]
+    "body": [
+      "::: {custom-style=\"${1:Style Name}\"}",
+      "${2:content}",
+      ":::"
+    ]
   },
   "aligned": {
     "prefix": "aligned",
-    "body": ["$$", "\\begin{aligned}", "  y &= x", "\\end{aligned}", "$$"]
+    "body": [
+      "$$",
+      "\\begin{aligned}",
+      "  y &= x",
+      "\\end{aligned}",
+      "$$"
+    ]
   },
   "markdown:embed": {
     "prefix": "embed",
     "body": "[!embed](${1:url})"
-  }
+  },
 }

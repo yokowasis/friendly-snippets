@@ -11,18 +11,28 @@
   },
   "typeimport": {
     "prefix": "typeimport",
-    "body": ["/**", " * @typedef { import(\"${1:./Types.js}\")}", " */"]
+    "body": [
+      "/**",
+      " * @typedef { import(\"${1:./Types.js}\")}",
+      " */"
+    ]
   },
   "typedef": {
     "prefix": "typedef",
-    "body": ["/** @typedef {${1:someTypeOrImport}} ${2:TypeName} */"]
+    "body": [
+      "/** @typedef {${1:someTypeOrImport}} ${2:TypeName} */"
+    ]
   },
   "typeWrap": {
     "prefix": "ty",
-    "body": ["/** @type {${1:TypeName}} */ ($TM_SELECTED_TEXT)"]
+    "body": [
+      "/** @type {${1:TypeName}} */ ($TM_SELECTED_TEXT)"
+    ]
   },
   "type": {
     "prefix": ":",
-    "body": ["/** @type {${1:TypeName}} */ "]
+    "body": [
+      "/** @type {${1:TypeName}} */ "
+    ]
   }
 }

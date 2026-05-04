@@ -1,30 +1,46 @@
 {
   "Bold text": {
     "prefix": "bold",
-    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "body": [
+      "\\textbf{${1:$TM_SELECTED_TEXT}}"
+    ],
     "description": "Make text bold"
   },
   "Bold text BF": {
     "prefix": "bf",
-    "body": ["\\textbf{${1:$TM_SELECTED_TEXT}}"],
+    "body": [
+      "\\textbf{${1:$TM_SELECTED_TEXT}}"
+    ],
     "description": "Make text bold"
   },
   "Underline": {
     "prefix": "under",
-    "body": ["\\underline{${1:$TM_SELECTED_TEXT}}"]
+    "body": [
+      "\\underline{${1:$TM_SELECTED_TEXT}}"
+    ]
   },
   "Italic": {
     "prefix": "it",
-    "body": ["\\textit{${1:$TM_SELECTED_TEXT}}"]
+    "body": [
+      "\\textit{${1:$TM_SELECTED_TEXT}}"
+    ]
   },
   "Latex Numbering": {
     "prefix": "numbering",
-    "body": ["\\begin{enumerate}", "  \\item ${1:item}", "\\end{enumerate}"],
+    "body": [
+      "\\begin{enumerate}",
+      "  \\item ${1:item}",
+      "\\end{enumerate}"
+    ],
     "description": "Latex Numbering"
   },
   "Latex Bullets": {
     "prefix": "bullets",
-    "body": ["\\begin{itemize}", "  \\item ${1:item}", "\\end{itemize}"],
+    "body": [
+      "\\begin{itemize}",
+      "  \\item ${1:item}",
+      "\\end{itemize}"
+    ],
     "description": "Latex Bullets"
   },
   "Latex Bullets Table": {
@@ -38,22 +54,32 @@
   },
   "Align Right": {
     "prefix": "alignright",
-    "body": ["\\begin{flushright}", "  ${1:item}", "\\end{flushright}"],
+    "body": [
+      "\\begin{flushright}",
+      "  ${1:item}",
+      "\\end{flushright}"
+    ],
     "description": "Align Right"
   },
   "Subsection": {
     "prefix": "subsection",
-    "body": ["\\subsection{${1:Subsection}}"],
+    "body": [
+      "\\subsection{${1:Subsection}}"
+    ],
     "description": "Latex Subsection"
   },
   "SubSubsection": {
     "prefix": "subsubsection",
-    "body": ["\\subsubsection{${1:SubSubsection}}"],
+    "body": [
+      "\\subsubsection{${1:SubSubsection}}"
+    ],
     "description": "Latex SubSubsection"
   },
   "Section": {
     "prefix": "section",
-    "body": ["\\section{${1:Section}}"],
+    "body": [
+      "\\section{${1:Section}}"
+    ],
     "description": "Latex Section"
   },
   "image": {

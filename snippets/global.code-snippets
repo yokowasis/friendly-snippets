@@ -1,0 +1,875 @@
+{
+  "adddate": {
+    "prefix": "adddate",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": [
+      "const newDate = new Date().getTime() + 30 * 24 * 60 * 60 * 1000; // add 30 days;"
+    ]
+  },
+  "savefile": {
+    "prefix": "savefile",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": [
+      "\t\tconst jsonString = JSON.stringify(list, null, 2);",
+      "\t\tconst filePath = path.resolve(\"src/lib/web.json\"); // adjust if needed",
+      "\t\tawait writeFile(filePath, jsonString, \"utf8\");",
+      ""
+    ]
+  },
+  "today": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "today",
+    "body": [
+      "const today = new Date().toISOString().split(\"T\")[0];"
+    ]
+  },
+  "awaitdefined": {
+    "scope": "typescript,javascript",
+    "prefix": "awaitdefined",
+    "body": [
+      "await customElements.whenDefined(\"${1:cs-input}\");"
+    ]
+  },
+  "arrMap": {
+    "scope": "javascript,typescript",
+    "prefix": "arrMap",
+    "body": [
+      "\t\tconst ${1:varName}Map = ${1:varName}.reduce(",
+      "\t\t\t(acc, category) => {",
+      "\t\t\t\tacc[category.id] = category.name;",
+      "\t\t\t\treturn acc;",
+      "\t\t\t},",
+      "\t\t\t{} as Record<string, string>,",
+      "\t\t);",
+      ""
+    ]
+  },
+  "cs-modal": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-modal",
+    "body": [
+      "<cs-modal id=\"${1:modalID}\">",
+      "  <h1>Modal Title</h1>",
+      "  <p>Modal Content</p>",
+      "</cs-modal>",
+      "",
+      "<script>",
+      "  const ${1:modalID} = document.getElementById(\"${1:modalID}\");",
+      "  ${1:modalID}.show();",
+      "",
+      "  ${1:modalID}.addEventListener(\"close\", () => {",
+      "    console.log(\"Modal closed\");",
+      "  });",
+      "",
+      "  ${1:modalID}.addEventListener(\"confirm\", () => {",
+      "    console.log(\"Modal Confirm\");",
+      "  });",
+      "</script>",
+      ""
+    ]
+  },
+  "cs-infocard": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-infocard",
+    "body": [
+      "<cs-infocard",
+      "  title=\"${1:Some Title}\"",
+      "  value=\"${2:150}\"",
+      "  unit=\"${3:People}\"",
+      "  btn-title=\"${4:More Info}\"",
+      "  background=\"${5:linear-gradient(to right, #00c6ff, #0072ff)}\"",
+      ">",
+      "  <div slot=\"icon\"><i-c icon=\"${6:user}\"></i-c></div>",
+      "</cs-infocard>"
+    ]
+  },
+  "cs-input": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-input",
+    "body": [
+      "<cs-input",
+      "  id=\"${1:someID}\"",
+      "  type=\"${2|text,password,time,date|}\"",
+      "  theme=\"${3|mui,tailwind|}\"",
+      "  placeholder=\"\"",
+      "  label=\"\"",
+      "  value=\"\"",
+      "  icon=\"\"",
+      "  note=\"\"",
+      "  mode=\"${4|dark,light|}\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-input>"
+    ]
+  },
+  "cs-select": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-select",
+    "body": [
+      "<cs-select",
+      "  id=\"${1:someid}\"",
+      "  label=\"${2:Label}\"",
+      "  value=\"\"",
+      "  data=\"${3:Satu;Dua;Tiga}\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-select>"
+    ]
+  },
+  "typeWrap": {
+    "scope": "javascript,javascriptreact,typescript",
+    "prefix": "ty",
+    "body": [
+      "/** @type {${1:TypeName}} */ ",
+      "($TM_SELECTED_TEXT)"
+    ]
+  },
+  "typeWrapPHP": {
+    "scope": "php",
+    "prefix": "ty",
+    "body": [
+      "/** @var ${1:TypeName}  $TM_SELECTED_TEXT */",
+      "$TM_SELECTED_TEXT"
+    ]
+  },
+  "type": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ":",
+    "body": [
+      "/** @type {${1:TypeName}} */ "
+    ]
+  },
+  "list-icon": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "list-icon",
+    "body": [
+      "<list-icon></list-icon>"
+    ]
+  },
+  "cs-radio": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-radio",
+    "body": [
+      "<cs-radio",
+      "  id=\"${1:someid}\"",
+      "  label=\"${2:Label}\"",
+      "  type=\"${3|radio,checkbox|}\"",
+      "  value=\"\"",
+      "  data=\"${4:Satu;Dua;Tiga}\"",
+      "  dataValue=\"${5:1;2;3}\"",
+      "  cols=\"${6:1}\"",
+      "  onchange=\"someFunction()\"",
+      "></cs-radio>"
+    ]
+  },
+  "cs-upload": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-upload",
+    "body": [
+      "<cs-upload id=\"${1:someid}\" label=\"${2:Label}\" limit=${3:10}></cs-upload>"
+    ]
+  },
+  "cs-rtf": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-rtf",
+    "body": [
+      "<cs-rtf id=\"${1:someid}\" label=\"${2:Label}\"></cs-rtf>"
+    ]
+  },
+  "cs-toast": {
+    "scope": "html,php,javascriptreact,typescriptreact,svelte",
+    "prefix": "cs-toast",
+    "body": [
+      "<cs-toast></cs-toast>"
+    ]
+  },
+  "toast": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "toast",
+    "body": [
+      "toast.${1|push,error,info,success,warn,loading,hide|}(\"${2:message}\",${3:durationms},\"${4|top-right,top-left,bottom-right,bottom-left|}\")"
+    ]
+  },
+  "git": {
+    "scope": "json",
+    "prefix": "git",
+    "body": [
+      "\"${1:repo-name}\": \"git+https://github.com/yokowasis/${1:repo-name}.git\","
+    ]
+  },
+  "ecosystempm2json": {
+    "scope": "json",
+    "prefix": "ecosystempm2json",
+    "body": [
+      "{",
+      "  \"apps\": [",
+      "    {",
+      "      \"name\": \"cbtAdmin-svelte:3000\",",
+      "      \"script\": \"npm run deploy\",",
+      "      \"watch\": false,",
+      "      \"instances\": 1,",
+      "      \"env\": {",
+      "        \"PORT\": 3000",
+      "      }",
+      "    }",
+      "  ]",
+      "}"
+    ]
+  },
+  "svelteSearchParams": {
+    "prefix": "svelteSearchParams",
+    "body": [
+      "\timport { page } from \"\\$app/state\";",
+      "\tlet params_${1:paramsName} = \\$derived(page.url.searchParams.get(\"${1:paramsName}\") ?? \"\");",
+      "\tlet ${1:paramsName} = \\$state(\"\");",
+      "\t\\$effect(() => {",
+      "\t\t${1:paramsName} = params_${1:paramsName};",
+      "\t});"
+    ]
+  },
+  "svelteAPI": {
+    "scope": "javascript,typescript",
+    "prefix": "svelteapi",
+    "body": [
+      "import { json } from \"@sveltejs/kit\";",
+      "import type { RequestHandler } from \"./\\$types\";",
+      "",
+      "const headers = {",
+      "  \"Access-Control-Allow-Origin\": \"*\",",
+      "  \"Access-Control-Allow-Methods\": \"GET,HEAD,PUT,PATCH,POST,DELETE\",",
+      "  \"Access-Control-Allow-Headers\": \"Content-Type,authorization\",",
+      "};",
+      "",
+      "export const OPTIONS: RequestHandler = () => {",
+      "  return new Response(\"\", {",
+      "    status: 200,",
+      "    headers,",
+      "  });",
+      "};",
+      "export const POST: RequestHandler = async ({ request, cookies }) => {",
+      "  const { something } = await request.json();",
+      "",
+      "  return json({ something }, { status: 200, headers });",
+      "};",
+      "",
+      "export const GET: RequestHandler = ({ url, params }) => {",
+      "  const q = url.searchParams.get(\"q\");",
+      "  // const slug = params.slug;",
+      "  const number = Math.floor(Math.random() * 6) + 1;",
+      "",
+      "  return json({ number }, {status:200, headers});",
+      "};",
+      ""
+    ]
+  },
+  "svelteeach": {
+    "scope": "svelte",
+    "prefix": "each",
+    "body": [
+      "{#each ${1:items} as ${2:item}}",
+      "\t${3:item}",
+      "{/each}"
+    ]
+  },
+  "svelteifelse": {
+    "scope": "svelte",
+    "prefix": "ifelse",
+    "body": [
+      "{#if ${1:true}}",
+      "\t${2:dosomething}",
+      "{:else}",
+      "\t${3:somethingelse}",
+      "{/if}"
+    ]
+  },
+  "svelteif": {
+    "scope": "svelte",
+    "prefix": "if",
+    "body": [
+      "{#if ${1:true}}",
+      "\t${2: //dosomething}",
+      "{/if}"
+    ]
+  },
+  "svelte": {
+    "scope": "svelte",
+    "prefix": "svelte",
+    "body": [
+      "<script lang=\"ts\">",
+      "\timport type { PageData, ActionData } from './\\$types';",
+      "\texport let data: PageData;",
+      "\texport let form: ActionData;",
+      "</script>",
+      "",
+      "{#if form?.success}",
+      "\t<p>Successfully logged in! Welcome back</p>",
+      "{/if}"
+    ]
+  },
+  "environmentConda": {
+    "scope": "yaml",
+    "prefix": "environmentConda",
+    "body": [
+      "name: ${1:environmentName}",
+      "channels:",
+      "  - conda-forge",
+      "dependencies:",
+      "  - python=3.10",
+      "  - jupyter",
+      "  - pip",
+      "  - pip:",
+      "    - pynvim"
+    ]
+  },
+  "GithubPullSubModules": {
+    "scope": "shellscript",
+    "prefix": "GithubPullSubModules",
+    "body": [
+      "git submodule update --init --recursive",
+      "git submodule update --recursive --remote",
+      "cd src/react-form",
+      "git checkout main",
+      "git pull",
+      "cd ../../",
+      ""
+    ]
+  },
+  "GithubActionPingURL": {
+    "scope": "github-actions-workflow,yml,yaml",
+    "prefix": "GithubActionPingURL",
+    "body": [
+      "# name : .github/workflows/ping.yml",
+      "name: Deploy to host2",
+      "on:",
+      "  push:",
+      "    branches:",
+      "      - \"main\"",
+      "    paths-ignore:",
+      "      - \"**/*.md\"",
+      "      - \"**/*.mjs\"",
+      "      - \"**/ping.yml\"",
+      "jobs:",
+      "  build:",
+      "    runs-on: ubuntu-latest",
+      "    steps:",
+      "      - name: PING",
+      "        run: curl https://deploy.host2.bimasoft.web.id/svelte-cbtadmin",
+      ""
+    ]
+  },
+  "GithubActionPagesNextJS": {
+    "scope": "github-actions-workflow,yml,yaml",
+    "prefix": "GithubActionPagesNextJS",
+    "body": [
+      "# name : .github/workflows/ping.yml",
+      "name: Deploy to GitHub Pages",
+      "on:",
+      "  push:",
+      "    branches:",
+      "      - \"viteBranch\"",
+      "    paths-ignore:",
+      "      - \"**/*.md\"",
+      "      - \"**/*.mjs\"",
+      "      # - \"**/ping.yml\"",
+      "permissions:",
+      "  contents: read",
+      "  pages: write",
+      "  id-token: write",
+      "concurrency:",
+      "  group: \"pages\"",
+      "  cancel-in-progress: false",
+      "jobs:",
+      "  build:",
+      "    runs-on: ubuntu-latest",
+      "    steps:",
+      "      - name: Checkout Repository",
+      "        uses: actions/checkout@v4",
+      "        with:",
+      "          submodules: recursive",
+      "      - uses: pnpm/action-setup@v2",
+      "        with:",
+      "          version: 8",
+      "      - name: Detect package manager",
+      "        id: detect-package-manager",
+      "        run: |",
+      "          if [ -f \"${{ github.workspace }}/yarn.lock\" ]; then",
+      "            echo \"manager=yarn\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=install\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=yarn\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          elif [ -f \"${{ github.workspace }}/pnpm-lock.yaml\" ]; then",
+      "            echo \"manager=pnpm\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=install\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=pnpm\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          elif [ -f \"${{ github.workspace }}/package.json\" ]; then",
+      "            echo \"manager=npm\" >> \\$GITHUB_OUTPUT",
+      "            echo \"command=ci\" >> \\$GITHUB_OUTPUT",
+      "            echo \"runner=npx --no-install\" >> \\$GITHUB_OUTPUT",
+      "            exit 0",
+      "          else",
+      "            echo \"Unable to determine package manager\"",
+      "            exit 1",
+      "          fi",
+      "      - name: Setup Node",
+      "        uses: actions/setup-node@v4",
+      "        with:",
+      "          node-version: \"20\"",
+      "          cache: ${{ steps.detect-package-manager.outputs.manager }}",
+      "      - name: Configure git to use GitHub token for private dependencies",
+      "        run: git config --global url.\"https://${{ secrets.GH_TOKEN }}@github.com/\".insteadOf \"https://github.com/\"",
+      "      - name: Install dependencies",
+      "        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}",
+      "      - name: Build project",
+      "        run: ${{ steps.detect-package-manager.outputs.runner }} run build",
+      "      - name: Upload artifact",
+      "        uses: actions/upload-pages-artifact@v2",
+      "        with:",
+      "          path: ./dist",
+      "  # Deployment job",
+      "  deploy:",
+      "    environment:",
+      "      name: github-pages",
+      "      url: ${{ steps.deployment.outputs.page_url }}",
+      "    runs-on: ubuntu-latest",
+      "    needs: build",
+      "    steps:",
+      "      - name: Deploy to GitHub Pages",
+      "        id: deployment",
+      "        uses: actions/deploy-pages@v3"
+    ]
+  },
+  "pb": {
+    "scope": "javascript,typescript",
+    "prefix": "pb",
+    "body": [
+      "import PocketBase from \"pocketbase\"",
+      "const pb = new PocketBase(\"${1:http://localhost:3000}\");"
+    ]
+  },
+  "try": {
+    "scope": "javascript,typescript",
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  ${1:code}",
+      "} catch (e) {",
+      "  console.error(e);",
+      "} finally {",
+      "  ${2:code}",
+      "}"
+    ]
+  },
+  "supabase": {
+    "scope": "javascript,typescript",
+    "prefix": "supabase",
+    "body": [
+      "import { createClient } from '@supabase/supabase-js';",
+      "export const supabase = createClient('https://supabase-api.b.app.web.id', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzI4NDg5NjAwLAogICJleHAiOiAxODg2MjU2MDAwCn0.Z0Qi_fL4s-gLFeCkTxp1hTtCHK7Nd26BDj_rNfNc4XU')"
+    ]
+  },
+  "express": {
+    "scope": "javascript, typescript",
+    "prefix": "express",
+    "body": [
+      "import express from \"express\";",
+      "import dotenv from \"dotenv\";",
+      "import fs from 'fs';",
+      "import http from 'http';",
+      "import https from 'https';",
+      "import cors from \"cors\";",
+      "import bodyParser from \"body-parser\";",
+      "",
+      "dotenv.config()",
+      "",
+      "const app = express();",
+      "const port = process.env.PORT || 3000;",
+      "const portssl = process.env.PORTSSL;",
+      "",
+      "app.use(cors());",
+      "app.use(bodyParser.urlencoded({",
+      "  extended: true,",
+      "  limit: \"1GB\",",
+      "  parameterLimit: 1000000",
+      "}));",
+      "app.use(bodyParser.json());",
+      "app.use(express.static(\"public\"));",
+      "",
+      "app.route(\"/\").get((req, res) => {",
+      "  res.send(\"index page\");",
+      "});",
+      "",
+      "app.route(\"/\").post((req, res) => {",
+      "  res.json({",
+      "    hello: \"World\"",
+      "  })",
+      "})",
+      "",
+      "",
+      "const httpServer = http.createServer(app);",
+      "",
+      "if (portssl) {",
+      "  const privkeyPath = process.env.privkey || './privkey.pem';",
+      "  const certificatePath = process.env.certificate || './fullchain.pem';",
+      "  const privateKey = fs.readFileSync(privkeyPath, 'utf8');",
+      "  const certificate = fs.readFileSync(certificatePath, 'utf8');",
+      "  const credentials = { key: privateKey, cert: certificate };",
+      "  const httpsServer = https.createServer(credentials, app);",
+      "  httpsServer.listen(portssl);",
+      "}",
+      "",
+      "httpServer.listen(port);",
+      "",
+      "console.log('Express Started on: ' + port);",
+      "",
+      ""
+    ],
+    "description": "express"
+  },
+  "webcomponents": {
+    "scope": "javascript,typescript",
+    "prefix": "webcomponents",
+    "body": [
+      "class Template extends HTMLElement {",
+      "  constructor() {",
+      "    super();",
+      "    this.attachShadow({ mode: \"open\" });",
+      "  }",
+      "",
+      "  static get observedAttributes() {",
+      "    return [\"value\"];",
+      "  }",
+      "",
+      "  /**",
+      "   *",
+      "   * @param {string} name",
+      "   * @param {string} _",
+      "   * @param {string} newValue",
+      "   */",
+      "  attributeChangedCallback(name, _, newValue) {}",
+      "",
+      "  connectedCallback() {",
+      "    this.render();",
+      "  }",
+      "",
+      "  render() {",
+      "    const sr = this.shadowRoot;",
+      "    if (!sr) return;",
+      "    sr.innerHTML = `",
+      "    <style>",
+      "    </style>",
+      "    <div class=\"content\">",
+      "    </div>",
+      "    `;",
+      "  }",
+      "}",
+      "",
+      "customElements.define(\"my-template\", Template);",
+      ""
+    ],
+    "description": "Web Component"
+  },
+  "searchParams": {
+    "scope": "javascript,typescript",
+    "prefix": "searchParams",
+    "body": [
+      "const { searchParams } = new URL(req.url)",
+      "const hello = searchParams.get('hello')"
+    ]
+  },
+  "fetchawait": {
+    "scope": "javascript,typescript",
+    "prefix": "fetchawait",
+    "body": [
+      "const r = await (await fetch(`${1:domain}`,{",
+      "  method: \"${2:GET}\",",
+      "  headers: {",
+      "    'Accept': 'application/json',",
+      "    'Content-Type': 'application/json'",
+      "  },",
+      "})).json()"
+    ]
+  },
+  "forof": {
+    "scope": "javascript,typescript",
+    "prefix": "forof",
+    "body": [
+      "for (const ${1:iterator} of ${2:object}) {",
+      "  ",
+      "}"
+    ],
+    "description": "forof"
+  },
+  "forin": {
+    "scope": "javascript,typescript",
+    "prefix": "forin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "  if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {",
+      "    const element = ${2:object}[${1:key}];",
+      "  }",
+      "}"
+    ],
+    "description": "forin"
+  },
+  "for": {
+    "scope": "javascript,typescript",
+    "prefix": "for",
+    "body": [
+      "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+      "  const element = ${2:array}[${1:index}];  ",
+      "}"
+    ],
+    "description": "for"
+  },
+  "foreach": {
+    "scope": "javascript,typescript",
+    "prefix": "foreach",
+    "body": [
+      "${1:array}.forEach(element => {  ",
+      "});"
+    ],
+    "description": "foreach"
+  },
+  "fn": {
+    "scope": "javascript,typescript",
+    "prefix": "fn",
+    "body": [
+      "function ${1:functionName}() {",
+      "  ${2}",
+      "}"
+    ]
+  },
+  "setTimeout": {
+    "scope": "javascript,typescript",
+    "prefix": "setTimeout",
+    "body": [
+      "setTimeout(() => {",
+      "  ${1}",
+      "}, ${2:delay});"
+    ]
+  },
+  "setInterval": {
+    "scope": "javascript,typescript",
+    "prefix": "setInterval",
+    "body": [
+      "setInterval(() => {",
+      "  ${1}",
+      "}, ${2:delay});"
+    ]
+  },
+  "timeout": {
+    "scope": "javascript,typescript",
+    "prefix": "timeout",
+    "body": [
+      "const timeout = new Timeout();",
+      "timeout",
+      "  .wrap(",
+      "    somefunction(),",
+      "    10000,",
+      "    \"Timeout...\"",
+      "  )",
+      "  .then((s) => {",
+      "    // Do Something",
+      "  })",
+      "  .catch((e) => {",
+      "    console.log (e);",
+      "  })",
+      "  .finally(() => timeout.clear(...timeout.ids));"
+    ],
+    "description": ""
+  },
+  "supabaseUpload": {
+    "scope": "javascript,typescript",
+    "prefix": "supabaseUpload",
+    "body": [
+      "const file = /** @type {HTMLInputElement} */ (document.getElementById('${1:file}'));",
+      "if (file?.files?.length) {",
+      "\tconst fileToUpload = file.files[0];",
+      "\tconst { data, error } = await supabase.storage",
+      "\t\t.from('${2:table}')",
+      "\t\t.upload('${3:file}', fileToUpload, {",
+      "\t\t\tcacheControl: '3600',",
+      "\t\t\tupsert: false",
+      "\t\t});",
+      "\t\tif (error) {",
+      "\t\t\tconsole.log(error);",
+      "\t\t} else {",
+      "\t\t\tconsole.log(data);",
+      "\t\t}",
+      "}"
+    ]
+  },
+  "typedef": {
+    "scope": "javascript,typescript",
+    "prefix": "typedef",
+    "body": [
+      "/** @typedef {Object<string,string>} SomeType */"
+    ]
+  },
+  "typefunction": {
+    "scope": "javascript,typescript",
+    "prefix": "typef",
+    "body": [
+      "/**",
+      " *",
+      " * @param {string} param1",
+      " * @param {Object<string,string>} param2",
+      " * @returns {string[]}",
+      " */"
+    ]
+  },
+  "cl": {
+    "scope": "typescript,javascript,javascriptreact,typescriptreact",
+    "prefix": "cl",
+    "body": [
+      "console.${2:log}(${1:something});"
+    ]
+  },
+  "ajax": {
+    "scope": "javascript,typescript",
+    "prefix": "ajax",
+    "body": [
+      "$.ajax({",
+      "\turl: '/path/to/file',",
+      "\ttype: 'default GET (Other values: POST)',",
+      "\tdataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',",
+      "\tdata: {param1: 'value1'},",
+      "}).done(function(e) {",
+      "\tconsole.log(\"success\");",
+      "}).fail(function(e) {",
+      "\tconsole.log(\"error\");",
+      "}).always(function(e) {",
+      "\tconsole.log(\"complete\");",
+      "});"
+    ]
+  },
+  "replaceall": {
+    "scope": "javascript,typescript",
+    "prefix": "replaceall",
+    "body": [
+      "${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');"
+    ]
+  },
+  "jqr": {
+    "scope": "javascript,typescript",
+    "prefix": "jqr",
+    "body": [
+      "(function( $ ) {",
+      "\t${1:Jquery Stuff}",
+      "})( jQuery );"
+    ]
+  },
+  "alertyesno": {
+    "scope": "javascript,typescript",
+    "prefix": "alertyesno",
+    "body": [
+      "const r = confirm(\"${1:Some Prompt}\");",
+      "if (r == true) {",
+      "  ${2:// Do Something}",
+      "}"
+    ]
+  },
+  "toint_js": {
+    "scope": "javascript,typescript",
+    "prefix": "toint",
+    "body": "${1:varName} = parseInt(${1:varName});"
+  },
+  "fetch": {
+    "scope": "javascript,typescript",
+    "prefix": "fetch",
+    "body": [
+      "fetch(\"https://bot.bimasoft.web.id:4020/getip\",{",
+      "\tmethod: \"GET\",",
+      "\theaders: {",
+      "\t\t'Accept': 'application/json',",
+      "\t\t'Content-Type': 'application/json'",
+      "\t},",
+      "})",
+      ".then(res => res.json())",
+      ".then((result) => {",
+      "\tconsole.log(result);",
+      "})",
+      ".catch((err) => {",
+      "\tconsole.log(err);",
+      "})"
+    ]
+  },
+  "urlparams": {
+    "scope": "javascript,typescript",
+    "prefix": "urlparams",
+    "body": [
+      "const urlParams = new URLSearchParams(window.location.search);",
+      "const ${1:param} = urlParams.get('${1:param}');"
+    ]
+  },
+  "react": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "react",
+    "body": [
+      "const ${1:Component} = (props) => {",
+      "\treturn (<></>);",
+      "}",
+      "",
+      "export default ${1:Component};"
+    ]
+  },
+  "preactClass": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "preactClass",
+    "body": [
+      "class classComponent extends Component {",
+      "\tconstructor(props) {",
+      "\t\tsuper();",
+      "\t\tthis.state = {",
+      "\t\t\ttext: '',",
+      "\t\t};",
+      "\t\tthis.btnClick = this.btnClick.bind(this);",
+      "\t}",
+      "\tcomponentDidMount() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'OK',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\tbtnClick() {",
+      "\t\tthis.setState({",
+      "\t\t\ttext: 'BTN CLICKED',",
+      "\t\t});",
+      "\t}",
+      "",
+      "\trender() {",
+      "\t\treturn html`",
+      "\t\t\t<div>",
+      "\t\t\t\t<h1>${this.state.text}</h1>",
+      "\t\t\t\t<button onclick=${this.btnClick}>CLICK ME !!</button>",
+      "\t\t\t</div>",
+      "\t\t`;",
+      "\t}",
+      "}",
+      "",
+      "export default classComponent;"
+    ]
+  },
+  "promisenew": {
+    "scope": "javascript,typescript",
+    "prefix": "promisenew",
+    "body": [
+      "return new Promise(async (resolve, reject) => {",
+      "\tif (\"OK\") {",
+      "\t\tresolve (\"OK\")",
+      "\t} else {",
+      "\t\treject (\"ERROR\");",
+      "\t}",
+      "});"
+    ]
+  },
+  "preactRouter": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "preactRouter",
+    "body": [
+      "<\\${Router} history=\\${createHashHistory()} >",
+      "\t<\\${Login} path=\"/\" />",
+      "\t<\\${AsyncRoute} path=\"/dashboard\" getComponent=\\${()=>import(\"../Pages/Dashboard.js\").then(module=>module.default)} />",
+      "<//>"
+    ]
+  }
+}

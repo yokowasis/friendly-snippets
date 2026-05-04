@@ -1,7 +1,18 @@
 {
+  "substr": {
+    "prefix": "substr",
+    "body": [
+      "\t\ttext = \"Hello World\"",
+      "\t\tif \"World\" in text:",
+      "\t\t\t\tprint(\"Substring exists\")",
+      ""
+    ]
+  },
   "exportcsv": {
     "prefix": "exportcsv",
-    "body": ["df.to_csv('data.csv', index=False)"],
+    "body": [
+      "df.to_csv('data.csv', index=False)"
+    ],
     "description": "importcsv"
   },
   "importcsv": {
@@ -31,27 +42,36 @@
   "impnumpy": {
     "prefix": "impnumpy",
     "description": "impnumpy",
-    "body": ["import numpy as np"]
+    "body": [
+      "import numpy as np"
+    ]
   },
   "imppandas": {
     "prefix": "imppandas",
     "description": "imppandas",
-    "body": ["import pandas as pd"]
+    "body": [
+      "import pandas as pd"
+    ]
   },
-
   "tolower": {
     "prefix": "tolower",
-    "body": ["${1:variable}.lower()"],
+    "body": [
+      "${1:variable}.lower()"
+    ],
     "description": "Convert string to lowercase"
   },
   "replace": {
     "prefix": "replace",
-    "body": ["${1:variable}.replace(\"${2:old}\", \"${3:new}\")"],
+    "body": [
+      "${1:variable}.replace(\"${2:old}\", \"${3:new}\")"
+    ],
     "description": "Replace all occurrences of a substring with another substring"
   },
   "printall": {
     "prefix": "printall",
-    "body": ["pprint.pprint(${1:list})"],
+    "body": [
+      "pprint.pprint(${1:list})"
+    ],
     "description": "Print all elements of a list"
   },
   "file_chooser": {
@@ -128,12 +148,16 @@
   },
   "split_string": {
     "prefix": "splitstr",
-    "body": ["${1:parts} = ${2:text}.split('${3:delimiter}')"],
+    "body": [
+      "${1:parts} = ${2:text}.split('${3:delimiter}')"
+    ],
     "description": "Split string into list by delimiter"
   },
   "hello": {
     "prefix": "hello",
-    "body": ["print(\"Hello World\")"]
+    "body": [
+      "print(\"Hello World\")"
+    ]
   },
   "playwright_basic": {
     "prefix": "playwright",
@@ -163,11 +187,11 @@
       "from playwright.sync_api import sync_playwright",
       "",
       "# Temporary profile folder",
-      "profile_dir = Path(r\"C:\\\\tmp\\\\chrome-profile\")",
+      "profile_dir = Path(r\"C:\\\\\\tmp\\\\\\chrome-profile\")",
       "profile_dir.mkdir(exist_ok=True)",
       "",
       "# Start Chrome with remote debugging",
-      "chrome_path = r\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"",
+      "chrome_path = r\"C:\\\\\\Program Files\\\\\\Google\\\\\\Chrome\\\\\\Application\\\\\\chrome.exe\"",
       "subprocess.Popen([",
       "    chrome_path,",
       "    \"--remote-debugging-port=9222\",",
