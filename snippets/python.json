@@ -1,257 +1,241 @@
 {
-  "substr": {
-    "prefix": "substr",
-    "body": [
-      "\t\ttext = \"Hello World\"",
-      "\t\tif \"World\" in text:",
-      "\t\t\t\tprint(\"Substring exists\")",
-      ""
-    ]
-  },
-  "exportcsv": {
-    "prefix": "exportcsv",
-    "body": [
-      "df.to_csv('data.csv', index=False)"
-    ],
-    "description": "importcsv"
-  },
-  "importcsv": {
-    "prefix": "importcsv",
-    "body": [
-      "import pandas as pd",
-      "",
-      "df = pd.read_csv('${1:somefile.csv}', encoding='ISO-8859-1', sep=\",\")",
-      "df.head()"
-    ],
-    "description": "importcsv"
-  },
-  "df": {
-    "prefix": "df",
-    "description": "df",
-    "body": [
-      "df = pd.DataFrame([",
-      "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
-      "])",
-      "",
-      "df = df._append({",
-      "  \"first_name\" : \"Yoko\",",
-      "  \"last_name\" : \"Wasis\"",
-      "}, ignore_index=True)"
-    ]
-  },
-  "impnumpy": {
-    "prefix": "impnumpy",
-    "description": "impnumpy",
-    "body": [
-      "import numpy as np"
-    ]
-  },
-  "imppandas": {
-    "prefix": "imppandas",
-    "description": "imppandas",
-    "body": [
-      "import pandas as pd"
-    ]
-  },
-  "tolower": {
-    "prefix": "tolower",
-    "body": [
-      "${1:variable}.lower()"
-    ],
-    "description": "Convert string to lowercase"
-  },
-  "replace": {
-    "prefix": "replace",
-    "body": [
-      "${1:variable}.replace(\"${2:old}\", \"${3:new}\")"
-    ],
-    "description": "Replace all occurrences of a substring with another substring"
-  },
-  "printall": {
-    "prefix": "printall",
-    "body": [
-      "pprint.pprint(${1:list})"
-    ],
-    "description": "Print all elements of a list"
-  },
-  "file_chooser": {
-    "prefix": "filechooser",
-    "body": [
-      "with page.expect_file_chooser() as fc:",
-      "    click_button(page, \"Upload\")",
-      "    file_chooser = fc.value",
-      "    file_chooser.set_files(\"./icon.png\")",
-      ""
-    ],
-    "description": "Playwright file chooser"
-  },
-  "dotenv": {
-    "prefix": "dotenv",
-    "body": [
-      "from dotenv import load_dotenv",
-      "import os",
-      "",
-      "# Load variables from .env into the environment",
-      "load_dotenv()",
-      "",
-      "# Now you can access them",
-      "api_key = os.getenv('API_KEY')",
-      "db_url  = os.getenv('DB_URL')"
-    ],
-    "description": "Load environment variables from .env file"
-  },
-  "locator": {
-    "prefix": "locator",
-    "body": [
-      "${1:element} = page.locator(\"${2:button}\", has=page.get_by_text(\"${3:text}\", exact=True))"
-    ],
-    "description": "Playwright locator"
-  },
-  "save_csv_csvmodule": {
-    "prefix": "savecsv",
-    "body": [
-      "import csv",
-      "",
-      "with open('${1:file.csv}', mode='w', newline='', encoding='utf-8') as file:",
-      "    writer = csv.writer(file)",
-      "    ${2:header = ['col1', 'col2', 'col3']}",
-      "    writer.writerow(header)",
-      "    for ${3:row} in ${4:data}:",
-      "        writer.writerow(${3:row})"
-    ],
-    "description": "Save data to CSV using built-in csv module"
-  },
-  "if_elif_else": {
-    "prefix": "ifelif",
-    "body": [
-      "if ${1:condition1}:",
-      "    ${2:# code for condition1}",
-      "elif ${3:condition2}:",
-      "    ${4:# code for condition2}",
-      "else:",
-      "    ${5:# default / else code}"
-    ],
-    "description": "Python if / elif / else block"
-  },
-  "switch_case": {
-    "prefix": "switch",
-    "body": [
-      "match ${1:variable}:",
-      "    case ${2:val1}:",
-      "        ${3:# code for val1}",
-      "    case ${4:val2}:",
-      "        ${5:# code for val2}",
-      "    case _:",
-      "        ${6:# default / else code}"
-    ],
-    "description": "Python 3.10+ match / case (switch)"
-  },
-  "split_string": {
-    "prefix": "splitstr",
-    "body": [
-      "${1:parts} = ${2:text}.split('${3:delimiter}')"
-    ],
-    "description": "Split string into list by delimiter"
-  },
-  "hello": {
-    "prefix": "hello",
-    "body": [
-      "print(\"Hello World\")"
-    ]
-  },
-  "playwright_basic": {
-    "prefix": "playwright",
-    "body": [
-      "from playwright.sync_api import sync_playwright",
-      "",
-      "with sync_playwright() as p:",
-      "    browser = p.chromium.launch(headless=False)",
-      "    context = browser.new_context()",
-      "    page = context.new_page()",
-      "",
-      "    page.goto(\"${1:https://example.com}\")",
-      "    page.set_default_timeout(${2:10000})",
-      "",
-      "    ${3:# page actions here}",
-      "",
-      "    browser.close()"
-    ],
-    "description": "Playwright normal usage (launch browser)"
-  },
-  "playwright_attach": {
-    "prefix": "playwright_attach",
-    "body": [
-      "import subprocess",
-      "import time",
-      "from pathlib import Path",
-      "from playwright.sync_api import sync_playwright",
-      "",
-      "# Temporary profile folder",
-      "profile_dir = Path(r\"C:\\\\\\tmp\\\\\\chrome-profile\")",
-      "profile_dir.mkdir(exist_ok=True)",
-      "",
-      "# Start Chrome with remote debugging",
-      "chrome_path = r\"C:\\\\\\Program Files\\\\\\Google\\\\\\Chrome\\\\\\Application\\\\\\chrome.exe\"",
-      "subprocess.Popen([",
-      "    chrome_path,",
-      "    \"--remote-debugging-port=9222\",",
-      "    f\"--user-data-dir={profile_dir}\"",
-      "])",
-      "",
-      "# Wait a few seconds for Chrome to start",
-      "time.sleep(5)",
-      "print(\"Chrome launched with remote debugging on port 9222\")",
-      "",
-      "",
-      "p = sync_playwright().start()",
-      "browser = p.chromium.connect_over_cdp(\"http://localhost:9222\")",
-      "context = browser.contexts[0] if browser.contexts else browser.new_context()",
-      "page = context.pages[0] if context.pages else context.new_page()",
-      "page.goto(\"https://google.com\")",
-      "print(page.title())",
-      ""
-    ]
-  },
-  "read_csv_csvmodule": {
-    "prefix": "readcsv",
-    "body": [
-      "import csv",
-      "",
-      "with open('${1:file.csv}', newline='', encoding='utf-8') as csvfile:",
-      "    reader = csv.reader(csvfile)",
-      "    header = next(reader)  # skip or store header",
-      "    for row in reader:",
-      "        print(row)"
-    ],
-    "description": "Read CSV using built-in csv module"
-  },
-  "class": {
-    "prefix": "class",
-    "body": [
-      "class User:",
-      "    \"\"\"User credentials\"\"\"",
-      "",
-      "    def __init__(self, username, password):",
-      "        self.username = username",
-      "        self.password = password"
-    ]
-  },
-  "foreach_loop": {
-    "prefix": "foreach",
-    "body": [
-      "for ${1:item} in ${2:iterable}:",
-      "    ${3:# TODO: do something with ${1:item}}"
-    ],
-    "description": "Python foreach loop"
-  },
-  "try_except": {
-    "prefix": "trycatch",
-    "body": [
-      "try:",
-      "    ${1:# code that may raise an exception}",
-      "except ${2:Exception} as ${3:e}:",
-      "    ${4:print(f\"Error\")}"
-    ],
-    "description": "Python try/except block"
-  }
+    "substr": {
+        "prefix": "substr",
+        "body": [
+            "\t\ttext = \"Hello World\"",
+            "\t\tif \"World\" in text:",
+            "\t\t\t\tprint(\"Substring exists\")",
+            ""
+        ]
+    },
+    "exportcsv": {
+        "prefix": "exportcsv",
+        "body": ["df.to_csv('data.csv', index=False)"],
+        "description": "importcsv"
+    },
+    "importcsv": {
+        "prefix": "importcsv",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_csv('${1:somefile.csv}', encoding='ISO-8859-1', sep=\",\")",
+            "df.head()"
+        ],
+        "description": "importcsv"
+    },
+    "df": {
+        "prefix": "df",
+        "description": "df",
+        "body": [
+            "df = pd.DataFrame([",
+            "  {\"first_name\" : \"Wasis\", \"last_name\" : \"Sasoko\"},",
+            "])",
+            "",
+            "df = df._append({",
+            "  \"first_name\" : \"Yoko\",",
+            "  \"last_name\" : \"Wasis\"",
+            "}, ignore_index=True)"
+        ]
+    },
+    "impnumpy": {
+        "prefix": "impnumpy",
+        "description": "impnumpy",
+        "body": ["import numpy as np"]
+    },
+    "imppandas": {
+        "prefix": "imppandas",
+        "description": "imppandas",
+        "body": ["import pandas as pd"]
+    },
+    "tolower": {
+        "prefix": "tolower",
+        "body": ["${1:variable}.lower()"],
+        "description": "Convert string to lowercase"
+    },
+    "replace": {
+        "prefix": "replace",
+        "body": ["${1:variable}.replace(\"${2:old}\", \"${3:new}\")"],
+        "description": "Replace all occurrences of a substring with another substring"
+    },
+    "printall": {
+        "prefix": "printall",
+        "body": ["pprint.pprint(${1:list})"],
+        "description": "Print all elements of a list"
+    },
+    "file_chooser": {
+        "prefix": "filechooser",
+        "body": [
+            "with page.expect_file_chooser() as fc:",
+            "    click_button(page, \"Upload\")",
+            "    file_chooser = fc.value",
+            "    file_chooser.set_files(\"./icon.png\")",
+            ""
+        ],
+        "description": "Playwright file chooser"
+    },
+    "dotenv": {
+        "prefix": "dotenv",
+        "body": [
+            "from dotenv import load_dotenv",
+            "import os",
+            "",
+            "# Load variables from .env into the environment",
+            "load_dotenv()",
+            "",
+            "# Now you can access them",
+            "api_key = os.getenv('API_KEY')",
+            "db_url  = os.getenv('DB_URL')"
+        ],
+        "description": "Load environment variables from .env file"
+    },
+    "locator": {
+        "prefix": "locator",
+        "body": [
+            "${1:element} = page.locator(\"${2:button}\", has=page.get_by_text(\"${3:text}\", exact=True))"
+        ],
+        "description": "Playwright locator"
+    },
+    "save_csv_csvmodule": {
+        "prefix": "savecsv",
+        "body": [
+            "import csv",
+            "",
+            "with open('${1:file.csv}', mode='w', newline='', encoding='utf-8') as file:",
+            "    writer = csv.writer(file)",
+            "    ${2:header = ['col1', 'col2', 'col3']}",
+            "    writer.writerow(header)",
+            "    for ${3:row} in ${4:data}:",
+            "        writer.writerow(${3:row})"
+        ],
+        "description": "Save data to CSV using built-in csv module"
+    },
+    "if_elif_else": {
+        "prefix": "ifelif",
+        "body": [
+            "if ${1:condition1}:",
+            "    ${2:# code for condition1}",
+            "elif ${3:condition2}:",
+            "    ${4:# code for condition2}",
+            "else:",
+            "    ${5:# default / else code}"
+        ],
+        "description": "Python if / elif / else block"
+    },
+    "switch_case": {
+        "prefix": "switch",
+        "body": [
+            "match ${1:variable}:",
+            "    case ${2:val1}:",
+            "        ${3:# code for val1}",
+            "    case ${4:val2}:",
+            "        ${5:# code for val2}",
+            "    case _:",
+            "        ${6:# default / else code}"
+        ],
+        "description": "Python 3.10+ match / case (switch)"
+    },
+    "split_string": {
+        "prefix": "splitstr",
+        "body": ["${1:parts} = ${2:text}.split('${3:delimiter}')"],
+        "description": "Split string into list by delimiter"
+    },
+    "hello": {
+        "prefix": "hello",
+        "body": ["print(\"Hello World\")"]
+    },
+    "playwright_basic": {
+        "prefix": "playwright",
+        "body": [
+            "from playwright.sync_api import sync_playwright",
+            "",
+            "with sync_playwright() as p:",
+            "    browser = p.chromium.launch(headless=False)",
+            "    context = browser.new_context()",
+            "    page = context.new_page()",
+            "",
+            "    page.goto(\"${1:https://example.com}\")",
+            "    page.set_default_timeout(${2:10000})",
+            "",
+            "    ${3:# page actions here}",
+            "",
+            "    browser.close()"
+        ],
+        "description": "Playwright normal usage (launch browser)"
+    },
+    "playwright_attach": {
+        "prefix": "playwright_attach",
+        "body": [
+            "import subprocess",
+            "import time",
+            "from pathlib import Path",
+            "from playwright.sync_api import sync_playwright",
+            "",
+            "# Temporary profile folder",
+            "profile_dir = Path(r\"C:\\\\\\tmp\\\\\\chrome-profile\")",
+            "profile_dir.mkdir(exist_ok=True)",
+            "",
+            "# Start Chrome with remote debugging",
+            "chrome_path = r\"C:\\\\\\Program Files\\\\\\Google\\\\\\Chrome\\\\\\Application\\\\\\chrome.exe\"",
+            "subprocess.Popen([",
+            "    chrome_path,",
+            "    \"--remote-debugging-port=9222\",",
+            "    f\"--user-data-dir={profile_dir}\"",
+            "])",
+            "",
+            "# Wait a few seconds for Chrome to start",
+            "time.sleep(5)",
+            "print(\"Chrome launched with remote debugging on port 9222\")",
+            "",
+            "",
+            "p = sync_playwright().start()",
+            "browser = p.chromium.connect_over_cdp(\"http://localhost:9222\")",
+            "context = browser.contexts[0] if browser.contexts else browser.new_context()",
+            "page = context.pages[0] if context.pages else context.new_page()",
+            "page.goto(\"https://google.com\")",
+            "print(page.title())",
+            ""
+        ]
+    },
+    "read_csv_csvmodule": {
+        "prefix": "readcsv",
+        "body": [
+            "import csv",
+            "",
+            "with open('${1:file.csv}', newline='', encoding='utf-8') as csvfile:",
+            "    reader = csv.reader(csvfile)",
+            "    header = next(reader)  # skip or store header",
+            "    for row in reader:",
+            "        print(row)"
+        ],
+        "description": "Read CSV using built-in csv module"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class User:",
+            "    \"\"\"User credentials\"\"\"",
+            "",
+            "    def __init__(self, username, password):",
+            "        self.username = username",
+            "        self.password = password"
+        ]
+    },
+    "foreach_loop": {
+        "prefix": "foreach",
+        "body": [
+            "for ${1:item} in ${2:iterable}:",
+            "    ${3:# TODO: do something with ${1:item}}"
+        ],
+        "description": "Python foreach loop"
+    },
+    "try_except": {
+        "prefix": "trycatch",
+        "body": [
+            "try:",
+            "    ${1:# code that may raise an exception}",
+            "except ${2:Exception} as ${3:e}:",
+            "    ${4:print(f\"Error\")}"
+        ],
+        "description": "Python try/except block"
+    }
 }

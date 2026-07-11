@@ -1,0 +1,13 @@
+{
+    "post": {
+        "prefix": "post",
+        "body": [
+            "curl -X POST \"https://example.com/api\" \\",
+            "\t-H \"Content-Type: application/json\" \\",
+            "\t-d '{",
+            "\t\t\"name\": \"John\",",
+            "\t\t\"email\": \"john@example.com\"",
+            "\t}'"
+        ]
+    }
+}
