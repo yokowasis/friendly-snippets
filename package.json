@@ -1,95 +1,149 @@
 {
-    "name": "friendly-snippets",
-    "engines": {
-        "vscode": "^1.11.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": ["python"],
-                "path": "./snippets/python.json"
-            },
-            {
-                "language": ["cpp"],
-                "path": "./snippets/cpp.json"
-            },
-            {
-                "language": ["rust"],
-                "path": "./snippets/rust.json"
-            },
-            {
-                "language": ["go"],
-                "path": "./snippets/go.json"
-            },
-            {
-                "language": ["c"],
-                "path": "./snippets/c.json"
-            },
-            {
-                "language": ["markdown"],
-                "path": "./snippets/markdown.json"
-            },
-            {
-                "language": ["latex", "tex"],
-                "path": "./snippets/latex.json"
-            },
-            {
-                "language": ["plaintext", "markdown", "tex", "html", "all"],
-                "path": "./snippets/global.code-snippets"
-            },
-            {
-                "language": ["javascript", "javascriptreact"],
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": ["typescript", "typescriptreact"],
-                "path": "./snippets/typescript.json"
-            },
-            {
-                "language": ["html", "php"],
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": ["html", "php"],
-                "path": "./snippets/php.json"
-            },
-            {
-                "language": [
-                    "javascriptreact",
-                    "typescriptreact",
-                    "javascript",
-                    "typescript"
-                ],
-                "path": "./snippets/jsfamily.code-snippets"
-            },
-            {
-                "language": ["go", "asm"],
-                "path": "./snippets/go.asm.json"
-            },
-            {
-                "language": ["groovy"],
-                "path": "./snippets/groovy.json"
-            },
-            {
-                "language": ["http"],
-                "path": "./snippets/http.json"
-            },
-            {
-                "language": ["json"],
-                "path": "./snippets/json.json"
-            },
-            {
-                "language": ["jsonc"],
-                "path": "./snippets/jsonc.json"
-            },
-            {
-                "language": ["svelte"],
-                "path": "./snippets/svelte.json"
-            },
-            {
-                "language": ["shellscript"],
-                "path": "./snippets/shellscript.json"
-            }
-        ]
-    }
+  "name": "friendly-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "python"
+        ],
+        "path": "./snippets/python.json"
+      },
+      {
+        "language": [
+          "cpp"
+        ],
+        "path": "./snippets/cpp.json"
+      },
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "./snippets/rust.json"
+      },
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./snippets/go.json"
+      },
+      {
+        "language": [
+          "c"
+        ],
+        "path": "./snippets/c.json"
+      },
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": [
+          "latex",
+          "tex"
+        ],
+        "path": "./snippets/latex.json"
+      },
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "all"
+        ],
+        "path": "./snippets/global.code-snippets"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact"
+        ],
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": [
+          "html",
+          "php"
+        ],
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": [
+          "html",
+          "php"
+        ],
+        "path": "./snippets/php.json"
+      },
+      {
+        "language": [
+          "javascriptreact",
+          "typescriptreact",
+          "javascript",
+          "typescript"
+        ],
+        "path": "./snippets/jsfamily.code-snippets"
+      },
+      {
+        "language": [
+          "go",
+          "asm"
+        ],
+        "path": "./snippets/go.asm.json"
+      },
+      {
+        "language": [
+          "groovy"
+        ],
+        "path": "./snippets/groovy.json"
+      },
+      {
+        "language": [
+          "http"
+        ],
+        "path": "./snippets/http.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./snippets/json.json"
+      },
+      {
+        "language": [
+          "jsonc"
+        ],
+        "path": "./snippets/jsonc.json"
+      },
+      {
+        "language": [
+          "svelte"
+        ],
+        "path": "./snippets/svelte.json"
+      },
+      {
+        "language": [
+          "shellscript"
+        ],
+        "path": "./snippets/shellscript.json"
+      },
+      {
+        "language": [
+          "mysql"
+        ],
+        "path": "./snippets/mysql.json"
+      }
+    ]
+  }
 }

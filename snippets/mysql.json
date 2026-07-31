@@ -1,0 +1,296 @@
+{
+  "select": {
+    "prefix": "select",
+    "body": ["SELECT ${1:*} FROM ${2:table}${3: WHERE ${4:condition}};"],
+    "description": "SELECT query"
+  },
+  "selectall": {
+    "prefix": "selectall",
+    "body": ["SELECT * FROM ${1:table};"],
+    "description": "Select all columns from a table"
+  },
+  "insert": {
+    "prefix": "insert",
+    "body": [
+      "INSERT INTO ${1:table} (${2:col1, col2, col3}) VALUES (${3:value1, value2, value3});"
+    ],
+    "description": "INSERT new row"
+  },
+  "update": {
+    "prefix": "update",
+    "body": [
+      "UPDATE ${1:table} SET",
+      "  ${2:col1} = ${3:value1},",
+      "  ${4:col2} = ${5:value2}",
+      "WHERE ${6:condition};"
+    ],
+    "description": "UPDATE rows"
+  },
+  "delete": {
+    "prefix": "delete",
+    "body": ["DELETE FROM ${1:table} WHERE ${2:condition};"],
+    "description": "DELETE rows"
+  },
+  "create_table": {
+    "prefix": "create_table",
+    "body": [
+      "CREATE TABLE ${1:table} (",
+      "  ${2:id} INT AUTO_INCREMENT PRIMARY KEY,",
+      "  ${3:col1} ${4|int,varchar(255),boolean,datetime,timestamp,date,bigint,decimal(10,2),text,char(255),json,double,float,longtext,blob|}",
+      ");"
+    ],
+    "description": "CREATE TABLE"
+  },
+  "create_database": {
+    "prefix": "create_database",
+    "body": [
+      "CREATE DATABASE IF NOT EXISTS ${1:dbname} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+    ],
+    "description": "CREATE DATABASE"
+  },
+  "use": {
+    "prefix": "use",
+    "body": ["USE ${1:dbname};"],
+    "description": "Select database"
+  },
+  "alter_add": {
+    "prefix": "alter_add",
+    "body": [
+      "ALTER TABLE ${1:table} ADD ${2:col} ${3|int,varchar(255),boolean,datetime,timestamp,date,bigint,decimal(10,2),text,char(255),json,double,float,longtext,blob|};"
+    ],
+    "description": "ALTER TABLE ADD column"
+  },
+  "alter_drop": {
+    "prefix": "alter_drop",
+    "body": ["ALTER TABLE ${1:table} DROP COLUMN ${2:col};"],
+    "description": "ALTER TABLE DROP column"
+  },
+  "alter_modify": {
+    "prefix": "alter_modify",
+    "body": [
+      "ALTER TABLE ${1:table} MODIFY ${2:col} ${3|int,varchar(255),boolean,datetime,timestamp,date,bigint,decimal(10,2),text,char(255),json,double,float,longtext,blob|};"
+    ],
+    "description": "ALTER TABLE MODIFY column"
+  },
+  "alter_move": {
+    "prefix": "alter_move",
+    "body": [
+      "ALTER TABLE ${1:table} MODIFY ${2:col} ${3|int,varchar(255),boolean,datetime,timestamp,date,bigint,decimal(10,2),text,char(255),json,double,float,longtext,blob|} AFTER ${4:other_col};"
+    ],
+    "description": "ALTER TABLE move column position"
+  },
+  "alter_rename": {
+    "prefix": "alter_rename",
+    "body": ["ALTER TABLE ${1:table} RENAME TO ${2:new_table};"],
+    "description": "ALTER TABLE rename"
+  },
+  "alter_move": {
+    "prefix": "alter_move",
+    "body": [
+      "ALTER TABLE ${1:table} MODIFY ${2:col} ${3|int,varchar(255),boolean,datetime,timestamp,date,bigint,decimal(10,2),text,char(255),json,double,float,longtext,blob|} ${4|AFTER,FIRST|} ${5:other_col};"
+    ],
+    "description": "ALTER TABLE move column position"
+  },
+  "drop_table": {
+    "prefix": "drop_table",
+    "body": ["DROP TABLE IF EXISTS ${1:table};"],
+    "description": "DROP TABLE"
+  },
+  "drop_database": {
+    "prefix": "drop_database",
+    "body": ["DROP DATABASE IF EXISTS ${1:dbname};"],
+    "description": "DROP DATABASE"
+  },
+  "truncate": {
+    "prefix": "truncate",
+    "body": ["TRUNCATE TABLE ${1:table};"],
+    "description": "TRUNCATE TABLE"
+  },
+  "inner_join": {
+    "prefix": "join",
+    "body": [
+      "INNER JOIN ${1:table} ON ${2:table1}.${3:col} = ${1:table}.${3:col}"
+    ],
+    "description": "INNER JOIN"
+  },
+  "left_join": {
+    "prefix": "left_join",
+    "body": [
+      "LEFT JOIN ${1:table} ON ${2:table1}.${3:col} = ${1:table}.${3:col}"
+    ],
+    "description": "LEFT JOIN"
+  },
+  "right_join": {
+    "prefix": "right_join",
+    "body": [
+      "RIGHT JOIN ${1:table} ON ${2:table1}.${3:col} = ${1:table}.${3:col}"
+    ],
+    "description": "RIGHT JOIN"
+  },
+  "where": {
+    "prefix": "where",
+    "body": ["WHERE ${1:col} ${2:=} ${3:value}"],
+    "description": "WHERE clause"
+  },
+  "order_by": {
+    "prefix": "order",
+    "body": ["ORDER BY ${1:col} ${2|ASC,DESC|}"],
+    "description": "ORDER BY clause"
+  },
+  "group_by": {
+    "prefix": "group",
+    "body": ["GROUP BY ${1:col}"],
+    "description": "GROUP BY clause"
+  },
+  "having": {
+    "prefix": "having",
+    "body": ["HAVING ${1:condition}"],
+    "description": "HAVING clause"
+  },
+  "limit": {
+    "prefix": "limit",
+    "body": ["LIMIT ${1:10}"],
+    "description": "LIMIT clause"
+  },
+  "distinct": {
+    "prefix": "distinct",
+    "body": ["SELECT DISTINCT ${1:col} FROM ${2:table};"],
+    "description": "SELECT DISTINCT"
+  },
+  "count": {
+    "prefix": "count",
+    "body": ["SELECT COUNT(${1:*}) FROM ${2:table};"],
+    "description": "COUNT rows"
+  },
+  "sum": {
+    "prefix": "sum",
+    "body": ["SELECT SUM(${1:col}) FROM ${2:table};"],
+    "description": "SUM of column"
+  },
+  "avg": {
+    "prefix": "avg",
+    "body": ["SELECT AVG(${1:col}) FROM ${2:table};"],
+    "description": "AVG of column"
+  },
+  "min": {
+    "prefix": "min",
+    "body": ["SELECT MIN(${1:col}) FROM ${2:table};"],
+    "description": "MIN of column"
+  },
+  "max": {
+    "prefix": "max",
+    "body": ["SELECT MAX(${1:col}) FROM ${2:table};"],
+    "description": "MAX of column"
+  },
+  "union": {
+    "prefix": "union",
+    "body": ["UNION ${1|ALL,DISTINCT|} SELECT ${2:col} FROM ${3:table};"],
+    "description": "UNION clause"
+  },
+  "subquery": {
+    "prefix": "subquery",
+    "body": [
+      "SELECT ${1:col} FROM ${2:table} WHERE ${3:col} IN (SELECT ${4:col} FROM ${5:table});"
+    ],
+    "description": "Subquery"
+  },
+  "create_index": {
+    "prefix": "create_index",
+    "body": ["CREATE INDEX ${1:idx_name} ON ${2:table} (${3:col});"],
+    "description": "CREATE INDEX"
+  },
+  "drop_index": {
+    "prefix": "drop_index",
+    "body": ["DROP INDEX ${1:idx_name} ON ${2:table};"],
+    "description": "DROP INDEX"
+  },
+  "begin": {
+    "prefix": "begin",
+    "body": ["START TRANSACTION;"],
+    "description": "Start transaction"
+  },
+  "commit": {
+    "prefix": "commit",
+    "body": ["COMMIT;"],
+    "description": "Commit transaction"
+  },
+  "rollback": {
+    "prefix": "rollback",
+    "body": ["ROLLBACK;"],
+    "description": "Rollback transaction"
+  },
+  "show_tables": {
+    "prefix": "show_tables",
+    "body": ["SHOW TABLES;"],
+    "description": "Show tables"
+  },
+  "show_databases": {
+    "prefix": "show_databases",
+    "body": ["SHOW DATABASES;"],
+    "description": "Show databases"
+  },
+  "describe": {
+    "prefix": "describe",
+    "body": ["DESCRIBE ${1:table};"],
+    "description": "Describe table structure"
+  },
+  "explain": {
+    "prefix": "explain",
+    "body": ["EXPLAIN ${1:SELECT * FROM table};"],
+    "description": "Explain query execution plan"
+  },
+  "create_user": {
+    "prefix": "create_user",
+    "body": [
+      "CREATE USER '${1:username}'@'${2:localhost}' IDENTIFIED BY '${3:password}';"
+    ],
+    "description": "CREATE USER"
+  },
+  "grant": {
+    "prefix": "grant",
+    "body": [
+      "GRANT ALL PRIVILEGES ON ${1:dbname}.* TO '${2:username}'@'${3:localhost}';"
+    ],
+    "description": "GRANT privileges"
+  },
+  "flush_privileges": {
+    "prefix": "flush",
+    "body": ["FLUSH PRIVILEGES;"],
+    "description": "FLUSH PRIVILEGES"
+  },
+  "procedure": {
+    "prefix": "procedure",
+    "body": [
+      "DELIMITER $$",
+      "CREATE PROCEDURE ${1:name}()",
+      "BEGIN",
+      "  ${2:-- statements}",
+      "END$$",
+      "DELIMITER ;"
+    ],
+    "description": "CREATE PROCEDURE"
+  },
+  "trigger": {
+    "prefix": "trigger",
+    "body": [
+      "DELIMITER $$",
+      "CREATE TRIGGER ${1:name} ${2|BEFORE,AFTER|} ${3|INSERT,UPDATE,DELETE|} ON ${4:table}",
+      "FOR EACH ROW",
+      "BEGIN",
+      "  ${5:-- statements}",
+      "END$$",
+      "DELIMITER ;"
+    ],
+    "description": "CREATE TRIGGER"
+  },
+  "case": {
+    "prefix": "case",
+    "body": [
+      "CASE ${1:col}",
+      "  WHEN ${2:value} THEN ${3:result}",
+      "  ELSE ${4:default}",
+      "END"
+    ],
+    "description": "CASE expression"
+  }
+}
