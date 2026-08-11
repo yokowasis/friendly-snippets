@@ -1,10 +1,7 @@
 {
     "error": {
         "prefix": "error",
-        "body": [
-            "error_reporting(E_ALL);",
-            "ini_set('display_errors', 1);"
-        ]
+        "body": ["error_reporting(E_ALL);", "ini_set('display_errors', 1);"]
     },
     "typecasting": {
         "prefix": "typecast",
@@ -23,15 +20,7 @@
     },
     "var": {
         "prefix": "var",
-        "body": [
-            "/** @var ${1:TypeName} */"
-        ]
-    },
-    "cl": {
-        "prefix": "cl",
-        "body": [
-            "console.log($1);"
-        ]
+        "body": ["/** @var ${1:TypeName} */"]
     },
     "typeWrapPHP": {
         "prefix": "ty",
@@ -176,11 +165,7 @@
     },
     "test": {
         "prefix": "test",
-        "body": [
-            "<?php",
-            "echo 'Hello World';",
-            "?>"
-        ]
+        "body": ["<?php", "echo 'Hello World';", "?>"]
     },
     "whoami": {
         "prefix": "whoami",
@@ -188,11 +173,7 @@
     },
     "php-pre": {
         "prefix": "pre",
-        "body": [
-            "echo '<pre>';",
-            "${1:something};",
-            "echo '</pre>';"
-        ]
+        "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
     },
     "backward-php": {
         "prefix": "bph",
@@ -288,21 +269,15 @@
     },
     "pe": {
         "prefix": "pe",
-        "body": [
-            "echo \"<p>${1:this}</p>\";"
-        ]
+        "body": ["echo \"<p>${1:this}</p>\";"]
     },
     "nowdate": {
         "prefix": "nowdate",
-        "body": [
-            "date(\"Y-m-d\")"
-        ]
+        "body": ["date(\"Y-m-d\")"]
     },
     "nowtime": {
         "prefix": "nowtime",
-        "body": [
-            "date(\"H:i\")"
-        ]
+        "body": ["date(\"H:i\")"]
     },
     "toint": {
         "prefix": "toint",
@@ -353,9 +328,7 @@
     },
     "php_date": {
         "prefix": "date",
-        "body": [
-            "\\$date = date(\"Y-m-d\",time());"
-        ]
+        "body": ["\\$date = date(\"Y-m-d\",time());"]
     },
     "mysql": {
         "prefix": "mysql",
