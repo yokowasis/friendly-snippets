@@ -1,1 +1,53 @@
-{}
+{
+    "svelteeach": {
+        "prefix": "each",
+        "body": [
+            "{#each ${1:items} as ${2:item}}",
+            "\t${3:item}",
+            "{/each}"
+        ]
+    },
+    "svelteifelse": {
+        "prefix": "ifelse",
+        "body": [
+            "{#if ${1:true}}",
+            "\t${2:dosomething}",
+            "{:else}",
+            "\t${3:somethingelse}",
+            "{/if}"
+        ]
+    },
+    "svelteif": {
+        "prefix": "if",
+        "body": [
+            "{#if ${1:true}}",
+            "\t${2: //dosomething}",
+            "{/if}"
+        ]
+    },
+    "svelte": {
+        "prefix": "svelte",
+        "body": [
+            "<script lang=\"ts\">",
+            "\timport type { PageData, ActionData } from './\\$types';",
+            "\texport let data: PageData;",
+            "\texport let form: ActionData;",
+            "</script>",
+            "",
+            "{#if form?.success}",
+            "\t<p>Successfully logged in! Welcome back</p>",
+            "{/if}"
+        ]
+    },
+    "svelteSearchParams": {
+        "prefix": "svelteSearchParams",
+        "body": [
+            "\timport { page } from \"\\$app/state\";",
+            "\tlet params_${1:paramsName} = \\$derived(page.url.searchParams.get(\"${1:paramsName}\") ?? \"\");",
+            "\tlet ${1:paramsName} = \\$state(\"\");",
+            "\t\\$effect(() => {",
+            "\t\t${1:paramsName} = params_${1:paramsName};",
+            "\t});"
+        ]
+    }
+}

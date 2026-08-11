@@ -1,1 +1,593 @@
-{}
+{
+    "paramsbuild": {
+        "prefix": "paramsbuild",
+        "body": [
+            "\t\t\t\tconst params = new URLSearchParams({",
+            "\t\t\t\t\tcategory: \"shoes\",",
+            "\t\t\t\t}).toString();",
+            "\t\t\t\tconst url = `/something?\\${params}`;"
+        ]
+    },
+    "s3": {
+        "prefix": "s3",
+        "body": [
+            "import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';",
+            "import fs from 'node:fs';",
+            "import 'dotenv/config';",
+            "import mime from 'mime-types';",
+            "",
+            "// Initialize the S3 client using your custom server variables",
+            "const s3Client = new S3Client({",
+            "\tendpoint: process.env.S3_ENDPOINT,",
+            "\tregion: process.env.S3_REGION,",
+            "\tcredentials: {",
+            "\t\taccessKeyId: process.env.S3_ACCESS_KEY,",
+            "\t\tsecretAccessKey: process.env.S3_SECRET_KEY,",
+            "\t},",
+            "\tforcePathStyle: true, // Crucial for standalone custom servers like MinIO",
+            "});",
+            "",
+            "/**",
+            " * Uploads a local file to a specific destination on a custom S3 server.",
+            " * ",
+            " * @param {string} localPath - The absolute or relative path to the local file.",
+            " * @param {string} destinationKey - The target path/filename inside the S3 bucket.",
+            " * @returns {Promise<{success: boolean, url: string, key: string}>}",
+            " */",
+            "export async function uploadToCustomS3(localPath, destinationKey) {",
+            "\t// 1. Structural validations",
+            "\tif (!localPath || !destinationKey) {",
+            "\t\tthrow new Error('Both localPath and destinationKey parameters are required.');",
+            "\t}",
+            "",
+            "\tif (!fs.existsSync(localPath)) {",
+            "\t\tthrow new Error(`Local file not found at path: \"\\${localPath}\"`);",
+            "\t}",
+            "",
+            "\ttry {",
+            "\t\t// 2. Stream the file directly to avoid loading large files into memory",
+            "\t\tconst fileStream = fs.createReadStream(localPath);",
+            "",
+            "\t\t/** @type {import('@aws-sdk/client-s3').PutObjectCommandInput} */",
+            "\t\tconst uploadParams = {",
+            "\t\t\tBucket: process.env.S3_BUCKET_NAME,",
+            "\t\t\tKey: destinationKey,",
+            "\t\t\tBody: fileStream,",
+            "\t\t\tContentType: mime.lookup(localPath) || 'application/octet-stream',",
+            "\t\t};",
+            "",
+            "\t\tconst command = new PutObjectCommand(uploadParams);",
+            "\t\tawait s3Client.send(command);",
+            "",
+            "\t\t// 3. Construct and return useful details",
+            "\t\tconst fileUrl = `${process.env.S3_ENDPOINT}/${process.env.S3_BUCKET_NAME}/\\${destinationKey}`;",
+            "\t\t",
+            "\t\treturn {",
+            "\t\t\tsuccess: true,",
+            "\t\t\turl: fileUrl,",
+            "\t\t\tkey: destinationKey",
+            "\t\t};",
+            "",
+            "\t} catch (error) {",
+            "\t\tconsole.error(`Failed uploading \\${localPath} to \\${destinationKey}:`, error);",
+            "\t\tthrow error;",
+            "\t}",
+            "}",
+            ""
+        ]
+    },
+    "pbauthadmin": {
+        "prefix": "pbauthadmin",
+        "body": [
+            "await pb",
+            "\t\t.collection(\"_superusers\")",
+            "\t\t.authWithPassword(\"test@example.com\", \"1234567890\");"
+        ]
+    },
+    "pbauth": {
+        "prefix": "pbauth",
+        "body": [
+            "const authData = await pb",
+            "\t\t.collection(\"users\")",
+            "\t\t.authWithPassword(\"YOUR_USERNAME_OR_EMAIL\", \"YOUR_PASSWORD\");"
+        ]
+    },
+    "adddate": {
+        "prefix": "adddate",
+        "body": [
+            "const newDate = new Date().getTime() + 30 * 24 * 60 * 60 * 1000; // add 30 days;"
+        ]
+    },
+    "savefile": {
+        "prefix": "savefile",
+        "body": [
+            "\t\tconst jsonString = JSON.stringify(list, null, 2);",
+            "\t\tconst filePath = path.resolve(\"src/lib/web.json\"); // adjust if needed",
+            "\t\tawait writeFile(filePath, jsonString, \"utf8\");",
+            ""
+        ]
+    },
+    "today": {
+        "prefix": "today",
+        "body": [
+            "const today = new Date().toISOString().split(\"T\")[0];"
+        ]
+    },
+    "awaitdefined": {
+        "prefix": "awaitdefined",
+        "body": [
+            "await customElements.whenDefined(\"${1:cs-input}\");"
+        ]
+    },
+    "arrMap": {
+        "prefix": "arrMap",
+        "body": [
+            "\t\tconst ${1:varName}Map = ${1:varName}.reduce(",
+            "\t\t\t(acc, category) => {",
+            "\t\t\t\tacc[category.id] = category.name;",
+            "\t\t\t\treturn acc;",
+            "\t\t\t},",
+            "\t\t\t{} as Record<string, string>,",
+            "\t\t);",
+            ""
+        ]
+    },
+    "typeWrap": {
+        "prefix": "ty",
+        "body": [
+            "/** @type {${1:TypeName}} */ ",
+            "($TM_SELECTED_TEXT)"
+        ]
+    },
+    "type": {
+        "prefix": ":",
+        "body": [
+            "/** @type {${1:TypeName}} */ "
+        ]
+    },
+    "toast": {
+        "prefix": "toast",
+        "body": [
+            "toast.${1|push,error,info,success,warn,loading,hide|}(\"${2:message}\",${3:durationms},\"${4|top-right,top-left,bottom-right,bottom-left|}\")"
+        ]
+    },
+    "svelteAPI": {
+        "prefix": "svelteapi",
+        "body": [
+            "import { json } from \"@sveltejs/kit\";",
+            "import type { RequestHandler } from \"./\\$types\";",
+            "",
+            "const headers = {",
+            "  \"Access-Control-Allow-Origin\": \"*\",",
+            "  \"Access-Control-Allow-Methods\": \"GET,HEAD,PUT,PATCH,POST,DELETE\",",
+            "  \"Access-Control-Allow-Headers\": \"Content-Type,authorization\",",
+            "};",
+            "",
+            "export const OPTIONS: RequestHandler = () => {",
+            "  return new Response(\"\", {",
+            "    status: 200,",
+            "    headers,",
+            "  });",
+            "};",
+            "export const POST: RequestHandler = async ({ request, cookies }) => {",
+            "  const { something } = await request.json();",
+            "",
+            "  return json({ something }, { status: 200, headers });",
+            "};",
+            "",
+            "export const GET: RequestHandler = ({ url, params }) => {",
+            "  const q = url.searchParams.get(\"q\");",
+            "  // const slug = params.slug;",
+            "  const number = Math.floor(Math.random() * 6) + 1;",
+            "",
+            "  return json({ number }, {status:200, headers});",
+            "};",
+            ""
+        ]
+    },
+    "pb": {
+        "prefix": "pb",
+        "body": [
+            "import PocketBase from \"pocketbase\"",
+            "const pb = new PocketBase(\"${1:http://localhost:3000}\");"
+        ]
+    },
+    "try": {
+        "prefix": "try",
+        "body": [
+            "try {",
+            "  ${1:code}",
+            "} catch (e) {",
+            "  console.error(e);",
+            "} finally {",
+            "  ${2:code}",
+            "}"
+        ]
+    },
+    "supabase": {
+        "prefix": "supabase",
+        "body": [
+            "import { createClient } from '@supabase/supabase-js';",
+            "export const supabase = createClient('https://supabase-api.b.app.web.id', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzI4NDg5NjAwLAogICJleHAiOiAxODg2MjU2MDAwCn0.Z0Qi_fL4s-gLFeCkTxp1hTtCHK7Nd26BDj_rNfNc4XU')"
+        ]
+    },
+    "express": {
+        "prefix": "express",
+        "body": [
+            "import express from \"express\";",
+            "import dotenv from \"dotenv\";",
+            "import fs from 'fs';",
+            "import http from 'http';",
+            "import https from 'https';",
+            "import cors from \"cors\";",
+            "import bodyParser from \"body-parser\";",
+            "",
+            "dotenv.config()",
+            "",
+            "const app = express();",
+            "const port = process.env.PORT || 3000;",
+            "const portssl = process.env.PORTSSL;",
+            "",
+            "app.use(cors());",
+            "app.use(bodyParser.urlencoded({",
+            "  extended: true,",
+            "  limit: \"1GB\",",
+            "  parameterLimit: 1000000",
+            "}));",
+            "app.use(bodyParser.json());",
+            "app.use(express.static(\"public\"));",
+            "",
+            "app.route(\"/\").get((req, res) => {",
+            "  res.send(\"index page\");",
+            "});",
+            "",
+            "app.route(\"/\").post((req, res) => {",
+            "  res.json({",
+            "    hello: \"World\"",
+            "  })",
+            "})",
+            "",
+            "",
+            "const httpServer = http.createServer(app);",
+            "",
+            "if (portssl) {",
+            "  const privkeyPath = process.env.privkey || './privkey.pem';",
+            "  const certificatePath = process.env.certificate || './fullchain.pem';",
+            "  const privateKey = fs.readFileSync(privkeyPath, 'utf8');",
+            "  const certificate = fs.readFileSync(certificatePath, 'utf8');",
+            "  const credentials = { key: privateKey, cert: certificate };",
+            "  const httpsServer = https.createServer(credentials, app);",
+            "  httpsServer.listen(portssl);",
+            "}",
+            "",
+            "httpServer.listen(port);",
+            "",
+            "console.log('Express Started on: ' + port);",
+            "",
+            ""
+        ],
+        "description": "express"
+    },
+    "webcomponents": {
+        "prefix": "webcomponents",
+        "body": [
+            "class Template extends HTMLElement {",
+            "  constructor() {",
+            "    super();",
+            "    this.attachShadow({ mode: \"open\" });",
+            "  }",
+            "",
+            "  static get observedAttributes() {",
+            "    return [\"value\"];",
+            "  }",
+            "",
+            "  /**",
+            "   *",
+            "   * @param {string} name",
+            "   * @param {string} _",
+            "   * @param {string} newValue",
+            "   */",
+            "  attributeChangedCallback(name, _, newValue) {}",
+            "",
+            "  connectedCallback() {",
+            "    this.render();",
+            "  }",
+            "",
+            "  render() {",
+            "    const sr = this.shadowRoot;",
+            "    if (!sr) return;",
+            "    sr.innerHTML = `",
+            "    <style>",
+            "    </style>",
+            "    <div class=\"content\">",
+            "    </div>",
+            "    `;",
+            "  }",
+            "}",
+            "",
+            "customElements.define(\"my-template\", Template);",
+            ""
+        ],
+        "description": "Web Component"
+    },
+    "searchParams": {
+        "prefix": "searchParams",
+        "body": [
+            "const { searchParams } = new URL(req.url)",
+            "const hello = searchParams.get('hello')"
+        ]
+    },
+    "fetchawait": {
+        "prefix": "fetchawait",
+        "body": [
+            "const r = await (await fetch(`${1:domain}`,{",
+            "  method: \"${2:GET}\",",
+            "  headers: {",
+            "    'Accept': 'application/json',",
+            "    'Content-Type': 'application/json'",
+            "  },",
+            "})).json()"
+        ]
+    },
+    "forof": {
+        "prefix": "forof",
+        "body": [
+            "for (const ${1:iterator} of ${2:object}) {",
+            "  ",
+            "}"
+        ],
+        "description": "forof"
+    },
+    "forin": {
+        "prefix": "forin",
+        "body": [
+            "for (const ${1:key} in ${2:object}) {",
+            "  if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {",
+            "    const element = ${2:object}[${1:key}];",
+            "  }",
+            "}"
+        ],
+        "description": "forin"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+            "  const element = ${2:array}[${1:index}];  ",
+            "}"
+        ],
+        "description": "for"
+    },
+    "foreach": {
+        "prefix": "foreach",
+        "body": [
+            "${1:array}.forEach(element => {  ",
+            "});"
+        ],
+        "description": "foreach"
+    },
+    "fn": {
+        "prefix": "fn",
+        "body": [
+            "function ${1:functionName}() {",
+            "  ${2}",
+            "}"
+        ]
+    },
+    "setTimeout": {
+        "prefix": "setTimeout",
+        "body": [
+            "setTimeout(() => {",
+            "  ${1}",
+            "}, ${2:delay});"
+        ]
+    },
+    "setInterval": {
+        "prefix": "setInterval",
+        "body": [
+            "setInterval(() => {",
+            "  ${1}",
+            "}, ${2:delay});"
+        ]
+    },
+    "timeout": {
+        "prefix": "timeout",
+        "body": [
+            "const timeout = new Timeout();",
+            "timeout",
+            "  .wrap(",
+            "    somefunction(),",
+            "    10000,",
+            "    \"Timeout...\"",
+            "  )",
+            "  .then((s) => {",
+            "    // Do Something",
+            "  })",
+            "  .catch((e) => {",
+            "    console.log (e);",
+            "  })",
+            "  .finally(() => timeout.clear(...timeout.ids));"
+        ],
+        "description": ""
+    },
+    "supabaseUpload": {
+        "prefix": "supabaseUpload",
+        "body": [
+            "const file = /** @type {HTMLInputElement} */ (document.getElementById('${1:file}'));",
+            "if (file?.files?.length) {",
+            "\tconst fileToUpload = file.files[0];",
+            "\tconst { data, error } = await supabase.storage",
+            "\t\t.from('${2:table}')",
+            "\t\t.upload('${3:file}', fileToUpload, {",
+            "\t\t\tcacheControl: '3600',",
+            "\t\t\tupsert: false",
+            "\t\t});",
+            "\t\tif (error) {",
+            "\t\t\tconsole.log(error);",
+            "\t\t} else {",
+            "\t\t\tconsole.log(data);",
+            "\t\t}",
+            "}"
+        ]
+    },
+    "typedef": {
+        "prefix": "typedef",
+        "body": [
+            "/** @typedef {Object<string,string>} SomeType */"
+        ]
+    },
+    "typefunction": {
+        "prefix": "typef",
+        "body": [
+            "/**",
+            " *",
+            " * @param {string} param1",
+            " * @param {Object<string,string>} param2",
+            " * @returns {string[]}",
+            " */"
+        ]
+    },
+    "cl": {
+        "prefix": "cl",
+        "body": [
+            "console.${2:log}(${1:something});"
+        ]
+    },
+    "ajax": {
+        "prefix": "ajax",
+        "body": [
+            "$.ajax({",
+            "\turl: '/path/to/file',",
+            "\ttype: 'default GET (Other values: POST)',",
+            "\tdataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',",
+            "\tdata: {param1: 'value1'},",
+            "}).done(function(e) {",
+            "\tconsole.log(\"success\");",
+            "}).fail(function(e) {",
+            "\tconsole.log(\"error\");",
+            "}).always(function(e) {",
+            "\tconsole.log(\"complete\");",
+            "});"
+        ]
+    },
+    "replaceall": {
+        "prefix": "replaceall",
+        "body": [
+            "${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');"
+        ]
+    },
+    "jqr": {
+        "prefix": "jqr",
+        "body": [
+            "(function( $ ) {",
+            "\t${1:Jquery Stuff}",
+            "})( jQuery );"
+        ]
+    },
+    "alertyesno": {
+        "prefix": "alertyesno",
+        "body": [
+            "const r = confirm(\"${1:Some Prompt}\");",
+            "if (r == true) {",
+            "  ${2:// Do Something}",
+            "}"
+        ]
+    },
+    "toint_js": {
+        "prefix": "toint",
+        "body": "${1:varName} = parseInt(${1:varName});"
+    },
+    "fetch": {
+        "prefix": "fetch",
+        "body": [
+            "fetch(\"https://bot.bimasoft.web.id:4020/getip\",{",
+            "\tmethod: \"GET\",",
+            "\theaders: {",
+            "\t\t'Accept': 'application/json',",
+            "\t\t'Content-Type': 'application/json'",
+            "\t},",
+            "})",
+            ".then(res => res.json())",
+            ".then((result) => {",
+            "\tconsole.log(result);",
+            "})",
+            ".catch((err) => {",
+            "\tconsole.log(err);",
+            "})"
+        ]
+    },
+    "paramsget": {
+        "prefix": "paramsget",
+        "body": [
+            "const urlParams = new URLSearchParams(window.location.search);",
+            "const ${1:param} = urlParams.get('${1:param}');"
+        ]
+    },
+    "react": {
+        "prefix": "react",
+        "body": [
+            "const ${1:Component} = (props) => {",
+            "\treturn (<></>);",
+            "}",
+            "",
+            "export default ${1:Component};"
+        ]
+    },
+    "preactClass": {
+        "prefix": "preactClass",
+        "body": [
+            "class classComponent extends Component {",
+            "\tconstructor(props) {",
+            "\t\tsuper();",
+            "\t\tthis.state = {",
+            "\t\t\ttext: '',",
+            "\t\t};",
+            "\t\tthis.btnClick = this.btnClick.bind(this);",
+            "\t}",
+            "\tcomponentDidMount() {",
+            "\t\tthis.setState({",
+            "\t\t\ttext: 'OK',",
+            "\t\t});",
+            "\t}",
+            "",
+            "\tbtnClick() {",
+            "\t\tthis.setState({",
+            "\t\t\ttext: 'BTN CLICKED',",
+            "\t\t});",
+            "\t}",
+            "",
+            "\trender() {",
+            "\t\treturn html`",
+            "\t\t\t<div>",
+            "\t\t\t\t<h1>${this.state.text}</h1>",
+            "\t\t\t\t<button onclick=${this.btnClick}>CLICK ME !!</button>",
+            "\t\t\t</div>",
+            "\t\t`;",
+            "\t}",
+            "}",
+            "",
+            "export default classComponent;"
+        ]
+    },
+    "promisenew": {
+        "prefix": "promisenew",
+        "body": [
+            "return new Promise(async (resolve, reject) => {",
+            "\tif (\"OK\") {",
+            "\t\tresolve (\"OK\")",
+            "\t} else {",
+            "\t\treject (\"ERROR\");",
+            "\t}",
+            "});"
+        ]
+    },
+    "preactRouter": {
+        "prefix": "preactRouter",
+        "body": [
+            "<\\${Router} history=\\${createHashHistory()} >",
+            "\t<\\${Login} path=\"/\" />",
+            "\t<\\${AsyncRoute} path=\"/dashboard\" getComponent=\\${()=>import(\"../Pages/Dashboard.js\").then(module=>module.default)} />",
+            "<//>"
+        ]
+    }
+}

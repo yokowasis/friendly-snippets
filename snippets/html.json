@@ -146,5 +146,110 @@
             "</html>",
             ""
         ]
+    },
+    "cs-modal": {
+        "prefix": "cs-modal",
+        "body": [
+            "<cs-modal id=\"${1:modalID}\">",
+            "  <h1>Modal Title</h1>",
+            "  <p>Modal Content</p>",
+            "</cs-modal>",
+            "",
+            "<script>",
+            "  const ${1:modalID} = document.getElementById(\"${1:modalID}\");",
+            "  ${1:modalID}.show();",
+            "",
+            "  ${1:modalID}.addEventListener(\"close\", () => {",
+            "    console.log(\"Modal closed\");",
+            "  });",
+            "",
+            "  ${1:modalID}.addEventListener(\"confirm\", () => {",
+            "    console.log(\"Modal Confirm\");",
+            "  });",
+            "</script>",
+            ""
+        ]
+    },
+    "cs-infocard": {
+        "prefix": "cs-infocard",
+        "body": [
+            "<cs-infocard",
+            "  title=\"${1:Some Title}\"",
+            "  value=\"${2:150}\"",
+            "  unit=\"${3:People}\"",
+            "  btn-title=\"${4:More Info}\"",
+            "  background=\"${5:linear-gradient(to right, #00c6ff, #0072ff)}\"",
+            ">",
+            "  <div slot=\"icon\"><i-c icon=\"${6:user}\"></i-c></div>",
+            "</cs-infocard>"
+        ]
+    },
+    "cs-input": {
+        "prefix": "cs-input",
+        "body": [
+            "<cs-input",
+            "  id=\"${1:someID}\"",
+            "  type=\"${2|text,password,time,date|}\"",
+            "  theme=\"${3|mui,tailwind|}\"",
+            "  placeholder=\"\"",
+            "  label=\"\"",
+            "  value=\"\"",
+            "  icon=\"\"",
+            "  note=\"\"",
+            "  mode=\"${4|dark,light|}\"",
+            "  onchange=\"someFunction()\"",
+            "></cs-input>"
+        ]
+    },
+    "cs-select": {
+        "prefix": "cs-select",
+        "body": [
+            "<cs-select",
+            "  id=\"${1:someid}\"",
+            "  label=\"${2:Label}\"",
+            "  value=\"\"",
+            "  data=\"${3:Satu;Dua;Tiga}\"",
+            "  onchange=\"someFunction()\"",
+            "></cs-select>"
+        ]
+    },
+    "list-icon": {
+        "prefix": "list-icon",
+        "body": [
+            "<list-icon></list-icon>"
+        ]
+    },
+    "cs-radio": {
+        "prefix": "cs-radio",
+        "body": [
+            "<cs-radio",
+            "  id=\"${1:someid}\"",
+            "  label=\"${2:Label}\"",
+            "  type=\"${3|radio,checkbox|}\"",
+            "  value=\"\"",
+            "  data=\"${4:Satu;Dua;Tiga}\"",
+            "  dataValue=\"${5:1;2;3}\"",
+            "  cols=\"${6:1}\"",
+            "  onchange=\"someFunction()\"",
+            "></cs-radio>"
+        ]
+    },
+    "cs-upload": {
+        "prefix": "cs-upload",
+        "body": [
+            "<cs-upload id=\"${1:someid}\" label=\"${2:Label}\" limit=${3:10}></cs-upload>"
+        ]
+    },
+    "cs-rtf": {
+        "prefix": "cs-rtf",
+        "body": [
+            "<cs-rtf id=\"${1:someid}\" label=\"${2:Label}\"></cs-rtf>"
+        ]
+    },
+    "cs-toast": {
+        "prefix": "cs-toast",
+        "body": [
+            "<cs-toast></cs-toast>"
+        ]
     }
 }

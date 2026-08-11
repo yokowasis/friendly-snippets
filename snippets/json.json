@@ -4,5 +4,29 @@
         "body": [
             "\t\t\"gen\": \"npx pocketbase-typegen --url https://r78cx445lggesovkbe6u0bl9.sg.app.web.id --email admin@cbt.my.id --password 123123123 -o ./src/lib/pocketbase-types.ts\","
         ]
+    },
+    "git": {
+        "prefix": "git",
+        "body": [
+            "\"${1:repo-name}\": \"git+https://github.com/yokowasis/${1:repo-name}.git\","
+        ]
+    },
+    "ecosystempm2json": {
+        "prefix": "ecosystempm2json",
+        "body": [
+            "{",
+            "  \"apps\": [",
+            "    {",
+            "      \"name\": \"cbtAdmin-svelte:3000\",",
+            "      \"script\": \"npm run deploy\",",
+            "      \"watch\": false,",
+            "      \"instances\": 1,",
+            "      \"env\": {",
+            "        \"PORT\": 3000",
+            "      }",
+            "    }",
+            "  ]",
+            "}"
+        ]
     }
 }

@@ -12,17 +12,30 @@
     },
     "shebang": {
         "prefix": "shebang",
-        "body": ["#!/bin/bash", ""],
+        "body": [
+            "#!/bin/bash",
+            ""
+        ],
         "description": "Add a bash shebang script template"
     },
     "if": {
         "prefix": "if",
-        "body": ["if [ ${1:condition} ]; then", "\t$0", "fi"],
+        "body": [
+            "if [ ${1:condition} ]; then",
+            "\t$0",
+            "fi"
+        ],
         "description": "if statement"
     },
     "ifelse": {
         "prefix": "ifelse",
-        "body": ["if [ ${1:condition} ]; then", "\t$0", "else", "\t${2}", "fi"],
+        "body": [
+            "if [ ${1:condition} ]; then",
+            "\t$0",
+            "else",
+            "\t${2}",
+            "fi"
+        ],
         "description": "if-else statement"
     },
     "elif": {
@@ -38,17 +51,29 @@
     },
     "for": {
         "prefix": "for",
-        "body": ["for ${1:var} in ${2:list}; do", "\t$0", "done"],
+        "body": [
+            "for ${1:var} in ${2:list}; do",
+            "\t$0",
+            "done"
+        ],
         "description": "for loop"
     },
     "while": {
         "prefix": "while",
-        "body": ["while [ ${1:condition} ]; do", "\t$0", "done"],
+        "body": [
+            "while [ ${1:condition} ]; do",
+            "\t$0",
+            "done"
+        ],
         "description": "while loop"
     },
     "until": {
         "prefix": "until",
-        "body": ["until [ ${1:condition} ]; do", "\t$0", "done"],
+        "body": [
+            "until [ ${1:condition} ]; do",
+            "\t$0",
+            "done"
+        ],
         "description": "until loop"
     },
     "case": {
@@ -70,22 +95,44 @@
     },
     "func": {
         "prefix": "func",
-        "body": ["${1:name}() {", "\t$0", "}"],
+        "body": [
+            "${1:name}() {",
+            "\t$0",
+            "}"
+        ],
         "description": "Define a function"
     },
     "read": {
         "prefix": "read",
-        "body": ["read -p \"${1:prompt}: \" ${2:var}"],
+        "body": [
+            "read -p \"${1:prompt}: \" ${2:var}"
+        ],
         "description": "Read user input into a variable"
     },
     "export": {
         "prefix": "export",
-        "body": ["export ${1:VAR}=\"${2:value}\""],
+        "body": [
+            "export ${1:VAR}=\"${2:value}\""
+        ],
         "description": "Export an environment variable"
     },
     "curldownload": {
         "prefix": "curldownload",
-        "body": ["curl -OL ${1:https://example.com/file}"],
+        "body": [
+            "curl -OL ${1:https://example.com/file}"
+        ],
         "description": "Download a file with curl"
+    },
+    "GithubPullSubModules": {
+        "prefix": "GithubPullSubModules",
+        "body": [
+            "git submodule update --init --recursive",
+            "git submodule update --recursive --remote",
+            "cd src/react-form",
+            "git checkout main",
+            "git pull",
+            "cd ../../",
+            ""
+        ]
     }
 }

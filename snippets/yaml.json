@@ -1,1 +1,16 @@
-{}
+{
+    "environmentConda": {
+        "prefix": "environmentConda",
+        "body": [
+            "name: ${1:environmentName}",
+            "channels:",
+            "  - conda-forge",
+            "dependencies:",
+            "  - python=3.10",
+            "  - jupyter",
+            "  - pip",
+            "  - pip:",
+            "    - pynvim"
+        ]
+    }
+}

@@ -1,7 +1,10 @@
 {
     "error": {
         "prefix": "error",
-        "body": ["error_reporting(E_ALL);", "ini_set('display_errors', 1);"]
+        "body": [
+            "error_reporting(E_ALL);",
+            "ini_set('display_errors', 1);"
+        ]
     },
     "typecasting": {
         "prefix": "typecast",
@@ -20,11 +23,15 @@
     },
     "var": {
         "prefix": "var",
-        "body": ["/** @var ${1:TypeName} */"]
+        "body": [
+            "/** @var ${1:TypeName} */"
+        ]
     },
     "cl": {
         "prefix": "cl",
-        "body": ["console.log($1);"]
+        "body": [
+            "console.log($1);"
+        ]
     },
     "typeWrapPHP": {
         "prefix": "ty",
@@ -169,7 +176,11 @@
     },
     "test": {
         "prefix": "test",
-        "body": ["<?php", "echo 'Hello World';", "?>"]
+        "body": [
+            "<?php",
+            "echo 'Hello World';",
+            "?>"
+        ]
     },
     "whoami": {
         "prefix": "whoami",
@@ -177,7 +188,11 @@
     },
     "php-pre": {
         "prefix": "pre",
-        "body": ["echo '<pre>';", "${1:something};", "echo '</pre>';"]
+        "body": [
+            "echo '<pre>';",
+            "${1:something};",
+            "echo '</pre>';"
+        ]
     },
     "backward-php": {
         "prefix": "bph",
@@ -273,15 +288,21 @@
     },
     "pe": {
         "prefix": "pe",
-        "body": ["echo \"<p>${1:this}</p>\";"]
+        "body": [
+            "echo \"<p>${1:this}</p>\";"
+        ]
     },
     "nowdate": {
         "prefix": "nowdate",
-        "body": ["date(\"Y-m-d\")"]
+        "body": [
+            "date(\"Y-m-d\")"
+        ]
     },
     "nowtime": {
         "prefix": "nowtime",
-        "body": ["date(\"H:i\")"]
+        "body": [
+            "date(\"H:i\")"
+        ]
     },
     "toint": {
         "prefix": "toint",
@@ -332,7 +353,9 @@
     },
     "php_date": {
         "prefix": "date",
-        "body": ["\\$date = date(\"Y-m-d\",time());"]
+        "body": [
+            "\\$date = date(\"Y-m-d\",time());"
+        ]
     },
     "mysql": {
         "prefix": "mysql",
@@ -539,6 +562,79 @@
             "}",
             "",
             "add_action( 'admin_menu', 'parent_menu_add_admin_page');"
+        ]
+    },
+    "phpdownloadandunzip": {
+        "prefix": "phpdownloadandunzip",
+        "body": [
+            "\\$url = \"https://someurl.zip\";",
+            "\\$zipFile = tempnam(sys_get_temp_dir(), 'update_') . '.zip';",
+            "",
+            "echo \"Downloading \\$url ...\\n\";",
+            "",
+            "\\$fp = fopen(\\$zipFile, 'w+');",
+            "\\$ch = curl_init(\\$url);",
+            "curl_setopt(\\$ch, CURLOPT_FILE, \\$fp);",
+            "curl_setopt(\\$ch, CURLOPT_FOLLOWLOCATION, true);",
+            "curl_setopt(\\$ch, CURLOPT_TIMEOUT, 300);",
+            "curl_exec(\\$ch);",
+            "\\$httpCode = curl_getinfo(\\$ch, CURLINFO_HTTP_CODE);",
+            "curl_close(\\$ch);",
+            "fclose(\\$fp);",
+            "",
+            "if (\\$httpCode !== 200) {",
+            "\t\tunlink(\\$zipFile);",
+            "\t\techo \"Download failed (HTTP \\$httpCode)\\n\";",
+            "\t\texit(1);",
+            "}",
+            "",
+            "echo \"Extracting \\$zipFile ...\\n\";",
+            "",
+            "\\$zip = new ZipArchive;",
+            "if (\\$zip->open(\\$zipFile) !== true) {",
+            "\t\tunlink(\\$zipFile);",
+            "\t\techo \"Failed to open zip file\\n\";",
+            "\t\texit(1);",
+            "}",
+            "",
+            "\\$zip->extractTo(getcwd());",
+            "\\$zip->close();",
+            "unlink(\\$zipFile);",
+            "",
+            "echo \"Done.\\n\";",
+            ""
+        ]
+    },
+    "phpmovefilesinsidefolder": {
+        "prefix": "phpmovefilesinsidefolder",
+        "body": [
+            "\\$sourceDir = __DIR__ . '/out';",
+            "\\$targetDir = __DIR__;",
+            "",
+            "\\$items = scandir(\\$sourceDir);",
+            "",
+            "foreach (\\$items as \\$item) {",
+            "\tif (\\$item === '.' || \\$item === '..') {",
+            "\t\tcontinue;",
+            "\t}",
+            "",
+            "\t\\$source = \\$sourceDir . '/' . \\$item;",
+            "\t\\$target = \\$targetDir . '/' . \\$item;",
+            "",
+            "\t// Remove existing target if conflict",
+            "\tif (file_exists(\\$target)) {",
+            "\t\tif (is_dir(\\$target)) {",
+            "\t\t\texec('rm -rf ' . escapeshellarg(\\$target));",
+            "\t\t} else {",
+            "\t\t\tunlink(\\$target);",
+            "\t\t}",
+            "\t}",
+            "",
+            "\trename(\\$source, \\$target);",
+            "}",
+            "",
+            "echo \"Done\\n\";",
+            ""
         ]
     }
 }
