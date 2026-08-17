@@ -3,6 +3,9 @@
   "engines": {
     "vscode": "^1.11.0"
   },
+  "scripts": {
+    "sync:zed": "python scripts/sync-zed.py"
+  },
   "contributes": {
     "snippets": [
       {
