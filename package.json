@@ -140,7 +140,8 @@
       },
       {
         "language": [
-          "mysql"
+          "mysql",
+          "sql"
         ],
         "path": "./snippets/mysql.json"
       }
