@@ -137,7 +137,8 @@
       },
       {
         "language": [
-          "shellscript"
+          "shellscript",
+          "sh"
         ],
         "path": "./snippets/shellscript.json"
       },
