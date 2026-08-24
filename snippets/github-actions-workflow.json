@@ -1,4 +1,14 @@
 {
+    "pnpm": {
+        "prefix": "pnpm",
+        "body": [
+            "- uses: pnpm/setup@v1",
+            "  with:",
+            "    version: 11",
+            "    runtime: node@24",
+            "    cache: true"
+        ]
+    },
     "GithubActionPingURL": {
         "prefix": "GithubActionPingURL",
         "body": [

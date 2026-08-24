@@ -148,6 +148,18 @@
           "sql"
         ],
         "path": "./snippets/mysql.json"
+      },
+      {
+        "language": [
+          "yaml"
+        ],
+        "path": "./snippets/github-actions-workflow.json"
+      },
+      {
+        "language": [
+          "yaml"
+        ],
+        "path": "./snippets/yaml.json"
       }
     ]
   }
