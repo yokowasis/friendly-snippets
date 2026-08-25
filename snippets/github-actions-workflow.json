@@ -1,4 +1,15 @@
 {
+    "github-private": {
+        "prefix": "github-private",
+        "body": [
+            "      - name: Configure git to use GitHub token for private dependencies",
+            "        run: |",
+            "          git config --global url.\"https://\\${{ secrets.GH_TOKEN }}@github.com/\".insteadOf \"https://github.com/\"",
+            "          git config --global --add url.\"https://\\${{ secrets.GH_TOKEN }}@github.com/\".insteadOf \"git@github.com:\"",
+            "          git config --global --add url.\"https://\\${{ secrets.GH_TOKEN }}@github.com/\".insteadOf \"ssh://git@github.com/\"",
+            ""
+        ]
+    },
     "pnpm": {
         "prefix": "pnpm",
         "body": [
