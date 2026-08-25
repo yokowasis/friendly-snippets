@@ -1,4 +1,14 @@
 {
+    "ifexists": {
+        "prefix": "ifexists",
+        "body": [
+            "if [ -f \"/path/to/file.txt\" ]; then",
+            "    echo \"File exists.\"",
+            "else",
+            "    echo \"File does not exist.\"",
+            "fi"
+        ]
+    },
     "post": {
         "prefix": "post",
         "body": [
