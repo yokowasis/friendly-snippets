@@ -1,4 +1,10 @@
 {
+    "private-package": {
+        "prefix": "private-package",
+        "body": [
+            "    \"cordova-plugin-appsignature\": \"git+https://github.com/yokowasis/cordova-plugin-appsignature\","
+        ]
+    },
     "pb-gen": {
         "prefix": "pb-gen",
         "body": [
