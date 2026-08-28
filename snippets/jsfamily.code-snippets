@@ -1,4 +1,18 @@
 {
+    "sortArrayOfObjectStringAsc" : {
+        "prefix" : "sortArrayOfObjectStringAsc",
+        "body": [
+            "users.sort((a, b) =>",
+            "  a.profile.name.localeCompare(b.profile.name)",
+            ");"
+        ]
+    },
+    "sortArrayOfObjectNumberAsc" : {
+        "prefix" : "sortArrayOfObjectAsc",
+        "body": [
+            "users.sort((a, b) => a.age - b.age);"
+        ]
+    },
     "paramsbuild": {
         "prefix": "paramsbuild",
         "body": [
