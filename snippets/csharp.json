@@ -107,5 +107,87 @@
         "body": [
             "string ${1:selectedValue} = ${2:myPicker}.SelectedItem?.ToString();$0"
         ]
+    },
+    "For Loop": {
+        "prefix": ["for", "forloop"],
+        "description": "for loop (incrementing)",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)",
+            "{",
+            "    $0",
+            "}"
+        ]
+    },
+    "For Reverse Loop": {
+        "prefix": ["forr", "forrev"],
+        "description": "for loop (decrementing / reverse)",
+        "body": [
+            "for (int ${1:i} = ${2:length} - 1; ${1:i} >= 0; ${1:i}--)",
+            "{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Foreach Loop": {
+        "prefix": ["foreach", "fe"],
+        "description": "foreach loop over collection",
+        "body": [
+            "foreach (var ${1:item} in ${2:collection})",
+            "{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Foreach Loop with Index": {
+        "prefix": ["foreachi", "fei"],
+        "description": "foreach loop with an index counter",
+        "body": [
+            "int ${1:i} = 0;",
+            "foreach (var ${2:item} in ${3:collection})",
+            "{",
+            "    $0",
+            "    ${1:i}++;",
+            "}"
+        ]
+    },
+    "Await Foreach Loop": {
+        "prefix": ["foreacha", "awaitforeach"],
+        "description": "await foreach loop for IAsyncEnumerable",
+        "body": [
+            "await foreach (var ${1:item} in ${2:asyncEnumerable})",
+            "{",
+            "    $0",
+            "}"
+        ]
+    },
+    "While Loop": {
+        "prefix": "while",
+        "description": "while loop",
+        "body": [
+            "while (${1:condition})",
+            "{",
+            "    $0",
+            "}"
+        ]
+    },
+    "Do-While Loop": {
+        "prefix": ["do", "dowhile"],
+        "description": "do-while loop",
+        "body": [
+            "do",
+            "{",
+            "    $0",
+            "} while (${1:condition});"
+        ]
+    },
+    "Parallel ForEachAsync": {
+        "prefix": ["pforeach", "parallelforeach"],
+        "description": "Parallel.ForEachAsync loop",
+        "body": [
+            "await Parallel.ForEachAsync(${1:collection}, async (${2:item}, ${3:cancellationToken}) =>",
+            "{",
+            "    $0",
+            "});"
+        ]
     }
 }
