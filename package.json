@@ -160,6 +160,20 @@
           "yaml"
         ],
         "path": "./snippets/yaml.json"
+      },
+      {
+        "language": [
+          "cs",
+          "csharp"
+        ],
+        "path": "./snippets/csharp.json"
+      },
+      {
+        "language": [
+          "xml",
+          "xaml"
+        ],
+        "path": "./snippets/xaml.json"
       }
     ]
   }

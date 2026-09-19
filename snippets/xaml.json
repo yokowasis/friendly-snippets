@@ -1,0 +1,57 @@
+{
+    "MAUI ScrollView": {
+        "prefix": "mauiscrollview",
+        "description": "MAUI ScrollView with common properties",
+        "body": [
+            "<ScrollView Orientation=\"${1|Vertical,Horizontal,Both|}\"",
+            "            Padding=\"${2:16}\">",
+            "    $0",
+            "</ScrollView>"
+        ]
+    },
+    "MAUI VerticalStackLayout": {
+        "prefix": "mauivstack",
+        "description": "MAUI VerticalStackLayout with common properties",
+        "body": [
+            "<VerticalStackLayout Spacing=\"${1:8}\"",
+            "                     Padding=\"${2:16}\"",
+            "                     HorizontalOptions=\"${3|Fill,Start,Center,End|}\">",
+            "    $0",
+            "</VerticalStackLayout>"
+        ]
+    },
+    "MAUI HorizontalStackLayout": {
+        "prefix": "mauihstack",
+        "description": "MAUI HorizontalStackLayout with common properties",
+        "body": [
+            "<HorizontalStackLayout Spacing=\"${1:8}\"",
+            "                       Padding=\"${2:16}\"",
+            "                       VerticalOptions=\"${3|Center,Fill,Start,End|}\">",
+            "    $0",
+            "</HorizontalStackLayout>"
+        ]
+    },
+    "MAUI Label": {
+        "prefix": "mauilabel",
+        "description": "MAUI Label with common properties",
+        "body": [
+            "<Label Text=\"${1:Hello, World!}\"",
+            "       FontSize=\"${2:16}\"",
+            "       TextColor=\"${3:Black}\"",
+            "       FontAttributes=\"${4|None,Bold,Italic|}\"",
+            "       HorizontalOptions=\"${5|Start,Center,End,Fill|}\" />$0"
+        ]
+    },
+    "MAUI Button": {
+        "prefix": "mauibutton",
+        "description": "MAUI Button with common properties",
+        "body": [
+            "<Button Text=\"${1:Click Me}\"",
+            "        Clicked=\"${2:OnButtonClicked}\"",
+            "        BackgroundColor=\"${3:#512BD4}\"",
+            "        TextColor=\"${4:White}\"",
+            "        HorizontalOptions=\"${5|Fill,Start,Center,End|}\"",
+            "        CornerRadius=\"${6:8}\" />$0"
+        ]
+    }
+}

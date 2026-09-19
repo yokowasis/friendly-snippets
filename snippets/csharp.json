@@ -1,0 +1,71 @@
+{
+    "Console.WriteLine": {
+        "prefix": "cl",
+        "description": "Outputs a message to the console (equivalent of console.log)",
+        "body": [
+            "Console.WriteLine($1);$0"
+        ]
+    },
+    "Fetch GET": {
+        "prefix": "fetch",
+        "description": "HTTP GET request using HttpClient with typed JSON deserialization",
+        "body": [
+            "public class ${1:MyResponse}",
+            "{",
+            "    public string ${2:Property} { get; set; }",
+            "}",
+            "",
+            "using var client = new HttpClient();",
+            "var ${3:response} = await client.GetAsync(\"${4:https://example.com/api}\");",
+            "${3:response}.EnsureSuccessStatusCode();",
+            "var ${5:result} = await ${3:response}.Content.ReadFromJsonAsync<${1:MyResponse}>();$0"
+        ]
+    },
+    "Fetch POST with JSON body": {
+        "prefix": "fetchpost",
+        "description": "HTTP POST request with JSON body and typed response using HttpClient",
+        "body": [
+            "public class ${1:MyResponse}",
+            "{",
+            "    public string ${2:Property} { get; set; }",
+            "}",
+            "",
+            "using var client = new HttpClient();",
+            "var ${3:response} = await client.PostAsJsonAsync(\"${4:https://example.com/api}\", ${5:payload});",
+            "${3:response}.EnsureSuccessStatusCode();",
+            "var ${6:result} = await ${3:response}.Content.ReadFromJsonAsync<${1:MyResponse}>();$0"
+        ]
+    },
+    "Try Catch": {
+        "prefix": "try",
+        "description": "try-catch block with Exception",
+        "body": [
+            "try",
+            "{",
+            "    $1",
+            "}",
+            "catch (Exception ${2:ex})",
+            "{",
+            "    Console.WriteLine(${2:ex}.Message);$0",
+            "}"
+        ]
+    },
+    "Try Catch Finally": {
+        "prefix": "trycatch",
+        "description": "try-catch-finally block with typed exception",
+        "body": [
+            "try",
+            "{",
+            "    $1",
+            "}",
+            "catch (${2:Exception} ${3:ex})",
+            "{",
+            "    Console.WriteLine(${3:ex}.Message);$4",
+            "}",
+            "finally",
+            "{",
+            "    $0",
+            "}"
+        ]
+    }
+}
