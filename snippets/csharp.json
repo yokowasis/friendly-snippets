@@ -2,9 +2,7 @@
     "Console.WriteLine": {
         "prefix": "cl",
         "description": "Outputs a message to the console (equivalent of console.log)",
-        "body": [
-            "Console.WriteLine($1);$0"
-        ]
+        "body": ["Console.WriteLine($1);$0"]
     },
     "Fetch GET": {
         "prefix": "fetch",
@@ -66,6 +64,48 @@
             "{",
             "    $0",
             "}"
+        ]
+    },
+    "MAUI Picker Code-Behind (Set Items & Get Value)": {
+        "prefix": "mauiselect",
+        "description": "MAUI Picker C# code-behind: set items and handle selection changed",
+        "body": [
+            "// Set items",
+            "${1:myPicker}.ItemsSource = new List<string>",
+            "{",
+            "    \"${2:Option 1}\",",
+            "    \"${3:Option 2}\",",
+            "    \"${4:Option 3}\"",
+            "};",
+            "",
+            "// Get selected value via event",
+            "private void ${5:OnPickerSelectedIndexChanged}(object sender, EventArgs e)",
+            "{",
+            "    var picker = (Picker)sender;",
+            "    if (picker.SelectedIndex != -1)",
+            "    {",
+            "        string ${6:selectedValue} = picker.SelectedItem?.ToString();$0",
+            "    }",
+            "}"
+        ]
+    },
+    "MAUI Picker Set Items": {
+        "prefix": "mauiselectset",
+        "description": "MAUI Picker set items in C#",
+        "body": [
+            "${1:myPicker}.ItemsSource = new List<string>",
+            "{",
+            "    \"${2:Option 1}\",",
+            "    \"${3:Option 2}\",",
+            "    \"${4:Option 3}\"",
+            "};$0"
+        ]
+    },
+    "MAUI Picker Get Value": {
+        "prefix": "mauiselectget",
+        "description": "MAUI Picker get selected value in C#",
+        "body": [
+            "string ${1:selectedValue} = ${2:myPicker}.SelectedItem?.ToString();$0"
         ]
     }
 }

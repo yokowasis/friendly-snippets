@@ -3,8 +3,9 @@
         "prefix": "mauiscrollview",
         "description": "MAUI ScrollView with common properties",
         "body": [
-            "<ScrollView Orientation=\"${1|Vertical,Horizontal,Both|}\"",
-            "            Padding=\"${2:16}\">",
+            "<ScrollView x:Name=\"${1:myScrollView}\"",
+            "            Orientation=\"${2|Vertical,Horizontal,Both|}\"",
+            "            Padding=\"${3:16}\">",
             "    $0",
             "</ScrollView>"
         ]
@@ -13,9 +14,10 @@
         "prefix": "mauivstack",
         "description": "MAUI VerticalStackLayout with common properties",
         "body": [
-            "<VerticalStackLayout Spacing=\"${1:8}\"",
-            "                     Padding=\"${2:16}\"",
-            "                     HorizontalOptions=\"${3|Fill,Start,Center,End|}\">",
+            "<VerticalStackLayout x:Name=\"${1:myVerticalStack}\"",
+            "                     Spacing=\"${2:8}\"",
+            "                     Padding=\"${3:16}\"",
+            "                     HorizontalOptions=\"${4|Fill,Start,Center,End|}\">",
             "    $0",
             "</VerticalStackLayout>"
         ]
@@ -24,34 +26,65 @@
         "prefix": "mauihstack",
         "description": "MAUI HorizontalStackLayout with common properties",
         "body": [
-            "<HorizontalStackLayout Spacing=\"${1:8}\"",
-            "                       Padding=\"${2:16}\"",
-            "                       VerticalOptions=\"${3|Center,Fill,Start,End|}\">",
+            "<HorizontalStackLayout x:Name=\"${1:myHorizontalStack}\"",
+            "                       Spacing=\"${2:8}\"",
+            "                       Padding=\"${3:16}\"",
+            "                       VerticalOptions=\"${4|Center,Fill,Start,End|}\">",
             "    $0",
             "</HorizontalStackLayout>"
         ]
     },
     "MAUI Label": {
         "prefix": "mauilabel",
-        "description": "MAUI Label with common properties",
+        "description": "MAUI Label with common properties including horizontal alignment",
         "body": [
-            "<Label Text=\"${1:Hello, World!}\"",
-            "       FontSize=\"${2:16}\"",
-            "       TextColor=\"${3:Black}\"",
-            "       FontAttributes=\"${4|None,Bold,Italic|}\"",
-            "       HorizontalOptions=\"${5|Start,Center,End,Fill|}\" />$0"
+            "<Label x:Name=\"${1:myLabel}\"",
+            "       Text=\"${2:Hello, World!}\"",
+            "       FontSize=\"${3:16}\"",
+            "       TextColor=\"${4:Black}\"",
+            "       HorizontalTextAlignment=\"${5|Center,Start,End,Justify|}\"",
+            "       HorizontalOptions=\"${6|Fill,Center,Start,End|}\"",
+            "       FontAttributes=\"${7|None,Bold,Italic|}\" />$0"
         ]
     },
     "MAUI Button": {
         "prefix": "mauibutton",
         "description": "MAUI Button with common properties",
         "body": [
-            "<Button Text=\"${1:Click Me}\"",
-            "        Clicked=\"${2:OnButtonClicked}\"",
-            "        BackgroundColor=\"${3:#512BD4}\"",
-            "        TextColor=\"${4:White}\"",
-            "        HorizontalOptions=\"${5|Fill,Start,Center,End|}\"",
-            "        CornerRadius=\"${6:8}\" />$0"
+            "<Button x:Name=\"${1:myButton}\"",
+            "        Text=\"${2:Click Me}\"",
+            "        Clicked=\"${3:OnButtonClicked}\"",
+            "        BackgroundColor=\"${4:#512BD4}\"",
+            "        TextColor=\"${5:White}\"",
+            "        HorizontalOptions=\"${6|Fill,Start,Center,End|}\"",
+            "        CornerRadius=\"${7:8}\" />$0"
+        ]
+    },
+    "MAUI Picker (Select)": {
+        "prefix": "mauiselect",
+        "description": "MAUI Picker dropdown (equivalent of HTML select)",
+        "body": [
+            "<Picker x:Name=\"${1:myPicker}\"",
+            "        Title=\"${2:Select an option}\"",
+            "        SelectedIndexChanged=\"${3:OnPickerSelectedIndexChanged}\"",
+            "        HorizontalOptions=\"${4|Fill,Start,Center,End|}\" />$0"
+        ]
+    },
+    "MAUI Picker Static Options (Select)": {
+        "prefix": "mauiselectstatic",
+        "description": "MAUI Picker dropdown with static items",
+        "body": [
+            "<Picker x:Name=\"${1:myPicker}\"",
+            "        Title=\"${2:Select an option}\"",
+            "        SelectedIndex=\"${3:0}\"",
+            "        HorizontalOptions=\"${4|Fill,Start,Center,End|}\">",
+            "    <Picker.ItemsSource>",
+            "        <x:Array Type=\"{x:Type x:String}\">",
+            "            <x:String>${5:Option 1}</x:String>",
+            "            <x:String>${6:Option 2}</x:String>",
+            "        </x:Array>",
+            "    </Picker.ItemsSource>",
+            "</Picker>$0"
         ]
     }
 }
