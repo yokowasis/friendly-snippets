@@ -189,5 +189,19 @@
             "    $0",
             "});"
         ]
+    },
+    "MAUI Entry Get Text": {
+        "prefix": ["mauiinputget", "inputtextget"],
+        "description": "MAUI Entry get text value in C#",
+        "body": [
+            "string ${1:text} = ${2:myEntry}.Text;$0"
+        ]
+    },
+    "MAUI Entry Set Text": {
+        "prefix": ["mauiinputset", "inputtextset"],
+        "description": "MAUI Entry set text value in C#",
+        "body": [
+            "${1:myEntry}.Text = \"${2:value}\";$0"
+        ]
     }
 }

@@ -86,5 +86,29 @@
             "    </Picker.ItemsSource>",
             "</Picker>$0"
         ]
+    },
+    "MAUI Entry (InputText)": {
+        "prefix": ["inputtext", "mauiinput", "mauiinputtext", "mauientry"],
+        "description": "MAUI Entry text input (equivalent of HTML input text)",
+        "body": [
+            "<Entry x:Name=\"${1:myEntry}\"",
+            "       Placeholder=\"${2:Enter text...}\"",
+            "       Text=\"${3}\"",
+            "       Keyboard=\"${4|Default,Text,Numeric,Email,Telephone,Chat,Url|}\"",
+            "       ClearButtonVisibility=\"${5|WhileEditing,Never|}\"",
+            "       HorizontalOptions=\"${6|Fill,Start,Center,End|}\" />$0"
+        ]
+    },
+    "MAUI Editor (TextArea)": {
+        "prefix": ["textarea", "mauieditor", "mauitextarea"],
+        "description": "MAUI Editor multi-line text input (equivalent of HTML textarea)",
+        "body": [
+            "<Editor x:Name=\"${1:myEditor}\"",
+            "        Placeholder=\"${2:Enter notes...}\"",
+            "        Text=\"${3}\"",
+            "        AutoSize=\"${4|TextChanges,Disabled|}\"",
+            "        HeightRequest=\"${5:100}\"",
+            "        HorizontalOptions=\"${6|Fill,Start,Center,End|}\" />$0"
+        ]
     }
 }
